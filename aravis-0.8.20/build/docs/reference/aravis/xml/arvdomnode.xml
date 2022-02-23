@@ -1,0 +1,481 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvDomNode">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvDomNode.top_of_page">ArvDomNode</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvDomNode</refname>
+<refpurpose>Base class for DOM nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvDomNode.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-node-name">arv_dom_node_get_node_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-node-value">arv_dom_node_get_node_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-node-set-node-value">arv_dom_node_set_node_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNodeType"><returnvalue>ArvDomNodeType</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-node-type">arv_dom_node_get_node_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-parent-node">arv_dom_node_get_parent_node</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNodeList"><returnvalue>ArvDomNodeList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-child-nodes">arv_dom_node_get_child_nodes</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-first-child">arv_dom_node_get_first_child</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-last-child">arv_dom_node_get_last_child</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-previous-sibling">arv_dom_node_get_previous_sibling</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-next-sibling">arv_dom_node_get_next_sibling</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNamedNodeMap"><returnvalue>ArvDomNamedNodeMap</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-attributes">arv_dom_node_get_attributes</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-insert-before">arv_dom_node_insert_before</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-replace-child">arv_dom_node_replace_child</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-append-child">arv_dom_node_append_child</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-remove-child">arv_dom_node_remove_child</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-node-has-child-nodes">arv_dom_node_has_child_nodes</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-node-changed">arv_dom_node_changed</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-get-owner-document">arv_dom_node_get_owner_document</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomNode.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvDomNode-struct">ArvDomNode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomNode.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvDomNode
+        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomCharacterData">ArvDomCharacterData</link>
+        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomDocumentFragment">ArvDomDocumentFragment</link>
+        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomDocument">ArvDomDocument</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvDomNode.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvDomNode.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-dom-node-get-node-name" role="function">
+<title>arv_dom_node_get_node_name&#160;()</title>
+<indexterm zone="arv-dom-node-get-node-name"><primary>arv_dom_node_get_node_name</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_dom_node_get_node_name (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<para>Gets the node name.</para>
+<refsect3 id="arv-dom-node-get-node-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-node-name.returns" role="returns">
+<title>Returns</title>
+<para> the node name.</para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-get-node-value" role="function">
+<title>arv_dom_node_get_node_value&#160;()</title>
+<indexterm zone="arv-dom-node-get-node-value"><primary>arv_dom_node_get_node_value</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_dom_node_get_node_value (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<para>Gets the node value.</para>
+<refsect3 id="arv-dom-node-get-node-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-node-value.returns" role="returns">
+<title>Returns</title>
+<para> the node value.</para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-set-node-value" role="function">
+<title>arv_dom_node_set_node_value&#160;()</title>
+<indexterm zone="arv-dom-node-set-node-value"><primary>arv_dom_node_set_node_value</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_node_set_node_value (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>,
+                             <parameter>const <link linkend="char"><type>char</type></link> *new_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-node-get-node-type" role="function">
+<title>arv_dom_node_get_node_type&#160;()</title>
+<indexterm zone="arv-dom-node-get-node-type"><primary>arv_dom_node_get_node_type</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNodeType"><returnvalue>ArvDomNodeType</returnvalue></link>
+arv_dom_node_get_node_type (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-node-get-parent-node" role="function">
+<title>arv_dom_node_get_parent_node&#160;()</title>
+<indexterm zone="arv-dom-node-get-parent-node"><primary>arv_dom_node_get_parent_node</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_get_parent_node (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<para>Get the parent node of <parameter>self</parameter>
+.</para>
+<refsect3 id="arv-dom-node-get-parent-node.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-parent-node.returns" role="returns">
+<title>Returns</title>
+<para><parameter>self</parameter>
+parent. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-get-child-nodes" role="function">
+<title>arv_dom_node_get_child_nodes&#160;()</title>
+<indexterm zone="arv-dom-node-get-child-nodes"><primary>arv_dom_node_get_child_nodes</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNodeList"><returnvalue>ArvDomNodeList</returnvalue></link>&#160;*
+arv_dom_node_get_child_nodes (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<refsect3 id="arv-dom-node-get-child-nodes.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-child-nodes.returns" role="returns">
+<title>Returns</title>
+<para>a <link linkend="ArvDomNodeList"><type>ArvDomNodeList</type></link>, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-get-first-child" role="function">
+<title>arv_dom_node_get_first_child&#160;()</title>
+<indexterm zone="arv-dom-node-get-first-child"><primary>arv_dom_node_get_first_child</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_get_first_child (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<refsect3 id="arv-dom-node-get-first-child.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-first-child.returns" role="returns">
+<title>Returns</title>
+<para><parameter>self</parameter>
+first child. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-get-last-child" role="function">
+<title>arv_dom_node_get_last_child&#160;()</title>
+<indexterm zone="arv-dom-node-get-last-child"><primary>arv_dom_node_get_last_child</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_get_last_child (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<refsect3 id="arv-dom-node-get-last-child.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-last-child.returns" role="returns">
+<title>Returns</title>
+<para><parameter>self</parameter>
+last child. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-get-previous-sibling" role="function">
+<title>arv_dom_node_get_previous_sibling&#160;()</title>
+<indexterm zone="arv-dom-node-get-previous-sibling"><primary>arv_dom_node_get_previous_sibling</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_get_previous_sibling (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<refsect3 id="arv-dom-node-get-previous-sibling.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-previous-sibling.returns" role="returns">
+<title>Returns</title>
+<para><parameter>self</parameter>
+previous sibling. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-get-next-sibling" role="function">
+<title>arv_dom_node_get_next_sibling&#160;()</title>
+<indexterm zone="arv-dom-node-get-next-sibling"><primary>arv_dom_node_get_next_sibling</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_get_next_sibling (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<refsect3 id="arv-dom-node-get-next-sibling.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-next-sibling.returns" role="returns">
+<title>Returns</title>
+<para><parameter>self</parameter>
+next sibling. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-get-attributes" role="function">
+<title>arv_dom_node_get_attributes&#160;()</title>
+<indexterm zone="arv-dom-node-get-attributes"><primary>arv_dom_node_get_attributes</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNamedNodeMap"><returnvalue>ArvDomNamedNodeMap</returnvalue></link>&#160;*
+arv_dom_node_get_attributes (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-node-insert-before" role="function">
+<title>arv_dom_node_insert_before&#160;()</title>
+<indexterm zone="arv-dom-node-insert-before"><primary>arv_dom_node_insert_before</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_insert_before (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>,
+                            <parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *new_child</parameter>,
+                            <parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *ref_child</parameter>);</programlisting>
+<para>Inserts the node <parameter>new_child</parameter>
+ before the existing child node <parameter>ref_child</parameter>
+. If
+<parameter>ref_child</parameter>
+ is null, insert <parameter>new_child</parameter>
+ at the end of the list of children.
+If the <parameter>new_child</parameter>
+ is already in the tree, it is first removed.</para>
+<refsect3 id="arv-dom-node-insert-before.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>new_child</para></entry>
+<entry role="parameter_description"><para>node to insert. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>ref_child</para></entry>
+<entry role="parameter_description"><para>reference node, i.e., the node before which the new node must be inserted. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-insert-before.returns" role="returns">
+<title>Returns</title>
+<para>the inserted node. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-replace-child" role="function">
+<title>arv_dom_node_replace_child&#160;()</title>
+<indexterm zone="arv-dom-node-replace-child"><primary>arv_dom_node_replace_child</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_replace_child (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>,
+                            <parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *new_child</parameter>,
+                            <parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *old_child</parameter>);</programlisting>
+<para>Replaces the child node <parameter>old_child</parameter>
+ with <parameter>new_child</parameter>
+ in the list of children,
+and returns the <parameter>old_child</parameter>
+ node.
+If the <parameter>new_child</parameter>
+ is already in the tree, it is first removed.</para>
+<refsect3 id="arv-dom-node-replace-child.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>new_child</para></entry>
+<entry role="parameter_description"><para>a replacement node. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>old_child</para></entry>
+<entry role="parameter_description"><para>node to replace. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-replace-child.returns" role="returns">
+<title>Returns</title>
+<para>the replaced node. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-append-child" role="function">
+<title>arv_dom_node_append_child&#160;()</title>
+<indexterm zone="arv-dom-node-append-child"><primary>arv_dom_node_append_child</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_append_child (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>,
+                           <parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *new_child</parameter>);</programlisting>
+<para>Adds the node <parameter>new_child</parameter>
+ to the end of the list of children of this node.
+If the <parameter>new_child</parameter>
+ is already in the tree, it is first removed.</para>
+<refsect3 id="arv-dom-node-append-child.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>new_child</para></entry>
+<entry role="parameter_description"><para>node to append. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-append-child.returns" role="returns">
+<title>Returns</title>
+<para>the added node. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-remove-child" role="function">
+<title>arv_dom_node_remove_child&#160;()</title>
+<indexterm zone="arv-dom-node-remove-child"><primary>arv_dom_node_remove_child</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_remove_child (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>,
+                           <parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *old_child</parameter>);</programlisting>
+<para>Removes the child node indicated by <parameter>old_child</parameter>
+ from the list of children, and returns it.</para>
+<refsect3 id="arv-dom-node-remove-child.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>old_child</para></entry>
+<entry role="parameter_description"><para>node to remove. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-remove-child.returns" role="returns">
+<title>Returns</title>
+<para>the removed node. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-has-child-nodes" role="function">
+<title>arv_dom_node_has_child_nodes&#160;()</title>
+<indexterm zone="arv-dom-node-has-child-nodes"><primary>arv_dom_node_has_child_nodes</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_dom_node_has_child_nodes (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-node-changed" role="function">
+<title>arv_dom_node_changed&#160;()</title>
+<indexterm zone="arv-dom-node-changed"><primary>arv_dom_node_changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_node_changed (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-node-get-owner-document" role="function">
+<title>arv_dom_node_get_owner_document&#160;()</title>
+<indexterm zone="arv-dom-node-get-owner-document"><primary>arv_dom_node_get_owner_document</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+arv_dom_node_get_owner_document (<parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *self</parameter>);</programlisting>
+<refsect3 id="arv-dom-node-get-owner-document.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-get-owner-document.returns" role="returns">
+<title>Returns</title>
+<para><parameter>self</parameter>
+owner document. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ArvDomNode.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvDomNode-struct" role="struct">
+<title>ArvDomNode</title>
+<indexterm zone="ArvDomNode-struct"><primary>ArvDomNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvDomNode ArvDomNode;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

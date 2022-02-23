@@ -1,0 +1,4473 @@
+<ENUM>
+<NAME>ArvBufferStatus</NAME>
+typedef enum {
+	ARV_BUFFER_STATUS_UNKNOWN = -1,
+	ARV_BUFFER_STATUS_SUCCESS = 0,
+	ARV_BUFFER_STATUS_CLEARED,
+	ARV_BUFFER_STATUS_TIMEOUT,
+	ARV_BUFFER_STATUS_MISSING_PACKETS,
+	ARV_BUFFER_STATUS_WRONG_PACKET_ID,
+	ARV_BUFFER_STATUS_SIZE_MISMATCH,
+	ARV_BUFFER_STATUS_FILLING,
+	ARV_BUFFER_STATUS_ABORTED
+} ArvBufferStatus;
+</ENUM>
+<ENUM>
+<NAME>ArvBufferPayloadType</NAME>
+typedef enum {
+	ARV_BUFFER_PAYLOAD_TYPE_UNKNOWN = 		-1,
+	ARV_BUFFER_PAYLOAD_TYPE_IMAGE =			0x0001,
+	ARV_BUFFER_PAYLOAD_TYPE_RAWDATA = 		0x0002,
+	ARV_BUFFER_PAYLOAD_TYPE_FILE = 			0x0003,
+	ARV_BUFFER_PAYLOAD_TYPE_CHUNK_DATA = 		0x0004,
+	ARV_BUFFER_PAYLOAD_TYPE_EXTENDED_CHUNK_DATA = 	0x0005, /* Deprecated */
+	ARV_BUFFER_PAYLOAD_TYPE_JPEG = 			0x0006,
+	ARV_BUFFER_PAYLOAD_TYPE_JPEG2000 = 		0x0007,
+	ARV_BUFFER_PAYLOAD_TYPE_H264 = 			0x0008,
+	ARV_BUFFER_PAYLOAD_TYPE_MULTIZONE_IMAGE = 	0x0009,
+	ARV_BUFFER_PAYLOAD_TYPE_IMAGE_EXTENDED_CHUNK = 	0x4001
+} ArvBufferPayloadType;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_BUFFER</NAME>
+#define ARV_TYPE_BUFFER             (arv_buffer_get_type ())
+</MACRO>
+<USER_FUNCTION>
+<NAME>ArvFrameCallback</NAME>
+<RETURNS>void</RETURNS>
+ArvBuffer *buffer
+</USER_FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_new_allocate</NAME>
+<RETURNS>ArvBuffer *</RETURNS>
+size_t size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_new</NAME>
+<RETURNS>ArvBuffer *</RETURNS>
+size_t size, void *preallocated
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_new_full</NAME>
+<RETURNS>ArvBuffer *</RETURNS>
+size_t size, void *preallocated, void *user_data, GDestroyNotify user_data_destroy_func
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_status</NAME>
+<RETURNS>ArvBufferStatus</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_user_data</NAME>
+<RETURNS>const void *</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_payload_type</NAME>
+<RETURNS>ArvBufferPayloadType</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_timestamp</NAME>
+<RETURNS>guint64</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_set_timestamp</NAME>
+<RETURNS>void</RETURNS>
+ArvBuffer *buffer, guint64 timestamp_ns
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_system_timestamp</NAME>
+<RETURNS>guint64</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_set_system_timestamp</NAME>
+<RETURNS>void</RETURNS>
+ArvBuffer *buffer, guint64 timestamp_ns
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_set_frame_id</NAME>
+<RETURNS>void</RETURNS>
+ArvBuffer *buffer, guint64 frame_id
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_frame_id</NAME>
+<RETURNS>guint64</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_data</NAME>
+<RETURNS>const void *</RETURNS>
+ArvBuffer *buffer, size_t *size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_image_region</NAME>
+<RETURNS>void</RETURNS>
+ArvBuffer *buffer, gint *x, gint *y, gint *width, gint *height
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_image_width</NAME>
+<RETURNS>gint</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_image_height</NAME>
+<RETURNS>gint</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_image_x</NAME>
+<RETURNS>gint</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_image_y</NAME>
+<RETURNS>gint</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_image_pixel_format</NAME>
+<RETURNS>ArvPixelFormat</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_has_chunks</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_buffer_get_chunk_data</NAME>
+<RETURNS>const void *</RETURNS>
+ArvBuffer *buffer, guint64 chunk_id, size_t *size
+</FUNCTION>
+<STRUCT>
+<NAME>ArvBuffer</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_CAMERA</NAME>
+#define ARV_TYPE_CAMERA             (arv_camera_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvCameraClass</NAME>
+struct _ArvCameraClass {
+	GObjectClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_camera_new</NAME>
+<RETURNS>ArvCamera *</RETURNS>
+const char *name, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_new_with_device</NAME>
+<RETURNS>ArvCamera *</RETURNS>
+ArvDevice *device, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_device</NAME>
+<RETURNS>ArvDevice *</RETURNS>
+ArvCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_create_stream</NAME>
+<RETURNS>ArvStream *</RETURNS>
+ArvCamera *camera, ArvStreamCallback callback, void *user_data, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_vendor_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_model_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_device_serial_number</NAME>
+<RETURNS>const char *</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_device_id</NAME>
+<RETURNS>const char *</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_sensor_size</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *width, gint *height, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_region</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint x, gint y, gint width, gint height, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_region</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *x, gint *y, gint *width, gint *height, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_x_offset_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *min, gint *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_x_offset_increment</NAME>
+<RETURNS>gint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_y_offset_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *min, gint *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_y_offset_increment</NAME>
+<RETURNS>gint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_width_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *min, gint *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_width_increment</NAME>
+<RETURNS>gint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_height_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *min, gint *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_height_increment</NAME>
+<RETURNS>gint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_binning</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint dx, gint dy, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_binning</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *dx, gint *dy, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_x_binning_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *min, gint *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_x_binning_increment</NAME>
+<RETURNS>gint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_y_binning_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint *min, gint *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_y_binning_increment</NAME>
+<RETURNS>gint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_binning_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_pixel_format</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvPixelFormat format, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_pixel_format_from_string</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char * format, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_pixel_format</NAME>
+<RETURNS>ArvPixelFormat</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_pixel_format_as_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_dup_available_pixel_formats</NAME>
+<RETURNS>gint64 *</RETURNS>
+ArvCamera *camera, guint *n_pixel_formats, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_dup_available_pixel_formats_as_strings</NAME>
+<RETURNS>const char **</RETURNS>
+ArvCamera *camera, guint *n_pixel_formats, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_dup_available_pixel_formats_as_display_names</NAME>
+<RETURNS>const char **</RETURNS>
+ArvCamera *camera, guint *n_pixel_formats, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_start_acquisition</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_stop_acquisition</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_abort_acquisition</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_acquisition</NAME>
+<RETURNS>ArvBuffer *</RETURNS>
+ArvCamera *camera, guint64 timeout, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_acquisition_mode</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvAcquisitionMode value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_acquisition_mode</NAME>
+<RETURNS>ArvAcquisitionMode</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_frame_count</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint64 frame_count, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_frame_count</NAME>
+<RETURNS>gint64</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_frame_count_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint64 *min, gint64 *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_frame_rate_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_frame_rate</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, double frame_rate, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_frame_rate</NAME>
+<RETURNS>double</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_frame_rate_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, double *min, double *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_trigger</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *source, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_trigger_source</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *source, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_trigger_source</NAME>
+<RETURNS>const char *</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_dup_available_trigger_sources</NAME>
+<RETURNS>const char **</RETURNS>
+ArvCamera *camera, guint *n_sources, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_dup_available_triggers</NAME>
+<RETURNS>const char **</RETURNS>
+ArvCamera *camera, guint *n_triggers, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_clear_triggers</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_software_trigger_supported</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_software_trigger</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_exposure_time_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_exposure_auto_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_exposure_time</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, double exposure_time_us, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_exposure_time</NAME>
+<RETURNS>double</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_exposure_time_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, double *min, double *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_exposure_time_auto</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvAuto auto_mode, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_exposure_time_auto</NAME>
+<RETURNS>ArvAuto</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_exposure_mode</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvExposureMode mode, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_gain_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_gain_auto_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_gain</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, double gain, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_gain</NAME>
+<RETURNS>double</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_gain_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, double *min, double *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_gain_auto</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvAuto auto_mode, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_gain_auto</NAME>
+<RETURNS>ArvAuto</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_black_level_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_black_level_auto_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_black_level</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, double blacklevel, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_black_level</NAME>
+<RETURNS>double</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_black_level_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, double *min, double *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_black_level_auto</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvAuto auto_mode, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_black_level_auto</NAME>
+<RETURNS>ArvAuto</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_payload</NAME>
+<RETURNS>guint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_execute_command</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_boolean</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *feature, gboolean value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_boolean</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_boolean_gi</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *feature, gboolean *value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_string</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *feature, const char *value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvCamera *camera, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_integer</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *feature, gint64 value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_integer</NAME>
+<RETURNS>gint64</RETURNS>
+ArvCamera *camera, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_integer_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *feature, gint64 *min, gint64 *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_integer_increment</NAME>
+<RETURNS>gint64</RETURNS>
+ArvCamera *camera, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_float</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *feature, double value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_float</NAME>
+<RETURNS>double</RETURNS>
+ArvCamera *camera, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_float_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *feature, double *min, double *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_float_increment</NAME>
+<RETURNS>double</RETURNS>
+ArvCamera *camera, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_dup_available_enumerations</NAME>
+<RETURNS>gint64 *</RETURNS>
+ArvCamera *camera, const char *feature, guint *n_values, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_dup_available_enumerations_as_strings</NAME>
+<RETURNS>const char **</RETURNS>
+ArvCamera *camera, const char *feature, guint *n_values, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_dup_available_enumerations_as_display_names</NAME>
+<RETURNS>const char **</RETURNS>
+ArvCamera *camera, const char *feature, guint *n_values, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_enumeration_entry_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, const char *feature, const char *entry, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_feature_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_register_cache_policy</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvRegisterCachePolicy policy
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_range_check_policy</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvRangeCheckPolicy policy
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_gv_device</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_get_n_stream_channels</NAME>
+<RETURNS>gint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_select_stream_channel</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint channel_id, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_get_current_stream_channel</NAME>
+<RETURNS>int</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_set_packet_delay</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint64 delay_ns, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_get_packet_delay</NAME>
+<RETURNS>gint64</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_set_packet_size</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gint packet_size, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_get_packet_size</NAME>
+<RETURNS>guint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_auto_packet_size</NAME>
+<RETURNS>guint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_set_packet_size_adjustment</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvGvPacketSizeAdjustment adjustment
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_gv_set_stream_options</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvGvStreamOption options
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_is_uv_device</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_uv_is_bandwidth_control_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_uv_set_bandwidth</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, guint bandwidth, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_uv_get_bandwidth</NAME>
+<RETURNS>guint</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_uv_get_bandwidth_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, guint *min, guint *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_uv_set_usb_mode</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, ArvUvUsbMode usb_mode
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_are_chunks_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_chunk_mode</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, gboolean is_active, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_chunk_mode</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_chunk_state</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *chunk, gboolean is_enabled, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_get_chunk_state</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvCamera *camera, const char *chunk, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_set_chunks</NAME>
+<RETURNS>void</RETURNS>
+ArvCamera *camera, const char *chunk_list, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_camera_create_chunk_parser</NAME>
+<RETURNS>ArvChunkParser *</RETURNS>
+ArvCamera *camera
+</FUNCTION>
+<STRUCT>
+<NAME>ArvCamera</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_CHUNK_PARSER_ERROR</NAME>
+#define ARV_CHUNK_PARSER_ERROR arv_chunk_parser_error_quark()
+</MACRO>
+<FUNCTION>
+<NAME>arv_chunk_parser_error_quark</NAME>
+<RETURNS>GQuark</RETURNS>
+void
+</FUNCTION>
+<ENUM>
+<NAME>ArvChunkParserError</NAME>
+typedef enum {
+	ARV_CHUNK_PARSER_ERROR_INVALID_FEATURE_TYPE,
+	ARV_CHUNK_PARSER_ERROR_BUFFER_NOT_FOUND,
+	ARV_CHUNK_PARSER_ERROR_CHUNK_NOT_FOUND
+} ArvChunkParserError;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_CHUNK_PARSER</NAME>
+#define ARV_TYPE_CHUNK_PARSER             (arv_chunk_parser_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_chunk_parser_new</NAME>
+<RETURNS>ArvChunkParser *</RETURNS>
+const char *xml, gsize size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_chunk_parser_get_boolean_value</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvChunkParser *parser, ArvBuffer *buffer, const char *chunk, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_chunk_parser_get_string_value</NAME>
+<RETURNS>const char *</RETURNS>
+ArvChunkParser *parser, ArvBuffer *buffer, const char *chunk, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_chunk_parser_get_integer_value</NAME>
+<RETURNS>gint64</RETURNS>
+ArvChunkParser *parser, ArvBuffer *buffer, const char *chunk, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_chunk_parser_get_float_value</NAME>
+<RETURNS>double</RETURNS>
+ArvChunkParser *parser, ArvBuffer *buffer, const char *chunk, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvChunkParser</NAME>
+</STRUCT>
+<FUNCTION>
+<NAME>arv_debug_enable</NAME>
+<RETURNS>gboolean</RETURNS>
+const char *category_selection
+</FUNCTION>
+<MACRO>
+<NAME>ARV_DEVICE_ERROR</NAME>
+#define ARV_DEVICE_ERROR arv_device_error_quark()
+</MACRO>
+<FUNCTION>
+<NAME>arv_device_error_quark</NAME>
+<RETURNS>GQuark</RETURNS>
+void
+</FUNCTION>
+<ENUM>
+<NAME>ArvDeviceError</NAME>
+typedef enum {
+	ARV_DEVICE_ERROR_WRONG_FEATURE,
+	ARV_DEVICE_ERROR_FEATURE_NOT_FOUND,
+	ARV_DEVICE_ERROR_NOT_CONNECTED,
+	ARV_DEVICE_ERROR_PROTOCOL_ERROR,
+	ARV_DEVICE_ERROR_TRANSFER_ERROR,
+	ARV_DEVICE_ERROR_TIMEOUT,
+	ARV_DEVICE_ERROR_NOT_FOUND,
+	ARV_DEVICE_ERROR_INVALID_PARAMETER,
+	ARV_DEVICE_ERROR_GENICAM_NOT_FOUND,
+	ARV_DEVICE_ERROR_NO_STREAM_CHANNEL,
+	ARV_DEVICE_ERROR_NOT_CONTROLLER,
+	ARV_DEVICE_ERROR_UNKNOWN
+} ArvDeviceError;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_DEVICE</NAME>
+#define ARV_TYPE_DEVICE             (arv_device_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDeviceClass</NAME>
+struct _ArvDeviceClass {
+	GObjectClass parent_class;
+
+	ArvStream *	(*create_stream)	(ArvDevice *device, ArvStreamCallback callback, void *user_data, GError **error);
+
+	const char *	(*get_genicam_xml)	(ArvDevice *device, size_t *size);
+	ArvGc *		(*get_genicam)		(ArvDevice *device);
+
+	gboolean	(*read_memory)		(ArvDevice *device, guint64 address, guint32 size, void *buffer, GError **error);
+	gboolean	(*write_memory)		(ArvDevice *device, guint64 address, guint32 size, void *buffer, GError **error);
+	gboolean	(*read_register)	(ArvDevice *device, guint64 address, guint32 *value, GError **error);
+	gboolean	(*write_register)	(ArvDevice *device, guint64 address, guint32 value, GError **error);
+
+	/* signals */
+	void		(*control_lost)		(ArvDevice *device);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_device_create_stream</NAME>
+<RETURNS>ArvStream *</RETURNS>
+ArvDevice *device, ArvStreamCallback callback, void *user_data, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_read_memory</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDevice *device, guint64 address, guint32 size, void *buffer, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_write_memory</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDevice *device, guint64 address, guint32 size, void *buffer, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_read_register</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDevice *device, guint64 address, guint32 *value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_write_register</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDevice *device, guint64 address, guint32 value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_genicam_xml</NAME>
+<RETURNS>const char *</RETURNS>
+ArvDevice *device, size_t *size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_genicam</NAME>
+<RETURNS>ArvGc *</RETURNS>
+ArvDevice *device
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_is_feature_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDevice *device, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_feature</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+ArvDevice *device, const char *feature
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_create_chunk_parser</NAME>
+<RETURNS>ArvChunkParser *</RETURNS>
+ArvDevice *device
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_execute_command</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_set_boolean_feature_value</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, const char *feature, gboolean value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_boolean_feature_value</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDevice *device, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_boolean_feature_value_gi</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, const char *feature, gboolean *value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_set_string_feature_value</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, const char *feature, const char *value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_string_feature_value</NAME>
+<RETURNS>const char *</RETURNS>
+ArvDevice *device, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_set_integer_feature_value</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, const char *feature, gint64 value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_integer_feature_value</NAME>
+<RETURNS>gint64</RETURNS>
+ArvDevice *device, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_integer_feature_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, const char *feature, gint64 *min, gint64 *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_integer_feature_increment</NAME>
+<RETURNS>gint64</RETURNS>
+ArvDevice *device, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_set_float_feature_value</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, const char *feature, double value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_float_feature_value</NAME>
+<RETURNS>double</RETURNS>
+ArvDevice *device, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_float_feature_bounds</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, const char *feature, double *min, double *max, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_get_float_feature_increment</NAME>
+<RETURNS>double</RETURNS>
+ArvDevice *device, const char *feature, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_dup_available_enumeration_feature_values</NAME>
+<RETURNS>gint64 *</RETURNS>
+ArvDevice *device, const char *feature, guint *n_values, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_dup_available_enumeration_feature_values_as_strings</NAME>
+<RETURNS>const char **</RETURNS>
+ArvDevice *device, const char *feature, guint *n_values, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_dup_available_enumeration_feature_values_as_display_names</NAME>
+<RETURNS>const char **</RETURNS>
+ArvDevice *device, const char *feature, guint *n_values, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_is_enumeration_entry_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDevice *device, const char *feature, const char *entry, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_set_features_from_string</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDevice *device, const char *string, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_set_register_cache_policy</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, ArvRegisterCachePolicy policy
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_device_set_range_check_policy</NAME>
+<RETURNS>void</RETURNS>
+ArvDevice *device, ArvRangeCheckPolicy policy
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDevice</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_DOM_CHARACTER_DATA</NAME>
+#define ARV_TYPE_DOM_CHARACTER_DATA             (arv_dom_character_data_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDomCharacterDataClass</NAME>
+struct _ArvDomCharacterDataClass {
+	ArvDomNodeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_character_data_get_data</NAME>
+<RETURNS>const char *</RETURNS>
+ArvDomCharacterData *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_character_data_set_data</NAME>
+<RETURNS>void</RETURNS>
+ArvDomCharacterData *self, const char *value
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomCharacterData</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_DOM_DOCUMENT</NAME>
+#define ARV_TYPE_DOM_DOCUMENT             (arv_dom_document_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDomDocumentClass</NAME>
+struct _ArvDomDocumentClass {
+	ArvDomNodeClass parent_class;
+
+	ArvDomElement *	(*get_document_element) (ArvDomDocument* self);
+	ArvDomElement *	(*create_element) 	(ArvDomDocument* self, const char *tag_name);
+	ArvDomText * 	(*create_text_node) 	(ArvDomDocument* self, const char *data);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_document_get_document_element</NAME>
+<RETURNS>ArvDomElement *</RETURNS>
+ArvDomDocument *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_create_element</NAME>
+<RETURNS>ArvDomElement *</RETURNS>
+ArvDomDocument *self, const char *tag_name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_create_text_node</NAME>
+<RETURNS>ArvDomText *</RETURNS>
+ArvDomDocument *self, const char *data
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_get_url</NAME>
+<RETURNS>const char *</RETURNS>
+ArvDomDocument *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_set_url</NAME>
+<RETURNS>void</RETURNS>
+ArvDomDocument *self, const char *url
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_set_path</NAME>
+<RETURNS>void</RETURNS>
+ArvDomDocument *self, const char *path
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_get_href_data</NAME>
+<RETURNS>void *</RETURNS>
+ArvDomDocument *self, const char *href, gsize *size
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomDocument</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_DOM_DOCUMENT_FRAGMENT</NAME>
+#define ARV_TYPE_DOM_DOCUMENT_FRAGMENT             (arv_dom_document_fragment_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDomDocumentFragmentClass</NAME>
+struct _ArvDomDocumentFragmentClass {
+	ArvDomNodeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_document_fragment_new</NAME>
+<RETURNS>ArvDomDocumentFragment *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomDocumentFragment</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_DOM_ELEMENT</NAME>
+#define ARV_TYPE_DOM_ELEMENT (arv_dom_element_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDomElementClass</NAME>
+struct _ArvDomElementClass {
+	ArvDomNodeClass parent_class;
+
+	const char* 	(*get_attribute) (ArvDomElement *self, const char *name);
+	void 		(*set_attribute) (ArvDomElement *self, const char *name, const char *attribute_value);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_element_get_tag_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvDomElement *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_element_get_attribute</NAME>
+<RETURNS>const char *</RETURNS>
+ArvDomElement *self, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_element_set_attribute</NAME>
+<RETURNS>void</RETURNS>
+ArvDomElement *self, const char *name, const char *attribute_value
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomElement</NAME>
+</STRUCT>
+<USER_FUNCTION>
+<NAME>ArvDomDocumentCreateFunction</NAME>
+<RETURNS>ArvDomDocument *</RETURNS>
+void
+</USER_FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_implementation_create_document</NAME>
+<RETURNS>ArvDomDocument *</RETURNS>
+const char *namespace_uri, const char *qualified_name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_implementation_add_document_type</NAME>
+<RETURNS>void</RETURNS>
+const char *qualified_name, GType document_type
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_implementation_cleanup</NAME>
+<RETURNS>void</RETURNS>
+void
+</FUNCTION>
+<MACRO>
+<NAME>ARV_TYPE_DOM_NAMED_NODE_MAP</NAME>
+#define ARV_TYPE_DOM_NAMED_NODE_MAP             (arv_dom_named_node_map_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDomNamedNodeMapClass</NAME>
+struct _ArvDomNamedNodeMapClass {
+	GObjectClass parent_class;
+
+	ArvDomNode *	(*get) 			(ArvDomNamedNodeMap *map, const char *name);
+	ArvDomNode *	(*set) 			(ArvDomNamedNodeMap *map, ArvDomNode *node);
+	ArvDomNode *	(*remove) 		(ArvDomNamedNodeMap *map, const char *name);
+	ArvDomNode *	(*get_item) 		(ArvDomNamedNodeMap *map, unsigned int index);
+	unsigned int	(*get_length)		(ArvDomNamedNodeMap *map);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_named_node_map_get_named_item</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNamedNodeMap *map, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_named_node_map_set_named_item</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNamedNodeMap *map, ArvDomNode *item
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_named_node_map_remove_named_item</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNamedNodeMap *map, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_named_node_map_get_item</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNamedNodeMap *map, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_named_node_map_get_length</NAME>
+<RETURNS>unsigned int</RETURNS>
+ArvDomNamedNodeMap *map
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomNamedNodeMap</NAME>
+</STRUCT>
+<ENUM>
+<NAME>ArvDomNodeType</NAME>
+typedef enum  {
+	ARV_DOM_NODE_TYPE_ELEMENT_NODE = 1,
+	ARV_DOM_NODE_TYPE_ATTRIBUTE_NODE,
+	ARV_DOM_NODE_TYPE_TEXT_NODE,
+	ARV_DOM_NODE_TYPE_CDATA_SECTION_NODE,
+	ARV_DOM_NODE_TYPE_ENTITY_REFERENCE_NODE,
+	ARV_DOM_NODE_TYPE_ENTITY_NODE,
+	ARV_DOM_NODE_TYPE_PROCESSING_INSTRUCTION_NODE,
+	ARV_DOM_NODE_TYPE_COMMENT_NODE,
+	ARV_DOM_NODE_TYPE_DOCUMENT_NODE,
+	ARV_DOM_NODE_TYPE_DOCUMENT_TYPE_NODE,
+	ARV_DOM_NODE_TYPE_DOCUMENT_FRAGMENT_NODE,
+	ARV_DOM_NODE_TYPE_NOTATION_NODE
+} ArvDomNodeType;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_DOM_NODE</NAME>
+#define ARV_TYPE_DOM_NODE             (arv_dom_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDomNodeClass</NAME>
+struct _ArvDomNodeClass {
+	GObjectClass parent_class;
+
+	/* DOM node virtuals */
+
+	const char* 		(*get_node_name) 	(ArvDomNode* self);
+	const char* 		(*get_node_value) 	(ArvDomNode* self);
+	void 			(*set_node_value) 	(ArvDomNode* self, const char* new_value);
+	ArvDomNodeType 		(*get_node_type) 	(ArvDomNode* self);
+
+	/* Validation virtuals */
+
+	gboolean		(*can_append_child) 	(ArvDomNode *self, ArvDomNode *new_child);
+
+	/* Implementation virtuals */
+
+	void			(*post_new_child) 	(ArvDomNode *parent, ArvDomNode *child);
+	void			(*pre_remove_child) 	(ArvDomNode *parent, ArvDomNode *child);
+	void			(*changed)		(ArvDomNode *self);
+	gboolean		(*child_changed)	(ArvDomNode *self, ArvDomNode *child);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_node_get_node_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_node_value</NAME>
+<RETURNS>const char *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_set_node_value</NAME>
+<RETURNS>void</RETURNS>
+ArvDomNode *self, const char *new_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_node_type</NAME>
+<RETURNS>ArvDomNodeType</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_parent_node</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_child_nodes</NAME>
+<RETURNS>ArvDomNodeList *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_first_child</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_last_child</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_previous_sibling</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_next_sibling</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_attributes</NAME>
+<RETURNS>ArvDomNamedNodeMap *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_insert_before</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self, ArvDomNode *new_child, ArvDomNode *ref_child
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_replace_child</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self, ArvDomNode *new_child, ArvDomNode *old_child
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_append_child</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self, ArvDomNode *new_child
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_remove_child</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNode *self, ArvDomNode *old_child
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_has_child_nodes</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_changed</NAME>
+<RETURNS>void</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_get_owner_document</NAME>
+<RETURNS>ArvDomDocument *</RETURNS>
+ArvDomNode *self
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_DOM_NODE_CHILD_LIST</NAME>
+#define ARV_TYPE_DOM_NODE_CHILD_LIST (arv_dom_node_child_list_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_dom_node_child_list_new</NAME>
+<RETURNS>ArvDomNodeList *</RETURNS>
+ArvDomNode *parent_node
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomNodeChildList</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_DOM_NODE_LIST</NAME>
+#define ARV_TYPE_DOM_NODE_LIST             (arv_dom_node_list_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDomNodeListClass</NAME>
+struct _ArvDomNodeListClass {
+	GObjectClass parent_class;
+
+	ArvDomNode *	(*get_item) 		(ArvDomNodeList *list, unsigned int index);
+	unsigned int	(*get_length)		(ArvDomNodeList *list);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_node_list_get_item</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+ArvDomNodeList *list, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_node_list_get_length</NAME>
+<RETURNS>unsigned int</RETURNS>
+ArvDomNodeList *list
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomNodeList</NAME>
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_document_append_from_memory</NAME>
+<RETURNS>void</RETURNS>
+ArvDomDocument *document, ArvDomNode *node, const void *buffer, int size, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_new_from_memory</NAME>
+<RETURNS>ArvDomDocument *</RETURNS>
+const void *buffer, int size, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_new_from_path</NAME>
+<RETURNS>ArvDomDocument *</RETURNS>
+const char *path, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_dom_document_new_from_url</NAME>
+<RETURNS>ArvDomDocument *</RETURNS>
+const char *url, GError **error
+</FUNCTION>
+<MACRO>
+<NAME>ARV_TYPE_DOM_TEXT</NAME>
+#define ARV_TYPE_DOM_TEXT             (arv_dom_text_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvDomTextClass</NAME>
+struct _ArvDomTextClass {
+	ArvDomCharacterDataClass  parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_dom_text_new</NAME>
+<RETURNS>ArvDomNode *</RETURNS>
+const char *data
+</FUNCTION>
+<STRUCT>
+<NAME>ArvDomText</NAME>
+</STRUCT>
+<ENUM>
+<NAME>ArvAuto</NAME>
+typedef enum {
+	ARV_AUTO_OFF,
+	ARV_AUTO_ONCE,
+	ARV_AUTO_CONTINUOUS
+} ArvAuto;
+</ENUM>
+<FUNCTION>
+<NAME>arv_auto_to_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvAuto value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_auto_from_string</NAME>
+<RETURNS>ArvAuto</RETURNS>
+const char *string
+</FUNCTION>
+<ENUM>
+<NAME>ArvAcquisitionMode</NAME>
+typedef enum {
+	ARV_ACQUISITION_MODE_CONTINUOUS,
+	ARV_ACQUISITION_MODE_SINGLE_FRAME,
+	ARV_ACQUISITION_MODE_MULTI_FRAME
+} ArvAcquisitionMode;
+</ENUM>
+<FUNCTION>
+<NAME>arv_acquisition_mode_to_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvAcquisitionMode value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_acquisition_mode_from_string</NAME>
+<RETURNS>ArvAcquisitionMode</RETURNS>
+const char *string
+</FUNCTION>
+<ENUM>
+<NAME>ArvExposureMode</NAME>
+typedef enum {
+	ARV_EXPOSURE_MODE_OFF,
+	ARV_EXPOSURE_MODE_TIMED,
+	ARV_EXPOSURE_MODE_TRIGGER_WIDTH,
+	ARV_EXPOSURE_MODE_TRIGGER_CONTROLLED
+} ArvExposureMode;
+</ENUM>
+<FUNCTION>
+<NAME>arv_exposure_mode_to_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvExposureMode value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_exposure_mode_from_string</NAME>
+<RETURNS>ArvExposureMode</RETURNS>
+const char *string
+</FUNCTION>
+<ENUM>
+<NAME>ArvUvUsbMode</NAME>
+typedef enum
+{
+	ARV_UV_USB_MODE_SYNC,
+	ARV_UV_USB_MODE_ASYNC,
+        ARV_UV_USB_MODE_DEFAULT = ARV_UV_USB_MODE_SYNC
+} ArvUvUsbMode;
+</ENUM>
+<TYPEDEF>
+<NAME>ArvPixelFormat</NAME>
+typedef guint32 ArvPixelFormat;
+</TYPEDEF>
+<MACRO>
+<NAME>ARV_TYPE_PIXEL_FORMAT</NAME>
+#define ARV_TYPE_PIXEL_FORMAT G_TYPE_UINT32
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BIT_PER_PIXEL</NAME>
+#define ARV_PIXEL_FORMAT_BIT_PER_PIXEL(pixel_format) (((pixel_format) >> 16) & 0xff)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_MONO_8</NAME>
+#define	ARV_PIXEL_FORMAT_MONO_8			((ArvPixelFormat) 0x01080001u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_MONO_8_SIGNED</NAME>
+#define	ARV_PIXEL_FORMAT_MONO_8_SIGNED		((ArvPixelFormat) 0x01080002u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_MONO_10</NAME>
+#define	ARV_PIXEL_FORMAT_MONO_10		((ArvPixelFormat) 0x01100003u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_MONO_10_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_MONO_10_PACKED		((ArvPixelFormat) 0x010c0004u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_MONO_12</NAME>
+#define ARV_PIXEL_FORMAT_MONO_12		((ArvPixelFormat) 0x01100005u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_MONO_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_MONO_12_PACKED		((ArvPixelFormat) 0x010c0006u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_MONO_14</NAME>
+#define ARV_PIXEL_FORMAT_MONO_14		((ArvPixelFormat) 0x01100025u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_MONO_16</NAME>
+#define ARV_PIXEL_FORMAT_MONO_16		((ArvPixelFormat) 0x01100007u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GR_8</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GR_8		((ArvPixelFormat) 0x01080008u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_RG_8</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_RG_8		((ArvPixelFormat) 0x01080009u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GB_8</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GB_8		((ArvPixelFormat) 0x0108000au)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_BG_8</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_BG_8		((ArvPixelFormat) 0x0108000bu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GR_10</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GR_10		((ArvPixelFormat) 0x0110000cu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_RG_10</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_RG_10		((ArvPixelFormat) 0x0110000du)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GB_10</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GB_10		((ArvPixelFormat) 0x0110000eu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_BG_10</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_BG_10		((ArvPixelFormat) 0x0110000fu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GR_12</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GR_12		((ArvPixelFormat) 0x01100010u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_RG_12</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_RG_12		((ArvPixelFormat) 0x01100011u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GB_12</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GB_12		((ArvPixelFormat) 0x01100012u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_BG_12</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_BG_12		((ArvPixelFormat) 0x01100013u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GR_16</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GR_16		((ArvPixelFormat) 0x0110002eu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_RG_16</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_RG_16		((ArvPixelFormat) 0x0110002fu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GB_16</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GB_16		((ArvPixelFormat) 0x01100030u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_BG_16</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_BG_16		((ArvPixelFormat) 0x01100031u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_BG_10P</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_BG_10P		((ArvPixelFormat) 0x010a0052u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GB_10P</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GB_10P		((ArvPixelFormat) 0x010a0054u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GR_10P</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GR_10P		((ArvPixelFormat) 0x010a0056u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_RG_10P</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_RG_10P		((ArvPixelFormat) 0x010a0058u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_BG_12P</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_BG_12P		((ArvPixelFormat) 0x010c0053u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GB_12P</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GB_12P		((ArvPixelFormat) 0x010c0055u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GR_12P</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GR_12P		((ArvPixelFormat) 0x010c0057u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_RG_12P</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_RG_12P		((ArvPixelFormat) 0x010c0059u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED	((ArvPixelFormat) 0x010c002au)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED	((ArvPixelFormat) 0x010c002bu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED	((ArvPixelFormat) 0x010c002cu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED	((ArvPixelFormat) 0x010c002du)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED	((ArvPixelFormat) 0x010c0026u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED	((ArvPixelFormat) 0x010c0027u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED	((ArvPixelFormat) 0x010c0028u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED	((ArvPixelFormat) 0x010c0029u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_RGB_8_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_RGB_8_PACKED		((ArvPixelFormat) 0x02180014u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BGR_8_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BGR_8_PACKED		((ArvPixelFormat) 0x02180015u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_RGBA_8_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_RGBA_8_PACKED		((ArvPixelFormat) 0x02200016u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BGRA_8_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BGRA_8_PACKED		((ArvPixelFormat) 0x02200017u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_RGB_10_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_RGB_10_PACKED		((ArvPixelFormat) 0x02300018u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BGR_10_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BGR_10_PACKED		((ArvPixelFormat) 0x02300019u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_RGB_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_RGB_12_PACKED		((ArvPixelFormat) 0x0230001au)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_BGR_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_BGR_12_PACKED		((ArvPixelFormat) 0x0230001bu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_YUV_411_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_YUV_411_PACKED		((ArvPixelFormat) 0x020c001eu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_YUV_422_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_YUV_422_PACKED		((ArvPixelFormat) 0x0210001fu)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_YUV_444_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_YUV_444_PACKED		((ArvPixelFormat) 0x02180020u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_RGB_8_PLANAR</NAME>
+#define ARV_PIXEL_FORMAT_RGB_8_PLANAR		((ArvPixelFormat) 0x02180021u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_RGB_10_PLANAR</NAME>
+#define ARV_PIXEL_FORMAT_RGB_10_PLANAR		((ArvPixelFormat) 0x02300022u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_RGB_12_PLANAR</NAME>
+#define ARV_PIXEL_FORMAT_RGB_12_PLANAR		((ArvPixelFormat) 0x02300023u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_RGB_16_PLANAR</NAME>
+#define ARV_PIXEL_FORMAT_RGB_16_PLANAR		((ArvPixelFormat) 0x02300024u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED 	((ArvPixelFormat) 0x02100032u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED  	((ArvPixelFormat) 0x810c0001u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED  	((ArvPixelFormat) 0x810c0002u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED  	((ArvPixelFormat) 0x810c0003u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED  	((ArvPixelFormat) 0x810c0004u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED 	((ArvPixelFormat) 0x82100005u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16		((ArvPixelFormat) 0x81100006u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16		((ArvPixelFormat) 0x81100007u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16		((ArvPixelFormat) 0x81100008u)
+</MACRO>
+<MACRO>
+<NAME>ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16</NAME>
+#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16		((ArvPixelFormat) 0x81100009u)
+</MACRO>
+<MACRO>
+<NAME>ARV_TYPE_EVALUATOR</NAME>
+#define ARV_TYPE_EVALUATOR             (arv_evaluator_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_evaluator_new</NAME>
+<RETURNS>ArvEvaluator *</RETURNS>
+const char *expression
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_set_expression</NAME>
+<RETURNS>void</RETURNS>
+ArvEvaluator *evaluator, const char *expression
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_get_expression</NAME>
+<RETURNS>const char *</RETURNS>
+ArvEvaluator *evaluator
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_set_sub_expression</NAME>
+<RETURNS>void</RETURNS>
+ArvEvaluator *evaluator, const char *name, const char *expression
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_get_sub_expression</NAME>
+<RETURNS>const char *</RETURNS>
+ArvEvaluator *evaluator, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_set_constant</NAME>
+<RETURNS>void</RETURNS>
+ArvEvaluator *evaluator, const char *name, const char *constant
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_get_constant</NAME>
+<RETURNS>const char *</RETURNS>
+ArvEvaluator *evaluator, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_evaluate_as_double</NAME>
+<RETURNS>double</RETURNS>
+ArvEvaluator *evaluator, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_evaluate_as_int64</NAME>
+<RETURNS>gint64</RETURNS>
+ArvEvaluator *evaluator, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_set_double_variable</NAME>
+<RETURNS>void</RETURNS>
+ArvEvaluator *evaluator, const char *name, double v_double
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_evaluator_set_int64_variable</NAME>
+<RETURNS>void</RETURNS>
+ArvEvaluator *evaluator, const char *name, gint64 v_int64
+</FUNCTION>
+<STRUCT>
+<NAME>ArvEvaluator</NAME>
+</STRUCT>
+<FUNCTION>
+<NAME>arv_set_fake_camera_genicam_filename</NAME>
+<RETURNS>void</RETURNS>
+const char *filename
+</FUNCTION>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_MEMORY_SIZE</NAME>
+#define ARV_FAKE_CAMERA_MEMORY_SIZE	0x10000
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_SENSOR_WIDTH</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_SENSOR_WIDTH		0x11c
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_SENSOR_HEIGHT</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_SENSOR_HEIGHT		0x118
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_WIDTH</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_WIDTH			0x100
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_HEIGHT</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_HEIGHT			0x104
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_X_OFFSET</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_X_OFFSET		0x130
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_Y_OFFSET</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_Y_OFFSET		0x134
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_BINNING_HORIZONTAL</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_BINNING_HORIZONTAL	0x108
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_BINNING_VERTICAL</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_BINNING_VERTICAL	0x10c
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_PIXEL_FORMAT</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_PIXEL_FORMAT		0x128
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_TEST</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_TEST			0x1f0
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_SENSOR_WIDTH</NAME>
+#define ARV_FAKE_CAMERA_SENSOR_WIDTH			2048
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_SENSOR_HEIGHT</NAME>
+#define ARV_FAKE_CAMERA_SENSOR_HEIGHT			2048
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_WIDTH_DEFAULT</NAME>
+#define ARV_FAKE_CAMERA_WIDTH_DEFAULT			512
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_HEIGHT_DEFAULT</NAME>
+#define ARV_FAKE_CAMERA_HEIGHT_DEFAULT			512
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_BINNING_HORIZONTAL_DEFAULT</NAME>
+#define ARV_FAKE_CAMERA_BINNING_HORIZONTAL_DEFAULT	1
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_BINNING_VERTICAL_DEFAULT</NAME>
+#define ARV_FAKE_CAMERA_BINNING_VERTICAL_DEFAULT	1
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_PIXEL_FORMAT_DEFAULT</NAME>
+#define ARV_FAKE_CAMERA_PIXEL_FORMAT_DEFAULT		ARV_PIXEL_FORMAT_MONO_8
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_TEST_REGISTER_DEFAULT</NAME>
+#define ARV_FAKE_CAMERA_TEST_REGISTER_DEFAULT		0x12345678
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_ACQUISITION_MODE</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_ACQUISITION_MODE	0x12c
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_ACQUISITION_FRAME_PERIOD_US</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_ACQUISITION_FRAME_PERIOD_US	0x138
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_FRAME_START_OFFSET</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_FRAME_START_OFFSET		0x000
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_ACQUISITION_START_OFFSET</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_ACQUISITION_START_OFFSET	0x020
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_TRIGGER_MODE</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_TRIGGER_MODE		0x300
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_TRIGGER_SOURCE</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_TRIGGER_SOURCE		0x304
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_TRIGGER_ACTIVATION</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_TRIGGER_ACTIVATION	0x308
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_ACQUISITION</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_ACQUISITION		0x124
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_EXPOSURE_TIME_US</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_EXPOSURE_TIME_US	0x120
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_ACQUISITION_FRAME_RATE_DEFAULT</NAME>
+#define ARV_FAKE_CAMERA_ACQUISITION_FRAME_RATE_DEFAULT	25.0
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_EXPOSURE_TIME_US_DEFAULT</NAME>
+#define ARV_FAKE_CAMERA_EXPOSURE_TIME_US_DEFAULT	10000.0
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_GAIN_RAW</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_GAIN_RAW		0x110
+</MACRO>
+<MACRO>
+<NAME>ARV_FAKE_CAMERA_REGISTER_GAIN_MODE</NAME>
+#define ARV_FAKE_CAMERA_REGISTER_GAIN_MODE		0x114
+</MACRO>
+<MACRO>
+<NAME>ARV_TYPE_FAKE_CAMERA</NAME>
+#define ARV_TYPE_FAKE_CAMERA             (arv_fake_camera_get_type ())
+</MACRO>
+<USER_FUNCTION>
+<NAME>ArvFakeCameraFillPattern</NAME>
+<RETURNS>void</RETURNS>
+ArvBuffer *buffer, void *fill_pattern_data, guint32 exposure_time_us, guint32 gain, ArvPixelFormat pixel_format
+</USER_FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_new</NAME>
+<RETURNS>ArvFakeCamera *</RETURNS>
+const char *serial_number
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_new_full</NAME>
+<RETURNS>ArvFakeCamera *</RETURNS>
+const char *serial_number, const char *genicam_filename
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_read_memory</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvFakeCamera *camera, guint32 address, guint32 size, void *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_write_memory</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvFakeCamera *camera, guint32 address, guint32 size, const void *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_read_register</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvFakeCamera *camera, guint32 address, guint32 *value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_write_register</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvFakeCamera *camera, guint32 address, guint32 value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_get_payload</NAME>
+<RETURNS>size_t</RETURNS>
+ArvFakeCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_wait_for_next_frame</NAME>
+<RETURNS>void</RETURNS>
+ArvFakeCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_get_sleep_time_for_next_frame</NAME>
+<RETURNS>guint64</RETURNS>
+ArvFakeCamera *camera, guint64 *next_timestamp_us
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_fill_buffer</NAME>
+<RETURNS>void</RETURNS>
+ArvFakeCamera *camera, ArvBuffer *buffer, guint32 *packet_size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_get_acquisition_status</NAME>
+<RETURNS>guint32</RETURNS>
+ArvFakeCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_get_stream_address</NAME>
+<RETURNS>GSocketAddress *</RETURNS>
+ArvFakeCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_set_inet_address</NAME>
+<RETURNS>void</RETURNS>
+ArvFakeCamera *camera, GInetAddress *address
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_get_control_channel_privilege</NAME>
+<RETURNS>guint32</RETURNS>
+ArvFakeCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_set_control_channel_privilege</NAME>
+<RETURNS>void</RETURNS>
+ArvFakeCamera *camera, guint32 privilege
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_get_heartbeat_timeout</NAME>
+<RETURNS>guint32</RETURNS>
+ArvFakeCamera *camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_set_fill_pattern</NAME>
+<RETURNS>void</RETURNS>
+ArvFakeCamera *camera, ArvFakeCameraFillPattern fill_pattern_callback, void *fill_pattern_data
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_set_trigger_frequency</NAME>
+<RETURNS>void</RETURNS>
+ArvFakeCamera *camera, double frequency
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_camera_get_genicam_xml</NAME>
+<RETURNS>const char *</RETURNS>
+ArvFakeCamera *camera, size_t *size
+</FUNCTION>
+<STRUCT>
+<NAME>ArvFakeCamera</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_FAKE_DEVICE</NAME>
+#define ARV_TYPE_FAKE_DEVICE             (arv_fake_device_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_fake_device_new</NAME>
+<RETURNS>ArvDevice *</RETURNS>
+const char *serial_number, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_fake_device_get_fake_camera</NAME>
+<RETURNS>ArvFakeCamera *</RETURNS>
+ArvFakeDevice *device
+</FUNCTION>
+<STRUCT>
+<NAME>ArvFakeDevice</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_FAKE_INTERFACE</NAME>
+#define ARV_TYPE_FAKE_INTERFACE             (arv_fake_interface_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_fake_interface_get_instance</NAME>
+<RETURNS>ArvInterface *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvFakeInterface</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_FAKE_STREAM</NAME>
+#define ARV_TYPE_FAKE_STREAM             (arv_fake_stream_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvFakeStream</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_GC_ERROR</NAME>
+#define ARV_GC_ERROR arv_gc_error_quark()
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_error_quark</NAME>
+<RETURNS>GQuark</RETURNS>
+void
+</FUNCTION>
+<ENUM>
+<NAME>ArvGcError</NAME>
+typedef enum {
+	ARV_GC_ERROR_PROPERTY_NOT_DEFINED,
+	ARV_GC_ERROR_PVALUE_NOT_DEFINED,
+	ARV_GC_ERROR_INVALID_PVALUE,
+	ARV_GC_ERROR_EMPTY_ENUMERATION,
+	ARV_GC_ERROR_OUT_OF_RANGE,
+	ARV_GC_ERROR_NO_DEVICE_SET,
+	ARV_GC_ERROR_NO_EVENT_IMPLEMENTATION,
+	ARV_GC_ERROR_NODE_NOT_FOUND,
+	ARV_GC_ERROR_ENUM_ENTRY_NOT_FOUND,
+	ARV_GC_ERROR_INVALID_LENGTH,
+	ARV_GC_ERROR_READ_ONLY,
+	ARV_GC_ERROR_SET_FROM_STRING_UNDEFINED,
+	ARV_GC_ERROR_GET_AS_STRING_UNDEFINED,
+	ARV_GC_ERROR_INVALID_BIT_RANGE
+} ArvGcError;
+</ENUM>
+<ENUM>
+<NAME>ArvRegisterCachePolicy</NAME>
+typedef enum {
+	ARV_REGISTER_CACHE_POLICY_DISABLE,
+	ARV_REGISTER_CACHE_POLICY_ENABLE,
+	ARV_REGISTER_CACHE_POLICY_DEBUG,
+	ARV_REGISTER_CACHE_POLICY_DEFAULT = ARV_REGISTER_CACHE_POLICY_DISABLE
+} ArvRegisterCachePolicy;
+</ENUM>
+<ENUM>
+<NAME>ArvRangeCheckPolicy</NAME>
+typedef enum {
+	ARV_RANGE_CHECK_POLICY_DISABLE,
+	ARV_RANGE_CHECK_POLICY_ENABLE,
+	ARV_RANGE_CHECK_POLICY_DEBUG,
+	ARV_RANGE_CHECK_POLICY_DEFAULT = ARV_RANGE_CHECK_POLICY_DISABLE
+} ArvRangeCheckPolicy;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_GC</NAME>
+#define ARV_TYPE_GC             (arv_gc_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_new</NAME>
+<RETURNS>ArvGc *</RETURNS>
+ArvDevice *device, const void *xml, size_t size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_feature_node</NAME>
+<RETURNS>void</RETURNS>
+ArvGc *genicam, ArvGcFeatureNode *node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_set_register_cache_policy</NAME>
+<RETURNS>void</RETURNS>
+ArvGc *genicam, ArvRegisterCachePolicy policy
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_get_register_cache_policy</NAME>
+<RETURNS>ArvRegisterCachePolicy</RETURNS>
+ArvGc *genicam
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_set_range_check_policy</NAME>
+<RETURNS>void</RETURNS>
+ArvGc *genicam, ArvRangeCheckPolicy policy
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_get_range_check_policy</NAME>
+<RETURNS>ArvRangeCheckPolicy</RETURNS>
+ArvGc *genicam
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_set_default_node_data</NAME>
+<RETURNS>void</RETURNS>
+ArvGc *genicam, const char *node_name, ...
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_get_node</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+ArvGc *genicam, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_get_device</NAME>
+<RETURNS>ArvDevice *</RETURNS>
+ArvGc *genicam
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_set_buffer</NAME>
+<RETURNS>void</RETURNS>
+ArvGc *genicam, ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_get_buffer</NAME>
+<RETURNS>ArvBuffer *</RETURNS>
+ArvGc *genicam
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGc</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_BOOLEAN</NAME>
+#define ARV_TYPE_GC_BOOLEAN             (arv_gc_boolean_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_boolean_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_boolean_get_value</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcBoolean *gc_boolean, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_boolean_get_value_gi</NAME>
+<RETURNS>void</RETURNS>
+ArvGcBoolean *gc_boolean, gboolean *value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_boolean_set_value</NAME>
+<RETURNS>void</RETURNS>
+ArvGcBoolean *gc_boolean, gboolean v_boolean, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcBoolean</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_CATEGORY</NAME>
+#define ARV_TYPE_GC_CATEGORY             (arv_gc_category_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_category_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_category_get_features</NAME>
+<RETURNS>const GSList *</RETURNS>
+ArvGcCategory *category
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcCategory</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_COMMAND</NAME>
+#define ARV_TYPE_GC_COMMAND             (arv_gc_command_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_command_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_command_execute</NAME>
+<RETURNS>void</RETURNS>
+ArvGcCommand *gc_command, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcCommand</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_CONVERTER</NAME>
+#define ARV_TYPE_GC_CONVERTER             (arv_gc_converter_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcConverterClass</NAME>
+struct _ArvGcConverterClass {
+	ArvGcFeatureNodeClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcConverter</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_CONVERTER_NODE</NAME>
+#define ARV_TYPE_GC_CONVERTER_NODE             (arv_gc_converter_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_converter_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcConverterNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_ENUM_ENTRY</NAME>
+#define ARV_TYPE_GC_ENUM_ENTRY             (arv_gc_enum_entry_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_enum_entry_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enum_entry_get_value</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcEnumEntry *entry, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcEnumEntry</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_ENUMERATION</NAME>
+#define ARV_TYPE_GC_ENUMERATION (arv_gc_enumeration_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_enumeration_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enumeration_get_entries</NAME>
+<RETURNS>const GSList *</RETURNS>
+ArvGcEnumeration *enumeration
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enumeration_get_string_value</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcEnumeration *enumeration, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enumeration_set_string_value</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcEnumeration *enumeration, const char *value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enumeration_get_int_value</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcEnumeration *enumeration, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enumeration_set_int_value</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcEnumeration *enumeration, gint64 value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enumeration_dup_available_int_values</NAME>
+<RETURNS>gint64 *</RETURNS>
+ArvGcEnumeration *enumeration,	guint *n_values, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enumeration_dup_available_string_values</NAME>
+<RETURNS>const char **</RETURNS>
+ArvGcEnumeration *enumeration,	guint *n_values, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_enumeration_dup_available_display_names</NAME>
+<RETURNS>const char **</RETURNS>
+ArvGcEnumeration *enumeration, guint *n_values, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcEnumeration</NAME>
+</STRUCT>
+<ENUM>
+<NAME>ArvGcNameSpace</NAME>
+typedef enum {
+	ARV_GC_NAME_SPACE_UNDEFINED = -1,
+	ARV_GC_NAME_SPACE_STANDARD,
+	ARV_GC_NAME_SPACE_CUSTOM
+} ArvGcNameSpace;
+</ENUM>
+<ENUM>
+<NAME>ArvGcAccessMode</NAME>
+typedef enum {
+	ARV_GC_ACCESS_MODE_UNDEFINED = -1,
+	ARV_GC_ACCESS_MODE_RO,
+	ARV_GC_ACCESS_MODE_WO,
+	ARV_GC_ACCESS_MODE_RW
+} ArvGcAccessMode;
+</ENUM>
+<ENUM>
+<NAME>ArvGcCachable</NAME>
+typedef enum {
+	ARV_GC_CACHABLE_UNDEFINED = -1,
+	ARV_GC_CACHABLE_NO_CACHE,
+	ARV_GC_CACHABLE_WRITE_THROUGH,
+	ARV_GC_CACHABLE_WRITE_AROUND
+} ArvGcCachable;
+</ENUM>
+<ENUM>
+<NAME>ArvGcSignedness</NAME>
+typedef enum {
+	ARV_GC_SIGNEDNESS_UNDEFINED = -1,
+	ARV_GC_SIGNEDNESS_SIGNED,
+	ARV_GC_SIGNEDNESS_UNSIGNED
+} ArvGcSignedness;
+</ENUM>
+<ENUM>
+<NAME>ArvGcIsLinear</NAME>
+typedef enum {
+	ARV_GC_IS_LINEAR_UNDEFINED = -1,
+	ARV_GC_IS_LINEAR_NO,
+	ARV_GC_IS_LINEAR_YES
+} ArvGcIsLinear;
+</ENUM>
+<ENUM>
+<NAME>ArvGcVisibility</NAME>
+typedef enum {
+	ARV_GC_VISIBILITY_UNDEFINED = -1,
+	ARV_GC_VISIBILITY_INVISIBLE,
+	ARV_GC_VISIBILITY_GURU,
+	ARV_GC_VISIBILITY_EXPERT,
+	ARV_GC_VISIBILITY_BEGINNER
+} ArvGcVisibility;
+</ENUM>
+<ENUM>
+<NAME>ArvGcRepresentation</NAME>
+typedef enum {
+	ARV_GC_REPRESENTATION_UNDEFINED = -1,
+	ARV_GC_REPRESENTATION_LINEAR,
+	ARV_GC_REPRESENTATION_LOGARITHMIC,
+	ARV_GC_REPRESENTATION_BOOLEAN,
+	ARV_GC_REPRESENTATION_PURE_NUMBER,
+	ARV_GC_REPRESENTATION_HEX_NUMBER,
+	ARV_GC_REPRESENTATION_IPV4_ADDRESS,
+	ARV_GC_REPRESENTATION_MAC_ADDRESS
+} ArvGcRepresentation;
+</ENUM>
+<ENUM>
+<NAME>ArvGcDisplayNotation</NAME>
+typedef enum {
+	ARV_GC_DISPLAY_NOTATION_UNDEFINED = -1,
+	ARV_GC_DISPLAY_NOTATION_AUTOMATIC,
+	ARV_GC_DISPLAY_NOTATION_FIXED,
+	ARV_GC_DISPLAY_NOTATION_SCIENTIFIC
+} ArvGcDisplayNotation;
+</ENUM>
+<ENUM>
+<NAME>ArvGcStreamable</NAME>
+typedef enum {
+	ARV_GC_STREAMABLE_UNDEFINED = -1,
+	ARV_GC_STREAMABLE_NO,
+	ARV_GC_STREAMABLE_YES
+} ArvGcStreamable;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_GC_FEATURE_NODE</NAME>
+#define ARV_TYPE_GC_FEATURE_NODE             (arv_gc_feature_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcFeatureNodeClass</NAME>
+struct _ArvGcFeatureNodeClass {
+	ArvGcNodeClass parent_class;
+
+	ArvGcFeatureNode *	(*get_linked_feature)	(ArvGcFeatureNode *gc_feature_node);
+	ArvGcAccessMode		(*get_access_mode)	(ArvGcFeatureNode *gc_feature_node);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcFeatureNode *gc_feature_node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_name_space</NAME>
+<RETURNS>ArvGcNameSpace</RETURNS>
+ArvGcFeatureNode *gc_feature_node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_tooltip</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcFeatureNode *gc_feature_node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_description</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcFeatureNode *gc_feature_node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_display_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcFeatureNode *gc_feature_node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_visibility</NAME>
+<RETURNS>ArvGcVisibility</RETURNS>
+ArvGcFeatureNode *gc_feature_node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_is_available</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcFeatureNode *gc_feature_node, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_is_implemented</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcFeatureNode *gc_feature_node, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_is_locked</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcFeatureNode *gc_feature_node, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_imposed_access_mode</NAME>
+<RETURNS>ArvGcAccessMode</RETURNS>
+ArvGcFeatureNode *gc_feature_node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_actual_access_mode</NAME>
+<RETURNS>ArvGcAccessMode</RETURNS>
+ArvGcFeatureNode *gc_feature_node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_set_value_from_string</NAME>
+<RETURNS>void</RETURNS>
+ArvGcFeatureNode *gc_feature_node, const char *string, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_feature_node_get_value_as_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcFeatureNode *gc_feature_node, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcFeatureNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_FLOAT</NAME>
+#define ARV_TYPE_GC_FLOAT             	(arv_gc_float_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcFloatInterface</NAME>
+struct _ArvGcFloatInterface {
+	GTypeInterface parent;
+
+	double			(*get_value)		(ArvGcFloat *gc_float, GError **error);
+	void			(*set_value)		(ArvGcFloat *gc_float, double value, GError **error);
+	double			(*get_min)		(ArvGcFloat *gc_float, GError **error);
+	double			(*get_max)		(ArvGcFloat *gc_float, GError **error);
+	double			(*get_inc)		(ArvGcFloat *gc_float, GError **error);
+	ArvGcRepresentation	(*get_representation)	(ArvGcFloat *gc_float);
+	ArvGcDisplayNotation	(*get_display_notation) (ArvGcFloat *gc_float);
+	gint64			(*get_display_precision)(ArvGcFloat *gc_float);
+	const char *		(*get_unit)		(ArvGcFloat *gc_float);
+	void			(*impose_min)		(ArvGcFloat *gc_float, double minimum, GError **error);
+	void			(*impose_max)		(ArvGcFloat *gc_float, double maximum, GError **error);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_float_get_value</NAME>
+<RETURNS>double</RETURNS>
+ArvGcFloat *gc_float, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_set_value</NAME>
+<RETURNS>void</RETURNS>
+ArvGcFloat *gc_float, double value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_get_min</NAME>
+<RETURNS>double</RETURNS>
+ArvGcFloat *gc_float, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_get_max</NAME>
+<RETURNS>double</RETURNS>
+ArvGcFloat *gc_float, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_get_inc</NAME>
+<RETURNS>double</RETURNS>
+ArvGcFloat *gc_float, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_get_representation</NAME>
+<RETURNS>ArvGcRepresentation</RETURNS>
+ArvGcFloat *gc_float
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_get_unit</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcFloat *gc_float
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_get_display_notation</NAME>
+<RETURNS>ArvGcDisplayNotation</RETURNS>
+ArvGcFloat *gc_float
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_get_display_precision</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcFloat *gc_float
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_impose_min</NAME>
+<RETURNS>void</RETURNS>
+ArvGcFloat *gc_float, double minimum, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_float_impose_max</NAME>
+<RETURNS>void</RETURNS>
+ArvGcFloat *gc_float, double maximum, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcFloat</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_FLOAT_NODE</NAME>
+#define ARV_TYPE_GC_FLOAT_NODE             (arv_gc_float_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_float_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcFloatNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_FLOAT_REG_NODE</NAME>
+#define ARV_TYPE_GC_FLOAT_REG_NODE             (arv_gc_float_reg_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcFloatRegNodeClass</NAME>
+struct _ArvGcFloatRegNodeClass {
+	ArvGcRegisterNodeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_float_reg_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcFloatRegNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_GROUP_NODE</NAME>
+#define ARV_TYPE_GC_GROUP_NODE             (arv_gc_group_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_group_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcGroupNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_INDEX_NODE</NAME>
+#define ARV_TYPE_GC_INDEX_NODE             (arv_gc_index_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_index_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_index_node_get_index</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcIndexNode *index_node, gint64 default_offset, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcIndexNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_INT_CONVERTER_NODE</NAME>
+#define ARV_TYPE_GC_INT_CONVERTER_NODE             (arv_gc_int_converter_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_int_converter_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcIntConverterNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_INTEGER</NAME>
+#define ARV_TYPE_GC_INTEGER             	(arv_gc_integer_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcIntegerInterface</NAME>
+struct _ArvGcIntegerInterface {
+	GTypeInterface parent;
+
+	gint64			(*get_value)		(ArvGcInteger *gc_integer, GError **error);
+	void			(*set_value)		(ArvGcInteger *gc_integer, gint64 value, GError **error);
+	gint64			(*get_min)		(ArvGcInteger *gc_integer, GError **error);
+	gint64			(*get_max)		(ArvGcInteger *gc_integer, GError **error);
+	gint64			(*get_inc)		(ArvGcInteger *gc_integer, GError **error);
+	ArvGcRepresentation	(*get_representation)	(ArvGcInteger *gc_integer);
+	const char *		(*get_unit)		(ArvGcInteger *gc_integer);
+	void			(*impose_min)		(ArvGcInteger *gc_integer, gint64 minimum, GError **error);
+	void			(*impose_max)		(ArvGcInteger *gc_integer, gint64 maximum, GError **error);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_integer_get_value</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcInteger *gc_integer, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_integer_set_value</NAME>
+<RETURNS>void</RETURNS>
+ArvGcInteger *gc_integer, gint64 value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_integer_get_min</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcInteger *gc_integer, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_integer_get_max</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcInteger *gc_integer, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_integer_get_inc</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcInteger *gc_integer, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_integer_get_representation</NAME>
+<RETURNS>ArvGcRepresentation</RETURNS>
+ArvGcInteger *gc_integer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_integer_get_unit</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcInteger *gc_integer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_integer_impose_min</NAME>
+<RETURNS>void</RETURNS>
+ArvGcInteger *gc_integer, gint64 minimum, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_integer_impose_max</NAME>
+<RETURNS>void</RETURNS>
+ArvGcInteger *gc_integer, gint64 maximum, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcInteger</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_INTEGER_NODE</NAME>
+#define ARV_TYPE_GC_INTEGER_NODE             (arv_gc_integer_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_integer_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcIntegerNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_INT_REG_NODE</NAME>
+#define ARV_TYPE_GC_INT_REG_NODE             (arv_gc_int_reg_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcIntRegNodeClass</NAME>
+struct _ArvGcIntRegNodeClass {
+	ArvGcRegisterNodeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_int_reg_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcIntRegNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_INT_SWISS_KNIFE_NODE</NAME>
+#define ARV_TYPE_GC_INT_SWISS_KNIFE_NODE             (arv_gc_int_swiss_knife_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcIntSwissKnifeNodeClass</NAME>
+struct _ArvGcIntSwissKnifeNodeClass {
+	ArvGcSwissKnifeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_int_swiss_knife_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcIntSwissKnifeNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_INVALIDATOR_NODE</NAME>
+#define ARV_TYPE_GC_INVALIDATOR_NODE             (arv_gc_invalidator_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_invalidator_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_invalidator_has_changed</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcInvalidatorNode *self
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcInvalidatorNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_MASKED_INT_REG_NODE</NAME>
+#define ARV_TYPE_GC_MASKED_INT_REG_NODE             (arv_gc_masked_int_reg_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcMaskedIntRegNodeClass</NAME>
+struct _ArvGcMaskedIntRegNodeClass {
+	ArvGcRegisterNodeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_masked_int_reg_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcMaskedIntRegNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_NODE</NAME>
+#define ARV_TYPE_GC_NODE             (arv_gc_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcNodeClass</NAME>
+struct _ArvGcNodeClass {
+	ArvDomElementClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_node_get_genicam</NAME>
+<RETURNS>ArvGc *</RETURNS>
+ArvGcNode *gc_node
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_PORT</NAME>
+#define ARV_TYPE_GC_PORT (arv_gc_port_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_port_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_port_read</NAME>
+<RETURNS>void</RETURNS>
+ArvGcPort *port, void *buffer, guint64 address, guint64 length, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_port_write</NAME>
+<RETURNS>void</RETURNS>
+ArvGcPort *port, void *buffer, guint64 address, guint64 length, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcPort</NAME>
+</STRUCT>
+<ENUM>
+<NAME>ArvGcPropertyNodeType</NAME>
+typedef enum {
+	ARV_GC_PROPERTY_NODE_TYPE_UNKNOWN	= 0,
+	ARV_GC_PROPERTY_NODE_TYPE_VALUE,
+	ARV_GC_PROPERTY_NODE_TYPE_ADDRESS,
+	ARV_GC_PROPERTY_NODE_TYPE_DESCRIPTION,
+	ARV_GC_PROPERTY_NODE_TYPE_VISIBILITY,
+	ARV_GC_PROPERTY_NODE_TYPE_TOOLTIP,
+	ARV_GC_PROPERTY_NODE_TYPE_DISPLAY_NAME,
+	ARV_GC_PROPERTY_NODE_TYPE_MINIMUM,
+	ARV_GC_PROPERTY_NODE_TYPE_MAXIMUM,
+	ARV_GC_PROPERTY_NODE_TYPE_SLOPE,
+	ARV_GC_PROPERTY_NODE_TYPE_INCREMENT,
+	ARV_GC_PROPERTY_NODE_TYPE_IS_LINEAR,
+	ARV_GC_PROPERTY_NODE_TYPE_REPRESENTATION,
+	ARV_GC_PROPERTY_NODE_TYPE_DISPLAY_NOTATION,
+	ARV_GC_PROPERTY_NODE_TYPE_DISPLAY_PRECISION,
+	ARV_GC_PROPERTY_NODE_TYPE_UNIT,
+	ARV_GC_PROPERTY_NODE_TYPE_ON_VALUE,
+	ARV_GC_PROPERTY_NODE_TYPE_OFF_VALUE,
+	ARV_GC_PROPERTY_NODE_TYPE_LENGTH,
+	ARV_GC_PROPERTY_NODE_TYPE_FORMULA,
+	ARV_GC_PROPERTY_NODE_TYPE_FORMULA_TO,
+	ARV_GC_PROPERTY_NODE_TYPE_FORMULA_FROM,
+	ARV_GC_PROPERTY_NODE_TYPE_EXPRESSION,
+	ARV_GC_PROPERTY_NODE_TYPE_CONSTANT,
+	ARV_GC_PROPERTY_NODE_TYPE_ACCESS_MODE,
+	ARV_GC_PROPERTY_NODE_TYPE_IMPOSED_ACCESS_MODE,
+	ARV_GC_PROPERTY_NODE_TYPE_CACHABLE,
+	ARV_GC_PROPERTY_NODE_TYPE_POLLING_TIME,
+	ARV_GC_PROPERTY_NODE_TYPE_ENDIANNESS,
+	ARV_GC_PROPERTY_NODE_TYPE_SIGN,
+	ARV_GC_PROPERTY_NODE_TYPE_LSB,
+	ARV_GC_PROPERTY_NODE_TYPE_MSB,
+	ARV_GC_PROPERTY_NODE_TYPE_BIT,
+	ARV_GC_PROPERTY_NODE_TYPE_COMMAND_VALUE,
+	ARV_GC_PROPERTY_NODE_TYPE_CHUNK_ID,
+	ARV_GC_PROPERTY_NODE_TYPE_EVENT_ID,
+	ARV_GC_PROPERTY_NODE_TYPE_VALUE_INDEXED,
+	ARV_GC_PROPERTY_NODE_TYPE_VALUE_DEFAULT,
+	ARV_GC_PROPERTY_NODE_TYPE_STREAMABLE,
+
+	ARV_GC_PROPERTY_NODE_TYPE_P_UNKNONW	= 1000,
+	ARV_GC_PROPERTY_NODE_TYPE_P_FEATURE,
+	ARV_GC_PROPERTY_NODE_TYPE_P_VALUE,
+	ARV_GC_PROPERTY_NODE_TYPE_P_ADDRESS,
+	ARV_GC_PROPERTY_NODE_TYPE_P_IS_IMPLEMENTED,
+	ARV_GC_PROPERTY_NODE_TYPE_P_IS_LOCKED,
+	ARV_GC_PROPERTY_NODE_TYPE_P_IS_AVAILABLE,
+	ARV_GC_PROPERTY_NODE_TYPE_P_SELECTED,
+	ARV_GC_PROPERTY_NODE_TYPE_P_MINIMUM,
+	ARV_GC_PROPERTY_NODE_TYPE_P_MAXIMUM,
+	ARV_GC_PROPERTY_NODE_TYPE_P_INCREMENT,
+	ARV_GC_PROPERTY_NODE_TYPE_P_INDEX,
+	ARV_GC_PROPERTY_NODE_TYPE_P_LENGTH,
+	ARV_GC_PROPERTY_NODE_TYPE_P_PORT,
+	ARV_GC_PROPERTY_NODE_TYPE_P_VARIABLE,
+	ARV_GC_PROPERTY_NODE_TYPE_P_INVALIDATOR,
+	ARV_GC_PROPERTY_NODE_TYPE_P_COMMAND_VALUE,
+	ARV_GC_PROPERTY_NODE_TYPE_P_VALUE_INDEXED,
+	ARV_GC_PROPERTY_NODE_TYPE_P_VALUE_DEFAULT
+} ArvGcPropertyNodeType;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_GC_PROPERTY_NODE</NAME>
+#define ARV_TYPE_GC_PROPERTY_NODE             (arv_gc_property_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcPropertyNodeClass</NAME>
+struct _ArvGcPropertyNodeClass {
+	ArvGcNodeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_feature</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_value</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_value</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_address</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_address</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_description</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_visibility</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_tooltip</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_display_name</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_minimum</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_minimum</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_maximum</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_maximum</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_slope</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_increment</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_increment</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_is_linear</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_representation</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_display_notation</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_display_precision</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_unit</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_on_value</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_off_value</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_is_implemented</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_is_available</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_is_locked</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_selected</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_length</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_length</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_port</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_variable</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_formula</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_formula_to</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_formula_from</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_expression</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_constant</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_access_mode</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_imposed_access_mode</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_cachable</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_polling_time</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_endianness</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_sign</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_lsb</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_msb</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_bit</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_command_value</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_command_value</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_chunk_id</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_event_id</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_value_default</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_p_value_default</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_new_streamable</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcPropertyNode *node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcPropertyNode *node, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_set_string</NAME>
+<RETURNS>void</RETURNS>
+ArvGcPropertyNode *node, const char *string, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_int64</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcPropertyNode *node, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_set_int64</NAME>
+<RETURNS>void</RETURNS>
+ArvGcPropertyNode *node, gint64 v_int64, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_double</NAME>
+<RETURNS>double</RETURNS>
+ArvGcPropertyNode *node, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_set_double</NAME>
+<RETURNS>void</RETURNS>
+ArvGcPropertyNode *node, double v_double, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_endianness</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcPropertyNode *self, guint default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_sign</NAME>
+<RETURNS>ArvGcSignedness</RETURNS>
+ArvGcPropertyNode *self, ArvGcSignedness default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_lsb</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcPropertyNode *self, guint default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_msb</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcPropertyNode *self, guint default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_cachable</NAME>
+<RETURNS>ArvGcCachable</RETURNS>
+ArvGcPropertyNode *self, ArvGcCachable default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_access_mode</NAME>
+<RETURNS>ArvGcAccessMode</RETURNS>
+ArvGcPropertyNode *self, ArvGcAccessMode default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_visibility</NAME>
+<RETURNS>ArvGcVisibility</RETURNS>
+ArvGcPropertyNode *self, ArvGcVisibility default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_representation</NAME>
+<RETURNS>ArvGcRepresentation</RETURNS>
+ArvGcPropertyNode *self, ArvGcRepresentation default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_display_notation</NAME>
+<RETURNS>ArvGcDisplayNotation</RETURNS>
+ArvGcPropertyNode *self, ArvGcDisplayNotation default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_display_precision</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcPropertyNode *self, gint64 default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_streamable</NAME>
+<RETURNS>ArvGcStreamable</RETURNS>
+ArvGcPropertyNode *self, ArvGcStreamable default_value
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_linked_node</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+ArvGcPropertyNode *node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_property_node_get_node_type</NAME>
+<RETURNS>ArvGcPropertyNodeType</RETURNS>
+ArvGcPropertyNode *node
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcPropertyNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_REGISTER</NAME>
+#define ARV_TYPE_GC_REGISTER             	(arv_gc_register_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcRegisterInterface</NAME>
+struct _ArvGcRegisterInterface {
+	GTypeInterface parent;
+
+	void 		(*get)			(ArvGcRegister *gc_register, void *buffer, guint64 length, GError **error);
+	void 		(*set)			(ArvGcRegister *gc_register, const void *buffer, guint64 length, GError **error);
+	guint64		(*get_address) 		(ArvGcRegister *gc_register, GError **error);
+	guint64 	(*get_length)		(ArvGcRegister *gc_register, GError **error);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_register_get</NAME>
+<RETURNS>void</RETURNS>
+ArvGcRegister *gc_register, void *buffer, guint64 length, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_set</NAME>
+<RETURNS>void</RETURNS>
+ArvGcRegister *gc_register, const void *buffer, guint64 length, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_get_address</NAME>
+<RETURNS>guint64</RETURNS>
+ArvGcRegister *gc_register, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_get_length</NAME>
+<RETURNS>guint64</RETURNS>
+ArvGcRegister *gc_register, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcRegister</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_REGISTER_DESCRIPTION_NODE</NAME>
+#define ARV_TYPE_GC_REGISTER_DESCRIPTION_NODE             (arv_gc_register_description_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_compare_schema_version</NAME>
+<RETURNS>int</RETURNS>
+ArvGcRegisterDescriptionNode *node, guint major, guint minor, guint subminor
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_check_schema_version</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcRegisterDescriptionNode *node, guint required_major, guint required_minor, guint required_subminor
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_get_model_name</NAME>
+<RETURNS>char *</RETURNS>
+ArvGcRegisterDescriptionNode* node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_get_vendor_name</NAME>
+<RETURNS>char *</RETURNS>
+ArvGcRegisterDescriptionNode* node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_get_major_version</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcRegisterDescriptionNode* node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_get_minor_version</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcRegisterDescriptionNode* node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_get_subminor_version</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcRegisterDescriptionNode* node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_get_schema_major_version</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcRegisterDescriptionNode* node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_get_schema_minor_version</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcRegisterDescriptionNode* node
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_register_description_node_get_schema_subminor_version</NAME>
+<RETURNS>guint</RETURNS>
+ArvGcRegisterDescriptionNode* node
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcRegisterDescriptionNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_REGISTER_NODE</NAME>
+#define ARV_TYPE_GC_REGISTER_NODE (arv_gc_register_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcRegisterNodeClass</NAME>
+struct _ArvGcRegisterNodeClass {
+	ArvGcFeatureNodeClass parent_class;
+
+	ArvGcCachable default_cachable;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_register_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcRegisterNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_SELECTOR</NAME>
+#define ARV_TYPE_GC_SELECTOR (arv_gc_selector_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcSelectorInterface</NAME>
+struct _ArvGcSelectorInterface {
+	GTypeInterface parent;
+
+	const GSList *	(*get_selected_features)	(ArvGcSelector *gc_selector);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_selector_is_selector</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGcSelector *gc_selector
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_selector_get_selected_features</NAME>
+<RETURNS>const GSList *</RETURNS>
+ArvGcSelector *gc_selector
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcSelector</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_STRING</NAME>
+#define ARV_TYPE_GC_STRING             		(arv_gc_string_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcStringInterface</NAME>
+struct _ArvGcStringInterface {
+	GTypeInterface parent;
+
+	const char *	(*get_value)		(ArvGcString *gc_string, GError **error);
+	void		(*set_value)		(ArvGcString *gc_string, const char *value, GError **error);
+	gint64		(*get_max_length)	(ArvGcString *gc_string, GError **error);
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_string_get_value</NAME>
+<RETURNS>const char *</RETURNS>
+ArvGcString *gc_string, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_string_set_value</NAME>
+<RETURNS>void</RETURNS>
+ArvGcString *gc_string, const char *value, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_string_get_max_length</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcString *gc_string, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcString</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_STRING_NODE</NAME>
+#define ARV_TYPE_GC_STRING_NODE             (arv_gc_string_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_string_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcStringNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_STRING_REG_NODE</NAME>
+#define ARV_TYPE_GC_STRING_REG_NODE             (arv_gc_string_reg_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcStringRegNodeClass</NAME>
+struct _ArvGcStringRegNodeClass {
+	ArvGcRegisterNodeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_string_reg_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcStringRegNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_STRUCT_ENTRY_NODE</NAME>
+#define ARV_TYPE_GC_STRUCT_ENTRY_NODE             (arv_gc_struct_entry_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_struct_entry_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcStructEntryNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_STRUCT_REG_NODE</NAME>
+#define ARV_TYPE_GC_STRUCT_REG_NODE             (arv_gc_struct_reg_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcStructRegNodeClass</NAME>
+struct _ArvGcStructRegNodeClass {
+	ArvGcRegisterNodeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_struct_reg_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcStructRegNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_SWISS_KNIFE</NAME>
+#define ARV_TYPE_GC_SWISS_KNIFE  (arv_gc_swiss_knife_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcSwissKnifeClass</NAME>
+struct _ArvGcSwissKnifeClass {
+	ArvGcFeatureNodeClass parent_class;
+};
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcSwissKnife</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_SWISS_KNIFE_NODE</NAME>
+#define ARV_TYPE_GC_SWISS_KNIFE_NODE             (arv_gc_swiss_knife_node_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvGcSwissKnifeNodeClass</NAME>
+struct _ArvGcSwissKnifeNodeClass {
+	ArvGcSwissKnifeClass parent_class;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_gc_swiss_knife_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcSwissKnifeNode</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GC_VALUE_INDEXED_NODE</NAME>
+#define ARV_TYPE_GC_VALUE_INDEXED_NODE (arv_gc_value_indexed_node_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gc_value_indexed_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_p_value_indexed_node_new</NAME>
+<RETURNS>ArvGcNode *</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gc_value_indexed_node_get_index</NAME>
+<RETURNS>gint64</RETURNS>
+ArvGcValueIndexedNode *value_indexed_node
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGcValueIndexedNode</NAME>
+</STRUCT>
+<ENUM>
+<NAME>ArvGvPacketSizeAdjustment</NAME>
+typedef enum
+{
+	ARV_GV_PACKET_SIZE_ADJUSTMENT_NEVER,
+	ARV_GV_PACKET_SIZE_ADJUSTMENT_ON_FAILURE_ONCE,
+	ARV_GV_PACKET_SIZE_ADJUSTMENT_ON_FAILURE,
+	ARV_GV_PACKET_SIZE_ADJUSTMENT_ONCE,
+	ARV_GV_PACKET_SIZE_ADJUSTMENT_ALWAYS,
+	ARV_GV_PACKET_SIZE_ADJUSTMENT_DEFAULT = ARV_GV_PACKET_SIZE_ADJUSTMENT_ON_FAILURE_ONCE
+} ArvGvPacketSizeAdjustment;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_GV_DEVICE</NAME>
+#define ARV_TYPE_GV_DEVICE             (arv_gv_device_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gv_device_new</NAME>
+<RETURNS>ArvDevice *</RETURNS>
+GInetAddress *interface_address, GInetAddress *device_address, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_take_control</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGvDevice *gv_device, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_leave_control</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGvDevice *gv_device, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_get_timestamp_tick_frequency</NAME>
+<RETURNS>guint64</RETURNS>
+ArvGvDevice *gv_device, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_get_interface_address</NAME>
+<RETURNS>GSocketAddress *</RETURNS>
+ArvGvDevice *device
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_get_device_address</NAME>
+<RETURNS>GSocketAddress *</RETURNS>
+ArvGvDevice *device
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_get_packet_size</NAME>
+<RETURNS>guint</RETURNS>
+ArvGvDevice *gv_device, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_set_packet_size</NAME>
+<RETURNS>void</RETURNS>
+ArvGvDevice *gv_device, gint packet_size, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_set_packet_size_adjustment</NAME>
+<RETURNS>void</RETURNS>
+ArvGvDevice *gv_device, ArvGvPacketSizeAdjustment adjustment
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_auto_packet_size</NAME>
+<RETURNS>guint</RETURNS>
+ArvGvDevice *gv_device, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_get_stream_options</NAME>
+<RETURNS>ArvGvStreamOption</RETURNS>
+ArvGvDevice *gv_device
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_set_stream_options</NAME>
+<RETURNS>void</RETURNS>
+ArvGvDevice *gv_device, ArvGvStreamOption options
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_device_is_controller</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGvDevice *gv_device
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGvDevice</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_GV_FAKE_CAMERA_DEFAULT_SERIAL_NUMBER</NAME>
+#define ARV_GV_FAKE_CAMERA_DEFAULT_SERIAL_NUMBER	"GV01"
+</MACRO>
+<MACRO>
+<NAME>ARV_GV_FAKE_CAMERA_DEFAULT_INTERFACE</NAME>
+#define ARV_GV_FAKE_CAMERA_DEFAULT_INTERFACE		"127.0.0.1"
+</MACRO>
+<MACRO>
+<NAME>ARV_TYPE_GV_FAKE_CAMERA</NAME>
+#define ARV_TYPE_GV_FAKE_CAMERA (arv_gv_fake_camera_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gv_fake_camera_new</NAME>
+<RETURNS>ArvGvFakeCamera *</RETURNS>
+const char *interface_name, const char *serial_number
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_fake_camera_new_full</NAME>
+<RETURNS>ArvGvFakeCamera *</RETURNS>
+const char *interface_name, const char *serial_number, const char *genicam_filename
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_fake_camera_is_running</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvGvFakeCamera *gv_fake_camera
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_fake_camera_get_fake_camera</NAME>
+<RETURNS>ArvFakeCamera *</RETURNS>
+ArvGvFakeCamera *gv_fake_camera
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGvFakeCamera</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_GV_INTERFACE</NAME>
+#define ARV_TYPE_GV_INTERFACE             (arv_gv_interface_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gv_interface_get_instance</NAME>
+<RETURNS>ArvInterface *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGvInterface</NAME>
+</STRUCT>
+<ENUM>
+<NAME>ArvGvStreamOption</NAME>
+typedef enum {
+	ARV_GV_STREAM_OPTION_NONE = 0,
+	ARV_GV_STREAM_OPTION_PACKET_SOCKET_DISABLED
+} ArvGvStreamOption;
+</ENUM>
+<ENUM>
+<NAME>ArvGvStreamSocketBuffer</NAME>
+typedef enum {
+	ARV_GV_STREAM_SOCKET_BUFFER_FIXED,
+	ARV_GV_STREAM_SOCKET_BUFFER_AUTO
+} ArvGvStreamSocketBuffer;
+</ENUM>
+<ENUM>
+<NAME>ArvGvStreamPacketResend</NAME>
+typedef enum {
+	ARV_GV_STREAM_PACKET_RESEND_NEVER,
+	ARV_GV_STREAM_PACKET_RESEND_ALWAYS
+} ArvGvStreamPacketResend;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_GV_STREAM</NAME>
+#define ARV_TYPE_GV_STREAM             (arv_gv_stream_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_gv_stream_get_port</NAME>
+<RETURNS>guint16</RETURNS>
+ArvGvStream *gv_stream
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_gv_stream_get_statistics</NAME>
+<RETURNS>void</RETURNS>
+ArvGvStream *gv_stream, guint64 *n_resent_packets, guint64 *n_missing_packets
+</FUNCTION>
+<STRUCT>
+<NAME>ArvGvStream</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_INTERFACE</NAME>
+#define ARV_TYPE_INTERFACE             (arv_interface_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvInterfaceClass</NAME>
+struct _ArvInterfaceClass {
+	GObjectClass parent_class;
+
+	void 		(*update_device_list)		(ArvInterface *interface, GArray *device_ids);
+	ArvDevice *	(*open_device)			(ArvInterface *interface, const char *device_id, GError **error);
+
+	const char *	protocol;
+};
+</STRUCT>
+<FUNCTION>
+<NAME>arv_interface_update_device_list</NAME>
+<RETURNS>void</RETURNS>
+ArvInterface *interface
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_n_devices</NAME>
+<RETURNS>unsigned int</RETURNS>
+ArvInterface *interface
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_device_id</NAME>
+<RETURNS>const char *</RETURNS>
+ArvInterface *interface, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_device_physical_id</NAME>
+<RETURNS>const char *</RETURNS>
+ArvInterface *interface, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_device_address</NAME>
+<RETURNS>const char *</RETURNS>
+ArvInterface *interface, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_device_vendor</NAME>
+<RETURNS>const char *</RETURNS>
+ArvInterface *interface, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_device_manufacturer_info</NAME>
+<RETURNS>const char *</RETURNS>
+ArvInterface *interface, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_device_model</NAME>
+<RETURNS>const char *</RETURNS>
+ArvInterface *interface, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_device_serial_nbr</NAME>
+<RETURNS>const char *</RETURNS>
+ArvInterface *interface, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_get_device_protocol</NAME>
+<RETURNS>const char *</RETURNS>
+ArvInterface *interface, unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_interface_open_device</NAME>
+<RETURNS>ArvDevice *</RETURNS>
+ArvInterface *interface, const char *device_id, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvInterface</NAME>
+</STRUCT>
+<FUNCTION>
+<NAME>arv_get_major_version</NAME>
+<RETURNS>guint</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_minor_version</NAME>
+<RETURNS>guint</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_micro_version</NAME>
+<RETURNS>guint</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_pixel_format_to_gst_caps_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvPixelFormat pixel_format
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_pixel_format_from_gst_caps</NAME>
+<RETURNS>ArvPixelFormat</RETURNS>
+const char *name, const char *format, int bpp, int depth
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_pixel_format_to_gst_0_10_caps_string</NAME>
+<RETURNS>const char *</RETURNS>
+ArvPixelFormat pixel_format
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_pixel_format_from_gst_0_10_caps</NAME>
+<RETURNS>ArvPixelFormat</RETURNS>
+const char *name, int bpp, int depth, guint32 fourcc
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_make_thread_realtime</NAME>
+<RETURNS>gboolean</RETURNS>
+int priority
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_make_thread_high_priority</NAME>
+<RETURNS>gboolean</RETURNS>
+int nice_level
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_strip</NAME>
+<RETURNS>char *</RETURNS>
+char *str, const char *illegal_chars, char replacement_char
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_is_uri</NAME>
+<RETURNS>gboolean</RETURNS>
+const char *str
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_to_uri</NAME>
+<RETURNS>char *</RETURNS>
+const char *str
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_parse_double</NAME>
+<RETURNS>gboolean</RETURNS>
+char **str, double *x
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_parse_double_list</NAME>
+<RETURNS>unsigned int</RETURNS>
+char **str, unsigned int n_values, double *values
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_skip_spaces</NAME>
+<RETURNS>void</RETURNS>
+char **str
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_skip_char</NAME>
+<RETURNS>void</RETURNS>
+char **str, char c
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_skip_comma_and_spaces</NAME>
+<RETURNS>void</RETURNS>
+char **str
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_skip_semicolon_and_spaces</NAME>
+<RETURNS>void</RETURNS>
+char **str
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_str_skip_colon_and_spaces</NAME>
+<RETURNS>void</RETURNS>
+char **str
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_g_string_append_hex_dump</NAME>
+<RETURNS>void</RETURNS>
+GString *string, const void *data, size_t size
+</FUNCTION>
+<ENUM>
+<NAME>ArvStreamCallbackType</NAME>
+typedef enum {
+	ARV_STREAM_CALLBACK_TYPE_INIT,
+	ARV_STREAM_CALLBACK_TYPE_EXIT,
+	ARV_STREAM_CALLBACK_TYPE_START_BUFFER,
+	ARV_STREAM_CALLBACK_TYPE_BUFFER_DONE
+} ArvStreamCallbackType;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_STREAM</NAME>
+#define ARV_TYPE_STREAM             (arv_stream_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvStreamClass</NAME>
+struct _ArvStreamClass {
+	GObjectClass parent_class;
+
+	void		(*start_thread)		(ArvStream *stream);
+	void		(*stop_thread)		(ArvStream *stream);
+
+	/* signals */
+	void        	(*new_buffer)   	(ArvStream *stream);
+};
+</STRUCT>
+<USER_FUNCTION>
+<NAME>ArvStreamCallback</NAME>
+<RETURNS>void</RETURNS>
+void *user_data, ArvStreamCallbackType type, ArvBuffer *buffer
+</USER_FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_push_buffer</NAME>
+<RETURNS>void</RETURNS>
+ArvStream *stream, ArvBuffer *buffer
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_pop_buffer</NAME>
+<RETURNS>ArvBuffer *</RETURNS>
+ArvStream *stream
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_try_pop_buffer</NAME>
+<RETURNS>ArvBuffer *</RETURNS>
+ArvStream *stream
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_timeout_pop_buffer</NAME>
+<RETURNS>ArvBuffer *</RETURNS>
+ArvStream *stream, guint64 timeout
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_n_buffers</NAME>
+<RETURNS>void</RETURNS>
+ArvStream *stream, gint *n_input_buffers, gint *n_output_buffers
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_start_thread</NAME>
+<RETURNS>void</RETURNS>
+ArvStream *stream
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_stop_thread</NAME>
+<RETURNS>unsigned int</RETURNS>
+ArvStream *stream, gboolean delete_buffers
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_statistics</NAME>
+<RETURNS>void</RETURNS>
+ArvStream *stream, guint64 *n_completed_buffers, guint64 *n_failures, guint64 *n_underruns
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_n_infos</NAME>
+<RETURNS>guint</RETURNS>
+ArvStream *stream
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_info_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvStream *stream, guint id
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_info_type</NAME>
+<RETURNS>GType</RETURNS>
+ArvStream *stream, guint id
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_info_uint64</NAME>
+<RETURNS>guint64</RETURNS>
+ArvStream *stream, guint id
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_info_double</NAME>
+<RETURNS>double</RETURNS>
+ArvStream *stream, guint id
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_info_uint64_by_name</NAME>
+<RETURNS>guint64</RETURNS>
+ArvStream *stream, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_info_double_by_name</NAME>
+<RETURNS>double</RETURNS>
+ArvStream *stream, const char *name
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_set_emit_signals</NAME>
+<RETURNS>void</RETURNS>
+ArvStream *stream, gboolean emit_signals
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_stream_get_emit_signals</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvStream *stream
+</FUNCTION>
+<STRUCT>
+<NAME>ArvStream</NAME>
+</STRUCT>
+<FUNCTION>
+<NAME>arv_get_n_interfaces</NAME>
+<RETURNS>unsigned int</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_interface_id</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_enable_interface</NAME>
+<RETURNS>void</RETURNS>
+const char *interface_id
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_disable_interface</NAME>
+<RETURNS>void</RETURNS>
+const char *interface_id
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_update_device_list</NAME>
+<RETURNS>void</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_n_devices</NAME>
+<RETURNS>unsigned int</RETURNS>
+void
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_device_id</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_device_physical_id</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_device_address</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_device_vendor</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_device_manufacturer_info</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_device_model</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_device_serial_nbr</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_get_device_protocol</NAME>
+<RETURNS>const char *</RETURNS>
+unsigned int index
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_open_device</NAME>
+<RETURNS>ArvDevice *</RETURNS>
+const char *device_id, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_shutdown</NAME>
+<RETURNS>void</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvCamera</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvChunkParser</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDevice</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDomCharacterData</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDomDocument</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDomDocumentFragment</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDomElement</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDomNamedNodeMap</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDomNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDomNodeList</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvDomText</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvEvaluator</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvFakeCamera</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGc</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcBoolean</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcCategory</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcCommand</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcConverter</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcConverterNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcEnumEntry</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcEnumeration</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcFeatureNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcFloat</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcFloatNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcGroupNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcIndexNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcIntConverterNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcInteger</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcIntegerNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcInvalidatorNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcPort</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcPropertyNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcRegister</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcRegisterDescriptionNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcRegisterNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcSelector</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcString</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcStructEntryNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcSwissKnife</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGcValueIndexedNode</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGvDevice</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGvFakeCamera</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGvInterface</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvGvStream</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvInterface</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvStream</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvUvDevice</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvUvInterface</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvUvStream</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvZip</NAME>
+</STRUCT>
+<STRUCT>
+<NAME>ArvZipFile</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_UV_DEVICE</NAME>
+#define ARV_TYPE_UV_DEVICE             (arv_uv_device_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_uv_device_new</NAME>
+<RETURNS>ArvDevice *</RETURNS>
+const char *vendor, const char *product, const char *serial_number, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_uv_device_new_from_guid</NAME>
+<RETURNS>ArvDevice *</RETURNS>
+const char *guid, GError **error
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_uv_device_set_usb_mode</NAME>
+<RETURNS>void</RETURNS>
+ArvUvDevice *uv_device, ArvUvUsbMode usb_mode
+</FUNCTION>
+<STRUCT>
+<NAME>ArvUvDevice</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_UV_INTERFACE</NAME>
+#define ARV_TYPE_UV_INTERFACE             (arv_uv_interface_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_uv_interface_get_instance</NAME>
+<RETURNS>ArvInterface *</RETURNS>
+void
+</FUNCTION>
+<STRUCT>
+<NAME>ArvUvInterface</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_TYPE_UV_STREAM</NAME>
+#define ARV_TYPE_UV_STREAM             (arv_uv_stream_get_type ())
+</MACRO>
+<STRUCT>
+<NAME>ArvUvStream</NAME>
+</STRUCT>
+<MACRO>
+<NAME>ARV_XML_SCHEMA_ERROR</NAME>
+#define ARV_XML_SCHEMA_ERROR arv_xml_schema_error_quark()
+</MACRO>
+<FUNCTION>
+<NAME>arv_xml_schema_error_quark</NAME>
+<RETURNS>GQuark</RETURNS>
+void
+</FUNCTION>
+<ENUM>
+<NAME>ArvXmlSchemaError</NAME>
+typedef enum {
+	ARV_XML_SCHEMA_ERROR_INVALID_STRUCTURE
+} ArvXmlSchemaError;
+</ENUM>
+<MACRO>
+<NAME>ARV_TYPE_XML_SCHEMA</NAME>
+#define ARV_TYPE_XML_SCHEMA                  (arv_xml_schema_get_type ())
+</MACRO>
+<FUNCTION>
+<NAME>arv_xml_schema_new_from_memory</NAME>
+<RETURNS>ArvXmlSchema *</RETURNS>
+const char *buffer, size_t size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_xml_schema_new_from_file</NAME>
+<RETURNS>ArvXmlSchema *</RETURNS>
+GFile *file
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_xml_schema_new_from_path</NAME>
+<RETURNS>ArvXmlSchema *</RETURNS>
+const char *path
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_xml_schema_validate</NAME>
+<RETURNS>gboolean</RETURNS>
+ArvXmlSchema *schema, const void *xml, size_t size, int *line, int *column, GError **error
+</FUNCTION>
+<STRUCT>
+<NAME>ArvXmlSchema</NAME>
+</STRUCT>
+<FUNCTION>
+<NAME>arv_zip_new</NAME>
+<RETURNS>ArvZip *</RETURNS>
+const void *buffer, size_t size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_zip_free</NAME>
+<RETURNS>void</RETURNS>
+ArvZip *zip
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_zip_get_file</NAME>
+<RETURNS>void *</RETURNS>
+ArvZip *zip, const char *name, size_t *size
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_zip_get_file_list</NAME>
+<RETURNS>const GSList *</RETURNS>
+ArvZip *zip
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_zip_file_get_name</NAME>
+<RETURNS>const char *</RETURNS>
+ArvZipFile *zip_file
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_zip_file_get_uncompressed_size</NAME>
+<RETURNS>size_t</RETURNS>
+ArvZipFile *zip_file
+</FUNCTION>
+<MACRO>
+<NAME>ARV_GUINT32_FROM_LE_PTR</NAME>
+#define ARV_GUINT32_FROM_LE_PTR(ptr,offset) arv_guint32_from_unaligned_le_ptr (ptr, offset)
+</MACRO>
+<MACRO>
+<NAME>ARV_GUINT16_FROM_LE_PTR</NAME>
+#define ARV_GUINT16_FROM_LE_PTR(ptr,offset) arv_guint16_from_unaligned_le_ptr (ptr, offset)
+</MACRO>
+<FUNCTION>
+<NAME>arv_guint32_from_unaligned_le_ptr</NAME>
+<RETURNS>guint32</RETURNS>
+const char *ptr, gint32 offset
+</FUNCTION>
+<FUNCTION>
+<NAME>arv_guint16_from_unaligned_le_ptr</NAME>
+<RETURNS>guint16</RETURNS>
+const char *ptr, gint16 offset
+</FUNCTION>
+<MACRO>
+<NAME>ARV_API</NAME>
+#define ARV_API extern __attribute__ ((visibility ("default")))
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_HAS_USB</NAME>
+#define ARAVIS_HAS_USB 1
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_HAS_PACKET_SOCKET</NAME>
+#define ARAVIS_HAS_PACKET_SOCKET 1
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_HAS_FAST_HEARTBEAT</NAME>
+#define ARAVIS_HAS_FAST_HEARTBEAT 0
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_VERSION</NAME>
+#define ARAVIS_VERSION "0.8.20"
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_API_VERSION</NAME>
+#define ARAVIS_API_VERSION "0.8"
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_MAJOR_VERSION</NAME>
+#define ARAVIS_MAJOR_VERSION 0
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_MINOR_VERSION</NAME>
+#define ARAVIS_MINOR_VERSION 8
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_MICRO_VERSION</NAME>
+#define ARAVIS_MICRO_VERSION 20
+</MACRO>
+<MACRO>
+<NAME>ARAVIS_CHECK_VERSION</NAME>
+#define ARAVIS_CHECK_VERSION(major,minor,micro) 				\
+	(ARAVIS_MAJOR_VERSION > (major) ||					\
+	 (ARAVIS_MAJOR_VERSION == (major) && ARAVIS_MINOR_VERSION > (minor)) ||	\
+	 (ARAVIS_MAJOR_VERSION == (major) && ARAVIS_MINOR_VERSION == (minor) && \
+	  ARAVIS_MICRO_VERSION >= (micro)))
+</MACRO>

@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcCommand">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcCommand.top_of_page">ArvGcCommand</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcCommand</refname>
+<refpurpose>Class for Command nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcCommand.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-command-new">arv_gc_command_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-command-execute">arv_gc_command_execute</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcCommand.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcCommand-struct">ArvGcCommand</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcCommand.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcCommand
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGcCommand.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcCommand.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-command-new" role="function">
+<title>arv_gc_command_new&#160;()</title>
+<indexterm zone="arv-gc-command-new"><primary>arv_gc_command_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_command_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-command-execute" role="function">
+<title>arv_gc_command_execute&#160;()</title>
+<indexterm zone="arv-gc-command-execute"><primary>arv_gc_command_execute</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_command_execute (<parameter><link linkend="ArvGcCommand"><type>ArvGcCommand</type></link> *gc_command</parameter>,
+                        <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcCommand.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcCommand-struct" role="struct">
+<title>ArvGcCommand</title>
+<indexterm zone="ArvGcCommand-struct"><primary>ArvGcCommand</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcCommand ArvGcCommand;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

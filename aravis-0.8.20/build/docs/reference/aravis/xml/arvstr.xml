@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="aravis-ArvStr">
+<refmeta>
+<refentrytitle role="top_of_page" id="aravis-ArvStr.top_of_page">ArvStr</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvStr</refname>
+<refpurpose>String utilities</refpurpose>
+</refnamediv>
+
+<refsect1 id="aravis-ArvStr.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-str-strip">arv_str_strip</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-str-is-uri">arv_str_is_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-str-to-uri">arv_str_to_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-str-parse-double">arv_str_parse_double</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-str-parse-double-list">arv_str_parse_double_list</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-str-skip-char">arv_str_skip_char</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-str-skip-colon-and-spaces">arv_str_skip_colon_and_spaces</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-str-skip-comma-and-spaces">arv_str_skip_comma_and_spaces</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-str-skip-semicolon-and-spaces">arv_str_skip_semicolon_and_spaces</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-str-skip-spaces">arv_str_skip_spaces</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="aravis-ArvStr.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="aravis-ArvStr.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-str-strip" role="function" condition="since:0.4.0">
+<title>arv_str_strip&#160;()</title>
+<indexterm zone="arv-str-strip" role="0.4.0"><primary>arv_str_strip</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_str_strip (<parameter><link linkend="char"><type>char</type></link> *str</parameter>,
+               <parameter>const <link linkend="char"><type>char</type></link> *illegal_chars</parameter>,
+               <parameter><link linkend="char"><type>char</type></link> replacement_char</parameter>);</programlisting>
+<para>Remove any <parameter>illegal_chars</parameter>
+ from <parameter>str</parameter>
+, and replace them by <parameter>replacement_char</parameter>
+ if they are not at the end or at the beginning of <parameter>str</parameter>
+.
+Several consecutive <parameter>illegal_chars</parameter>
+ are replaced by only one <parameter>replacement_char</parameter>
+. <parameter>illegal_chars</parameter>
+ at the beginnig or at the end of <parameter>str</parameter>
+
+are simply removed.</para>
+<para>If <parameter>replacement_char</parameter>
+ is '\0', all <parameter>illegal_chars</parameter>
+ are simply removed.</para>
+<refsect3 id="arv-str-strip.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>str</para></entry>
+<entry role="parameter_description"><para>a string. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>illegal_chars</para></entry>
+<entry role="parameter_description"><para>illegal characters</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>replacement_char</para></entry>
+<entry role="parameter_description"><para>replacement character</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-str-strip.returns" role="returns">
+<title>Returns</title>
+<para> <parameter>str</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-str-is-uri" role="function">
+<title>arv_str_is_uri&#160;()</title>
+<indexterm zone="arv-str-is-uri"><primary>arv_str_is_uri</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_str_is_uri (<parameter>const <link linkend="char"><type>char</type></link> *str</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-str-to-uri" role="function">
+<title>arv_str_to_uri&#160;()</title>
+<indexterm zone="arv-str-to-uri"><primary>arv_str_to_uri</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_str_to_uri (<parameter>const <link linkend="char"><type>char</type></link> *str</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-str-parse-double" role="function">
+<title>arv_str_parse_double&#160;()</title>
+<indexterm zone="arv-str-parse-double"><primary>arv_str_parse_double</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_str_parse_double (<parameter><link linkend="char"><type>char</type></link> **str</parameter>,
+                      <parameter><link linkend="double"><type>double</type></link> *x</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-str-parse-double-list" role="function">
+<title>arv_str_parse_double_list&#160;()</title>
+<indexterm zone="arv-str-parse-double-list"><primary>arv_str_parse_double_list</primary></indexterm>
+<programlisting language="C">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+arv_str_parse_double_list (<parameter><link linkend="char"><type>char</type></link> **str</parameter>,
+                           <parameter>unsigned <link linkend="int"><type>int</type></link> n_values</parameter>,
+                           <parameter><link linkend="double"><type>double</type></link> *values</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-str-skip-char" role="function">
+<title>arv_str_skip_char&#160;()</title>
+<indexterm zone="arv-str-skip-char"><primary>arv_str_skip_char</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_str_skip_char (<parameter><link linkend="char"><type>char</type></link> **str</parameter>,
+                   <parameter><link linkend="char"><type>char</type></link> c</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-str-skip-colon-and-spaces" role="function">
+<title>arv_str_skip_colon_and_spaces&#160;()</title>
+<indexterm zone="arv-str-skip-colon-and-spaces"><primary>arv_str_skip_colon_and_spaces</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_str_skip_colon_and_spaces (<parameter><link linkend="char"><type>char</type></link> **str</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-str-skip-comma-and-spaces" role="function">
+<title>arv_str_skip_comma_and_spaces&#160;()</title>
+<indexterm zone="arv-str-skip-comma-and-spaces"><primary>arv_str_skip_comma_and_spaces</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_str_skip_comma_and_spaces (<parameter><link linkend="char"><type>char</type></link> **str</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-str-skip-semicolon-and-spaces" role="function">
+<title>arv_str_skip_semicolon_and_spaces&#160;()</title>
+<indexterm zone="arv-str-skip-semicolon-and-spaces"><primary>arv_str_skip_semicolon_and_spaces</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_str_skip_semicolon_and_spaces (<parameter><link linkend="char"><type>char</type></link> **str</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-str-skip-spaces" role="function">
+<title>arv_str_skip_spaces&#160;()</title>
+<indexterm zone="arv-str-skip-spaces"><primary>arv_str_skip_spaces</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_str_skip_spaces (<parameter><link linkend="char"><type>char</type></link> **str</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

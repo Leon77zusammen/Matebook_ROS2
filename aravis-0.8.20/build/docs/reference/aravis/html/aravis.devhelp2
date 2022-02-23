@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="Aravis Reference Manual" link="index.html" author="" name="aravis" version="2" language="c">
+  <chapters>
+    <sub name="Overview" link="aravis-overview.html">
+      <sub name="Introduction" link="aravis-introduction.html"/>
+      <sub name="Thread Safety" link="thread-safety.html"/>
+      <sub name="Building and Debugging Aravis" link="aravis-building.html"/>
+    </sub>
+    <sub name="Aravis API reference" link="aravis-reference.html">
+      <sub name="Base" link="ch04.html">
+        <sub name="Arv" link="aravis-Arv.html"/>
+        <sub name="ArvCamera" link="ArvCamera.html"/>
+        <sub name="ArvInterface" link="ArvInterface.html"/>
+        <sub name="ArvDevice" link="ArvDevice.html"/>
+        <sub name="ArvStream" link="ArvStream.html"/>
+        <sub name="ArvBuffer" link="ArvBuffer.html"/>
+        <sub name="ArvChunkParser" link="ArvChunkParser.html"/>
+      </sub>
+      <sub name="Genicam" link="ch05.html">
+        <sub name="ArvGc" link="ArvGc.html"/>
+        <sub name="ArvGcNode" link="ArvGcNode.html"/>
+        <sub name="ArvGcPropertyNode" link="ArvGcPropertyNode.html"/>
+        <sub name="ArvGcIndexNode" link="ArvGcIndexNode.html"/>
+        <sub name="ArvGcValueIndexedNode" link="ArvGcValueIndexedNode.html"/>
+        <sub name="ArvGcInvalidatorNode" link="ArvGcInvalidatorNode.html"/>
+        <sub name="ArvGcFeatureNode" link="ArvGcFeatureNode.html"/>
+        <sub name="ArvGcRegisterDescriptionNode" link="ArvGcRegisterDescriptionNode.html"/>
+        <sub name="ArvGcGroupNode" link="ArvGcGroupNode.html"/>
+        <sub name="ArvGcRegister" link="ArvGcRegister.html"/>
+        <sub name="ArvGcInteger" link="ArvGcInteger.html"/>
+        <sub name="ArvGcFloat" link="ArvGcFloat.html"/>
+        <sub name="ArvGcString" link="ArvGcString.html"/>
+        <sub name="ArvGcCategory" link="ArvGcCategory.html"/>
+        <sub name="ArvGcCommand" link="ArvGcCommand.html"/>
+        <sub name="ArvGcBoolean" link="ArvGcBoolean.html"/>
+        <sub name="ArvGcIntegerNode" link="ArvGcIntegerNode.html"/>
+        <sub name="ArvGcFloatNode" link="ArvGcFloatNode.html"/>
+        <sub name="ArvGcRegisterNode" link="ArvGcRegisterNode.html"/>
+        <sub name="ArvGcStringNode" link="ArvGcStringNode.html"/>
+        <sub name="ArvGcStructEntryNode" link="ArvGcStructEntryNode.html"/>
+        <sub name="ArvGcEnumeration" link="ArvGcEnumeration.html"/>
+        <sub name="ArvGcEnumEntry" link="ArvGcEnumEntry.html"/>
+        <sub name="ArvGcConverter" link="ArvGcConverter.html"/>
+        <sub name="ArvGcConverterNode" link="ArvGcConverterNode.html"/>
+        <sub name="ArvGcIntConverterNode" link="ArvGcIntConverterNode.html"/>
+        <sub name="ArvGcSwissKnife" link="ArvGcSwissKnife.html"/>
+        <sub name="ArvGcSelector" link="ArvGcSelector.html"/>
+        <sub name="ArvGcPort" link="ArvGcPort.html"/>
+      </sub>
+      <sub name="Ethernet cameras" link="ch06.html">
+        <sub name="ArvGvInterface" link="ArvGvInterface.html"/>
+        <sub name="ArvGvDevice" link="ArvGvDevice.html"/>
+        <sub name="ArvGvStream" link="ArvGvStream.html"/>
+        <sub name="ArvGvFakeCamera" link="ArvGvFakeCamera.html"/>
+      </sub>
+      <sub name="USB cameras" link="ch07.html">
+        <sub name="ArvUvInterface" link="ArvUvInterface.html"/>
+        <sub name="ArvUvDevice" link="ArvUvDevice.html"/>
+        <sub name="ArvUvStream" link="ArvUvStream.html"/>
+      </sub>
+      <sub name="Fake cameras" link="ch08.html">
+        <sub name="ArvFakeInterface" link="ArvFakeInterface.html"/>
+        <sub name="ArvFakeDevice" link="ArvFakeDevice.html"/>
+        <sub name="ArvFakeStream" link="ArvFakeStream.html"/>
+        <sub name="ArvFakeCamera" link="ArvFakeCamera.html"/>
+      </sub>
+      <sub name="DOM" link="ch09.html">
+        <sub name="ArvDomNode" link="ArvDomNode.html"/>
+        <sub name="ArvDomNodeList" link="ArvDomNodeList.html"/>
+        <sub name="ArvDomNodeChildList" link="ArvDomNodeChildList.html"/>
+        <sub name="ArvDomNamedNodeMap" link="ArvDomNamedNodeMap.html"/>
+        <sub name="ArvDomDocument" link="ArvDomDocument.html"/>
+        <sub name="ArvDomDocumentFragment" link="ArvDomDocumentFragment.html"/>
+        <sub name="ArvDomElement" link="ArvDomElement.html"/>
+        <sub name="ArvDomCharacterData" link="ArvDomCharacterData.html"/>
+        <sub name="ArvDomText" link="ArvDomText.html"/>
+      </sub>
+      <sub name="Utils" link="ch10.html">
+        <sub name="ArvDebug" link="aravis-ArvDebug.html"/>
+        <sub name="ArvEvaluator" link="ArvEvaluator.html"/>
+        <sub name="ArvGst" link="aravis-ArvGst.html"/>
+        <sub name="ArvStr" link="aravis-ArvStr.html"/>
+        <sub name="ArvZip" link="aravis-ArvZip.html"/>
+        <sub name="ArvXmlSchema" link="ArvXmlSchema.html"/>
+      </sub>
+      <sub name="Object Hierarchy" link="ch11.html"/>
+      <sub name="Index" link="ix01.html"/>
+      <sub name="Index of new symbols in 0.2.0" link="ix02.html"/>
+      <sub name="Index of new symbols in 0.2.3" link="ix03.html"/>
+      <sub name="Index of new symbols in 0.4.0" link="ix04.html"/>
+      <sub name="Index of new symbols in 0.6.0" link="ix05.html"/>
+      <sub name="Index of new symbols in 0.6.2" link="ix06.html"/>
+      <sub name="Index of new symbols in 0.8.0" link="ix07.html"/>
+      <sub name="Index of new symbols in 0.8.3" link="ix08.html"/>
+      <sub name="Index of new symbols in 0.8.6" link="ix09.html"/>
+      <sub name="Index of new symbols in 0.8.8" link="ix10.html"/>
+      <sub name="Index of new symbols in 0.8.11" link="ix11.html"/>
+      <sub name="Index of new symbols in 0.8.15" link="ix12.html"/>
+      <sub name="Index of new symbols in 0.8.16" link="ix13.html"/>
+      <sub name="Index of new symbols in 0.8.17" link="ix14.html"/>
+      <sub name="Index of new symbols in 0.8.19" link="ix15.html"/>
+      <sub name="Index of new symbols in 0.8.20" link="ix16.html"/>
+      <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+    </sub>
+    <sub name="Ethernet protocol (GV)" link="aravis-gv.html">
+      <sub name="Introduction" link="aravis-gv-introduction.html"/>
+      <sub name="GVCP packets" link="aravis-gvcp.html"/>
+      <sub name="GVSP packets" link="aravis-gvsp.html"/>
+    </sub>
+  </chapters>
+  <functions>
+    <keyword type="function" name="arv_update_device_list ()" link="aravis-Arv.html#arv-update-device-list"/>
+    <keyword type="function" name="arv_get_n_devices ()" link="aravis-Arv.html#arv-get-n-devices"/>
+    <keyword type="function" name="arv_get_device_id ()" link="aravis-Arv.html#arv-get-device-id" since="0.2.0"/>
+    <keyword type="function" name="arv_get_device_physical_id ()" link="aravis-Arv.html#arv-get-device-physical-id" since="0.2.0"/>
+    <keyword type="function" name="arv_get_device_model ()" link="aravis-Arv.html#arv-get-device-model" since="0.6.0"/>
+    <keyword type="function" name="arv_get_device_serial_nbr ()" link="aravis-Arv.html#arv-get-device-serial-nbr" since="0.6.0"/>
+    <keyword type="function" name="arv_get_device_vendor ()" link="aravis-Arv.html#arv-get-device-vendor" since="0.6.0"/>
+    <keyword type="function" name="arv_get_device_manufacturer_info ()" link="aravis-Arv.html#arv-get-device-manufacturer-info" since="0.8.20"/>
+    <keyword type="function" name="arv_get_device_address ()" link="aravis-Arv.html#arv-get-device-address" since="0.6.0"/>
+    <keyword type="function" name="arv_get_device_protocol ()" link="aravis-Arv.html#arv-get-device-protocol" since="0.6.0"/>
+    <keyword type="function" name="arv_open_device ()" link="aravis-Arv.html#arv-open-device" since="0.8.0"/>
+    <keyword type="function" name="arv_get_n_interfaces ()" link="aravis-Arv.html#arv-get-n-interfaces"/>
+    <keyword type="function" name="arv_get_interface_id ()" link="aravis-Arv.html#arv-get-interface-id"/>
+    <keyword type="function" name="arv_disable_interface ()" link="aravis-Arv.html#arv-disable-interface"/>
+    <keyword type="function" name="arv_enable_interface ()" link="aravis-Arv.html#arv-enable-interface"/>
+    <keyword type="function" name="arv_shutdown ()" link="aravis-Arv.html#arv-shutdown"/>
+    <keyword type="macro" name="ARAVIS_CHECK_VERSION()" link="ArvCamera.html#ARAVIS-CHECK-VERSION:CAPS" since="0.6.0"/>
+    <keyword type="function" name="arv_get_major_version ()" link="ArvCamera.html#arv-get-major-version" since="0.8.20"/>
+    <keyword type="function" name="arv_get_micro_version ()" link="ArvCamera.html#arv-get-micro-version" since="0.8.20"/>
+    <keyword type="function" name="arv_get_minor_version ()" link="ArvCamera.html#arv-get-minor-version" since="0.8.20"/>
+    <keyword type="function" name="arv_auto_from_string ()" link="ArvCamera.html#arv-auto-from-string"/>
+    <keyword type="function" name="arv_auto_to_string ()" link="ArvCamera.html#arv-auto-to-string"/>
+    <keyword type="function" name="arv_camera_new ()" link="ArvCamera.html#arv-camera-new" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_new_with_device ()" link="ArvCamera.html#arv-camera-new-with-device" since="0.8.6"/>
+    <keyword type="function" name="arv_camera_create_stream ()" link="ArvCamera.html#arv-camera-create-stream" since="0.2.0"/>
+    <keyword type="function" name="arv_camera_get_device ()" link="ArvCamera.html#arv-camera-get-device" since="0.2.0"/>
+    <keyword type="function" name="arv_camera_get_vendor_name ()" link="ArvCamera.html#arv-camera-get-vendor-name" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_model_name ()" link="ArvCamera.html#arv-camera-get-model-name" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_device_serial_number ()" link="ArvCamera.html#arv-camera-get-device-serial-number" since="0.8.8"/>
+    <keyword type="function" name="arv_camera_get_device_id ()" link="ArvCamera.html#arv-camera-get-device-id" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_sensor_size ()" link="ArvCamera.html#arv-camera-get-sensor-size" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_region ()" link="ArvCamera.html#arv-camera-set-region" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_region ()" link="ArvCamera.html#arv-camera-get-region" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_x_offset_bounds ()" link="ArvCamera.html#arv-camera-get-x-offset-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_x_offset_increment ()" link="ArvCamera.html#arv-camera-get-x-offset-increment" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_y_offset_bounds ()" link="ArvCamera.html#arv-camera-get-y-offset-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_y_offset_increment ()" link="ArvCamera.html#arv-camera-get-y-offset-increment" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_height_bounds ()" link="ArvCamera.html#arv-camera-get-height-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_height_increment ()" link="ArvCamera.html#arv-camera-get-height-increment" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_width_bounds ()" link="ArvCamera.html#arv-camera-get-width-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_width_increment ()" link="ArvCamera.html#arv-camera-get-width-increment" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_binning_available ()" link="ArvCamera.html#arv-camera-is-binning-available" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_binning ()" link="ArvCamera.html#arv-camera-set-binning" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_binning ()" link="ArvCamera.html#arv-camera-get-binning" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_x_binning_bounds ()" link="ArvCamera.html#arv-camera-get-x-binning-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_x_binning_increment ()" link="ArvCamera.html#arv-camera-get-x-binning-increment" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_y_binning_bounds ()" link="ArvCamera.html#arv-camera-get-y-binning-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_y_binning_increment ()" link="ArvCamera.html#arv-camera-get-y-binning-increment" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_pixel_format ()" link="ArvCamera.html#arv-camera-set-pixel-format" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_pixel_format ()" link="ArvCamera.html#arv-camera-get-pixel-format" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_pixel_format_as_string ()" link="ArvCamera.html#arv-camera-get-pixel-format-as-string" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_pixel_format_from_string ()" link="ArvCamera.html#arv-camera-set-pixel-format-from-string" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_dup_available_pixel_formats ()" link="ArvCamera.html#arv-camera-dup-available-pixel-formats" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_dup_available_pixel_formats_as_display_names ()" link="ArvCamera.html#arv-camera-dup-available-pixel-formats-as-display-names" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_dup_available_pixel_formats_as_strings ()" link="ArvCamera.html#arv-camera-dup-available-pixel-formats-as-strings" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_start_acquisition ()" link="ArvCamera.html#arv-camera-start-acquisition" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_stop_acquisition ()" link="ArvCamera.html#arv-camera-stop-acquisition" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_abort_acquisition ()" link="ArvCamera.html#arv-camera-abort-acquisition" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_acquisition ()" link="ArvCamera.html#arv-camera-acquisition" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_acquisition_mode ()" link="ArvCamera.html#arv-camera-set-acquisition-mode"/>
+    <keyword type="function" name="arv_camera_get_acquisition_mode ()" link="ArvCamera.html#arv-camera-get-acquisition-mode" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_frame_count ()" link="ArvCamera.html#arv-camera-set-frame-count" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_frame_count ()" link="ArvCamera.html#arv-camera-get-frame-count" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_frame_count_bounds ()" link="ArvCamera.html#arv-camera-get-frame-count-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_frame_rate_available ()" link="ArvCamera.html#arv-camera-is-frame-rate-available" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_frame_rate ()" link="ArvCamera.html#arv-camera-set-frame-rate" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_frame_rate ()" link="ArvCamera.html#arv-camera-get-frame-rate" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_frame_rate_bounds ()" link="ArvCamera.html#arv-camera-get-frame-rate-bounds"/>
+    <keyword type="function" name="arv_camera_set_trigger ()" link="ArvCamera.html#arv-camera-set-trigger" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_trigger_source ()" link="ArvCamera.html#arv-camera-set-trigger-source" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_trigger_source ()" link="ArvCamera.html#arv-camera-get-trigger-source" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_dup_available_trigger_sources ()" link="ArvCamera.html#arv-camera-dup-available-trigger-sources" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_dup_available_triggers ()" link="ArvCamera.html#arv-camera-dup-available-triggers" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_clear_triggers ()" link="ArvCamera.html#arv-camera-clear-triggers" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_software_trigger_supported ()" link="ArvCamera.html#arv-camera-is-software-trigger-supported" since="0.8.17"/>
+    <keyword type="function" name="arv_camera_software_trigger ()" link="ArvCamera.html#arv-camera-software-trigger" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_exposure_time_available ()" link="ArvCamera.html#arv-camera-is-exposure-time-available" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_exposure_auto_available ()" link="ArvCamera.html#arv-camera-is-exposure-auto-available" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_exposure_time ()" link="ArvCamera.html#arv-camera-set-exposure-time" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_exposure_time ()" link="ArvCamera.html#arv-camera-get-exposure-time" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_exposure_time_bounds ()" link="ArvCamera.html#arv-camera-get-exposure-time-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_exposure_time_auto ()" link="ArvCamera.html#arv-camera-set-exposure-time-auto" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_exposure_time_auto ()" link="ArvCamera.html#arv-camera-get-exposure-time-auto" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_exposure_mode ()" link="ArvCamera.html#arv-camera-set-exposure-mode"/>
+    <keyword type="function" name="arv_camera_is_gain_available ()" link="ArvCamera.html#arv-camera-is-gain-available" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_gain_auto_available ()" link="ArvCamera.html#arv-camera-is-gain-auto-available" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_gain ()" link="ArvCamera.html#arv-camera-set-gain" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_gain ()" link="ArvCamera.html#arv-camera-get-gain" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_gain_bounds ()" link="ArvCamera.html#arv-camera-get-gain-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_gain_auto ()" link="ArvCamera.html#arv-camera-set-gain-auto" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_gain_auto ()" link="ArvCamera.html#arv-camera-get-gain-auto" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_black_level_available ()" link="ArvCamera.html#arv-camera-is-black-level-available" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_get_black_level ()" link="ArvCamera.html#arv-camera-get-black-level" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_set_black_level ()" link="ArvCamera.html#arv-camera-set-black-level" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_get_black_level_bounds ()" link="ArvCamera.html#arv-camera-get-black-level-bounds" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_is_black_level_auto_available ()" link="ArvCamera.html#arv-camera-is-black-level-auto-available" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_get_black_level_auto ()" link="ArvCamera.html#arv-camera-get-black-level-auto" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_set_black_level_auto ()" link="ArvCamera.html#arv-camera-set-black-level-auto" since="0.8.19"/>
+    <keyword type="function" name="arv_camera_get_payload ()" link="ArvCamera.html#arv-camera-get-payload" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_feature_available ()" link="ArvCamera.html#arv-camera-is-feature-available" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_execute_command ()" link="ArvCamera.html#arv-camera-execute-command" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_is_enumeration_entry_available ()" link="ArvCamera.html#arv-camera-is-enumeration-entry-available" since="0.8.17"/>
+    <keyword type="function" name="arv_camera_dup_available_enumerations ()" link="ArvCamera.html#arv-camera-dup-available-enumerations" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_dup_available_enumerations_as_strings ()" link="ArvCamera.html#arv-camera-dup-available-enumerations-as-strings" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_dup_available_enumerations_as_display_names ()" link="ArvCamera.html#arv-camera-dup-available-enumerations-as-display-names" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_boolean ()" link="ArvCamera.html#arv-camera-get-boolean" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_float ()" link="ArvCamera.html#arv-camera-get-float" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_float_bounds ()" link="ArvCamera.html#arv-camera-get-float-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_float_increment ()" link="ArvCamera.html#arv-camera-get-float-increment" since="0.8.16"/>
+    <keyword type="function" name="arv_camera_get_integer ()" link="ArvCamera.html#arv-camera-get-integer" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_integer_bounds ()" link="ArvCamera.html#arv-camera-get-integer-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_integer_increment ()" link="ArvCamera.html#arv-camera-get-integer-increment" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_string ()" link="ArvCamera.html#arv-camera-get-string" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_boolean ()" link="ArvCamera.html#arv-camera-set-boolean" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_float ()" link="ArvCamera.html#arv-camera-set-float" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_integer ()" link="ArvCamera.html#arv-camera-set-integer" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_string ()" link="ArvCamera.html#arv-camera-set-string" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_range_check_policy ()" link="ArvCamera.html#arv-camera-set-range-check-policy" since="0.8.8"/>
+    <keyword type="function" name="arv_camera_set_register_cache_policy ()" link="ArvCamera.html#arv-camera-set-register-cache-policy" since="0.8.8"/>
+    <keyword type="function" name="arv_camera_is_gv_device ()" link="ArvCamera.html#arv-camera-is-gv-device" since="0.4.0"/>
+    <keyword type="function" name="arv_camera_gv_get_n_stream_channels ()" link="ArvCamera.html#arv-camera-gv-get-n-stream-channels" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_select_stream_channel ()" link="ArvCamera.html#arv-camera-gv-select-stream-channel" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_get_current_stream_channel ()" link="ArvCamera.html#arv-camera-gv-get-current-stream-channel" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_get_packet_delay ()" link="ArvCamera.html#arv-camera-gv-get-packet-delay" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_set_packet_delay ()" link="ArvCamera.html#arv-camera-gv-set-packet-delay" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_get_packet_size ()" link="ArvCamera.html#arv-camera-gv-get-packet-size" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_set_packet_size ()" link="ArvCamera.html#arv-camera-gv-set-packet-size" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_auto_packet_size ()" link="ArvCamera.html#arv-camera-gv-auto-packet-size" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_gv_set_packet_size_adjustment ()" link="ArvCamera.html#arv-camera-gv-set-packet-size-adjustment" since="0.8.3"/>
+    <keyword type="function" name="arv_camera_gv_set_stream_options ()" link="ArvCamera.html#arv-camera-gv-set-stream-options" since="0.6.0"/>
+    <keyword type="function" name="arv_camera_is_uv_device ()" link="ArvCamera.html#arv-camera-is-uv-device" since="0.6.0"/>
+    <keyword type="function" name="arv_camera_uv_set_usb_mode ()" link="ArvCamera.html#arv-camera-uv-set-usb-mode" since="0.8.17"/>
+    <keyword type="function" name="arv_camera_uv_get_bandwidth ()" link="ArvCamera.html#arv-camera-uv-get-bandwidth" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_uv_get_bandwidth_bounds ()" link="ArvCamera.html#arv-camera-uv-get-bandwidth-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_uv_is_bandwidth_control_available ()" link="ArvCamera.html#arv-camera-uv-is-bandwidth-control-available" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_uv_set_bandwidth ()" link="ArvCamera.html#arv-camera-uv-set-bandwidth" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_are_chunks_available ()" link="ArvCamera.html#arv-camera-are-chunks-available" since="0.8.8"/>
+    <keyword type="function" name="arv_camera_get_chunk_mode ()" link="ArvCamera.html#arv-camera-get-chunk-mode" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_get_chunk_state ()" link="ArvCamera.html#arv-camera-get-chunk-state" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_chunk_mode ()" link="ArvCamera.html#arv-camera-set-chunk-mode" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_chunk_state ()" link="ArvCamera.html#arv-camera-set-chunk-state" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_set_chunks ()" link="ArvCamera.html#arv-camera-set-chunks" since="0.8.0"/>
+    <keyword type="function" name="arv_camera_create_chunk_parser ()" link="ArvCamera.html#arv-camera-create-chunk-parser" since="0.4.0"/>
+    <keyword type="function" name="arv_acquisition_mode_to_string ()" link="ArvCamera.html#arv-acquisition-mode-to-string"/>
+    <keyword type="function" name="arv_acquisition_mode_from_string ()" link="ArvCamera.html#arv-acquisition-mode-from-string"/>
+    <keyword type="function" name="arv_exposure_mode_from_string ()" link="ArvCamera.html#arv-exposure-mode-from-string"/>
+    <keyword type="function" name="arv_exposure_mode_to_string ()" link="ArvCamera.html#arv-exposure-mode-to-string"/>
+    <keyword type="macro" name="ARAVIS_VERSION" link="ArvCamera.html#ARAVIS-VERSION:CAPS" since="0.8.0"/>
+    <keyword type="macro" name="ARAVIS_API_VERSION" link="ArvCamera.html#ARAVIS-API-VERSION:CAPS" since="0.8.20"/>
+    <keyword type="macro" name="ARAVIS_MAJOR_VERSION" link="ArvCamera.html#ARAVIS-MAJOR-VERSION:CAPS" since="0.6.0"/>
+    <keyword type="macro" name="ARAVIS_MICRO_VERSION" link="ArvCamera.html#ARAVIS-MICRO-VERSION:CAPS" since="0.6.0"/>
+    <keyword type="macro" name="ARAVIS_MINOR_VERSION" link="ArvCamera.html#ARAVIS-MINOR-VERSION:CAPS" since="0.6.0"/>
+    <keyword type="macro" name="ARAVIS_HAS_PACKET_SOCKET" link="ArvCamera.html#ARAVIS-HAS-PACKET-SOCKET:CAPS" since="0.6.0"/>
+    <keyword type="macro" name="ARAVIS_HAS_USB" link="ArvCamera.html#ARAVIS-HAS-USB:CAPS" since="0.6.0"/>
+    <keyword type="macro" name="ARAVIS_HAS_FAST_HEARTBEAT" link="ArvCamera.html#ARAVIS-HAS-FAST-HEARTBEAT:CAPS" since="0.8.0"/>
+    <keyword type="enum" name="enum ArvAuto" link="ArvCamera.html#ArvAuto"/>
+    <keyword type="struct" name="ArvCamera" link="ArvCamera.html#ArvCamera-struct"/>
+    <keyword type="enum" name="enum ArvGvPacketSizeAdjustment" link="ArvCamera.html#ArvGvPacketSizeAdjustment"/>
+    <keyword type="enum" name="enum ArvAcquisitionMode" link="ArvCamera.html#ArvAcquisitionMode"/>
+    <keyword type="enum" name="enum ArvExposureMode" link="ArvCamera.html#ArvExposureMode"/>
+    <keyword type="property" name="The “device” property" link="ArvCamera.html#ArvCamera--device"/>
+    <keyword type="property" name="The “name” property" link="ArvCamera.html#ArvCamera--name"/>
+    <keyword type="function" name="arv_interface_get_device_address ()" link="ArvInterface.html#arv-interface-get-device-address" since="0.2.0"/>
+    <keyword type="function" name="arv_interface_get_device_id ()" link="ArvInterface.html#arv-interface-get-device-id" since="0.2.0"/>
+    <keyword type="function" name="arv_interface_get_device_model ()" link="ArvInterface.html#arv-interface-get-device-model" since="0.6.0"/>
+    <keyword type="function" name="arv_interface_get_device_physical_id ()" link="ArvInterface.html#arv-interface-get-device-physical-id" since="0.2.0"/>
+    <keyword type="function" name="arv_interface_get_device_serial_nbr ()" link="ArvInterface.html#arv-interface-get-device-serial-nbr" since="0.6.0"/>
+    <keyword type="function" name="arv_interface_get_device_vendor ()" link="ArvInterface.html#arv-interface-get-device-vendor" since="0.6.0"/>
+    <keyword type="function" name="arv_interface_get_device_manufacturer_info ()" link="ArvInterface.html#arv-interface-get-device-manufacturer-info" since="0.8.20"/>
+    <keyword type="function" name="arv_interface_get_device_protocol ()" link="ArvInterface.html#arv-interface-get-device-protocol" since="0.6.0"/>
+    <keyword type="function" name="arv_interface_get_n_devices ()" link="ArvInterface.html#arv-interface-get-n-devices" since="0.2.0"/>
+    <keyword type="function" name="arv_interface_open_device ()" link="ArvInterface.html#arv-interface-open-device" since="0.2.0"/>
+    <keyword type="function" name="arv_interface_update_device_list ()" link="ArvInterface.html#arv-interface-update-device-list" since="0.2.0"/>
+    <keyword type="function" name="arv_device_create_stream ()" link="ArvDevice.html#arv-device-create-stream" since="0.2.0"/>
+    <keyword type="function" name="arv_device_create_chunk_parser ()" link="ArvDevice.html#arv-device-create-chunk-parser" since="0.4.0"/>
+    <keyword type="function" name="arv_device_read_memory ()" link="ArvDevice.html#arv-device-read-memory" since="0.2.0"/>
+    <keyword type="function" name="arv_device_write_memory ()" link="ArvDevice.html#arv-device-write-memory" since="0.2.0"/>
+    <keyword type="function" name="arv_device_read_register ()" link="ArvDevice.html#arv-device-read-register" since="0.2.0"/>
+    <keyword type="function" name="arv_device_write_register ()" link="ArvDevice.html#arv-device-write-register" since="0.2.0"/>
+    <keyword type="function" name="arv_device_get_genicam_xml ()" link="ArvDevice.html#arv-device-get-genicam-xml" since="0.2.0"/>
+    <keyword type="function" name="arv_device_get_genicam ()" link="ArvDevice.html#arv-device-get-genicam" since="0.2.0"/>
+    <keyword type="function" name="arv_device_get_feature ()" link="ArvDevice.html#arv-device-get-feature" since="0.2.0"/>
+    <keyword type="function" name="arv_device_is_feature_available ()" link="ArvDevice.html#arv-device-is-feature-available" since="0.8.0"/>
+    <keyword type="function" name="arv_device_execute_command ()" link="ArvDevice.html#arv-device-execute-command" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_boolean_feature_value ()" link="ArvDevice.html#arv-device-get-boolean-feature-value" since="0.8.0"/>
+    <keyword type="function" name="arv_device_set_boolean_feature_value ()" link="ArvDevice.html#arv-device-set-boolean-feature-value" since="0.8.0"/>
+    <keyword type="function" name="arv_device_set_string_feature_value ()" link="ArvDevice.html#arv-device-set-string-feature-value" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_string_feature_value ()" link="ArvDevice.html#arv-device-get-string-feature-value" since="0.8.0"/>
+    <keyword type="function" name="arv_device_set_integer_feature_value ()" link="ArvDevice.html#arv-device-set-integer-feature-value" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_integer_feature_value ()" link="ArvDevice.html#arv-device-get-integer-feature-value" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_integer_feature_bounds ()" link="ArvDevice.html#arv-device-get-integer-feature-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_integer_feature_increment ()" link="ArvDevice.html#arv-device-get-integer-feature-increment" since="0.8.0"/>
+    <keyword type="function" name="arv_device_set_float_feature_value ()" link="ArvDevice.html#arv-device-set-float-feature-value" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_float_feature_value ()" link="ArvDevice.html#arv-device-get-float-feature-value" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_float_feature_bounds ()" link="ArvDevice.html#arv-device-get-float-feature-bounds" since="0.8.0"/>
+    <keyword type="function" name="arv_device_get_float_feature_increment ()" link="ArvDevice.html#arv-device-get-float-feature-increment" since="0.8.16"/>
+    <keyword type="function" name="arv_device_is_enumeration_entry_available ()" link="ArvDevice.html#arv-device-is-enumeration-entry-available" since="0.8.17"/>
+    <keyword type="function" name="arv_device_dup_available_enumeration_feature_values ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values" since="0.8.0"/>
+    <keyword type="function" name="arv_device_dup_available_enumeration_feature_values_as_strings ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-strings" since="0.8.0"/>
+    <keyword type="function" name="arv_device_dup_available_enumeration_feature_values_as_display_names ()" link="ArvDevice.html#arv-device-dup-available-enumeration-feature-values-as-display-names" since="0.8.0"/>
+    <keyword type="function" name="arv_device_set_features_from_string ()" link="ArvDevice.html#arv-device-set-features-from-string" since="0.8.0"/>
+    <keyword type="function" name="arv_device_set_range_check_policy ()" link="ArvDevice.html#arv-device-set-range-check-policy" since="0.8.6"/>
+    <keyword type="function" name="arv_device_set_register_cache_policy ()" link="ArvDevice.html#arv-device-set-register-cache-policy" since="0.8.0"/>
+    <keyword type="macro" name="ARV_DEVICE_ERROR" link="ArvDevice.html#ARV-DEVICE-ERROR:CAPS"/>
+    <keyword type="enum" name="enum ArvDeviceError" link="ArvDevice.html#ArvDeviceError"/>
+    <keyword type="struct" name="ArvDevice" link="ArvDevice.html#ArvDevice-struct"/>
+    <keyword type="signal" name="The “control-lost” signal" link="ArvDevice.html#ArvDevice-control-lost"/>
+    <keyword type="function" name="ArvStreamCallback ()" link="ArvStream.html#ArvStreamCallback"/>
+    <keyword type="function" name="arv_stream_push_buffer ()" link="ArvStream.html#arv-stream-push-buffer" since="0.2.0"/>
+    <keyword type="function" name="arv_stream_pop_buffer ()" link="ArvStream.html#arv-stream-pop-buffer" since="0.2.0"/>
+    <keyword type="function" name="arv_stream_try_pop_buffer ()" link="ArvStream.html#arv-stream-try-pop-buffer" since="0.2.0"/>
+    <keyword type="function" name="arv_stream_timeout_pop_buffer ()" link="ArvStream.html#arv-stream-timeout-pop-buffer" since="0.2.0"/>
+    <keyword type="function" name="arv_stream_get_n_buffers ()" link="ArvStream.html#arv-stream-get-n-buffers" since="0.2.0"/>
+    <keyword type="function" name="arv_stream_start_thread ()" link="ArvStream.html#arv-stream-start-thread" since="0.6.2"/>
+    <keyword type="function" name="arv_stream_stop_thread ()" link="ArvStream.html#arv-stream-stop-thread" since="0.6.2"/>
+    <keyword type="function" name="arv_stream_get_emit_signals ()" link="ArvStream.html#arv-stream-get-emit-signals" since="0.2.0"/>
+    <keyword type="function" name="arv_stream_set_emit_signals ()" link="ArvStream.html#arv-stream-set-emit-signals" since="0.2.0"/>
+    <keyword type="function" name="arv_make_thread_realtime ()" link="ArvStream.html#arv-make-thread-realtime" since="0.4.0"/>
+    <keyword type="function" name="arv_make_thread_high_priority ()" link="ArvStream.html#arv-make-thread-high-priority" since="0.4.0"/>
+    <keyword type="function" name="arv_stream_get_statistics ()" link="ArvStream.html#arv-stream-get-statistics" since="0.2.0"/>
+    <keyword type="function" name="arv_stream_get_n_infos ()" link="ArvStream.html#arv-stream-get-n-infos" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_name ()" link="ArvStream.html#arv-stream-get-info-name" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_type ()" link="ArvStream.html#arv-stream-get-info-type" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_double ()" link="ArvStream.html#arv-stream-get-info-double" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_double_by_name ()" link="ArvStream.html#arv-stream-get-info-double-by-name" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_uint64 ()" link="ArvStream.html#arv-stream-get-info-uint64" since="0.8.11"/>
+    <keyword type="function" name="arv_stream_get_info_uint64_by_name ()" link="ArvStream.html#arv-stream-get-info-uint64-by-name" since="0.8.11"/>
+    <keyword type="enum" name="enum ArvStreamCallbackType" link="ArvStream.html#ArvStreamCallbackType"/>
+    <keyword type="struct" name="ArvStream" link="ArvStream.html#ArvStream-struct"/>
+    <keyword type="property" name="The “callback” property" link="ArvStream.html#ArvStream--callback"/>
+    <keyword type="property" name="The “callback-data” property" link="ArvStream.html#ArvStream--callback-data"/>
+    <keyword type="property" name="The “device” property" link="ArvStream.html#ArvStream--device"/>
+    <keyword type="property" name="The “emit-signals” property" link="ArvStream.html#ArvStream--emit-signals"/>
+    <keyword type="signal" name="The “new-buffer” signal" link="ArvStream.html#ArvStream-new-buffer"/>
+    <keyword type="function" name="ArvFrameCallback ()" link="ArvBuffer.html#ArvFrameCallback"/>
+    <keyword type="function" name="arv_buffer_new ()" link="ArvBuffer.html#arv-buffer-new" since="0.2.0"/>
+    <keyword type="function" name="arv_buffer_new_full ()" link="ArvBuffer.html#arv-buffer-new-full" since="0.2.0"/>
+    <keyword type="function" name="arv_buffer_new_allocate ()" link="ArvBuffer.html#arv-buffer-new-allocate" since="0.2.3"/>
+    <keyword type="function" name="arv_buffer_get_user_data ()" link="ArvBuffer.html#arv-buffer-get-user-data" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_data ()" link="ArvBuffer.html#arv-buffer-get-data" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_has_chunks ()" link="ArvBuffer.html#arv-buffer-has-chunks" since="0.8.0"/>
+    <keyword type="function" name="arv_buffer_get_chunk_data ()" link="ArvBuffer.html#arv-buffer-get-chunk-data" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_timestamp ()" link="ArvBuffer.html#arv-buffer-get-timestamp" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_set_timestamp ()" link="ArvBuffer.html#arv-buffer-set-timestamp" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_system_timestamp ()" link="ArvBuffer.html#arv-buffer-get-system-timestamp" since="0.6.0"/>
+    <keyword type="function" name="arv_buffer_set_system_timestamp ()" link="ArvBuffer.html#arv-buffer-set-system-timestamp" since="0.6.0"/>
+    <keyword type="function" name="arv_buffer_set_frame_id ()" link="ArvBuffer.html#arv-buffer-set-frame-id" since="0.8.3"/>
+    <keyword type="function" name="arv_buffer_get_frame_id ()" link="ArvBuffer.html#arv-buffer-get-frame-id" since="0.8.0"/>
+    <keyword type="function" name="arv_buffer_get_payload_type ()" link="ArvBuffer.html#arv-buffer-get-payload-type" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_status ()" link="ArvBuffer.html#arv-buffer-get-status" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_image_height ()" link="ArvBuffer.html#arv-buffer-get-image-height" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_image_pixel_format ()" link="ArvBuffer.html#arv-buffer-get-image-pixel-format" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_image_region ()" link="ArvBuffer.html#arv-buffer-get-image-region" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_image_width ()" link="ArvBuffer.html#arv-buffer-get-image-width" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_image_x ()" link="ArvBuffer.html#arv-buffer-get-image-x" since="0.4.0"/>
+    <keyword type="function" name="arv_buffer_get_image_y ()" link="ArvBuffer.html#arv-buffer-get-image-y" since="0.4.0"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BIT_PER_PIXEL()" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BIT-PER-PIXEL:CAPS"/>
+    <keyword type="enum" name="enum ArvBufferStatus" link="ArvBuffer.html#ArvBufferStatus"/>
+    <keyword type="struct" name="ArvBuffer" link="ArvBuffer.html#ArvBuffer-struct"/>
+    <keyword type="enum" name="enum ArvBufferPayloadType" link="ArvBuffer.html#ArvBufferPayloadType"/>
+    <keyword type="typedef" name="ArvPixelFormat" link="ArvBuffer.html#ArvPixelFormat"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_BG_10P" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-BG-10P:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-BG-10-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_BG_12P" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-BG-12P:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GB_10P" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GB-10P:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GB-10-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GB_12P" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GB-12P:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GR_10P" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GR-10P:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GR-10-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GR_12P" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GR-12P:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_RG_10P" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-RG-10P:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-RG-10-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_RG_12P" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-RG-12P:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_BG_10" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-BG-10:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_BG_12" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-BG-12:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GR-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GB-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-RG-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-BG-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_BG_8" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-BG-8:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GB_10" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GB-10:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GB_12" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GB-12:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GB_8" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GB-8:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GR_10" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GR-10:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GR_12" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GR-12:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GR_8" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GR-8:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_RG_10" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-RG-10:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_RG_12" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-RG-12:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_RG_8" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-RG-8:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_BG_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-BG-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GB_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GB-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_GR_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-GR-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BAYER_RG_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BAYER-RG-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BGRA_8_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BGRA-8-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BGR_10_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BGR-10-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BGR_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BGR-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_BGR_8_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-BGR-8-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-CUSTOM-YUV-422-YUYV-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_MONO_10" link="ArvBuffer.html#ARV-PIXEL-FORMAT-MONO-10:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_MONO_10_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-MONO-10-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_MONO_12" link="ArvBuffer.html#ARV-PIXEL-FORMAT-MONO-12:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_MONO_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-MONO-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_MONO_14" link="ArvBuffer.html#ARV-PIXEL-FORMAT-MONO-14:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_MONO_16" link="ArvBuffer.html#ARV-PIXEL-FORMAT-MONO-16:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_MONO_8" link="ArvBuffer.html#ARV-PIXEL-FORMAT-MONO-8:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_MONO_8_SIGNED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-MONO-8-SIGNED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_RGBA_8_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-RGBA-8-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_RGB_10_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-RGB-10-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_RGB_10_PLANAR" link="ArvBuffer.html#ARV-PIXEL-FORMAT-RGB-10-PLANAR:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_RGB_12_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-RGB-12-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_RGB_12_PLANAR" link="ArvBuffer.html#ARV-PIXEL-FORMAT-RGB-12-PLANAR:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_RGB_16_PLANAR" link="ArvBuffer.html#ARV-PIXEL-FORMAT-RGB-16-PLANAR:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_RGB_8_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-RGB-8-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_RGB_8_PLANAR" link="ArvBuffer.html#ARV-PIXEL-FORMAT-RGB-8-PLANAR:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_YUV_411_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-YUV-411-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_YUV_422_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-YUV-422-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-YUV-422-YUYV-PACKED:CAPS"/>
+    <keyword type="macro" name="ARV_PIXEL_FORMAT_YUV_444_PACKED" link="ArvBuffer.html#ARV-PIXEL-FORMAT-YUV-444-PACKED:CAPS"/>
+    <keyword type="function" name="arv_chunk_parser_new ()" link="ArvChunkParser.html#arv-chunk-parser-new" since="0.4.0"/>
+    <keyword type="function" name="arv_chunk_parser_get_float_value ()" link="ArvChunkParser.html#arv-chunk-parser-get-float-value"/>
+    <keyword type="function" name="arv_chunk_parser_get_integer_value ()" link="ArvChunkParser.html#arv-chunk-parser-get-integer-value"/>
+    <keyword type="function" name="arv_chunk_parser_get_boolean_value ()" link="ArvChunkParser.html#arv-chunk-parser-get-boolean-value"/>
+    <keyword type="function" name="arv_chunk_parser_get_string_value ()" link="ArvChunkParser.html#arv-chunk-parser-get-string-value"/>
+    <keyword type="macro" name="ARV_CHUNK_PARSER_ERROR" link="ArvChunkParser.html#ARV-CHUNK-PARSER-ERROR:CAPS"/>
+    <keyword type="enum" name="enum ArvChunkParserError" link="ArvChunkParser.html#ArvChunkParserError"/>
+    <keyword type="struct" name="ArvChunkParser" link="ArvChunkParser.html#ArvChunkParser-struct"/>
+    <keyword type="property" name="The “genicam” property" link="ArvChunkParser.html#ArvChunkParser--genicam"/>
+    <keyword type="function" name="arv_gc_new ()" link="ArvGc.html#arv-gc-new"/>
+    <keyword type="function" name="arv_gc_get_node ()" link="ArvGc.html#arv-gc-get-node"/>
+    <keyword type="function" name="arv_gc_get_device ()" link="ArvGc.html#arv-gc-get-device"/>
+    <keyword type="function" name="arv_gc_get_buffer ()" link="ArvGc.html#arv-gc-get-buffer"/>
+    <keyword type="function" name="arv_gc_set_buffer ()" link="ArvGc.html#arv-gc-set-buffer"/>
+    <keyword type="function" name="arv_gc_get_range_check_policy ()" link="ArvGc.html#arv-gc-get-range-check-policy"/>
+    <keyword type="function" name="arv_gc_set_range_check_policy ()" link="ArvGc.html#arv-gc-set-range-check-policy"/>
+    <keyword type="function" name="arv_gc_get_register_cache_policy ()" link="ArvGc.html#arv-gc-get-register-cache-policy"/>
+    <keyword type="function" name="arv_gc_set_register_cache_policy ()" link="ArvGc.html#arv-gc-set-register-cache-policy"/>
+    <keyword type="struct" name="ArvGc" link="ArvGc.html#ArvGc-struct"/>
+    <keyword type="enum" name="enum ArvRangeCheckPolicy" link="ArvGc.html#ArvRangeCheckPolicy" since="0.8.6"/>
+    <keyword type="enum" name="enum ArvRegisterCachePolicy" link="ArvGc.html#ArvRegisterCachePolicy" since="0.8.0"/>
+    <keyword type="enum" name="enum ArvGcNameSpace" link="ArvGc.html#ArvGcNameSpace"/>
+    <keyword type="enum" name="enum ArvGcAccessMode" link="ArvGc.html#ArvGcAccessMode"/>
+    <keyword type="enum" name="enum ArvGcCachable" link="ArvGc.html#ArvGcCachable"/>
+    <keyword type="enum" name="enum ArvGcSignedness" link="ArvGc.html#ArvGcSignedness"/>
+    <keyword type="enum" name="enum ArvGcIsLinear" link="ArvGc.html#ArvGcIsLinear"/>
+    <keyword type="enum" name="enum ArvGcVisibility" link="ArvGc.html#ArvGcVisibility"/>
+    <keyword type="enum" name="enum ArvGcRepresentation" link="ArvGc.html#ArvGcRepresentation" since="0.8.0"/>
+    <keyword type="enum" name="enum ArvGcDisplayNotation" link="ArvGc.html#ArvGcDisplayNotation" since="0.8.0"/>
+    <keyword type="enum" name="enum ArvGcStreamable" link="ArvGc.html#ArvGcStreamable" since="0.8.8"/>
+    <keyword type="function" name="arv_gc_node_get_genicam ()" link="ArvGcNode.html#arv-gc-node-get-genicam"/>
+    <keyword type="struct" name="ArvGcNode" link="ArvGcNode.html#ArvGcNode-struct"/>
+    <keyword type="function" name="arv_gc_property_node_new_access_mode ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-access-mode"/>
+    <keyword type="function" name="arv_gc_property_node_new_address ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-address"/>
+    <keyword type="function" name="arv_gc_property_node_new_bit ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-bit"/>
+    <keyword type="function" name="arv_gc_property_node_new_cachable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-cachable"/>
+    <keyword type="function" name="arv_gc_property_node_new_command_value ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-command-value"/>
+    <keyword type="function" name="arv_gc_property_node_new_constant ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-constant"/>
+    <keyword type="function" name="arv_gc_property_node_new_description ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-description"/>
+    <keyword type="function" name="arv_gc_property_node_new_display_name ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-display-name"/>
+    <keyword type="function" name="arv_gc_property_node_new_endianness ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-endianness"/>
+    <keyword type="function" name="arv_gc_property_node_new_expression ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-expression"/>
+    <keyword type="function" name="arv_gc_property_node_new_formula ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-formula"/>
+    <keyword type="function" name="arv_gc_property_node_new_formula_from ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-formula-from"/>
+    <keyword type="function" name="arv_gc_property_node_new_formula_to ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-formula-to"/>
+    <keyword type="function" name="arv_gc_property_node_new_increment ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-increment"/>
+    <keyword type="function" name="arv_gc_property_node_new_imposed_access_mode ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-imposed-access-mode"/>
+    <keyword type="function" name="arv_gc_property_node_new_is_linear ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-is-linear"/>
+    <keyword type="function" name="arv_gc_property_node_new_length ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-length"/>
+    <keyword type="function" name="arv_gc_property_node_new_lsb ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-lsb"/>
+    <keyword type="function" name="arv_gc_property_node_new_maximum ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-maximum"/>
+    <keyword type="function" name="arv_gc_property_node_new_minimum ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-minimum"/>
+    <keyword type="function" name="arv_gc_property_node_new_msb ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-msb"/>
+    <keyword type="function" name="arv_gc_property_node_new_off_value ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-off-value"/>
+    <keyword type="function" name="arv_gc_property_node_new_on_value ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-on-value"/>
+    <keyword type="function" name="arv_gc_property_node_new_chunk_id ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-chunk-id"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_address ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-address"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_command_value ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-command-value"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_feature ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-feature"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_increment ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-increment"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_is_available ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-is-available"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_is_implemented ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-is-implemented"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_is_locked ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-is-locked"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_length ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-length"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_maximum ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-maximum"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_minimum ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-minimum"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_port ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-port"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_value ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-value"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_variable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-variable"/>
+    <keyword type="function" name="arv_gc_property_node_new_polling_time ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-polling-time"/>
+    <keyword type="function" name="arv_gc_property_node_new_sign ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-sign"/>
+    <keyword type="function" name="arv_gc_property_node_new_slope ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-slope"/>
+    <keyword type="function" name="arv_gc_property_node_new_tooltip ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-tooltip"/>
+    <keyword type="function" name="arv_gc_property_node_new_unit ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-unit"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_value_default ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-value-default"/>
+    <keyword type="function" name="arv_gc_property_node_new_value_default ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-value-default"/>
+    <keyword type="function" name="arv_gc_property_node_new_value ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-value"/>
+    <keyword type="function" name="arv_gc_property_node_new_event_id ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-event-id"/>
+    <keyword type="function" name="arv_gc_property_node_new_p_selected ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-p-selected"/>
+    <keyword type="function" name="arv_gc_property_node_get_name ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-name" since="0.6.0"/>
+    <keyword type="function" name="arv_gc_property_node_get_node_type ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-node-type"/>
+    <keyword type="function" name="arv_gc_property_node_get_linked_node ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-linked-node"/>
+    <keyword type="function" name="arv_gc_property_node_get_double ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-double"/>
+    <keyword type="function" name="arv_gc_property_node_set_double ()" link="ArvGcPropertyNode.html#arv-gc-property-node-set-double"/>
+    <keyword type="function" name="arv_gc_property_node_get_int64 ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-int64"/>
+    <keyword type="function" name="arv_gc_property_node_set_int64 ()" link="ArvGcPropertyNode.html#arv-gc-property-node-set-int64"/>
+    <keyword type="function" name="arv_gc_property_node_get_string ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-string"/>
+    <keyword type="function" name="arv_gc_property_node_set_string ()" link="ArvGcPropertyNode.html#arv-gc-property-node-set-string"/>
+    <keyword type="function" name="arv_gc_property_node_get_access_mode ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-access-mode"/>
+    <keyword type="function" name="arv_gc_property_node_get_cachable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-cachable"/>
+    <keyword type="function" name="arv_gc_property_node_get_endianness ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-endianness"/>
+    <keyword type="function" name="arv_gc_property_node_get_lsb ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-lsb"/>
+    <keyword type="function" name="arv_gc_property_node_get_msb ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-msb"/>
+    <keyword type="function" name="arv_gc_property_node_get_sign ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-sign"/>
+    <keyword type="function" name="arv_gc_property_node_get_visibility ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-visibility"/>
+    <keyword type="function" name="arv_gc_property_node_new_visibility ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-visibility"/>
+    <keyword type="function" name="arv_gc_property_node_get_representation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-representation"/>
+    <keyword type="function" name="arv_gc_property_node_new_representation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-representation"/>
+    <keyword type="function" name="arv_gc_property_node_get_display_notation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-display-notation"/>
+    <keyword type="function" name="arv_gc_property_node_new_display_notation ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-display-notation"/>
+    <keyword type="function" name="arv_gc_property_node_get_display_precision ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-display-precision"/>
+    <keyword type="function" name="arv_gc_property_node_new_display_precision ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-display-precision"/>
+    <keyword type="function" name="arv_gc_property_node_new_streamable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-new-streamable"/>
+    <keyword type="function" name="arv_gc_property_node_get_streamable ()" link="ArvGcPropertyNode.html#arv-gc-property-node-get-streamable"/>
+    <keyword type="struct" name="ArvGcPropertyNode" link="ArvGcPropertyNode.html#ArvGcPropertyNode-struct"/>
+    <keyword type="property" name="The “node-type” property" link="ArvGcPropertyNode.html#ArvGcPropertyNode--node-type"/>
+    <keyword type="function" name="arv_gc_index_node_new ()" link="ArvGcIndexNode.html#arv-gc-index-node-new"/>
+    <keyword type="function" name="arv_gc_index_node_get_index ()" link="ArvGcIndexNode.html#arv-gc-index-node-get-index"/>
+    <keyword type="struct" name="ArvGcIndexNode" link="ArvGcIndexNode.html#ArvGcIndexNode-struct"/>
+    <keyword type="function" name="arv_gc_p_value_indexed_node_new ()" link="ArvGcValueIndexedNode.html#arv-gc-p-value-indexed-node-new"/>
+    <keyword type="function" name="arv_gc_value_indexed_node_get_index ()" link="ArvGcValueIndexedNode.html#arv-gc-value-indexed-node-get-index"/>
+    <keyword type="function" name="arv_gc_value_indexed_node_new ()" link="ArvGcValueIndexedNode.html#arv-gc-value-indexed-node-new"/>
+    <keyword type="function" name="arv_gc_invalidator_node_new ()" link="ArvGcInvalidatorNode.html#arv-gc-invalidator-node-new"/>
+    <keyword type="function" name="arv_gc_invalidator_has_changed ()" link="ArvGcInvalidatorNode.html#arv-gc-invalidator-has-changed"/>
+    <keyword type="struct" name="ArvGcInvalidatorNode" link="ArvGcInvalidatorNode.html#ArvGcInvalidatorNode-struct"/>
+    <keyword type="function" name="arv_gc_feature_node_get_value_as_string ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-value-as-string"/>
+    <keyword type="function" name="arv_gc_feature_node_set_value_from_string ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-set-value-from-string"/>
+    <keyword type="function" name="arv_gc_feature_node_get_name ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-name"/>
+    <keyword type="function" name="arv_gc_feature_node_get_name_space ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-name-space" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_feature_node_get_display_name ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-display-name"/>
+    <keyword type="function" name="arv_gc_feature_node_get_tooltip ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-tooltip"/>
+    <keyword type="function" name="arv_gc_feature_node_get_description ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-description"/>
+    <keyword type="function" name="arv_gc_feature_node_is_available ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-is-available"/>
+    <keyword type="function" name="arv_gc_feature_node_is_implemented ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-is-implemented"/>
+    <keyword type="function" name="arv_gc_feature_node_is_locked ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-is-locked"/>
+    <keyword type="function" name="arv_gc_feature_node_get_visibility ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-visibility"/>
+    <keyword type="function" name="arv_gc_feature_node_get_imposed_access_mode ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-imposed-access-mode" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_feature_node_get_actual_access_mode ()" link="ArvGcFeatureNode.html#arv-gc-feature-node-get-actual-access-mode" since="0.8.0"/>
+    <keyword type="struct" name="ArvGcFeatureNode" link="ArvGcFeatureNode.html#ArvGcFeatureNode-struct"/>
+    <keyword type="function" name="arv_gc_register_description_node_new ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-new"/>
+    <keyword type="function" name="arv_gc_register_description_node_compare_schema_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-compare-schema-version" since="0.6.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_check_schema_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-check-schema-version" since="0.6.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_model_name ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-model-name" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_vendor_name ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-vendor-name" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_major_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-major-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_minor_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-minor-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_subminor_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-subminor-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_schema_major_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-schema-major-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_schema_minor_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-schema-minor-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_description_node_get_schema_subminor_version ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-description-node-get-schema-subminor-version" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_register_feature_node ()" link="ArvGcRegisterDescriptionNode.html#arv-gc-register-feature-node"/>
+    <keyword type="struct" name="ArvGcRegisterDescriptionNode" link="ArvGcRegisterDescriptionNode.html#ArvGcRegisterDescriptionNode-struct"/>
+    <keyword type="function" name="arv_gc_group_node_new ()" link="ArvGcGroupNode.html#arv-gc-group-node-new"/>
+    <keyword type="struct" name="ArvGcGroupNode" link="ArvGcGroupNode.html#ArvGcGroupNode-struct"/>
+    <keyword type="function" name="arv_gc_register_get ()" link="ArvGcRegister.html#arv-gc-register-get"/>
+    <keyword type="function" name="arv_gc_register_get_address ()" link="ArvGcRegister.html#arv-gc-register-get-address"/>
+    <keyword type="function" name="arv_gc_register_get_length ()" link="ArvGcRegister.html#arv-gc-register-get-length"/>
+    <keyword type="function" name="arv_gc_register_set ()" link="ArvGcRegister.html#arv-gc-register-set"/>
+    <keyword type="struct" name="ArvGcRegister" link="ArvGcRegister.html#ArvGcRegister-struct"/>
+    <keyword type="function" name="arv_gc_integer_get_value ()" link="ArvGcInteger.html#arv-gc-integer-get-value"/>
+    <keyword type="function" name="arv_gc_integer_set_value ()" link="ArvGcInteger.html#arv-gc-integer-set-value"/>
+    <keyword type="function" name="arv_gc_integer_get_min ()" link="ArvGcInteger.html#arv-gc-integer-get-min"/>
+    <keyword type="function" name="arv_gc_integer_get_max ()" link="ArvGcInteger.html#arv-gc-integer-get-max"/>
+    <keyword type="function" name="arv_gc_integer_get_inc ()" link="ArvGcInteger.html#arv-gc-integer-get-inc"/>
+    <keyword type="function" name="arv_gc_integer_get_representation ()" link="ArvGcInteger.html#arv-gc-integer-get-representation"/>
+    <keyword type="function" name="arv_gc_integer_get_unit ()" link="ArvGcInteger.html#arv-gc-integer-get-unit"/>
+    <keyword type="function" name="arv_gc_integer_impose_min ()" link="ArvGcInteger.html#arv-gc-integer-impose-min"/>
+    <keyword type="function" name="arv_gc_integer_impose_max ()" link="ArvGcInteger.html#arv-gc-integer-impose-max"/>
+    <keyword type="struct" name="ArvGcInteger" link="ArvGcInteger.html#ArvGcInteger-struct"/>
+    <keyword type="function" name="arv_gc_float_get_value ()" link="ArvGcFloat.html#arv-gc-float-get-value"/>
+    <keyword type="function" name="arv_gc_float_set_value ()" link="ArvGcFloat.html#arv-gc-float-set-value"/>
+    <keyword type="function" name="arv_gc_float_get_min ()" link="ArvGcFloat.html#arv-gc-float-get-min"/>
+    <keyword type="function" name="arv_gc_float_get_max ()" link="ArvGcFloat.html#arv-gc-float-get-max"/>
+    <keyword type="function" name="arv_gc_float_get_inc ()" link="ArvGcFloat.html#arv-gc-float-get-inc"/>
+    <keyword type="function" name="arv_gc_float_get_representation ()" link="ArvGcFloat.html#arv-gc-float-get-representation"/>
+    <keyword type="function" name="arv_gc_float_get_unit ()" link="ArvGcFloat.html#arv-gc-float-get-unit"/>
+    <keyword type="function" name="arv_gc_float_get_display_notation ()" link="ArvGcFloat.html#arv-gc-float-get-display-notation" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_float_get_display_precision ()" link="ArvGcFloat.html#arv-gc-float-get-display-precision" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_float_impose_min ()" link="ArvGcFloat.html#arv-gc-float-impose-min"/>
+    <keyword type="function" name="arv_gc_float_impose_max ()" link="ArvGcFloat.html#arv-gc-float-impose-max"/>
+    <keyword type="struct" name="ArvGcFloat" link="ArvGcFloat.html#ArvGcFloat-struct"/>
+    <keyword type="function" name="arv_gc_string_get_value ()" link="ArvGcString.html#arv-gc-string-get-value"/>
+    <keyword type="function" name="arv_gc_string_set_value ()" link="ArvGcString.html#arv-gc-string-set-value"/>
+    <keyword type="function" name="arv_gc_string_get_max_length ()" link="ArvGcString.html#arv-gc-string-get-max-length"/>
+    <keyword type="struct" name="ArvGcString" link="ArvGcString.html#ArvGcString-struct"/>
+    <keyword type="function" name="arv_gc_category_new ()" link="ArvGcCategory.html#arv-gc-category-new"/>
+    <keyword type="function" name="arv_gc_category_get_features ()" link="ArvGcCategory.html#arv-gc-category-get-features"/>
+    <keyword type="struct" name="ArvGcCategory" link="ArvGcCategory.html#ArvGcCategory-struct"/>
+    <keyword type="function" name="arv_gc_command_new ()" link="ArvGcCommand.html#arv-gc-command-new"/>
+    <keyword type="function" name="arv_gc_command_execute ()" link="ArvGcCommand.html#arv-gc-command-execute"/>
+    <keyword type="struct" name="ArvGcCommand" link="ArvGcCommand.html#ArvGcCommand-struct"/>
+    <keyword type="function" name="arv_gc_boolean_new ()" link="ArvGcBoolean.html#arv-gc-boolean-new"/>
+    <keyword type="function" name="arv_gc_boolean_get_value ()" link="ArvGcBoolean.html#arv-gc-boolean-get-value" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_boolean_set_value ()" link="ArvGcBoolean.html#arv-gc-boolean-set-value"/>
+    <keyword type="struct" name="ArvGcBoolean" link="ArvGcBoolean.html#ArvGcBoolean-struct"/>
+    <keyword type="function" name="arv_gc_integer_node_new ()" link="ArvGcIntegerNode.html#arv-gc-integer-node-new"/>
+    <keyword type="struct" name="ArvGcIntegerNode" link="ArvGcIntegerNode.html#ArvGcIntegerNode-struct"/>
+    <keyword type="function" name="arv_gc_float_node_new ()" link="ArvGcFloatNode.html#arv-gc-float-node-new"/>
+    <keyword type="struct" name="ArvGcFloatNode" link="ArvGcFloatNode.html#ArvGcFloatNode-struct"/>
+    <keyword type="function" name="arv_gc_register_node_new ()" link="ArvGcRegisterNode.html#arv-gc-register-node-new"/>
+    <keyword type="function" name="arv_gc_int_reg_node_new ()" link="ArvGcRegisterNode.html#arv-gc-int-reg-node-new" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_masked_int_reg_node_new ()" link="ArvGcRegisterNode.html#arv-gc-masked-int-reg-node-new" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_float_reg_node_new ()" link="ArvGcRegisterNode.html#arv-gc-float-reg-node-new" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_string_reg_node_new ()" link="ArvGcRegisterNode.html#arv-gc-string-reg-node-new" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_struct_reg_node_new ()" link="ArvGcRegisterNode.html#arv-gc-struct-reg-node-new" since="0.8.0"/>
+    <keyword type="struct" name="ArvGcRegisterNode" link="ArvGcRegisterNode.html#ArvGcRegisterNode-struct"/>
+    <keyword type="struct" name="ArvGcIntRegNode" link="ArvGcRegisterNode.html#ArvGcIntRegNode-struct"/>
+    <keyword type="struct" name="ArvGcMaskedIntRegNode" link="ArvGcRegisterNode.html#ArvGcMaskedIntRegNode-struct"/>
+    <keyword type="struct" name="ArvGcFloatRegNode" link="ArvGcRegisterNode.html#ArvGcFloatRegNode-struct"/>
+    <keyword type="struct" name="ArvGcStringRegNode" link="ArvGcRegisterNode.html#ArvGcStringRegNode-struct"/>
+    <keyword type="struct" name="ArvGcStructRegNode" link="ArvGcRegisterNode.html#ArvGcStructRegNode-struct"/>
+    <keyword type="function" name="arv_gc_string_node_new ()" link="ArvGcStringNode.html#arv-gc-string-node-new"/>
+    <keyword type="struct" name="ArvGcStringNode" link="ArvGcStringNode.html#ArvGcStringNode-struct"/>
+    <keyword type="function" name="arv_gc_struct_entry_node_new ()" link="ArvGcStructEntryNode.html#arv-gc-struct-entry-node-new"/>
+    <keyword type="struct" name="ArvGcStructEntryNode" link="ArvGcStructEntryNode.html#ArvGcStructEntryNode-struct"/>
+    <keyword type="function" name="arv_gc_enumeration_new ()" link="ArvGcEnumeration.html#arv-gc-enumeration-new"/>
+    <keyword type="function" name="arv_gc_enumeration_get_string_value ()" link="ArvGcEnumeration.html#arv-gc-enumeration-get-string-value"/>
+    <keyword type="function" name="arv_gc_enumeration_set_string_value ()" link="ArvGcEnumeration.html#arv-gc-enumeration-set-string-value"/>
+    <keyword type="function" name="arv_gc_enumeration_get_int_value ()" link="ArvGcEnumeration.html#arv-gc-enumeration-get-int-value"/>
+    <keyword type="function" name="arv_gc_enumeration_set_int_value ()" link="ArvGcEnumeration.html#arv-gc-enumeration-set-int-value"/>
+    <keyword type="function" name="arv_gc_enumeration_get_entries ()" link="ArvGcEnumeration.html#arv-gc-enumeration-get-entries"/>
+    <keyword type="function" name="arv_gc_enumeration_dup_available_int_values ()" link="ArvGcEnumeration.html#arv-gc-enumeration-dup-available-int-values" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_enumeration_dup_available_string_values ()" link="ArvGcEnumeration.html#arv-gc-enumeration-dup-available-string-values" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_enumeration_dup_available_display_names ()" link="ArvGcEnumeration.html#arv-gc-enumeration-dup-available-display-names" since="0.8.0"/>
+    <keyword type="struct" name="ArvGcEnumeration" link="ArvGcEnumeration.html#ArvGcEnumeration-struct"/>
+    <keyword type="function" name="arv_gc_enum_entry_new ()" link="ArvGcEnumEntry.html#arv-gc-enum-entry-new"/>
+    <keyword type="function" name="arv_gc_enum_entry_get_value ()" link="ArvGcEnumEntry.html#arv-gc-enum-entry-get-value"/>
+    <keyword type="struct" name="ArvGcEnumEntry" link="ArvGcEnumEntry.html#ArvGcEnumEntry-struct"/>
+    <keyword type="struct" name="ArvGcConverter" link="ArvGcConverter.html#ArvGcConverter-struct"/>
+    <keyword type="function" name="arv_gc_converter_node_new ()" link="ArvGcConverterNode.html#arv-gc-converter-node-new"/>
+    <keyword type="struct" name="ArvGcConverterNode" link="ArvGcConverterNode.html#ArvGcConverterNode-struct"/>
+    <keyword type="function" name="arv_gc_int_converter_node_new ()" link="ArvGcIntConverterNode.html#arv-gc-int-converter-node-new"/>
+    <keyword type="struct" name="ArvGcIntConverterNode" link="ArvGcIntConverterNode.html#ArvGcIntConverterNode-struct"/>
+    <keyword type="function" name="arv_gc_swiss_knife_node_new ()" link="ArvGcSwissKnife.html#arv-gc-swiss-knife-node-new"/>
+    <keyword type="function" name="arv_gc_int_swiss_knife_node_new ()" link="ArvGcSwissKnife.html#arv-gc-int-swiss-knife-node-new"/>
+    <keyword type="struct" name="ArvGcSwissKnifeNode" link="ArvGcSwissKnife.html#ArvGcSwissKnifeNode-struct"/>
+    <keyword type="struct" name="ArvGcIntSwissKnifeNode" link="ArvGcSwissKnife.html#ArvGcIntSwissKnifeNode-struct"/>
+    <keyword type="function" name="arv_gc_selector_get_selected_features ()" link="ArvGcSelector.html#arv-gc-selector-get-selected-features" since="0.8.0"/>
+    <keyword type="function" name="arv_gc_selector_is_selector ()" link="ArvGcSelector.html#arv-gc-selector-is-selector" since="0.8.0"/>
+    <keyword type="struct" name="ArvGcSelector" link="ArvGcSelector.html#ArvGcSelector-struct"/>
+    <keyword type="function" name="arv_gc_port_new ()" link="ArvGcPort.html#arv-gc-port-new"/>
+    <keyword type="function" name="arv_gc_port_read ()" link="ArvGcPort.html#arv-gc-port-read"/>
+    <keyword type="function" name="arv_gc_port_write ()" link="ArvGcPort.html#arv-gc-port-write"/>
+    <keyword type="function" name="arv_gc_set_default_node_data ()" link="ArvGcPort.html#arv-gc-set-default-node-data"/>
+    <keyword type="struct" name="ArvGcPort" link="ArvGcPort.html#ArvGcPort-struct"/>
+    <keyword type="function" name="arv_gv_interface_get_instance ()" link="ArvGvInterface.html#arv-gv-interface-get-instance"/>
+    <keyword type="struct" name="ArvGvInterface" link="ArvGvInterface.html#ArvGvInterface-struct"/>
+    <keyword type="function" name="arv_gv_device_new ()" link="ArvGvDevice.html#arv-gv-device-new" since="0.8.0"/>
+    <keyword type="function" name="arv_gv_device_get_timestamp_tick_frequency ()" link="ArvGvDevice.html#arv-gv-device-get-timestamp-tick-frequency"/>
+    <keyword type="function" name="arv_gv_device_get_device_address ()" link="ArvGvDevice.html#arv-gv-device-get-device-address" since="0.2.0"/>
+    <keyword type="function" name="arv_gv_device_get_interface_address ()" link="ArvGvDevice.html#arv-gv-device-get-interface-address" since="0.2.0"/>
+    <keyword type="function" name="arv_gv_device_get_packet_size ()" link="ArvGvDevice.html#arv-gv-device-get-packet-size"/>
+    <keyword type="function" name="arv_gv_device_set_packet_size ()" link="ArvGvDevice.html#arv-gv-device-set-packet-size"/>
+    <keyword type="function" name="arv_gv_device_set_packet_size_adjustment ()" link="ArvGvDevice.html#arv-gv-device-set-packet-size-adjustment" since="0.8.3"/>
+    <keyword type="function" name="arv_gv_device_get_stream_options ()" link="ArvGvDevice.html#arv-gv-device-get-stream-options" since="0.6.0"/>
+    <keyword type="function" name="arv_gv_device_set_stream_options ()" link="ArvGvDevice.html#arv-gv-device-set-stream-options" since="0.6.0"/>
+    <keyword type="function" name="arv_gv_device_auto_packet_size ()" link="ArvGvDevice.html#arv-gv-device-auto-packet-size" since="0.6.0"/>
+    <keyword type="function" name="arv_gv_device_take_control ()" link="ArvGvDevice.html#arv-gv-device-take-control" since="0.8.3"/>
+    <keyword type="function" name="arv_gv_device_leave_control ()" link="ArvGvDevice.html#arv-gv-device-leave-control" since="0.8.3"/>
+    <keyword type="function" name="arv_gv_device_is_controller ()" link="ArvGvDevice.html#arv-gv-device-is-controller" since="0.8.0"/>
+    <keyword type="struct" name="ArvGvDevice" link="ArvGvDevice.html#ArvGvDevice-struct"/>
+    <keyword type="property" name="The “device-address” property" link="ArvGvDevice.html#ArvGvDevice--device-address"/>
+    <keyword type="property" name="The “interface-address” property" link="ArvGvDevice.html#ArvGvDevice--interface-address"/>
+    <keyword type="property" name="The “packet-size-adjustment” property" link="ArvGvDevice.html#ArvGvDevice--packet-size-adjustment"/>
+    <keyword type="function" name="arv_gv_stream_get_port ()" link="ArvGvStream.html#arv-gv-stream-get-port"/>
+    <keyword type="function" name="arv_gv_stream_get_statistics ()" link="ArvGvStream.html#arv-gv-stream-get-statistics"/>
+    <keyword type="enum" name="enum ArvGvStreamOption" link="ArvGvStream.html#ArvGvStreamOption"/>
+    <keyword type="enum" name="enum ArvGvStreamSocketBuffer" link="ArvGvStream.html#ArvGvStreamSocketBuffer"/>
+    <keyword type="enum" name="enum ArvGvStreamPacketResend" link="ArvGvStream.html#ArvGvStreamPacketResend"/>
+    <keyword type="struct" name="ArvGvStream" link="ArvGvStream.html#ArvGvStream-struct"/>
+    <keyword type="property" name="The “frame-retention” property" link="ArvGvStream.html#ArvGvStream--frame-retention"/>
+    <keyword type="property" name="The “initial-packet-timeout” property" link="ArvGvStream.html#ArvGvStream--initial-packet-timeout"/>
+    <keyword type="property" name="The “packet-request-ratio” property" link="ArvGvStream.html#ArvGvStream--packet-request-ratio"/>
+    <keyword type="property" name="The “packet-resend” property" link="ArvGvStream.html#ArvGvStream--packet-resend"/>
+    <keyword type="property" name="The “packet-timeout” property" link="ArvGvStream.html#ArvGvStream--packet-timeout"/>
+    <keyword type="property" name="The “socket-buffer” property" link="ArvGvStream.html#ArvGvStream--socket-buffer"/>
+    <keyword type="property" name="The “socket-buffer-size” property" link="ArvGvStream.html#ArvGvStream--socket-buffer-size"/>
+    <keyword type="function" name="arv_gv_fake_camera_new ()" link="ArvGvFakeCamera.html#arv-gv-fake-camera-new" since="0.8.0"/>
+    <keyword type="function" name="arv_gv_fake_camera_new_full ()" link="ArvGvFakeCamera.html#arv-gv-fake-camera-new-full" since="0.8.0"/>
+    <keyword type="function" name="arv_gv_fake_camera_get_fake_camera ()" link="ArvGvFakeCamera.html#arv-gv-fake-camera-get-fake-camera" since="0.8.0"/>
+    <keyword type="function" name="arv_gv_fake_camera_is_running ()" link="ArvGvFakeCamera.html#arv-gv-fake-camera-is-running" since="0.8.0"/>
+    <keyword type="property" name="The “genicam-filename” property" link="ArvGvFakeCamera.html#ArvGvFakeCamera--genicam-filename"/>
+    <keyword type="property" name="The “gvsp-lost-ratio” property" link="ArvGvFakeCamera.html#ArvGvFakeCamera--gvsp-lost-ratio"/>
+    <keyword type="property" name="The “interface-name” property" link="ArvGvFakeCamera.html#ArvGvFakeCamera--interface-name"/>
+    <keyword type="property" name="The “serial-number” property" link="ArvGvFakeCamera.html#ArvGvFakeCamera--serial-number"/>
+    <keyword type="function" name="arv_uv_interface_get_instance ()" link="ArvUvInterface.html#arv-uv-interface-get-instance"/>
+    <keyword type="function" name="arv_uv_device_new ()" link="ArvUvDevice.html#arv-uv-device-new" since="0.8.0"/>
+    <keyword type="function" name="arv_uv_device_new_from_guid ()" link="ArvUvDevice.html#arv-uv-device-new-from-guid" since="0.8.17"/>
+    <keyword type="function" name="arv_uv_device_set_usb_mode ()" link="ArvUvDevice.html#arv-uv-device-set-usb-mode" since="0.8.17"/>
+    <keyword type="enum" name="enum ArvUvUsbMode" link="ArvUvDevice.html#ArvUvUsbMode"/>
+    <keyword type="property" name="The “guid” property" link="ArvUvDevice.html#ArvUvDevice--guid"/>
+    <keyword type="property" name="The “product” property" link="ArvUvDevice.html#ArvUvDevice--product"/>
+    <keyword type="property" name="The “serial-number” property" link="ArvUvDevice.html#ArvUvDevice--serial-number"/>
+    <keyword type="property" name="The “vendor” property" link="ArvUvDevice.html#ArvUvDevice--vendor"/>
+    <keyword type="property" name="The “usb-mode” property" link="ArvUvStream.html#ArvUvStream--usb-mode"/>
+    <keyword type="function" name="arv_fake_interface_get_instance ()" link="ArvFakeInterface.html#arv-fake-interface-get-instance"/>
+    <keyword type="struct" name="ArvFakeInterface" link="ArvFakeInterface.html#ArvFakeInterface-struct"/>
+    <keyword type="function" name="arv_fake_device_new ()" link="ArvFakeDevice.html#arv-fake-device-new" since="0.8.0"/>
+    <keyword type="function" name="arv_fake_device_get_fake_camera ()" link="ArvFakeDevice.html#arv-fake-device-get-fake-camera" since="0.8.0"/>
+    <keyword type="struct" name="ArvFakeDevice" link="ArvFakeDevice.html#ArvFakeDevice-struct"/>
+    <keyword type="property" name="The “serial-number” property" link="ArvFakeDevice.html#ArvFakeDevice--serial-number"/>
+    <keyword type="struct" name="ArvFakeStream" link="ArvFakeStream.html#ArvFakeStream-struct"/>
+    <keyword type="function" name="arv_fake_camera_new ()" link="ArvFakeCamera.html#arv-fake-camera-new"/>
+    <keyword type="function" name="arv_fake_camera_new_full ()" link="ArvFakeCamera.html#arv-fake-camera-new-full"/>
+    <keyword type="function" name="arv_fake_camera_read_memory ()" link="ArvFakeCamera.html#arv-fake-camera-read-memory"/>
+    <keyword type="function" name="arv_fake_camera_write_memory ()" link="ArvFakeCamera.html#arv-fake-camera-write-memory"/>
+    <keyword type="function" name="arv_fake_camera_read_register ()" link="ArvFakeCamera.html#arv-fake-camera-read-register"/>
+    <keyword type="function" name="arv_fake_camera_write_register ()" link="ArvFakeCamera.html#arv-fake-camera-write-register"/>
+    <keyword type="function" name="arv_fake_camera_wait_for_next_frame ()" link="ArvFakeCamera.html#arv-fake-camera-wait-for-next-frame"/>
+    <keyword type="function" name="arv_fake_camera_get_sleep_time_for_next_frame ()" link="ArvFakeCamera.html#arv-fake-camera-get-sleep-time-for-next-frame"/>
+    <keyword type="function" name="arv_fake_camera_fill_buffer ()" link="ArvFakeCamera.html#arv-fake-camera-fill-buffer"/>
+    <keyword type="function" name="arv_fake_camera_set_inet_address ()" link="ArvFakeCamera.html#arv-fake-camera-set-inet-address"/>
+    <keyword type="function" name="arv_fake_camera_get_acquisition_status ()" link="ArvFakeCamera.html#arv-fake-camera-get-acquisition-status"/>
+    <keyword type="function" name="arv_fake_camera_get_control_channel_privilege ()" link="ArvFakeCamera.html#arv-fake-camera-get-control-channel-privilege"/>
+    <keyword type="function" name="arv_fake_camera_get_heartbeat_timeout ()" link="ArvFakeCamera.html#arv-fake-camera-get-heartbeat-timeout"/>
+    <keyword type="function" name="arv_fake_camera_get_payload ()" link="ArvFakeCamera.html#arv-fake-camera-get-payload"/>
+    <keyword type="function" name="arv_fake_camera_get_stream_address ()" link="ArvFakeCamera.html#arv-fake-camera-get-stream-address"/>
+    <keyword type="function" name="arv_fake_camera_set_control_channel_privilege ()" link="ArvFakeCamera.html#arv-fake-camera-set-control-channel-privilege"/>
+    <keyword type="function" name="arv_fake_camera_set_fill_pattern ()" link="ArvFakeCamera.html#arv-fake-camera-set-fill-pattern"/>
+    <keyword type="function" name="arv_fake_camera_set_trigger_frequency ()" link="ArvFakeCamera.html#arv-fake-camera-set-trigger-frequency"/>
+    <keyword type="function" name="arv_fake_camera_get_genicam_xml ()" link="ArvFakeCamera.html#arv-fake-camera-get-genicam-xml"/>
+    <keyword type="function" name="arv_set_fake_camera_genicam_filename ()" link="ArvFakeCamera.html#arv-set-fake-camera-genicam-filename"/>
+    <keyword type="struct" name="ArvFakeCamera" link="ArvFakeCamera.html#ArvFakeCamera-struct"/>
+    <keyword type="function" name="arv_dom_node_get_node_name ()" link="ArvDomNode.html#arv-dom-node-get-node-name"/>
+    <keyword type="function" name="arv_dom_node_get_node_value ()" link="ArvDomNode.html#arv-dom-node-get-node-value"/>
+    <keyword type="function" name="arv_dom_node_set_node_value ()" link="ArvDomNode.html#arv-dom-node-set-node-value"/>
+    <keyword type="function" name="arv_dom_node_get_node_type ()" link="ArvDomNode.html#arv-dom-node-get-node-type"/>
+    <keyword type="function" name="arv_dom_node_get_parent_node ()" link="ArvDomNode.html#arv-dom-node-get-parent-node"/>
+    <keyword type="function" name="arv_dom_node_get_child_nodes ()" link="ArvDomNode.html#arv-dom-node-get-child-nodes"/>
+    <keyword type="function" name="arv_dom_node_get_first_child ()" link="ArvDomNode.html#arv-dom-node-get-first-child"/>
+    <keyword type="function" name="arv_dom_node_get_last_child ()" link="ArvDomNode.html#arv-dom-node-get-last-child"/>
+    <keyword type="function" name="arv_dom_node_get_previous_sibling ()" link="ArvDomNode.html#arv-dom-node-get-previous-sibling"/>
+    <keyword type="function" name="arv_dom_node_get_next_sibling ()" link="ArvDomNode.html#arv-dom-node-get-next-sibling"/>
+    <keyword type="function" name="arv_dom_node_get_attributes ()" link="ArvDomNode.html#arv-dom-node-get-attributes"/>
+    <keyword type="function" name="arv_dom_node_insert_before ()" link="ArvDomNode.html#arv-dom-node-insert-before"/>
+    <keyword type="function" name="arv_dom_node_replace_child ()" link="ArvDomNode.html#arv-dom-node-replace-child"/>
+    <keyword type="function" name="arv_dom_node_append_child ()" link="ArvDomNode.html#arv-dom-node-append-child"/>
+    <keyword type="function" name="arv_dom_node_remove_child ()" link="ArvDomNode.html#arv-dom-node-remove-child"/>
+    <keyword type="function" name="arv_dom_node_has_child_nodes ()" link="ArvDomNode.html#arv-dom-node-has-child-nodes"/>
+    <keyword type="function" name="arv_dom_node_changed ()" link="ArvDomNode.html#arv-dom-node-changed"/>
+    <keyword type="function" name="arv_dom_node_get_owner_document ()" link="ArvDomNode.html#arv-dom-node-get-owner-document"/>
+    <keyword type="struct" name="ArvDomNode" link="ArvDomNode.html#ArvDomNode-struct"/>
+    <keyword type="function" name="arv_dom_node_list_get_item ()" link="ArvDomNodeList.html#arv-dom-node-list-get-item"/>
+    <keyword type="function" name="arv_dom_node_list_get_length ()" link="ArvDomNodeList.html#arv-dom-node-list-get-length"/>
+    <keyword type="function" name="arv_dom_node_child_list_new ()" link="ArvDomNodeChildList.html#arv-dom-node-child-list-new"/>
+    <keyword type="struct" name="ArvDomNodeChildList" link="ArvDomNodeChildList.html#ArvDomNodeChildList-struct"/>
+    <keyword type="function" name="arv_dom_named_node_map_get_item ()" link="ArvDomNamedNodeMap.html#arv-dom-named-node-map-get-item"/>
+    <keyword type="function" name="arv_dom_named_node_map_get_length ()" link="ArvDomNamedNodeMap.html#arv-dom-named-node-map-get-length"/>
+    <keyword type="function" name="arv_dom_named_node_map_get_named_item ()" link="ArvDomNamedNodeMap.html#arv-dom-named-node-map-get-named-item"/>
+    <keyword type="function" name="arv_dom_named_node_map_set_named_item ()" link="ArvDomNamedNodeMap.html#arv-dom-named-node-map-set-named-item"/>
+    <keyword type="function" name="arv_dom_named_node_map_remove_named_item ()" link="ArvDomNamedNodeMap.html#arv-dom-named-node-map-remove-named-item"/>
+    <keyword type="function" name="ArvDomDocumentCreateFunction ()" link="ArvDomDocument.html#ArvDomDocumentCreateFunction"/>
+    <keyword type="function" name="arv_dom_implementation_create_document ()" link="ArvDomDocument.html#arv-dom-implementation-create-document"/>
+    <keyword type="function" name="arv_dom_implementation_add_document_type ()" link="ArvDomDocument.html#arv-dom-implementation-add-document-type"/>
+    <keyword type="function" name="arv_dom_implementation_cleanup ()" link="ArvDomDocument.html#arv-dom-implementation-cleanup"/>
+    <keyword type="function" name="arv_dom_document_append_from_memory ()" link="ArvDomDocument.html#arv-dom-document-append-from-memory"/>
+    <keyword type="function" name="arv_dom_document_new_from_memory ()" link="ArvDomDocument.html#arv-dom-document-new-from-memory"/>
+    <keyword type="function" name="arv_dom_document_new_from_path ()" link="ArvDomDocument.html#arv-dom-document-new-from-path"/>
+    <keyword type="function" name="arv_dom_document_new_from_url ()" link="ArvDomDocument.html#arv-dom-document-new-from-url"/>
+    <keyword type="function" name="arv_dom_document_get_document_element ()" link="ArvDomDocument.html#arv-dom-document-get-document-element"/>
+    <keyword type="function" name="arv_dom_document_create_element ()" link="ArvDomDocument.html#arv-dom-document-create-element"/>
+    <keyword type="function" name="arv_dom_document_create_text_node ()" link="ArvDomDocument.html#arv-dom-document-create-text-node"/>
+    <keyword type="function" name="arv_dom_document_get_url ()" link="ArvDomDocument.html#arv-dom-document-get-url"/>
+    <keyword type="function" name="arv_dom_document_set_url ()" link="ArvDomDocument.html#arv-dom-document-set-url"/>
+    <keyword type="function" name="arv_dom_document_set_path ()" link="ArvDomDocument.html#arv-dom-document-set-path"/>
+    <keyword type="function" name="arv_dom_document_get_href_data ()" link="ArvDomDocument.html#arv-dom-document-get-href-data"/>
+    <keyword type="struct" name="ArvDomDocument" link="ArvDomDocument.html#ArvDomDocument-struct"/>
+    <keyword type="function" name="arv_dom_document_fragment_new ()" link="ArvDomDocumentFragment.html#arv-dom-document-fragment-new"/>
+    <keyword type="function" name="arv_dom_element_get_tag_name ()" link="ArvDomElement.html#arv-dom-element-get-tag-name"/>
+    <keyword type="function" name="arv_dom_element_get_attribute ()" link="ArvDomElement.html#arv-dom-element-get-attribute"/>
+    <keyword type="function" name="arv_dom_element_set_attribute ()" link="ArvDomElement.html#arv-dom-element-set-attribute"/>
+    <keyword type="struct" name="ArvDomElement" link="ArvDomElement.html#ArvDomElement-struct"/>
+    <keyword type="function" name="arv_dom_character_data_get_data ()" link="ArvDomCharacterData.html#arv-dom-character-data-get-data"/>
+    <keyword type="function" name="arv_dom_character_data_set_data ()" link="ArvDomCharacterData.html#arv-dom-character-data-set-data"/>
+    <keyword type="function" name="arv_dom_text_new ()" link="ArvDomText.html#arv-dom-text-new"/>
+    <keyword type="function" name="arv_debug_enable ()" link="aravis-ArvDebug.html#arv-debug-enable"/>
+    <keyword type="function" name="arv_evaluator_new ()" link="ArvEvaluator.html#arv-evaluator-new"/>
+    <keyword type="function" name="arv_evaluator_set_expression ()" link="ArvEvaluator.html#arv-evaluator-set-expression"/>
+    <keyword type="function" name="arv_evaluator_get_expression ()" link="ArvEvaluator.html#arv-evaluator-get-expression"/>
+    <keyword type="function" name="arv_evaluator_get_constant ()" link="ArvEvaluator.html#arv-evaluator-get-constant" since="0.6.0"/>
+    <keyword type="function" name="arv_evaluator_get_sub_expression ()" link="ArvEvaluator.html#arv-evaluator-get-sub-expression" since="0.6.0"/>
+    <keyword type="function" name="arv_evaluator_set_constant ()" link="ArvEvaluator.html#arv-evaluator-set-constant" since="0.6.0"/>
+    <keyword type="function" name="arv_evaluator_set_sub_expression ()" link="ArvEvaluator.html#arv-evaluator-set-sub-expression" since="0.6.0"/>
+    <keyword type="function" name="arv_evaluator_evaluate_as_double ()" link="ArvEvaluator.html#arv-evaluator-evaluate-as-double"/>
+    <keyword type="function" name="arv_evaluator_evaluate_as_int64 ()" link="ArvEvaluator.html#arv-evaluator-evaluate-as-int64"/>
+    <keyword type="function" name="arv_evaluator_set_double_variable ()" link="ArvEvaluator.html#arv-evaluator-set-double-variable"/>
+    <keyword type="function" name="arv_evaluator_set_int64_variable ()" link="ArvEvaluator.html#arv-evaluator-set-int64-variable"/>
+    <keyword type="struct" name="ArvEvaluator" link="ArvEvaluator.html#ArvEvaluator-struct"/>
+    <keyword type="function" name="arv_pixel_format_to_gst_caps_string ()" link="aravis-ArvGst.html#arv-pixel-format-to-gst-caps-string"/>
+    <keyword type="function" name="arv_pixel_format_from_gst_caps ()" link="aravis-ArvGst.html#arv-pixel-format-from-gst-caps"/>
+    <keyword type="function" name="arv_pixel_format_to_gst_0_10_caps_string ()" link="aravis-ArvGst.html#arv-pixel-format-to-gst-0-10-caps-string"/>
+    <keyword type="function" name="arv_pixel_format_from_gst_0_10_caps ()" link="aravis-ArvGst.html#arv-pixel-format-from-gst-0-10-caps"/>
+    <keyword type="function" name="arv_str_strip ()" link="aravis-ArvStr.html#arv-str-strip" since="0.4.0"/>
+    <keyword type="function" name="arv_str_is_uri ()" link="aravis-ArvStr.html#arv-str-is-uri"/>
+    <keyword type="function" name="arv_str_to_uri ()" link="aravis-ArvStr.html#arv-str-to-uri"/>
+    <keyword type="function" name="arv_str_parse_double ()" link="aravis-ArvStr.html#arv-str-parse-double"/>
+    <keyword type="function" name="arv_str_parse_double_list ()" link="aravis-ArvStr.html#arv-str-parse-double-list"/>
+    <keyword type="function" name="arv_str_skip_char ()" link="aravis-ArvStr.html#arv-str-skip-char"/>
+    <keyword type="function" name="arv_str_skip_colon_and_spaces ()" link="aravis-ArvStr.html#arv-str-skip-colon-and-spaces"/>
+    <keyword type="function" name="arv_str_skip_comma_and_spaces ()" link="aravis-ArvStr.html#arv-str-skip-comma-and-spaces"/>
+    <keyword type="function" name="arv_str_skip_semicolon_and_spaces ()" link="aravis-ArvStr.html#arv-str-skip-semicolon-and-spaces"/>
+    <keyword type="function" name="arv_str_skip_spaces ()" link="aravis-ArvStr.html#arv-str-skip-spaces"/>
+    <keyword type="function" name="arv_zip_new ()" link="aravis-ArvZip.html#arv-zip-new"/>
+    <keyword type="function" name="arv_zip_free ()" link="aravis-ArvZip.html#arv-zip-free"/>
+    <keyword type="function" name="arv_zip_get_file ()" link="aravis-ArvZip.html#arv-zip-get-file"/>
+    <keyword type="function" name="arv_zip_get_file_list ()" link="aravis-ArvZip.html#arv-zip-get-file-list"/>
+    <keyword type="function" name="arv_zip_file_get_name ()" link="aravis-ArvZip.html#arv-zip-file-get-name"/>
+    <keyword type="function" name="arv_zip_file_get_uncompressed_size ()" link="aravis-ArvZip.html#arv-zip-file-get-uncompressed-size"/>
+    <keyword type="macro" name="ARV_GUINT16_FROM_LE_PTR()" link="aravis-ArvZip.html#ARV-GUINT16-FROM-LE-PTR:CAPS"/>
+    <keyword type="macro" name="ARV_GUINT32_FROM_LE_PTR()" link="aravis-ArvZip.html#ARV-GUINT32-FROM-LE-PTR:CAPS"/>
+    <keyword type="function" name="arv_guint16_from_unaligned_le_ptr ()" link="aravis-ArvZip.html#arv-guint16-from-unaligned-le-ptr"/>
+    <keyword type="function" name="arv_guint32_from_unaligned_le_ptr ()" link="aravis-ArvZip.html#arv-guint32-from-unaligned-le-ptr"/>
+    <keyword type="struct" name="ArvZip" link="aravis-ArvZip.html#ArvZip"/>
+    <keyword type="function" name="arv_xml_schema_new_from_memory ()" link="ArvXmlSchema.html#arv-xml-schema-new-from-memory"/>
+    <keyword type="function" name="arv_xml_schema_new_from_file ()" link="ArvXmlSchema.html#arv-xml-schema-new-from-file"/>
+    <keyword type="function" name="arv_xml_schema_new_from_path ()" link="ArvXmlSchema.html#arv-xml-schema-new-from-path"/>
+    <keyword type="function" name="arv_xml_schema_validate ()" link="ArvXmlSchema.html#arv-xml-schema-validate"/>
+    <keyword type="macro" name="ARV_XML_SCHEMA_ERROR" link="ArvXmlSchema.html#ARV-XML-SCHEMA-ERROR:CAPS"/>
+    <keyword type="enum" name="enum ArvXmlSchemaError" link="ArvXmlSchema.html#ArvXmlSchemaError"/>
+    <keyword type="constant" name="ARV_AUTO_OFF" link="ArvCamera.html#ARV-AUTO-OFF:CAPS"/>
+    <keyword type="constant" name="ARV_AUTO_ONCE" link="ArvCamera.html#ARV-AUTO-ONCE:CAPS"/>
+    <keyword type="constant" name="ARV_AUTO_CONTINUOUS" link="ArvCamera.html#ARV-AUTO-CONTINUOUS:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_NEVER" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-NEVER:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_ON_FAILURE_ONCE" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-ON-FAILURE-ONCE:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_ON_FAILURE" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-ON-FAILURE:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_ONCE" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-ONCE:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_ALWAYS" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-ALWAYS:CAPS"/>
+    <keyword type="constant" name="ARV_GV_PACKET_SIZE_ADJUSTMENT_DEFAULT" link="ArvCamera.html#ARV-GV-PACKET-SIZE-ADJUSTMENT-DEFAULT:CAPS"/>
+    <keyword type="constant" name="ARV_ACQUISITION_MODE_CONTINUOUS" link="ArvCamera.html#ARV-ACQUISITION-MODE-CONTINUOUS:CAPS"/>
+    <keyword type="constant" name="ARV_ACQUISITION_MODE_SINGLE_FRAME" link="ArvCamera.html#ARV-ACQUISITION-MODE-SINGLE-FRAME:CAPS"/>
+    <keyword type="constant" name="ARV_ACQUISITION_MODE_MULTI_FRAME" link="ArvCamera.html#ARV-ACQUISITION-MODE-MULTI-FRAME:CAPS"/>
+    <keyword type="constant" name="ARV_EXPOSURE_MODE_OFF" link="ArvCamera.html#ARV-EXPOSURE-MODE-OFF:CAPS"/>
+    <keyword type="constant" name="ARV_EXPOSURE_MODE_TIMED" link="ArvCamera.html#ARV-EXPOSURE-MODE-TIMED:CAPS"/>
+    <keyword type="constant" name="ARV_EXPOSURE_MODE_TRIGGER_WIDTH" link="ArvCamera.html#ARV-EXPOSURE-MODE-TRIGGER-WIDTH:CAPS"/>
+    <keyword type="constant" name="ARV_EXPOSURE_MODE_TRIGGER_CONTROLLED" link="ArvCamera.html#ARV-EXPOSURE-MODE-TRIGGER-CONTROLLED:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_WRONG_FEATURE" link="ArvDevice.html#ARV-DEVICE-ERROR-WRONG-FEATURE:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_FEATURE_NOT_FOUND" link="ArvDevice.html#ARV-DEVICE-ERROR-FEATURE-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_NOT_CONNECTED" link="ArvDevice.html#ARV-DEVICE-ERROR-NOT-CONNECTED:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_PROTOCOL_ERROR" link="ArvDevice.html#ARV-DEVICE-ERROR-PROTOCOL-ERROR:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_TRANSFER_ERROR" link="ArvDevice.html#ARV-DEVICE-ERROR-TRANSFER-ERROR:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_TIMEOUT" link="ArvDevice.html#ARV-DEVICE-ERROR-TIMEOUT:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_NOT_FOUND" link="ArvDevice.html#ARV-DEVICE-ERROR-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_INVALID_PARAMETER" link="ArvDevice.html#ARV-DEVICE-ERROR-INVALID-PARAMETER:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_GENICAM_NOT_FOUND" link="ArvDevice.html#ARV-DEVICE-ERROR-GENICAM-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_NO_STREAM_CHANNEL" link="ArvDevice.html#ARV-DEVICE-ERROR-NO-STREAM-CHANNEL:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_NOT_CONTROLLER" link="ArvDevice.html#ARV-DEVICE-ERROR-NOT-CONTROLLER:CAPS"/>
+    <keyword type="constant" name="ARV_DEVICE_ERROR_UNKNOWN" link="ArvDevice.html#ARV-DEVICE-ERROR-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="ARV_STREAM_CALLBACK_TYPE_INIT" link="ArvStream.html#ARV-STREAM-CALLBACK-TYPE-INIT:CAPS"/>
+    <keyword type="constant" name="ARV_STREAM_CALLBACK_TYPE_EXIT" link="ArvStream.html#ARV-STREAM-CALLBACK-TYPE-EXIT:CAPS"/>
+    <keyword type="constant" name="ARV_STREAM_CALLBACK_TYPE_START_BUFFER" link="ArvStream.html#ARV-STREAM-CALLBACK-TYPE-START-BUFFER:CAPS"/>
+    <keyword type="constant" name="ARV_STREAM_CALLBACK_TYPE_BUFFER_DONE" link="ArvStream.html#ARV-STREAM-CALLBACK-TYPE-BUFFER-DONE:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_UNKNOWN" link="ArvBuffer.html#ARV-BUFFER-STATUS-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_SUCCESS" link="ArvBuffer.html#ARV-BUFFER-STATUS-SUCCESS:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_CLEARED" link="ArvBuffer.html#ARV-BUFFER-STATUS-CLEARED:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_TIMEOUT" link="ArvBuffer.html#ARV-BUFFER-STATUS-TIMEOUT:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_MISSING_PACKETS" link="ArvBuffer.html#ARV-BUFFER-STATUS-MISSING-PACKETS:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_WRONG_PACKET_ID" link="ArvBuffer.html#ARV-BUFFER-STATUS-WRONG-PACKET-ID:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_SIZE_MISMATCH" link="ArvBuffer.html#ARV-BUFFER-STATUS-SIZE-MISMATCH:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_FILLING" link="ArvBuffer.html#ARV-BUFFER-STATUS-FILLING:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_STATUS_ABORTED" link="ArvBuffer.html#ARV-BUFFER-STATUS-ABORTED:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_UNKNOWN" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_IMAGE" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-IMAGE:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_RAWDATA" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-RAWDATA:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_FILE" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-FILE:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_CHUNK_DATA" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-CHUNK-DATA:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_EXTENDED_CHUNK_DATA" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-EXTENDED-CHUNK-DATA:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_JPEG" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-JPEG:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_JPEG2000" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-JPEG2000:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_H264" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-H264:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_MULTIZONE_IMAGE" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-MULTIZONE-IMAGE:CAPS"/>
+    <keyword type="constant" name="ARV_BUFFER_PAYLOAD_TYPE_IMAGE_EXTENDED_CHUNK" link="ArvBuffer.html#ARV-BUFFER-PAYLOAD-TYPE-IMAGE-EXTENDED-CHUNK:CAPS"/>
+    <keyword type="constant" name="ARV_CHUNK_PARSER_ERROR_INVALID_FEATURE_TYPE" link="ArvChunkParser.html#ARV-CHUNK-PARSER-ERROR-INVALID-FEATURE-TYPE:CAPS"/>
+    <keyword type="constant" name="ARV_CHUNK_PARSER_ERROR_BUFFER_NOT_FOUND" link="ArvChunkParser.html#ARV-CHUNK-PARSER-ERROR-BUFFER-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="ARV_CHUNK_PARSER_ERROR_CHUNK_NOT_FOUND" link="ArvChunkParser.html#ARV-CHUNK-PARSER-ERROR-CHUNK-NOT-FOUND:CAPS"/>
+    <keyword type="constant" name="ARV_RANGE_CHECK_POLICY_DISABLE" link="ArvGc.html#ARV-RANGE-CHECK-POLICY-DISABLE:CAPS"/>
+    <keyword type="constant" name="ARV_RANGE_CHECK_POLICY_ENABLE" link="ArvGc.html#ARV-RANGE-CHECK-POLICY-ENABLE:CAPS"/>
+    <keyword type="constant" name="ARV_RANGE_CHECK_POLICY_DEBUG" link="ArvGc.html#ARV-RANGE-CHECK-POLICY-DEBUG:CAPS"/>
+    <keyword type="constant" name="ARV_RANGE_CHECK_POLICY_DEFAULT" link="ArvGc.html#ARV-RANGE-CHECK-POLICY-DEFAULT:CAPS"/>
+    <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_DISABLE" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-DISABLE:CAPS"/>
+    <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_ENABLE" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-ENABLE:CAPS"/>
+    <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_DEBUG" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-DEBUG:CAPS"/>
+    <keyword type="constant" name="ARV_REGISTER_CACHE_POLICY_DEFAULT" link="ArvGc.html#ARV-REGISTER-CACHE-POLICY-DEFAULT:CAPS"/>
+    <keyword type="constant" name="ARV_GC_NAME_SPACE_UNDEFINED" link="ArvGc.html#ARV-GC-NAME-SPACE-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_NAME_SPACE_STANDARD" link="ArvGc.html#ARV-GC-NAME-SPACE-STANDARD:CAPS"/>
+    <keyword type="constant" name="ARV_GC_NAME_SPACE_CUSTOM" link="ArvGc.html#ARV-GC-NAME-SPACE-CUSTOM:CAPS"/>
+    <keyword type="constant" name="ARV_GC_ACCESS_MODE_UNDEFINED" link="ArvGc.html#ARV-GC-ACCESS-MODE-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_ACCESS_MODE_RO" link="ArvGc.html#ARV-GC-ACCESS-MODE-RO:CAPS"/>
+    <keyword type="constant" name="ARV_GC_ACCESS_MODE_WO" link="ArvGc.html#ARV-GC-ACCESS-MODE-WO:CAPS"/>
+    <keyword type="constant" name="ARV_GC_ACCESS_MODE_RW" link="ArvGc.html#ARV-GC-ACCESS-MODE-RW:CAPS"/>
+    <keyword type="constant" name="ARV_GC_CACHABLE_UNDEFINED" link="ArvGc.html#ARV-GC-CACHABLE-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_CACHABLE_NO_CACHE" link="ArvGc.html#ARV-GC-CACHABLE-NO-CACHE:CAPS"/>
+    <keyword type="constant" name="ARV_GC_CACHABLE_WRITE_THROUGH" link="ArvGc.html#ARV-GC-CACHABLE-WRITE-THROUGH:CAPS"/>
+    <keyword type="constant" name="ARV_GC_CACHABLE_WRITE_AROUND" link="ArvGc.html#ARV-GC-CACHABLE-WRITE-AROUND:CAPS"/>
+    <keyword type="constant" name="ARV_GC_SIGNEDNESS_UNDEFINED" link="ArvGc.html#ARV-GC-SIGNEDNESS-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_SIGNEDNESS_SIGNED" link="ArvGc.html#ARV-GC-SIGNEDNESS-SIGNED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_SIGNEDNESS_UNSIGNED" link="ArvGc.html#ARV-GC-SIGNEDNESS-UNSIGNED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_IS_LINEAR_UNDEFINED" link="ArvGc.html#ARV-GC-IS-LINEAR-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_IS_LINEAR_NO" link="ArvGc.html#ARV-GC-IS-LINEAR-NO:CAPS"/>
+    <keyword type="constant" name="ARV_GC_IS_LINEAR_YES" link="ArvGc.html#ARV-GC-IS-LINEAR-YES:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_UNDEFINED" link="ArvGc.html#ARV-GC-VISIBILITY-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_INVISIBLE" link="ArvGc.html#ARV-GC-VISIBILITY-INVISIBLE:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_GURU" link="ArvGc.html#ARV-GC-VISIBILITY-GURU:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_EXPERT" link="ArvGc.html#ARV-GC-VISIBILITY-EXPERT:CAPS"/>
+    <keyword type="constant" name="ARV_GC_VISIBILITY_BEGINNER" link="ArvGc.html#ARV-GC-VISIBILITY-BEGINNER:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_UNDEFINED" link="ArvGc.html#ARV-GC-REPRESENTATION-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_LINEAR" link="ArvGc.html#ARV-GC-REPRESENTATION-LINEAR:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_LOGARITHMIC" link="ArvGc.html#ARV-GC-REPRESENTATION-LOGARITHMIC:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_BOOLEAN" link="ArvGc.html#ARV-GC-REPRESENTATION-BOOLEAN:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_PURE_NUMBER" link="ArvGc.html#ARV-GC-REPRESENTATION-PURE-NUMBER:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_HEX_NUMBER" link="ArvGc.html#ARV-GC-REPRESENTATION-HEX-NUMBER:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_IPV4_ADDRESS" link="ArvGc.html#ARV-GC-REPRESENTATION-IPV4-ADDRESS:CAPS"/>
+    <keyword type="constant" name="ARV_GC_REPRESENTATION_MAC_ADDRESS" link="ArvGc.html#ARV-GC-REPRESENTATION-MAC-ADDRESS:CAPS"/>
+    <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_UNDEFINED" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_AUTOMATIC" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-AUTOMATIC:CAPS"/>
+    <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_FIXED" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-FIXED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_DISPLAY_NOTATION_SCIENTIFIC" link="ArvGc.html#ARV-GC-DISPLAY-NOTATION-SCIENTIFIC:CAPS"/>
+    <keyword type="constant" name="ARV_GC_STREAMABLE_UNDEFINED" link="ArvGc.html#ARV-GC-STREAMABLE-UNDEFINED:CAPS"/>
+    <keyword type="constant" name="ARV_GC_STREAMABLE_NO" link="ArvGc.html#ARV-GC-STREAMABLE-NO:CAPS"/>
+    <keyword type="constant" name="ARV_GC_STREAMABLE_YES" link="ArvGc.html#ARV-GC-STREAMABLE-YES:CAPS"/>
+    <keyword type="constant" name="ARV_GV_STREAM_OPTION_NONE" link="ArvGvStream.html#ARV-GV-STREAM-OPTION-NONE:CAPS"/>
+    <keyword type="constant" name="ARV_GV_STREAM_OPTION_PACKET_SOCKET_DISABLED" link="ArvGvStream.html#ARV-GV-STREAM-OPTION-PACKET-SOCKET-DISABLED:CAPS"/>
+    <keyword type="constant" name="ARV_GV_STREAM_SOCKET_BUFFER_FIXED" link="ArvGvStream.html#ARV-GV-STREAM-SOCKET-BUFFER-FIXED:CAPS"/>
+    <keyword type="constant" name="ARV_GV_STREAM_SOCKET_BUFFER_AUTO" link="ArvGvStream.html#ARV-GV-STREAM-SOCKET-BUFFER-AUTO:CAPS"/>
+    <keyword type="constant" name="ARV_GV_STREAM_PACKET_RESEND_NEVER" link="ArvGvStream.html#ARV-GV-STREAM-PACKET-RESEND-NEVER:CAPS"/>
+    <keyword type="constant" name="ARV_GV_STREAM_PACKET_RESEND_ALWAYS" link="ArvGvStream.html#ARV-GV-STREAM-PACKET-RESEND-ALWAYS:CAPS"/>
+    <keyword type="constant" name="ARV_UV_USB_MODE_SYNC" link="ArvUvDevice.html#ARV-UV-USB-MODE-SYNC:CAPS"/>
+    <keyword type="constant" name="ARV_UV_USB_MODE_ASYNC" link="ArvUvDevice.html#ARV-UV-USB-MODE-ASYNC:CAPS"/>
+    <keyword type="constant" name="ARV_UV_USB_MODE_DEFAULT" link="ArvUvDevice.html#ARV-UV-USB-MODE-DEFAULT:CAPS"/>
+    <keyword type="constant" name="ARV_XML_SCHEMA_ERROR_INVALID_STRUCTURE" link="ArvXmlSchema.html#ARV-XML-SCHEMA-ERROR-INVALID-STRUCTURE:CAPS"/>
+  </functions>
+</book>

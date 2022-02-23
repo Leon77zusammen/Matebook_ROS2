@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvUvStream">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvUvStream.top_of_page">ArvUvStream</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvUvStream</refname>
+<refpurpose>USB3Vision video stream</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvUvStream.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="ArvUvUsbMode"><type>ArvUvUsbMode</type></link></entry><entry role="property_name"><link linkend="ArvUvStream--usb-mode">usb-mode</link></entry><entry role="property_flags">Write / Construct&#160;Only</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvUvStream.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvStream">ArvStream</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvUvStream
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvUvStream.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvUvStream.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="ArvUvStream.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ArvUvStream--usb-mode" role="property"><title>The <literal>“usb-mode”</literal> property</title>
+<indexterm zone="ArvUvStream--usb-mode"><primary>ArvUvStream:usb-mode</primary></indexterm>
+<programlisting>  “usb-mode”                 <link linkend="ArvUvUsbMode"><type>ArvUvUsbMode</type></link></programlisting>
+<para>USB device I/O mode.</para>
+<para>Owner: ArvUvStream</para>
+<para>Flags: Write / Construct&#160;Only</para>
+<para>Default value: ARV_UV_USB_MODE_SYNC</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

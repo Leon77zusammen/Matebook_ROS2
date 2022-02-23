@@ -1,0 +1,573 @@
+39% symbol docs coverage.
+365 symbols documented.
+142 symbols incomplete.
+566 not documented.
+
+
+ARV_CHUNK_PARSER_ERROR
+ARV_DEVICE_ERROR
+ARV_GUINT16_FROM_LE_PTR (<parameters>)
+ARV_GUINT32_FROM_LE_PTR (<parameters>)
+ARV_PIXEL_FORMAT_BAYER_BG_10
+ARV_PIXEL_FORMAT_BAYER_BG_10P
+ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED
+ARV_PIXEL_FORMAT_BAYER_BG_12
+ARV_PIXEL_FORMAT_BAYER_BG_12P
+ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED
+ARV_PIXEL_FORMAT_BAYER_BG_16
+ARV_PIXEL_FORMAT_BAYER_BG_8
+ARV_PIXEL_FORMAT_BAYER_GB_10
+ARV_PIXEL_FORMAT_BAYER_GB_10P
+ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED
+ARV_PIXEL_FORMAT_BAYER_GB_12
+ARV_PIXEL_FORMAT_BAYER_GB_12P
+ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED
+ARV_PIXEL_FORMAT_BAYER_GB_16
+ARV_PIXEL_FORMAT_BAYER_GB_8
+ARV_PIXEL_FORMAT_BAYER_GR_10
+ARV_PIXEL_FORMAT_BAYER_GR_10P
+ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED
+ARV_PIXEL_FORMAT_BAYER_GR_12
+ARV_PIXEL_FORMAT_BAYER_GR_12P
+ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED
+ARV_PIXEL_FORMAT_BAYER_GR_16
+ARV_PIXEL_FORMAT_BAYER_GR_8
+ARV_PIXEL_FORMAT_BAYER_RG_10
+ARV_PIXEL_FORMAT_BAYER_RG_10P
+ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED
+ARV_PIXEL_FORMAT_BAYER_RG_12
+ARV_PIXEL_FORMAT_BAYER_RG_12P
+ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED
+ARV_PIXEL_FORMAT_BAYER_RG_16
+ARV_PIXEL_FORMAT_BAYER_RG_8
+ARV_PIXEL_FORMAT_BGRA_8_PACKED
+ARV_PIXEL_FORMAT_BGR_10_PACKED
+ARV_PIXEL_FORMAT_BGR_12_PACKED
+ARV_PIXEL_FORMAT_BGR_8_PACKED
+ARV_PIXEL_FORMAT_BIT_PER_PIXEL (<parameters>)
+ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED
+ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16
+ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED
+ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16
+ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED
+ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16
+ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED
+ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16
+ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED
+ARV_PIXEL_FORMAT_MONO_10
+ARV_PIXEL_FORMAT_MONO_10_PACKED
+ARV_PIXEL_FORMAT_MONO_12
+ARV_PIXEL_FORMAT_MONO_12_PACKED
+ARV_PIXEL_FORMAT_MONO_14
+ARV_PIXEL_FORMAT_MONO_16
+ARV_PIXEL_FORMAT_MONO_8
+ARV_PIXEL_FORMAT_MONO_8_SIGNED
+ARV_PIXEL_FORMAT_RGBA_8_PACKED
+ARV_PIXEL_FORMAT_RGB_10_PACKED
+ARV_PIXEL_FORMAT_RGB_10_PLANAR
+ARV_PIXEL_FORMAT_RGB_12_PACKED
+ARV_PIXEL_FORMAT_RGB_12_PLANAR
+ARV_PIXEL_FORMAT_RGB_16_PLANAR
+ARV_PIXEL_FORMAT_RGB_8_PACKED
+ARV_PIXEL_FORMAT_RGB_8_PLANAR
+ARV_PIXEL_FORMAT_YUV_411_PACKED
+ARV_PIXEL_FORMAT_YUV_422_PACKED
+ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED
+ARV_PIXEL_FORMAT_YUV_444_PACKED
+ARV_XML_SCHEMA_ERROR
+ArvAcquisitionMode
+ArvAuto
+ArvBuffer
+ArvBufferPayloadType
+ArvBufferStatus
+ArvCamera
+ArvCameraVendor
+ArvChunkParser
+ArvChunkParserError
+ArvDevice
+ArvDeviceError
+ArvDomDocument
+ArvDomDocumentCreateFunction
+ArvDomElement
+ArvDomNode
+ArvDomNodeChildList
+ArvEvaluator
+ArvExposureMode
+ArvFakeCamera
+ArvFakeDevice
+ArvFakeInterface
+ArvFakeStream
+ArvFrameCallback (<parameters>)
+ArvGc
+ArvGcBoolean
+ArvGcCategory
+ArvGcCommand
+ArvGcConverter
+ArvGcConverterNode
+ArvGcEnumEntry
+ArvGcEnumeration
+ArvGcFeatureNode
+ArvGcFloat
+ArvGcFloatNode
+ArvGcFloatRegNode
+ArvGcGroupNode
+ArvGcIndexNode
+ArvGcIntConverterNode
+ArvGcIntRegNode
+ArvGcIntSwissKnifeNode
+ArvGcInteger
+ArvGcIntegerNode
+ArvGcInvalidatorNode
+ArvGcMaskedIntRegNode
+ArvGcNode
+ArvGcPort
+ArvGcPropertyNode
+ArvGcRegister
+ArvGcRegisterDescriptionNode
+ArvGcRegisterNode
+ArvGcSelector
+ArvGcString
+ArvGcStringNode
+ArvGcStringRegNode
+ArvGcStructEntryNode
+ArvGcStructRegNode
+ArvGcSwissKnifeNode
+ArvGvDevice
+ArvGvInterface
+ArvGvPacketSizeAdjustment
+ArvGvStream
+ArvGvStreamOption
+ArvGvStreamPacketResend
+ArvGvStreamSocketBuffer
+ArvGvcpCmdPacketFlags
+ArvGvcpCommand
+ArvGvcpDiscoveryPacketFlags
+ArvGvcpError
+ArvGvcpEventPacketFlags
+ArvGvcpPacketType
+ArvGvspContentType
+ArvGvspPacketType
+ArvGvspPayloadType
+ArvRangeCheckPolicy
+ArvRegisterCachePolicy
+ArvStream
+ArvStreamCallback (<parameters>)
+ArvUvUsbMode
+ArvUvcpCommand
+ArvUvcpFlags
+ArvUvcpStatus
+ArvUvspPacketType
+ArvXmlSchemaError
+ArvZip
+arv_acquisition_mode_from_string (<parameters>)
+arv_acquisition_mode_to_string (<parameters>)
+arv_auto_from_string (<parameters>)
+arv_auto_to_string (<parameters>)
+arv_buffer_has_chunks
+arv_camera_are_chunks_available
+arv_camera_get_acquisition_mode
+arv_camera_get_black_level
+arv_camera_get_black_level_auto
+arv_camera_get_boolean
+arv_camera_get_boolean_gi
+arv_camera_get_device_id
+arv_camera_get_device_serial_number
+arv_camera_get_exposure_time
+arv_camera_get_exposure_time_auto
+arv_camera_get_float
+arv_camera_get_float_increment
+arv_camera_get_frame_count
+arv_camera_get_frame_rate
+arv_camera_get_gain
+arv_camera_get_gain_auto
+arv_camera_get_height_increment
+arv_camera_get_integer
+arv_camera_get_integer_increment
+arv_camera_get_model_name
+arv_camera_get_pixel_format
+arv_camera_get_sensor_size
+arv_camera_get_string
+arv_camera_get_vendor_name
+arv_camera_get_width_increment
+arv_camera_get_x_binning_increment
+arv_camera_get_x_offset_increment
+arv_camera_get_y_binning_increment
+arv_camera_get_y_offset_increment
+arv_camera_gv_get_current_stream_channel
+arv_camera_gv_get_n_stream_channels
+arv_camera_gv_get_packet_delay
+arv_camera_gv_get_packet_size
+arv_camera_is_binning_available
+arv_camera_is_black_level_auto_available
+arv_camera_is_black_level_available
+arv_camera_is_enumeration_entry_available
+arv_camera_is_exposure_auto_available
+arv_camera_is_exposure_time_available
+arv_camera_is_frame_rate_available
+arv_camera_is_gain_auto_available
+arv_camera_is_gain_available
+arv_camera_is_gv_device
+arv_camera_is_software_trigger_supported
+arv_camera_is_uv_device
+arv_camera_set_acquisition_mode (<parameters>)
+arv_camera_set_black_level
+arv_camera_set_exposure_mode (<parameters>)
+arv_camera_uv_get_bandwidth
+arv_camera_uv_get_bandwidth_bounds
+arv_camera_uv_is_bandwidth_control_available
+arv_camera_uv_set_usb_mode
+arv_chunk_parser_get_boolean_value
+arv_chunk_parser_get_float_value
+arv_chunk_parser_get_integer_value
+arv_chunk_parser_get_string_value
+arv_decompress
+arv_device_get_boolean_feature_value
+arv_device_get_feature
+arv_device_get_float_feature_value
+arv_device_get_integer_feature_value
+arv_device_get_string_feature_value
+arv_device_is_enumeration_entry_available
+arv_dom_character_data_get_data (<parameters>)
+arv_dom_character_data_set_data (<parameters>)
+arv_dom_document_fragment_new
+arv_dom_document_get_document_element
+arv_dom_document_get_url (<parameters>)
+arv_dom_document_new_from_memory (<parameters>)
+arv_dom_document_new_from_path (<parameters>)
+arv_dom_document_new_from_url (<parameters>)
+arv_dom_document_set_path (<parameters>)
+arv_dom_document_set_url (<parameters>)
+arv_dom_element_get_attribute (<parameters>)
+arv_dom_element_get_tag_name (<parameters>)
+arv_dom_element_set_attribute (<parameters>)
+arv_dom_implementation_add_document_type (<parameters>)
+arv_dom_implementation_cleanup
+arv_dom_named_node_map_get_item
+arv_dom_named_node_map_get_length (<parameters>)
+arv_dom_named_node_map_get_named_item
+arv_dom_named_node_map_remove_named_item
+arv_dom_named_node_map_set_named_item
+arv_dom_node_changed (<parameters>)
+arv_dom_node_child_list_new (<parameters>)
+arv_dom_node_get_attributes (<parameters>)
+arv_dom_node_get_child_nodes
+arv_dom_node_get_first_child
+arv_dom_node_get_last_child
+arv_dom_node_get_next_sibling
+arv_dom_node_get_node_type (<parameters>)
+arv_dom_node_get_owner_document
+arv_dom_node_get_previous_sibling
+arv_dom_node_has_child_nodes (<parameters>)
+arv_dom_node_list_get_length (<parameters>)
+arv_dom_node_set_node_value (<parameters>)
+arv_dom_text_new (<parameters>)
+arv_evaluator_evaluate_as_double (<parameters>)
+arv_evaluator_evaluate_as_int64 (<parameters>)
+arv_evaluator_get_constant
+arv_evaluator_get_expression (<parameters>)
+arv_evaluator_get_sub_expression
+arv_evaluator_set_double_variable (<parameters>)
+arv_evaluator_set_expression (<parameters>)
+arv_evaluator_set_int64_variable (<parameters>)
+arv_exposure_mode_from_string (<parameters>)
+arv_exposure_mode_to_string (<parameters>)
+arv_fake_camera_get_acquisition_status (<parameters>)
+arv_fake_camera_get_control_channel_privilege (<parameters>)
+arv_fake_camera_get_genicam_xml
+arv_fake_camera_get_heartbeat_timeout (<parameters>)
+arv_fake_camera_get_payload (<parameters>)
+arv_fake_camera_get_sleep_time_for_next_frame
+arv_fake_camera_get_stream_address
+arv_fake_camera_new (<parameters>)
+arv_fake_camera_new_full (<parameters>)
+arv_fake_camera_read_memory (<parameters>)
+arv_fake_camera_read_register
+arv_fake_camera_set_control_channel_privilege (<parameters>)
+arv_fake_camera_set_inet_address (<parameters>)
+arv_fake_camera_set_trigger_frequency (<parameters>)
+arv_fake_camera_wait_for_next_frame (<parameters>)
+arv_fake_camera_write_memory (<parameters>)
+arv_fake_camera_write_register (<parameters>)
+arv_fake_device_get_fake_camera
+arv_fake_device_new
+arv_fake_stream_new
+arv_gc_boolean_get_value
+arv_gc_boolean_new
+arv_gc_boolean_set_value (<parameters>)
+arv_gc_category_new
+arv_gc_command_execute (<parameters>)
+arv_gc_command_new
+arv_gc_converter_node_new
+arv_gc_enum_entry_get_value (<parameters>)
+arv_gc_enum_entry_new
+arv_gc_enumeration_dup_available_int_values
+arv_gc_enumeration_get_entries
+arv_gc_enumeration_get_int_value (<parameters>)
+arv_gc_enumeration_get_string_value (<parameters>)
+arv_gc_enumeration_new
+arv_gc_enumeration_set_int_value (<parameters>)
+arv_gc_enumeration_set_string_value (<parameters>)
+arv_gc_feature_node_get_description (<parameters>)
+arv_gc_feature_node_get_display_name (<parameters>)
+arv_gc_feature_node_get_name (<parameters>)
+arv_gc_feature_node_get_tooltip (<parameters>)
+arv_gc_feature_node_get_visibility (<parameters>)
+arv_gc_feature_node_is_available (<parameters>)
+arv_gc_feature_node_is_implemented (<parameters>)
+arv_gc_feature_node_is_locked (<parameters>)
+arv_gc_float_get_inc
+arv_gc_float_get_max
+arv_gc_float_get_min
+arv_gc_float_get_unit (<parameters>)
+arv_gc_float_get_value (<parameters>)
+arv_gc_float_impose_max (<parameters>)
+arv_gc_float_impose_min (<parameters>)
+arv_gc_float_node_new
+arv_gc_float_reg_node_new
+arv_gc_float_set_value (<parameters>)
+arv_gc_get_range_check_policy (<parameters>)
+arv_gc_get_register_cache_policy (<parameters>)
+arv_gc_group_node_new
+arv_gc_index_node_get_index (<parameters>)
+arv_gc_index_node_new
+arv_gc_int_converter_node_new
+arv_gc_int_reg_node_new
+arv_gc_int_swiss_knife_node_new
+arv_gc_integer_get_inc (<parameters>)
+arv_gc_integer_get_max (<parameters>)
+arv_gc_integer_get_min (<parameters>)
+arv_gc_integer_get_unit (<parameters>)
+arv_gc_integer_get_value (<parameters>)
+arv_gc_integer_impose_max (<parameters>)
+arv_gc_integer_impose_min (<parameters>)
+arv_gc_integer_node_new
+arv_gc_integer_set_value (<parameters>)
+arv_gc_invalidator_has_changed (<parameters>)
+arv_gc_invalidator_node_new
+arv_gc_masked_int_reg_node_new
+arv_gc_new (<parameters>)
+arv_gc_p_value_indexed_node_new
+arv_gc_port_new
+arv_gc_port_read (<parameters>)
+arv_gc_port_write (<parameters>)
+arv_gc_property_node_get_access_mode (<parameters>)
+arv_gc_property_node_get_cachable (<parameters>)
+arv_gc_property_node_get_display_notation (<parameters>)
+arv_gc_property_node_get_display_precision (<parameters>)
+arv_gc_property_node_get_double (<parameters>)
+arv_gc_property_node_get_endianness (<parameters>)
+arv_gc_property_node_get_int64 (<parameters>)
+arv_gc_property_node_get_linked_node
+arv_gc_property_node_get_lsb (<parameters>)
+arv_gc_property_node_get_msb (<parameters>)
+arv_gc_property_node_get_name
+arv_gc_property_node_get_node_type (<parameters>)
+arv_gc_property_node_get_representation (<parameters>)
+arv_gc_property_node_get_sign (<parameters>)
+arv_gc_property_node_get_streamable (<parameters>)
+arv_gc_property_node_get_string (<parameters>)
+arv_gc_property_node_get_visibility (<parameters>)
+arv_gc_property_node_new_access_mode
+arv_gc_property_node_new_address
+arv_gc_property_node_new_bit
+arv_gc_property_node_new_cachable
+arv_gc_property_node_new_chunk_id
+arv_gc_property_node_new_command_value
+arv_gc_property_node_new_constant
+arv_gc_property_node_new_description
+arv_gc_property_node_new_display_name
+arv_gc_property_node_new_display_notation
+arv_gc_property_node_new_display_precision
+arv_gc_property_node_new_endianness
+arv_gc_property_node_new_event_id
+arv_gc_property_node_new_expression
+arv_gc_property_node_new_formula
+arv_gc_property_node_new_formula_from
+arv_gc_property_node_new_formula_to
+arv_gc_property_node_new_imposed_access_mode
+arv_gc_property_node_new_increment
+arv_gc_property_node_new_is_linear
+arv_gc_property_node_new_length
+arv_gc_property_node_new_lsb
+arv_gc_property_node_new_maximum
+arv_gc_property_node_new_minimum
+arv_gc_property_node_new_msb
+arv_gc_property_node_new_off_value
+arv_gc_property_node_new_on_value
+arv_gc_property_node_new_p_address
+arv_gc_property_node_new_p_command_value
+arv_gc_property_node_new_p_feature
+arv_gc_property_node_new_p_increment
+arv_gc_property_node_new_p_is_available
+arv_gc_property_node_new_p_is_implemented
+arv_gc_property_node_new_p_is_locked
+arv_gc_property_node_new_p_length
+arv_gc_property_node_new_p_maximum
+arv_gc_property_node_new_p_minimum
+arv_gc_property_node_new_p_port
+arv_gc_property_node_new_p_selected
+arv_gc_property_node_new_p_value
+arv_gc_property_node_new_p_value_default
+arv_gc_property_node_new_p_variable
+arv_gc_property_node_new_polling_time
+arv_gc_property_node_new_representation
+arv_gc_property_node_new_sign
+arv_gc_property_node_new_slope
+arv_gc_property_node_new_streamable
+arv_gc_property_node_new_tooltip
+arv_gc_property_node_new_unit
+arv_gc_property_node_new_value
+arv_gc_property_node_new_value_default
+arv_gc_property_node_new_visibility
+arv_gc_property_node_set_double (<parameters>)
+arv_gc_property_node_set_int64 (<parameters>)
+arv_gc_property_node_set_string (<parameters>)
+arv_gc_register_description_node_new
+arv_gc_register_feature_node (<parameters>)
+arv_gc_register_get (<parameters>)
+arv_gc_register_get_address (<parameters>)
+arv_gc_register_get_length (<parameters>)
+arv_gc_register_node_new
+arv_gc_register_set (<parameters>)
+arv_gc_selector_get_selected_features
+arv_gc_selector_is_selector
+arv_gc_set_buffer (<parameters>)
+arv_gc_set_default_node_data (<parameters>)
+arv_gc_set_range_check_policy (<parameters>)
+arv_gc_set_register_cache_policy (<parameters>)
+arv_gc_string_get_max_length
+arv_gc_string_node_new
+arv_gc_string_reg_node_new
+arv_gc_struct_entry_node_new
+arv_gc_struct_reg_node_new
+arv_gc_swiss_knife_node_new
+arv_gc_value_indexed_node_get_index (<parameters>)
+arv_gc_value_indexed_node_new
+arv_gv_device_get_device_address
+arv_gv_device_get_interface_address
+arv_gv_device_get_packet_size (<parameters>)
+arv_gv_device_get_stream_options
+arv_gv_device_get_timestamp_tick_frequency (<parameters>)
+arv_gv_device_is_controller
+arv_gv_device_leave_control
+arv_gv_device_new
+arv_gv_device_set_packet_size (<parameters>)
+arv_gv_device_take_control
+arv_gv_fake_camera_is_running
+arv_gv_fake_camera_new
+arv_gv_fake_camera_new_full
+arv_gv_stream_get_port (<parameters>)
+arv_gv_stream_get_statistics
+arv_gv_stream_new
+arv_gvcp_command_to_string
+arv_gvcp_error_to_string
+arv_gvcp_packet_flags_to_string_new
+arv_gvcp_packet_get_command
+arv_gvcp_packet_get_packet_flags
+arv_gvcp_packet_get_packet_type
+arv_gvcp_packet_get_pending_ack_timeout
+arv_gvcp_packet_new_discovery_cmd
+arv_gvcp_packet_new_read_memory_ack
+arv_gvcp_packet_new_read_memory_cmd
+arv_gvcp_packet_new_read_register_ack
+arv_gvcp_packet_new_read_register_cmd
+arv_gvcp_packet_new_write_memory_ack
+arv_gvcp_packet_new_write_memory_cmd
+arv_gvcp_packet_new_write_register_ack
+arv_gvcp_packet_new_write_register_cmd
+arv_gvcp_packet_type_to_string
+arv_histogram_new
+arv_make_thread_high_priority
+arv_make_thread_realtime
+arv_pixel_format_from_gst_0_10_caps (<parameters>)
+arv_pixel_format_from_gst_caps (<parameters>)
+arv_pixel_format_to_gst_0_10_caps_string (<parameters>)
+arv_pixel_format_to_gst_caps_string
+arv_set_fake_camera_genicam_filename (<parameters>)
+arv_str_is_uri (<parameters>)
+arv_str_parse_double (<parameters>)
+arv_str_parse_double_list (<parameters>)
+arv_str_skip_char (<parameters>)
+arv_str_skip_colon_and_spaces (<parameters>)
+arv_str_skip_comma_and_spaces (<parameters>)
+arv_str_skip_semicolon_and_spaces (<parameters>)
+arv_str_skip_spaces (<parameters>)
+arv_str_to_uri (<parameters>)
+arv_stream_get_info_double
+arv_stream_get_info_double_by_name
+arv_stream_get_info_name
+arv_stream_get_info_type
+arv_stream_get_info_uint64
+arv_stream_get_info_uint64_by_name
+arv_stream_get_n_infos
+arv_uv_device_new
+arv_uv_device_new_from_guid
+arv_uv_stream_new
+arv_uvcp_packet_get_command
+arv_uvcp_packet_get_flags
+arv_uvcp_packet_get_status
+arv_uvcp_packet_new_read_memory_cmd
+arv_uvcp_packet_new_write_memory_cmd
+arv_vendor_alias_lookup
+arv_xml_schema_new_from_file (<parameters>)
+arv_xml_schema_new_from_memory (<parameters>)
+arv_xml_schema_new_from_path (<parameters>)
+arv_xml_schema_validate (<parameters>)
+arv_zip_file_get_name (<parameters>)
+arv_zip_file_get_uncompressed_size (<parameters>)
+arv_zip_free (<parameters>)
+arv_zip_get_file (<parameters>)
+arv_zip_get_file_list (<parameters>)
+arv_zip_new
+
+arvdebug:long_description
+arvdomcharacterdata:long_description
+arvdomdocument:long_description
+arvdomdocumentfragment:long_description
+arvdomelement:long_description
+arvdomnamednodemap:long_description
+arvdomnamednodemap:short_description
+arvdomnode:long_description
+arvdomnodechildlist:long_description
+arvdomnodelist:long_description
+arvdomnodelist:short_description
+arvdomtext:long_description
+arvevaluator:long_description
+arvfakedevice:long_description
+arvfakeinterface:long_description
+arvfakestream:long_description
+arvgcboolean:long_description
+arvgccategory:long_description
+arvgccommand:long_description
+arvgcconverter:long_description
+arvgcconverternode:long_description
+arvgcenumentry:long_description
+arvgcenumeration:long_description
+arvgcfloat:long_description
+arvgcfloatnode:long_description
+arvgcgroupnode:long_description
+arvgcindexnode:long_description
+arvgcintconverternode:long_description
+arvgcinteger:long_description
+arvgcintegernode:long_description
+arvgcinvalidatornode:long_description
+arvgcport:long_description
+arvgcregister:long_description
+arvgcregisterdescriptionnode:long_description
+arvgcregisternode:long_description
+arvgcselector:long_description
+arvgcstring:long_description
+arvgcstringnode:long_description
+arvgcstructentrynode:long_description
+arvgcswissknife:long_description
+arvgcvalueindexednode:long_description
+arvgst:long_description
+arvgvdevice:long_description
+arvgvinterface:long_description
+arvgvstream:long_description
+arvstr:long_description
+arvuvdevice:long_description
+arvuvinterface:long_description
+arvuvstream:long_description
+arvxmlschema:long_description
+arvzip:long_description

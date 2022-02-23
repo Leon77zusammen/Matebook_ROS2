@@ -1,0 +1,725 @@
+Build started at 2022-02-20T16:21:27.602999
+Main binary: /usr/bin/python3
+Build Options: 
+Python system: Linux
+The Meson build system
+Version: 0.53.2
+Source dir: /home/yulong/Documents/aravis-0.8.20
+Build dir: /home/yulong/Documents/aravis-0.8.20/build
+Build type: native build
+Project name: aravis
+Project version: 0.8.20
+No CFLAGS in the environment, not changing global flags.
+No LDFLAGS in the environment, not changing global flags.
+No CPPFLAGS in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckc.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 9.3.0 "cc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0")
+C linker for the build machine: cc ld.bfd 2.34
+No CXXFLAGS in the environment, not changing global flags.
+No LDFLAGS in the environment, not changing global flags.
+No CPPFLAGS in the environment, not changing global flags.
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+Sanity check compiler command line: c++ /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckcpp.cc -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckcpp.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckcpp.exe
+C++ compiler for the build machine: c++ (gcc 9.3.0 "c++ (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0")
+C++ linker for the build machine: c++ ld.bfd 2.34
+No CFLAGS in the environment, not changing global flags.
+No LDFLAGS in the environment, not changing global flags.
+No CPPFLAGS in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+Sanity check compiler command line: cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckc.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckc.exe
+C compiler for the host machine: cc (gcc 9.3.0 "cc (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0")
+C linker for the host machine: cc ld.bfd 2.34
+No CXXFLAGS in the environment, not changing global flags.
+No LDFLAGS in the environment, not changing global flags.
+No CPPFLAGS in the environment, not changing global flags.
+Sanity testing C++ compiler: c++
+Is cross compiler: False.
+Sanity check compiler command line: c++ /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckcpp.cc -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckcpp.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/yulong/Documents/aravis-0.8.20/build/meson-private/sanitycheckcpp.exe
+C++ compiler for the host machine: c++ (gcc 9.3.0 "c++ (Ubuntu 9.3.0-17ubuntu1~20.04) 9.3.0")
+C++ linker for the host machine: c++ ld.bfd 2.34
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpkdl5rgwc
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpkdl5rgwc/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpkdl5rgwc/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wduplicated-branches 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wduplicated-branches: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpxfabnwx9
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpxfabnwx9/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpxfabnwx9/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wimplicit-fallthrough 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wimplicit-fallthrough: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp1bsjsp6l
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp1bsjsp6l/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp1bsjsp6l/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wmisleading-indentation 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmisleading-indentation: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp_fh60uq3
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp_fh60uq3/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp_fh60uq3/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wstrict-prototypes 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmppc5780wp
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmppc5780wp/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmppc5780wp/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wunused: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpbgas9yau
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpbgas9yau/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpbgas9yau/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wunused-variable 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wunused-variable: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpo7ea1e08
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpo7ea1e08/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpo7ea1e08/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wdeclaration-after-statement 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wdeclaration-after-statement: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpj7ske0mi
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpj7ske0mi/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpj7ske0mi/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat=2 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wformat=2: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpq0hl7rsg
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpq0hl7rsg/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpq0hl7rsg/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wimplicit-function-declaration 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wimplicit-function-declaration: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpcwqbpt40
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpcwqbpt40/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpcwqbpt40/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Winit-self 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Winit-self: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp0qlsoeuf
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp0qlsoeuf/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp0qlsoeuf/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-include-dirs 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmissing-include-dirs: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmppv5s_p8r
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmppv5s_p8r/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmppv5s_p8r/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wmissing-prototypes 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp5rtt_mz3
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp5rtt_mz3/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp5rtt_mz3/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wpointer-arith 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp5lb7gvh3
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp5lb7gvh3/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp5lb7gvh3/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wformat-nonliteral 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wformat-nonliteral: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp6w6gzvz9
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp6w6gzvz9/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp6w6gzvz9/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wenum-conversion 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ cc: error: unrecognized command line option '-Wenum-conversion'; did you mean '-Wno-conversion'?
+
+Compiler for C supports arguments -Wenum-conversion: NO 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpcijl93dm
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpcijl93dm/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpcijl93dm/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Wmaybe-uninitialized 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wmaybe-uninitialized: YES 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp8hc3vr_e
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp8hc3vr_e/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp8hc3vr_e/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fvisibility=hidden 
+
+Code:
+ int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Pkg-config binary for MachineChoice.HOST is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default pkg-config fallback at pkg-config
+Trying pkg-config binary pkg-config for machine MachineChoice.HOST at ['/usr/bin/pkg-config']
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.64.6
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-lglib-2.0
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpgso_oqz7
+Command line:  c++ /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpgso_oqz7/testfile.cpp -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpgso_oqz7/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -fpermissive 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        };
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpisjj9i24
+Command line:  c++ /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpisjj9i24/testfile.cpp -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpisjj9i24/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -fpermissive --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-linux-gnu/9/
+programs: =/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/9/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/9/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency glib-2.0 found: YES 2.64.6
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gobject-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gobject-2.0` -> 0
+2.64.6
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gobject-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gobject-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gobject-2.0 --libs` -> 0
+-lgobject-2.0 -lglib-2.0
+Run-time dependency gobject-2.0 found: YES 2.64.6
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gio-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gio-2.0` -> 0
+2.64.6
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gio-2.0` -> 0
+-pthread -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gio-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgio-2.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gio-2.0 --libs` -> 0
+-lgio-2.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency gio-2.0 found: YES 2.64.6
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libxml-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion libxml-2.0` -> 0
+2.9.10
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags libxml-2.0` -> 0
+-I/usr/include/libxml2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config libxml-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lxml2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config libxml-2.0 --libs` -> 0
+-lxml2
+Run-time dependency libxml-2.0 found: YES 2.9.10
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'zlib' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion zlib` -> 0
+1.2.11
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags zlib` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config zlib --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lz
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config zlib --libs` -> 0
+-lz
+Run-time dependency zlib found: YES 1.2.11
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'libusb-1.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion libusb-1.0` -> 0
+1.0.23
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags libusb-1.0` -> 0
+-I/usr/include/libusb-1.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config libusb-1.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lusb-1.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config libusb-1.0 --libs` -> 0
+-lusb-1.0
+Run-time dependency libusb-1.0 found: YES 1.0.23
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmptai8ytwk
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmptai8ytwk/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmptai8ytwk/output.exe -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lm -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library m found: YES
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpw1he7zns
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmpw1he7zns/testfile.c -pipe -E -P -D_FILE_OFFSET_BITS=64 -P -O0 
+
+Code:
+ 
+        #ifdef __has_include
+         #if !__has_include("linux/if_packet.h")
+          #error "Header 'linux/if_packet.h' could not be found"
+         #endif
+        #else
+         #include <linux/if_packet.h>
+        #endif
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Has header "linux/if_packet.h" : YES 
+Pkg-config binary for MachineChoice.BUILD is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default pkg-config fallback at pkg-config
+Trying pkg-config binary pkg-config for machine MachineChoice.BUILD at ['/usr/bin/pkg-config']
+Found pkg-config: /usr/bin/pkg-config (0.29.1)
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.64.6
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config glib-2.0 --libs` -> 0
+-lglib-2.0
+Configuring arvapi.h using configuration
+Configuring arvfeatures.h using configuration
+Configuring arvversion.h using configuration
+Program g-ir-scanner found: YES (/usr/bin/g-ir-scanner)
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gobject-introspection-1.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gobject-introspection-1.0` -> 0
+1.64.1
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gobject-introspection-1.0` -> 0
+-pthread -I/usr/include/gobject-introspection-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gobject-introspection-1.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgirepository-1.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gobject-introspection-1.0 --libs` -> 0
+-lgirepository-1.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency gobject-introspection-1.0 found: YES 1.64.1
+Pkg-config binary for MachineChoice.BUILD is cached.
+Determining dependency 'gobject-introspection-1.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gobject-introspection-1.0` -> 0
+1.64.1
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gobject-introspection-1.0` -> 0
+-pthread -I/usr/include/gobject-introspection-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gobject-introspection-1.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgirepository-1.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gobject-introspection-1.0 --libs` -> 0
+-lgirepository-1.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --variable=girdir glib-2.0` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --print-variables glib-2.0` -> 0
+bindir
+glib_genmarshal
+glib_mkenums
+gobject_query
+includedir
+libdir
+pcfiledir
+prefix
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --variable=girdir gobject-2.0` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --print-variables gobject-2.0` -> 0
+includedir
+libdir
+pcfiledir
+prefix
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --variable=girdir gio-2.0` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --print-variables gio-2.0` -> 0
+bindir
+datadir
+gdbus
+gdbus_codegen
+gio
+gio_querymodules
+giomoduledir
+glib_compile_resources
+glib_compile_schemas
+gresource
+gsettings
+includedir
+libdir
+pcfiledir
+prefix
+schemasdir
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --variable=girdir libxml-2.0` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --print-variables libxml-2.0` -> 0
+exec_prefix
+includedir
+libdir
+modules
+pcfiledir
+prefix
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --variable=girdir zlib` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --print-variables zlib` -> 0
+exec_prefix
+includedir
+libdir
+pcfiledir
+prefix
+sharedlibdir
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --variable=girdir libusb-1.0` -> 0
+
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --print-variables libusb-1.0` -> 0
+exec_prefix
+includedir
+libdir
+pcfiledir
+prefix
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+Running compile:
+Working directory:  /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp97r3j4q8
+Command line:  cc /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp97r3j4q8/testfile.c -o /home/yulong/Documents/aravis-0.8.20/build/meson-private/tmp97r3j4q8/output.obj -pipe -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-linux-gnu/9/
+programs: =/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/9/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../lib/:/lib/x86_64-linux-gnu/9/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/9/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../../x86_64-linux-gnu/lib/:/usr/lib/gcc/x86_64-linux-gnu/9/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Adding test "evaluator"
+Adding test "buffer"
+Adding test "misc"
+Adding test "dom"
+Adding test "genicam"
+Adding test "fake"
+Adding test "fakegv"
+Program python3 found: YES (/usr/bin/python3)
+Adding test "fake.py"
+Adding test "exception.py"
+Configuring pylaunch using configuration
+Configuring pylaunch-dbg using configuration
+Configuring jslaunch using configuration
+Configuring jslaunch-dbg using configuration
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gtk+-3.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gtk+-3.0` -> 0
+3.24.20
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gtk+-3.0` -> 0
+-pthread -I/usr/include/gtk-3.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gtk+-3.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gtk+-3.0 --libs` -> 0
+-lgtk-3 -lgdk-3 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -latk-1.0 -lcairo-gobject -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency gtk+-3.0 found: YES 3.24.20
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-base-1.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gstreamer-base-1.0` -> 0
+1.16.2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gstreamer-base-1.0` -> 0
+-pthread -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gstreamer-base-1.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gstreamer-base-1.0 --libs` -> 0
+-lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency gstreamer-base-1.0 found: YES 1.16.2
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-app-1.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gstreamer-app-1.0` -> 0
+1.16.2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gstreamer-app-1.0` -> 0
+-pthread -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gstreamer-app-1.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgstapp-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gstreamer-app-1.0 --libs` -> 0
+-lgstapp-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency gstreamer-app-1.0 found: YES 1.16.2
+Pkg-config binary for MachineChoice.HOST is cached.
+Determining dependency 'gstreamer-video-1.0' with pkg-config executable '/usr/bin/pkg-config'
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --modversion gstreamer-video-1.0` -> 0
+1.16.2
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config --cflags gstreamer-video-1.0` -> 0
+-pthread -I/usr/include/gstreamer-1.0 -I/usr/include/orc-0.4 -I/usr/include/gstreamer-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gstreamer-video-1.0 --libs` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+PKG_CONFIG_PATH: 
+Called `/usr/bin/pkg-config gstreamer-video-1.0 --libs` -> 0
+-lgstvideo-1.0 -lgstbase-1.0 -lgstreamer-1.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency gstreamer-video-1.0 found: YES 1.16.2
+Configuring arv-viewer-0.8.appdata.xml using configuration
+Configuring arv-viewer.desktop.in using configuration
+Dependency gstreamer-base-1.0 found: YES 1.16.2 (cached)
+Dependency gstreamer-app-1.0 found: YES 1.16.2 (cached)
+Configuring gst-aravis-launch using configuration
+Configuring gst-aravis-inspect using configuration
+Program gtkdoc-scan found: YES (/usr/bin/gtkdoc-scan)
+Program xsltproc found: YES (/usr/bin/xsltproc)
+Configuring gtkdocentities.ent using configuration
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+PKG_CONFIG_PATH: 
+PKG_CONFIG_PATH: 
+Got pkgconfig variable girdir : 
+Build targets in project: 48
+
+Found ninja-1.10.0 at /usr/bin/ninja

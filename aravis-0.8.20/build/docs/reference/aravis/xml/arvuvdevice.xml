@@ -1,0 +1,236 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvUvDevice">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvUvDevice.top_of_page">ArvUvDevice</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvUvDevice</refname>
+<refpurpose>USB3Vision device</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvUvDevice.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-uv-device-new">arv_uv_device_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-uv-device-new-from-guid">arv_uv_device_new_from_guid</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-uv-device-set-usb-mode">arv_uv_device_set_usb_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvUvDevice.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ArvUvDevice--guid">guid</link></entry><entry role="property_flags">Write / Construct&#160;Only</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ArvUvDevice--product">product</link></entry><entry role="property_flags">Write / Construct&#160;Only</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ArvUvDevice--serial-number">serial-number</link></entry><entry role="property_flags">Write / Construct&#160;Only</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ArvUvDevice--vendor">vendor</link></entry><entry role="property_flags">Write / Construct&#160;Only</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvUvDevice.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvUvUsbMode">ArvUvUsbMode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvUvDevice.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDevice">ArvDevice</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvUvDevice
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvUvDevice.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvUvDevice.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-uv-device-new" role="function" condition="since:0.8.0">
+<title>arv_uv_device_new&#160;()</title>
+<indexterm zone="arv-uv-device-new" role="0.8.0"><primary>arv_uv_device_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+arv_uv_device_new (<parameter>const <link linkend="char"><type>char</type></link> *vendor</parameter>,
+                   <parameter>const <link linkend="char"><type>char</type></link> *product</parameter>,
+                   <parameter>const <link linkend="char"><type>char</type></link> *serial_number</parameter>,
+                   <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-uv-device-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vendor</para></entry>
+<entry role="parameter_description"><para>USB3 vendor string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>product</para></entry>
+<entry role="parameter_description"><para>USB3 product string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>serial_number</para></entry>
+<entry role="parameter_description"><para>device serial number</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-uv-device-new.returns" role="returns">
+<title>Returns</title>
+<para> a newly created <link linkend="ArvDevice"><type>ArvDevice</type></link> using USB3 based protocol</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-uv-device-new-from-guid" role="function" condition="since:0.8.17">
+<title>arv_uv_device_new_from_guid&#160;()</title>
+<indexterm zone="arv-uv-device-new-from-guid" role="0.8.17"><primary>arv_uv_device_new_from_guid</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+arv_uv_device_new_from_guid (<parameter>const <link linkend="char"><type>char</type></link> *guid</parameter>,
+                             <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-uv-device-new-from-guid.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>guid</para></entry>
+<entry role="parameter_description"><para>device GUID</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-uv-device-new-from-guid.returns" role="returns">
+<title>Returns</title>
+<para> a newly created <link linkend="ArvDevice"><type>ArvDevice</type></link> using USB3 based protocol</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.17">0.8.17</link></para></refsect2>
+<refsect2 id="arv-uv-device-set-usb-mode" role="function" condition="since:0.8.17">
+<title>arv_uv_device_set_usb_mode&#160;()</title>
+<indexterm zone="arv-uv-device-set-usb-mode" role="0.8.17"><primary>arv_uv_device_set_usb_mode</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_uv_device_set_usb_mode (<parameter><link linkend="ArvUvDevice"><type>ArvUvDevice</type></link> *uv_device</parameter>,
+                            <parameter><link linkend="ArvUvUsbMode"><type>ArvUvUsbMode</type></link> usb_mode</parameter>);</programlisting>
+<para>Sets the option to utilize the USB synchronous or asynchronous device I/O API. The default mode is
+<parameter>ARV_UV_USB_MODE_SYNC</parameter>
+, which means USB bulk transfer will be synchronously executed. This mode is qualified to work,
+but it has the performance issue with some high framerate device. Using <parameter>ARV_UV_USB_MODE_ASYNC</parameter>
+ possibly improves the
+bandwidth.</para>
+<refsect3 id="arv-uv-device-set-usb-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>uv_device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvUvDevice"><type>ArvUvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>usb_mode</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvUvUsbMode"><type>ArvUvUsbMode</type></link> option</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.17">0.8.17</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="ArvUvDevice.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvUvUsbMode" role="enum">
+<title>enum ArvUvUsbMode</title>
+<indexterm zone="ArvUvUsbMode"><primary>ArvUvUsbMode</primary></indexterm>
+<refsect3 id="ArvUvUsbMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-UV-USB-MODE-SYNC:CAPS">ARV_UV_USB_MODE_SYNC</para></entry>
+<entry role="enum_member_description"><para>utilize libusb synchronous device I/O API</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-UV-USB-MODE-ASYNC:CAPS">ARV_UV_USB_MODE_ASYNC</para></entry>
+<entry role="enum_member_description"><para>utilize libusb asynchronous device I/O API</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-UV-USB-MODE-DEFAULT:CAPS">ARV_UV_USB_MODE_DEFAULT</para></entry>
+<entry role="enum_member_description"><para>default usb mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ArvUvDevice.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ArvUvDevice--guid" role="property"><title>The <literal>“guid”</literal> property</title>
+<indexterm zone="ArvUvDevice--guid"><primary>ArvUvDevice:guid</primary></indexterm>
+<programlisting>  “guid”                     <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>USB3 device GUID.</para><para>Owner: ArvUvDevice</para>
+<para>Flags: Write / Construct&#160;Only</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ArvUvDevice--product" role="property"><title>The <literal>“product”</literal> property</title>
+<indexterm zone="ArvUvDevice--product"><primary>ArvUvDevice:product</primary></indexterm>
+<programlisting>  “product”                  <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>USB3 device product string.</para><para>Owner: ArvUvDevice</para>
+<para>Flags: Write / Construct&#160;Only</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ArvUvDevice--serial-number" role="property"><title>The <literal>“serial-number”</literal> property</title>
+<indexterm zone="ArvUvDevice--serial-number"><primary>ArvUvDevice:serial-number</primary></indexterm>
+<programlisting>  “serial-number”            <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>USB3 device serial number.</para><para>Owner: ArvUvDevice</para>
+<para>Flags: Write / Construct&#160;Only</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="ArvUvDevice--vendor" role="property"><title>The <literal>“vendor”</literal> property</title>
+<indexterm zone="ArvUvDevice--vendor"><primary>ArvUvDevice:vendor</primary></indexterm>
+<programlisting>  “vendor”                   <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>USB3 device vendor string.</para><para>Owner: ArvUvDevice</para>
+<para>Flags: Write / Construct&#160;Only</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

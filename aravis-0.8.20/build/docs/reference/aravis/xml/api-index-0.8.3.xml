@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.8.3">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="arv-buffer-set-frame-id"><link linkend="arv-buffer-set-frame-id">arv_buffer_set_frame_id</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-gv-set-packet-size-adjustment"><link linkend="arv-camera-gv-set-packet-size-adjustment">arv_camera_gv_set_packet_size_adjustment</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="arv-gv-device-leave-control"><link linkend="arv-gv-device-leave-control">arv_gv_device_leave_control</link>, function in <link linkend="ArvGvDevice">ArvGvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gv-device-set-packet-size-adjustment"><link linkend="arv-gv-device-set-packet-size-adjustment">arv_gv_device_set_packet_size_adjustment</link>, function in <link linkend="ArvGvDevice">ArvGvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gv-device-take-control"><link linkend="arv-gv-device-take-control">arv_gv_device_take_control</link>, function in <link linkend="ArvGvDevice">ArvGvDevice</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

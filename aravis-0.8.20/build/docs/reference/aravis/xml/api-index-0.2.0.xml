@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.2.0">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="arv-buffer-new"><link linkend="arv-buffer-new">arv_buffer_new</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-new-full"><link linkend="arv-buffer-new-full">arv_buffer_new_full</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-create-stream"><link linkend="arv-camera-create-stream">arv_camera_create_stream</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-get-device"><link linkend="arv-camera-get-device">arv_camera_get_device</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="ArvDevice-control-lost"><link linkend="ArvDevice-control-lost">ArvDevice::control-lost</link>, object signal in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-device-create-stream"><link linkend="arv-device-create-stream">arv_device_create_stream</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-device-get-feature"><link linkend="arv-device-get-feature">arv_device_get_feature</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-device-get-genicam"><link linkend="arv-device-get-genicam">arv_device_get_genicam</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-device-get-genicam-xml"><link linkend="arv-device-get-genicam-xml">arv_device_get_genicam_xml</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-device-read-memory"><link linkend="arv-device-read-memory">arv_device_read_memory</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-device-read-register"><link linkend="arv-device-read-register">arv_device_read_register</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-device-write-memory"><link linkend="arv-device-write-memory">arv_device_write_memory</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-device-write-register"><link linkend="arv-device-write-register">arv_device_write_register</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="arv-get-device-id"><link linkend="arv-get-device-id">arv_get_device_id</link>, function in <link linkend="aravis-Arv">Arv</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-device-physical-id"><link linkend="arv-get-device-physical-id">arv_get_device_physical_id</link>, function in <link linkend="aravis-Arv">Arv</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gv-device-get-device-address"><link linkend="arv-gv-device-get-device-address">arv_gv_device_get_device_address</link>, function in <link linkend="ArvGvDevice">ArvGvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gv-device-get-interface-address"><link linkend="arv-gv-device-get-interface-address">arv_gv_device_get_interface_address</link>, function in <link linkend="ArvGvDevice">ArvGvDevice</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>I</title>
+<indexentry><primaryie linkends="arv-interface-get-device-address"><link linkend="arv-interface-get-device-address">arv_interface_get_device_address</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-interface-get-device-id"><link linkend="arv-interface-get-device-id">arv_interface_get_device_id</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-interface-get-device-physical-id"><link linkend="arv-interface-get-device-physical-id">arv_interface_get_device_physical_id</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-interface-get-n-devices"><link linkend="arv-interface-get-n-devices">arv_interface_get_n_devices</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-interface-open-device"><link linkend="arv-interface-open-device">arv_interface_open_device</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-interface-update-device-list"><link linkend="arv-interface-update-device-list">arv_interface_update_device_list</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="ArvStream-new-buffer"><link linkend="ArvStream-new-buffer">ArvStream::new-buffer</link>, object signal in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-emit-signals"><link linkend="arv-stream-get-emit-signals">arv_stream_get_emit_signals</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-n-buffers"><link linkend="arv-stream-get-n-buffers">arv_stream_get_n_buffers</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-statistics"><link linkend="arv-stream-get-statistics">arv_stream_get_statistics</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-pop-buffer"><link linkend="arv-stream-pop-buffer">arv_stream_pop_buffer</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-push-buffer"><link linkend="arv-stream-push-buffer">arv_stream_push_buffer</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-set-emit-signals"><link linkend="arv-stream-set-emit-signals">arv_stream_set_emit_signals</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-timeout-pop-buffer"><link linkend="arv-stream-timeout-pop-buffer">arv_stream_timeout_pop_buffer</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-try-pop-buffer"><link linkend="arv-stream-try-pop-buffer">arv_stream_try_pop_buffer</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

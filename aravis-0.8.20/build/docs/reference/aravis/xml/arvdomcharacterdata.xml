@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvDomCharacterData">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvDomCharacterData.top_of_page">ArvDomCharacterData</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvDomCharacterData</refname>
+<refpurpose>Base class for DOM character data nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvDomCharacterData.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-character-data-get-data">arv_dom_character_data_get_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-character-data-set-data">arv_dom_character_data_set_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomCharacterData.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvDomCharacterData
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomText">ArvDomText</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvDomCharacterData.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvDomCharacterData.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-dom-character-data-get-data" role="function">
+<title>arv_dom_character_data_get_data&#160;()</title>
+<indexterm zone="arv-dom-character-data-get-data"><primary>arv_dom_character_data_get_data</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_dom_character_data_get_data (<parameter><link linkend="ArvDomCharacterData"><type>ArvDomCharacterData</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-character-data-set-data" role="function">
+<title>arv_dom_character_data_set_data&#160;()</title>
+<indexterm zone="arv-dom-character-data-set-data"><primary>arv_dom_character_data_set_data</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_character_data_set_data (<parameter><link linkend="ArvDomCharacterData"><type>ArvDomCharacterData</type></link> *self</parameter>,
+                                 <parameter>const <link linkend="char"><type>char</type></link> *value</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

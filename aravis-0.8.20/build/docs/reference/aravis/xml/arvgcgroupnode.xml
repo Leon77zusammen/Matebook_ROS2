@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcGroupNode">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcGroupNode.top_of_page">ArvGcGroupNode</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcGroupNode</refname>
+<refpurpose>Class for Group nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcGroupNode.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-group-node-new">arv_gc_group_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcGroupNode.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcGroupNode-struct">ArvGcGroupNode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcGroupNode.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcGroupNode
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGcGroupNode.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcGroupNode.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-group-node-new" role="function">
+<title>arv_gc_group_node_new&#160;()</title>
+<indexterm zone="arv-gc-group-node-new"><primary>arv_gc_group_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_group_node_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcGroupNode.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcGroupNode-struct" role="struct">
+<title>ArvGcGroupNode</title>
+<indexterm zone="ArvGcGroupNode-struct"><primary>ArvGcGroupNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcGroupNode ArvGcGroupNode;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

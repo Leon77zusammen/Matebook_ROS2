@@ -1,0 +1,316 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvChunkParser">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvChunkParser.top_of_page">ArvChunkParser</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvChunkParser</refname>
+<refpurpose>Parser for extraction of chunk data from buffers</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvChunkParser.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvChunkParser"><returnvalue>ArvChunkParser</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-chunk-parser-new">arv_chunk_parser_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="double"><returnvalue>double</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-chunk-parser-get-float-value">arv_chunk_parser_get_float_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-chunk-parser-get-integer-value">arv_chunk_parser_get_integer_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-chunk-parser-get-boolean-value">arv_chunk_parser_get_boolean_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-chunk-parser-get-string-value">arv_chunk_parser_get_string_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvChunkParser.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="ArvGc"><type>ArvGc</type></link>&#160;*</entry><entry role="property_name"><link linkend="ArvChunkParser--genicam">genicam</link></entry><entry role="property_flags">Read / Write / Construct&#160;Only</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvChunkParser.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-CHUNK-PARSER-ERROR:CAPS">ARV_CHUNK_PARSER_ERROR</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvChunkParserError">ArvChunkParserError</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvChunkParser-struct">ArvChunkParser</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvChunkParser.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvChunkParser
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvChunkParser.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="ArvChunkParser"><type>ArvChunkParser</type></link> provides a class for the instantiation of chunk parsers used
+for the extraction of chunk data stored in the stream payload.</para>
+<para>Chunks are tagged blocks of data stored in a <link linkend="ArvBuffer"><type>ArvBuffer</type></link> containing
+a <link linkend="ARV-BUFFER-PAYLOAD-TYPE-CHUNK-DATA:CAPS"><type>ARV_BUFFER_PAYLOAD_TYPE_CHUNK_DATA</type></link> payload. The tags allow a chunk
+parser to dissect the data payload into its elements and to identify the content.</para>
+<para>Chunk data are enabled using either <link linkend="arv-camera-set-chunks"><function>arv_camera_set_chunks()</function></link> or
+<link linkend="arv-camera-set-chunk-mode"><function>arv_camera_set_chunk_mode()</function></link>. Both functions are simple convenience wrappers
+that handle the setting of ChunkModeActive, ChunkSelector and ChunkEnable
+GENICAM features.</para>
+<example id="arv-chunk-parser-test"><title>Example use of the ArvChunkParser API</title>
+<programlisting>
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" parse="text" href="../../../../tests/arvchunkparsertest.c">
+  <xi:fallback>FIXME: MISSING XINCLUDE CONTENT</xi:fallback>
+</xi:include>
+</programlisting>
+</example>
+
+</refsect1>
+<refsect1 id="ArvChunkParser.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-chunk-parser-new" role="function" condition="since:0.4.0">
+<title>arv_chunk_parser_new&#160;()</title>
+<indexterm zone="arv-chunk-parser-new" role="0.4.0"><primary>arv_chunk_parser_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvChunkParser"><returnvalue>ArvChunkParser</returnvalue></link>&#160;*
+arv_chunk_parser_new (<parameter>const <link linkend="char"><type>char</type></link> *xml</parameter>,
+                      <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>);</programlisting>
+<para>Creates a new chunk_parser.</para>
+<refsect3 id="arv-chunk-parser-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>xml</para></entry>
+<entry role="parameter_description"><para>XML genicam data</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>genicam data size, -1 if NULL terminated</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-chunk-parser-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="ArvChunkParser"><type>ArvChunkParser</type></link> object</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-chunk-parser-get-float-value" role="function">
+<title>arv_chunk_parser_get_float_value&#160;()</title>
+<indexterm zone="arv-chunk-parser-get-float-value"><primary>arv_chunk_parser_get_float_value</primary></indexterm>
+<programlisting language="C"><link linkend="double"><returnvalue>double</returnvalue></link>
+arv_chunk_parser_get_float_value (<parameter><link linkend="ArvChunkParser"><type>ArvChunkParser</type></link> *parser</parameter>,
+                                  <parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                                  <parameter>const <link linkend="char"><type>char</type></link> *chunk</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-chunk-parser-get-float-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>parser</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvChunkParser"><type>ArvChunkParser</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link> with a <link linkend="ARV-BUFFER-PAYLOAD-TYPE-CHUNK-DATA:CAPS"><type>ARV_BUFFER_PAYLOAD_TYPE_CHUNK_DATA</type></link> payload</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>chunk</para></entry>
+<entry role="parameter_description"><para>chunk data name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-chunk-parser-get-float-value.returns" role="returns">
+<title>Returns</title>
+<para> the float chunk data value.</para>
+</refsect3></refsect2>
+<refsect2 id="arv-chunk-parser-get-integer-value" role="function">
+<title>arv_chunk_parser_get_integer_value&#160;()</title>
+<indexterm zone="arv-chunk-parser-get-integer-value"><primary>arv_chunk_parser_get_integer_value</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_chunk_parser_get_integer_value (<parameter><link linkend="ArvChunkParser"><type>ArvChunkParser</type></link> *parser</parameter>,
+                                    <parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *chunk</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-chunk-parser-get-integer-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>parser</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvChunkParser"><type>ArvChunkParser</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link> with a <link linkend="ARV-BUFFER-PAYLOAD-TYPE-CHUNK-DATA:CAPS"><type>ARV_BUFFER_PAYLOAD_TYPE_CHUNK_DATA</type></link> payload</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>chunk</para></entry>
+<entry role="parameter_description"><para>chunk data name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-chunk-parser-get-integer-value.returns" role="returns">
+<title>Returns</title>
+<para> the integer chunk data integer.</para>
+</refsect3></refsect2>
+<refsect2 id="arv-chunk-parser-get-boolean-value" role="function">
+<title>arv_chunk_parser_get_boolean_value&#160;()</title>
+<indexterm zone="arv-chunk-parser-get-boolean-value"><primary>arv_chunk_parser_get_boolean_value</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_chunk_parser_get_boolean_value (<parameter><link linkend="ArvChunkParser"><type>ArvChunkParser</type></link> *parser</parameter>,
+                                    <parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *chunk</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-chunk-parser-get-boolean-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>parser</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvChunkParser"><type>ArvChunkParser</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link> with a <link linkend="ARV-BUFFER-PAYLOAD-TYPE-CHUNK-DATA:CAPS"><type>ARV_BUFFER_PAYLOAD_TYPE_CHUNK_DATA</type></link> payload</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>chunk</para></entry>
+<entry role="parameter_description"><para>chunk data name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-chunk-parser-get-boolean-value.returns" role="returns">
+<title>Returns</title>
+<para> the boolean chunk data value.</para>
+</refsect3></refsect2>
+<refsect2 id="arv-chunk-parser-get-string-value" role="function">
+<title>arv_chunk_parser_get_string_value&#160;()</title>
+<indexterm zone="arv-chunk-parser-get-string-value"><primary>arv_chunk_parser_get_string_value</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_chunk_parser_get_string_value (<parameter><link linkend="ArvChunkParser"><type>ArvChunkParser</type></link> *parser</parameter>,
+                                   <parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                                   <parameter>const <link linkend="char"><type>char</type></link> *chunk</parameter>,
+                                   <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-chunk-parser-get-string-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>parser</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvChunkParser"><type>ArvChunkParser</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link> with a <link linkend="ARV-BUFFER-PAYLOAD-TYPE-CHUNK-DATA:CAPS"><type>ARV_BUFFER_PAYLOAD_TYPE_CHUNK_DATA</type></link> payload</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>chunk</para></entry>
+<entry role="parameter_description"><para>chunk data name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-chunk-parser-get-string-value.returns" role="returns">
+<title>Returns</title>
+<para> the string chunk data value.</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ArvChunkParser.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ARV-CHUNK-PARSER-ERROR:CAPS" role="macro">
+<title>ARV_CHUNK_PARSER_ERROR</title>
+<indexterm zone="ARV-CHUNK-PARSER-ERROR:CAPS"><primary>ARV_CHUNK_PARSER_ERROR</primary></indexterm>
+<programlisting language="C">#define ARV_CHUNK_PARSER_ERROR arv_chunk_parser_error_quark()
+</programlisting>
+</refsect2>
+<refsect2 id="ArvChunkParserError" role="enum">
+<title>enum ArvChunkParserError</title>
+<indexterm zone="ArvChunkParserError"><primary>ArvChunkParserError</primary></indexterm>
+<refsect3 id="ArvChunkParserError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-CHUNK-PARSER-ERROR-INVALID-FEATURE-TYPE:CAPS">ARV_CHUNK_PARSER_ERROR_INVALID_FEATURE_TYPE</para></entry>
+<entry role="enum_member_description"><para>invalid feature type</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-CHUNK-PARSER-ERROR-BUFFER-NOT-FOUND:CAPS">ARV_CHUNK_PARSER_ERROR_BUFFER_NOT_FOUND</para></entry>
+<entry role="enum_member_description"><para>a buffer is not attached to the chunk parser</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-CHUNK-PARSER-ERROR-CHUNK-NOT-FOUND:CAPS">ARV_CHUNK_PARSER_ERROR_CHUNK_NOT_FOUND</para></entry>
+<entry role="enum_member_description"><para>the requested chunk is not found in the buffer data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvChunkParser-struct" role="struct">
+<title>ArvChunkParser</title>
+<indexterm zone="ArvChunkParser-struct"><primary>ArvChunkParser</primary></indexterm>
+<programlisting language="C">typedef struct _ArvChunkParser ArvChunkParser;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvChunkParser.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ArvChunkParser--genicam" role="property"><title>The <literal>“genicam”</literal> property</title>
+<indexterm zone="ArvChunkParser--genicam"><primary>ArvChunkParser:genicam</primary></indexterm>
+<programlisting>  “genicam”                  <link linkend="ArvGc"><type>ArvGc</type></link>&#160;*</programlisting>
+<para>Internal Genicam object</para>
+<para>Owner: ArvChunkParser</para>
+<para>Flags: Read / Write / Construct&#160;Only</para>
+<para role="stability">Stability Level: <acronym>Private</acronym></para></refsect2>
+
+</refsect1>
+
+</refentry>

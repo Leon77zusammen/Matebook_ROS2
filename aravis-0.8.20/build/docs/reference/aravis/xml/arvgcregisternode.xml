@@ -1,0 +1,196 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcRegisterNode">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcRegisterNode.top_of_page">ArvGcRegisterNode</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcRegisterNode</refname>
+<refpurpose>Class for Register nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcRegisterNode.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-register-node-new">arv_gc_register_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-int-reg-node-new">arv_gc_int_reg_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-masked-int-reg-node-new">arv_gc_masked_int_reg_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-float-reg-node-new">arv_gc_float_reg_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-string-reg-node-new">arv_gc_string_reg_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-struct-reg-node-new">arv_gc_struct_reg_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="ArvGcIntRegNode"/><anchor id="ArvGcMaskedIntRegNode"/><anchor id="ArvGcFloatRegNode"/><anchor id="ArvGcStringRegNode"/><anchor id="ArvGcStructRegNode"/><refsect1 id="ArvGcRegisterNode.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcRegisterNode-struct">ArvGcRegisterNode</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcIntRegNode-struct">ArvGcIntRegNode</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcMaskedIntRegNode-struct">ArvGcMaskedIntRegNode</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcFloatRegNode-struct">ArvGcFloatRegNode</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcStringRegNode-struct">ArvGcStringRegNode</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcStructRegNode-struct">ArvGcStructRegNode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcRegisterNode.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcRegisterNode
+                        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ArvGcFloatRegNode
+                        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ArvGcIntRegNode
+                        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ArvGcMaskedIntRegNode
+                        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> ArvGcStringRegNode
+                        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcStructRegNode
+</screen>
+</refsect1>
+<refsect1 id="ArvGcRegisterNode.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ArvGcRegisterNode implements
+ <link linkend="ArvGcRegister">ArvGcRegister</link>.</para>
+<para>
+ArvGcIntRegNode implements
+ <link linkend="ArvGcRegister">ArvGcRegister</link>,  <link linkend="ArvGcInteger">ArvGcInteger</link> and  <link linkend="ArvGcSelector">ArvGcSelector</link>.</para>
+<para>
+ArvGcMaskedIntRegNode implements
+ <link linkend="ArvGcRegister">ArvGcRegister</link>,  <link linkend="ArvGcInteger">ArvGcInteger</link> and  <link linkend="ArvGcSelector">ArvGcSelector</link>.</para>
+<para>
+ArvGcFloatRegNode implements
+ <link linkend="ArvGcRegister">ArvGcRegister</link> and  <link linkend="ArvGcFloat">ArvGcFloat</link>.</para>
+<para>
+ArvGcStringRegNode implements
+ <link linkend="ArvGcRegister">ArvGcRegister</link> and  <link linkend="ArvGcString">ArvGcString</link>.</para>
+<para>
+ArvGcStructRegNode implements
+ <link linkend="ArvGcRegister">ArvGcRegister</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvGcRegisterNode.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcRegisterNode.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-register-node-new" role="function">
+<title>arv_gc_register_node_new&#160;()</title>
+<indexterm zone="arv-gc-register-node-new"><primary>arv_gc_register_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_register_node_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-int-reg-node-new" role="function" condition="since:0.8.0">
+<title>arv_gc_int_reg_node_new&#160;()</title>
+<indexterm zone="arv-gc-int-reg-node-new" role="0.8.0"><primary>arv_gc_int_reg_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_int_reg_node_new (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="arv-gc-int-reg-node-new.returns" role="returns">
+<title>Returns</title>
+<para> a new IntReg node</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-masked-int-reg-node-new" role="function" condition="since:0.8.0">
+<title>arv_gc_masked_int_reg_node_new&#160;()</title>
+<indexterm zone="arv-gc-masked-int-reg-node-new" role="0.8.0"><primary>arv_gc_masked_int_reg_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_masked_int_reg_node_new (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="arv-gc-masked-int-reg-node-new.returns" role="returns">
+<title>Returns</title>
+<para> a new MaskedIntReg node</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-float-reg-node-new" role="function" condition="since:0.8.0">
+<title>arv_gc_float_reg_node_new&#160;()</title>
+<indexterm zone="arv-gc-float-reg-node-new" role="0.8.0"><primary>arv_gc_float_reg_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_float_reg_node_new (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="arv-gc-float-reg-node-new.returns" role="returns">
+<title>Returns</title>
+<para> a new FloatReg node</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-string-reg-node-new" role="function" condition="since:0.8.0">
+<title>arv_gc_string_reg_node_new&#160;()</title>
+<indexterm zone="arv-gc-string-reg-node-new" role="0.8.0"><primary>arv_gc_string_reg_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_string_reg_node_new (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="arv-gc-string-reg-node-new.returns" role="returns">
+<title>Returns</title>
+<para> a new StringReg node</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-struct-reg-node-new" role="function" condition="since:0.8.0">
+<title>arv_gc_struct_reg_node_new&#160;()</title>
+<indexterm zone="arv-gc-struct-reg-node-new" role="0.8.0"><primary>arv_gc_struct_reg_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_struct_reg_node_new (<parameter><type>void</type></parameter>);</programlisting>
+<refsect3 id="arv-gc-struct-reg-node-new.returns" role="returns">
+<title>Returns</title>
+<para>a new StructReg <link linkend="ArvGcNode"><type>ArvGcNode</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcRegisterNode.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcRegisterNode-struct" role="struct">
+<title>ArvGcRegisterNode</title>
+<indexterm zone="ArvGcRegisterNode-struct"><primary>ArvGcRegisterNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcRegisterNode ArvGcRegisterNode;</programlisting>
+</refsect2>
+<refsect2 id="ArvGcIntRegNode-struct" role="struct">
+<title>ArvGcIntRegNode</title>
+<indexterm zone="ArvGcIntRegNode-struct"><primary>ArvGcIntRegNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcIntRegNode ArvGcIntRegNode;</programlisting>
+</refsect2>
+<refsect2 id="ArvGcMaskedIntRegNode-struct" role="struct">
+<title>ArvGcMaskedIntRegNode</title>
+<indexterm zone="ArvGcMaskedIntRegNode-struct"><primary>ArvGcMaskedIntRegNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcMaskedIntRegNode ArvGcMaskedIntRegNode;</programlisting>
+</refsect2>
+<refsect2 id="ArvGcFloatRegNode-struct" role="struct">
+<title>ArvGcFloatRegNode</title>
+<indexterm zone="ArvGcFloatRegNode-struct"><primary>ArvGcFloatRegNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcFloatRegNode ArvGcFloatRegNode;</programlisting>
+</refsect2>
+<refsect2 id="ArvGcStringRegNode-struct" role="struct">
+<title>ArvGcStringRegNode</title>
+<indexterm zone="ArvGcStringRegNode-struct"><primary>ArvGcStringRegNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcStringRegNode ArvGcStringRegNode;</programlisting>
+</refsect2>
+<refsect2 id="ArvGcStructRegNode-struct" role="struct">
+<title>ArvGcStructRegNode</title>
+<indexterm zone="ArvGcStructRegNode-struct"><primary>ArvGcStructRegNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcStructRegNode ArvGcStructRegNode;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

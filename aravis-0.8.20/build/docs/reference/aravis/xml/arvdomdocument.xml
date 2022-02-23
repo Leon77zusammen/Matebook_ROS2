@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvDomDocument">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvDomDocument.top_of_page">ArvDomDocument</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvDomDocument</refname>
+<refpurpose>Base class for DOM document nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvDomDocument.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="ArvDomDocumentCreateFunction">*ArvDomDocumentCreateFunction</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-implementation-create-document">arv_dom_implementation_create_document</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-implementation-add-document-type">arv_dom_implementation_add_document_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-implementation-cleanup">arv_dom_implementation_cleanup</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-document-append-from-memory">arv_dom_document_append_from_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-document-new-from-memory">arv_dom_document_new_from_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-document-new-from-path">arv_dom_document_new_from_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-document-new-from-url">arv_dom_document_new_from_url</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomElement"><returnvalue>ArvDomElement</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-document-get-document-element">arv_dom_document_get_document_element</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomElement"><returnvalue>ArvDomElement</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-document-create-element">arv_dom_document_create_element</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomText"><returnvalue>ArvDomText</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-document-create-text-node">arv_dom_document_create_text_node</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-document-get-url">arv_dom_document_get_url</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-document-set-url">arv_dom_document_set_url</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-document-set-path">arv_dom_document_set_path</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-document-get-href-data">arv_dom_document_get_href_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomDocument.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvDomDocument-struct">ArvDomDocument</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomDocument.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvDomDocument
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGc">ArvGc</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvDomDocument.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvDomDocument.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="ArvDomDocumentCreateFunction" role="function">
+<title>ArvDomDocumentCreateFunction&#160;()</title>
+<indexterm zone="ArvDomDocumentCreateFunction"><primary>ArvDomDocumentCreateFunction</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+<phrase role="c_punctuation">(</phrase>*ArvDomDocumentCreateFunction<phrase role="c_punctuation">)</phrase> (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-implementation-create-document" role="function">
+<title>arv_dom_implementation_create_document&#160;()</title>
+<indexterm zone="arv-dom-implementation-create-document"><primary>arv_dom_implementation_create_document</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+arv_dom_implementation_create_document
+                               (<parameter>const <link linkend="char"><type>char</type></link> *namespace_uri</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *qualified_name</parameter>);</programlisting>
+<para>Create a new DOM document. Currently, only <parameter>qualified_name</parameter>
+ is used.</para>
+<refsect3 id="arv-dom-implementation-create-document.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>namespace_uri</para></entry>
+<entry role="parameter_description"><para>namespace URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>qualified_name</para></entry>
+<entry role="parameter_description"><para>qualified name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-implementation-create-document.returns" role="returns">
+<title>Returns</title>
+<para>a new <link linkend="ArvDomDocument"><type>ArvDomDocument</type></link>, NULL on error:. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-implementation-add-document-type" role="function">
+<title>arv_dom_implementation_add_document_type&#160;()</title>
+<indexterm zone="arv-dom-implementation-add-document-type"><primary>arv_dom_implementation_add_document_type</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_implementation_add_document_type
+                               (<parameter>const <link linkend="char"><type>char</type></link> *qualified_name</parameter>,
+                                <parameter><link linkend="GType"><type>GType</type></link> document_type</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-implementation-cleanup" role="function">
+<title>arv_dom_implementation_cleanup&#160;()</title>
+<indexterm zone="arv-dom-implementation-cleanup"><primary>arv_dom_implementation_cleanup</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_implementation_cleanup (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-document-append-from-memory" role="function">
+<title>arv_dom_document_append_from_memory&#160;()</title>
+<indexterm zone="arv-dom-document-append-from-memory"><primary>arv_dom_document_append_from_memory</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_document_append_from_memory (<parameter><link linkend="ArvDomDocument"><type>ArvDomDocument</type></link> *document</parameter>,
+                                     <parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *node</parameter>,
+                                     <parameter>const <link linkend="void"><type>void</type></link> *buffer</parameter>,
+                                     <parameter><link linkend="int"><type>int</type></link> size</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Append a chunk of xml tree to an existing document. The resulting nodes will be appended to
+<parameter>node</parameter>
+, or to <parameter>document</parameter>
+ if <parameter>node</parameter>
+ == NULL.</para>
+<para>Size set to a negative value indicated an unknow xml data size.</para>
+<refsect3 id="arv-dom-document-append-from-memory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>document</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomDocument"><type>ArvDomDocument</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNode"><type>ArvDomNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a memory buffer holding xml data</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>size of the xml data, in bytes</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>an error placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-document-new-from-memory" role="function">
+<title>arv_dom_document_new_from_memory&#160;()</title>
+<indexterm zone="arv-dom-document-new-from-memory"><primary>arv_dom_document_new_from_memory</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+arv_dom_document_new_from_memory (<parameter>const <link linkend="void"><type>void</type></link> *buffer</parameter>,
+                                  <parameter><link linkend="int"><type>int</type></link> size</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-document-new-from-path" role="function">
+<title>arv_dom_document_new_from_path&#160;()</title>
+<indexterm zone="arv-dom-document-new-from-path"><primary>arv_dom_document_new_from_path</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+arv_dom_document_new_from_path (<parameter>const <link linkend="char"><type>char</type></link> *path</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-document-new-from-url" role="function">
+<title>arv_dom_document_new_from_url&#160;()</title>
+<indexterm zone="arv-dom-document-new-from-url"><primary>arv_dom_document_new_from_url</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomDocument"><returnvalue>ArvDomDocument</returnvalue></link>&#160;*
+arv_dom_document_new_from_url (<parameter>const <link linkend="char"><type>char</type></link> *url</parameter>,
+                               <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-document-get-document-element" role="function">
+<title>arv_dom_document_get_document_element&#160;()</title>
+<indexterm zone="arv-dom-document-get-document-element"><primary>arv_dom_document_get_document_element</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomElement"><returnvalue>ArvDomElement</returnvalue></link>&#160;*
+arv_dom_document_get_document_element (<parameter><link linkend="ArvDomDocument"><type>ArvDomDocument</type></link> *self</parameter>);</programlisting>
+<refsect3 id="arv-dom-document-get-document-element.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomDocument"><type>ArvDomDocument</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-document-get-document-element.returns" role="returns">
+<title>Returns</title>
+<para>the top element of <parameter>self</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-document-create-element" role="function">
+<title>arv_dom_document_create_element&#160;()</title>
+<indexterm zone="arv-dom-document-create-element"><primary>arv_dom_document_create_element</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomElement"><returnvalue>ArvDomElement</returnvalue></link>&#160;*
+arv_dom_document_create_element (<parameter><link linkend="ArvDomDocument"><type>ArvDomDocument</type></link> *self</parameter>,
+                                 <parameter>const <link linkend="char"><type>char</type></link> *tag_name</parameter>);</programlisting>
+<para>Create a new element.</para>
+<refsect3 id="arv-dom-document-create-element.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomDocument"><type>ArvDomDocument</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tag_name</para></entry>
+<entry role="parameter_description"><para>node name of the element to create</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-document-create-element.returns" role="returns">
+<title>Returns</title>
+<para>a new orphan <link linkend="ArvDomElement"><type>ArvDomElement</type></link>, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-document-create-text-node" role="function">
+<title>arv_dom_document_create_text_node&#160;()</title>
+<indexterm zone="arv-dom-document-create-text-node"><primary>arv_dom_document_create_text_node</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomText"><returnvalue>ArvDomText</returnvalue></link>&#160;*
+arv_dom_document_create_text_node (<parameter><link linkend="ArvDomDocument"><type>ArvDomDocument</type></link> *self</parameter>,
+                                   <parameter>const <link linkend="char"><type>char</type></link> *data</parameter>);</programlisting>
+<para>Create a new text element.</para>
+<refsect3 id="arv-dom-document-create-text-node.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomDocument"><type>ArvDomDocument</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>initial content</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-document-create-text-node.returns" role="returns">
+<title>Returns</title>
+<para>a new orphan <link linkend="ArvDomText"><type>ArvDomText</type></link>, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-document-get-url" role="function">
+<title>arv_dom_document_get_url&#160;()</title>
+<indexterm zone="arv-dom-document-get-url"><primary>arv_dom_document_get_url</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_dom_document_get_url (<parameter><link linkend="ArvDomDocument"><type>ArvDomDocument</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-document-set-url" role="function">
+<title>arv_dom_document_set_url&#160;()</title>
+<indexterm zone="arv-dom-document-set-url"><primary>arv_dom_document_set_url</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_document_set_url (<parameter><link linkend="ArvDomDocument"><type>ArvDomDocument</type></link> *self</parameter>,
+                          <parameter>const <link linkend="char"><type>char</type></link> *url</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-document-set-path" role="function">
+<title>arv_dom_document_set_path&#160;()</title>
+<indexterm zone="arv-dom-document-set-path"><primary>arv_dom_document_set_path</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_document_set_path (<parameter><link linkend="ArvDomDocument"><type>ArvDomDocument</type></link> *self</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> *path</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-document-get-href-data" role="function">
+<title>arv_dom_document_get_href_data&#160;()</title>
+<indexterm zone="arv-dom-document-get-href-data"><primary>arv_dom_document_get_href_data</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+arv_dom_document_get_href_data (<parameter><link linkend="ArvDomDocument"><type>ArvDomDocument</type></link> *self</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *href</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> *size</parameter>);</programlisting>
+<para>Load the content referenced by <parameter>href</parameter>
+.</para>
+<refsect3 id="arv-dom-document-get-href-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomDocument"><type>ArvDomDocument</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>href</para></entry>
+<entry role="parameter_description"><para>document reference</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>data size placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-document-get-href-data.returns" role="returns">
+<title>Returns</title>
+<para>a newly allocated data buffer. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ArvDomDocument.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvDomDocument-struct" role="struct">
+<title>ArvDomDocument</title>
+<indexterm zone="ArvDomDocument-struct"><primary>ArvDomDocument</primary></indexterm>
+<programlisting language="C">typedef struct _ArvDomDocument ArvDomDocument;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

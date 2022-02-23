@@ -1,0 +1,8 @@
+<!ENTITY package "Aravis">
+<!ENTITY package_bugreport "https://github.com/AravisProject/aravis/issues">
+<!ENTITY package_name "Aravis">
+<!ENTITY package_string "aravis">
+<!ENTITY package_tarname "aravis-0.8.20">
+<!ENTITY package_url "https://github.com/AravisProject/aravis">
+<!ENTITY package_version "0.8.20">
+<!ENTITY package_api_version "0.8">

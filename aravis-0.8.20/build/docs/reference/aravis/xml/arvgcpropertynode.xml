@@ -1,0 +1,745 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcPropertyNode">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcPropertyNode.top_of_page">ArvGcPropertyNode</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcPropertyNode</refname>
+<refpurpose>Base class for Genicam property nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcPropertyNode.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-access-mode">arv_gc_property_node_new_access_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-address">arv_gc_property_node_new_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-bit">arv_gc_property_node_new_bit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-cachable">arv_gc_property_node_new_cachable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-command-value">arv_gc_property_node_new_command_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-constant">arv_gc_property_node_new_constant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-description">arv_gc_property_node_new_description</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-display-name">arv_gc_property_node_new_display_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-endianness">arv_gc_property_node_new_endianness</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-expression">arv_gc_property_node_new_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-formula">arv_gc_property_node_new_formula</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-formula-from">arv_gc_property_node_new_formula_from</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-formula-to">arv_gc_property_node_new_formula_to</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-increment">arv_gc_property_node_new_increment</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-imposed-access-mode">arv_gc_property_node_new_imposed_access_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-is-linear">arv_gc_property_node_new_is_linear</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-length">arv_gc_property_node_new_length</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-lsb">arv_gc_property_node_new_lsb</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-maximum">arv_gc_property_node_new_maximum</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-minimum">arv_gc_property_node_new_minimum</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-msb">arv_gc_property_node_new_msb</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-off-value">arv_gc_property_node_new_off_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-on-value">arv_gc_property_node_new_on_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-chunk-id">arv_gc_property_node_new_chunk_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-address">arv_gc_property_node_new_p_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-command-value">arv_gc_property_node_new_p_command_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-feature">arv_gc_property_node_new_p_feature</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-increment">arv_gc_property_node_new_p_increment</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-is-available">arv_gc_property_node_new_p_is_available</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-is-implemented">arv_gc_property_node_new_p_is_implemented</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-is-locked">arv_gc_property_node_new_p_is_locked</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-length">arv_gc_property_node_new_p_length</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-maximum">arv_gc_property_node_new_p_maximum</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-minimum">arv_gc_property_node_new_p_minimum</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-port">arv_gc_property_node_new_p_port</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-value">arv_gc_property_node_new_p_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-variable">arv_gc_property_node_new_p_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-polling-time">arv_gc_property_node_new_polling_time</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-sign">arv_gc_property_node_new_sign</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-slope">arv_gc_property_node_new_slope</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-tooltip">arv_gc_property_node_new_tooltip</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-unit">arv_gc_property_node_new_unit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-value-default">arv_gc_property_node_new_p_value_default</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-value-default">arv_gc_property_node_new_value_default</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-value">arv_gc_property_node_new_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-event-id">arv_gc_property_node_new_event_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-p-selected">arv_gc_property_node_new_p_selected</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-name">arv_gc_property_node_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcPropertyNodeType"><returnvalue>ArvGcPropertyNodeType</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-node-type">arv_gc_property_node_get_node_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-linked-node">arv_gc_property_node_get_linked_node</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="double"><returnvalue>double</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-double">arv_gc_property_node_get_double</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-set-double">arv_gc_property_node_set_double</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-int64">arv_gc_property_node_get_int64</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-set-int64">arv_gc_property_node_set_int64</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-string">arv_gc_property_node_get_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-set-string">arv_gc_property_node_set_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcAccessMode"><returnvalue>ArvGcAccessMode</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-access-mode">arv_gc_property_node_get_access_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcCachable"><returnvalue>ArvGcCachable</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-cachable">arv_gc_property_node_get_cachable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-endianness">arv_gc_property_node_get_endianness</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-lsb">arv_gc_property_node_get_lsb</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-msb">arv_gc_property_node_get_msb</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcSignedness"><returnvalue>ArvGcSignedness</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-sign">arv_gc_property_node_get_sign</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcVisibility"><returnvalue>ArvGcVisibility</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-visibility">arv_gc_property_node_get_visibility</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-visibility">arv_gc_property_node_new_visibility</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcRepresentation"><returnvalue>ArvGcRepresentation</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-representation">arv_gc_property_node_get_representation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-representation">arv_gc_property_node_new_representation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcDisplayNotation"><returnvalue>ArvGcDisplayNotation</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-display-notation">arv_gc_property_node_get_display_notation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-display-notation">arv_gc_property_node_new_display_notation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-display-precision">arv_gc_property_node_get_display_precision</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-display-precision">arv_gc_property_node_new_display_precision</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-new-streamable">arv_gc_property_node_new_streamable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcStreamable"><returnvalue>ArvGcStreamable</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-property-node-get-streamable">arv_gc_property_node_get_streamable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcPropertyNode.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="ArvGcPropertyNodeType"><type>ArvGcPropertyNodeType</type></link></entry><entry role="property_name"><link linkend="ArvGcPropertyNode--node-type">node-type</link></entry><entry role="property_flags">Read / Write / Construct&#160;Only</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcPropertyNode.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcPropertyNode-struct">ArvGcPropertyNode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcPropertyNode.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcPropertyNode
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcIndexNode">ArvGcIndexNode</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcInvalidatorNode">ArvGcInvalidatorNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcValueIndexedNode">ArvGcValueIndexedNode</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGcPropertyNode.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> provides a base class for the implementation of the different
+types of Genicam property nodes (Value, pValue, Endianness...).</para>
+
+</refsect1>
+<refsect1 id="ArvGcPropertyNode.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-property-node-new-access-mode" role="function">
+<title>arv_gc_property_node_new_access_mode&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-access-mode"><primary>arv_gc_property_node_new_access_mode</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_access_mode (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-address" role="function">
+<title>arv_gc_property_node_new_address&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-address"><primary>arv_gc_property_node_new_address</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_address (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-bit" role="function">
+<title>arv_gc_property_node_new_bit&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-bit"><primary>arv_gc_property_node_new_bit</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_bit (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-cachable" role="function">
+<title>arv_gc_property_node_new_cachable&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-cachable"><primary>arv_gc_property_node_new_cachable</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_cachable (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-command-value" role="function">
+<title>arv_gc_property_node_new_command_value&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-command-value"><primary>arv_gc_property_node_new_command_value</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_command_value
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-constant" role="function">
+<title>arv_gc_property_node_new_constant&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-constant"><primary>arv_gc_property_node_new_constant</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_constant (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-description" role="function">
+<title>arv_gc_property_node_new_description&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-description"><primary>arv_gc_property_node_new_description</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_description (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-display-name" role="function">
+<title>arv_gc_property_node_new_display_name&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-display-name"><primary>arv_gc_property_node_new_display_name</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_display_name (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-endianness" role="function">
+<title>arv_gc_property_node_new_endianness&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-endianness"><primary>arv_gc_property_node_new_endianness</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_endianness (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-expression" role="function">
+<title>arv_gc_property_node_new_expression&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-expression"><primary>arv_gc_property_node_new_expression</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_expression (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-formula" role="function">
+<title>arv_gc_property_node_new_formula&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-formula"><primary>arv_gc_property_node_new_formula</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_formula (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-formula-from" role="function">
+<title>arv_gc_property_node_new_formula_from&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-formula-from"><primary>arv_gc_property_node_new_formula_from</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_formula_from (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-formula-to" role="function">
+<title>arv_gc_property_node_new_formula_to&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-formula-to"><primary>arv_gc_property_node_new_formula_to</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_formula_to (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-increment" role="function">
+<title>arv_gc_property_node_new_increment&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-increment"><primary>arv_gc_property_node_new_increment</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_increment (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-imposed-access-mode" role="function">
+<title>arv_gc_property_node_new_imposed_access_mode&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-imposed-access-mode"><primary>arv_gc_property_node_new_imposed_access_mode</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_imposed_access_mode
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-is-linear" role="function">
+<title>arv_gc_property_node_new_is_linear&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-is-linear"><primary>arv_gc_property_node_new_is_linear</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_is_linear (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-length" role="function">
+<title>arv_gc_property_node_new_length&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-length"><primary>arv_gc_property_node_new_length</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_length (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-lsb" role="function">
+<title>arv_gc_property_node_new_lsb&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-lsb"><primary>arv_gc_property_node_new_lsb</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_lsb (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-maximum" role="function">
+<title>arv_gc_property_node_new_maximum&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-maximum"><primary>arv_gc_property_node_new_maximum</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_maximum (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-minimum" role="function">
+<title>arv_gc_property_node_new_minimum&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-minimum"><primary>arv_gc_property_node_new_minimum</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_minimum (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-msb" role="function">
+<title>arv_gc_property_node_new_msb&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-msb"><primary>arv_gc_property_node_new_msb</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_msb (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-off-value" role="function">
+<title>arv_gc_property_node_new_off_value&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-off-value"><primary>arv_gc_property_node_new_off_value</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_off_value (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-on-value" role="function">
+<title>arv_gc_property_node_new_on_value&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-on-value"><primary>arv_gc_property_node_new_on_value</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_on_value (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-chunk-id" role="function">
+<title>arv_gc_property_node_new_chunk_id&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-chunk-id"><primary>arv_gc_property_node_new_chunk_id</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_chunk_id (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-address" role="function">
+<title>arv_gc_property_node_new_p_address&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-address"><primary>arv_gc_property_node_new_p_address</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_address (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-command-value" role="function">
+<title>arv_gc_property_node_new_p_command_value&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-command-value"><primary>arv_gc_property_node_new_p_command_value</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_command_value
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-feature" role="function">
+<title>arv_gc_property_node_new_p_feature&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-feature"><primary>arv_gc_property_node_new_p_feature</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_feature (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-increment" role="function">
+<title>arv_gc_property_node_new_p_increment&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-increment"><primary>arv_gc_property_node_new_p_increment</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_increment (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-is-available" role="function">
+<title>arv_gc_property_node_new_p_is_available&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-is-available"><primary>arv_gc_property_node_new_p_is_available</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_is_available
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-is-implemented" role="function">
+<title>arv_gc_property_node_new_p_is_implemented&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-is-implemented"><primary>arv_gc_property_node_new_p_is_implemented</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_is_implemented
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-is-locked" role="function">
+<title>arv_gc_property_node_new_p_is_locked&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-is-locked"><primary>arv_gc_property_node_new_p_is_locked</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_is_locked (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-length" role="function">
+<title>arv_gc_property_node_new_p_length&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-length"><primary>arv_gc_property_node_new_p_length</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_length (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-maximum" role="function">
+<title>arv_gc_property_node_new_p_maximum&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-maximum"><primary>arv_gc_property_node_new_p_maximum</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_maximum (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-minimum" role="function">
+<title>arv_gc_property_node_new_p_minimum&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-minimum"><primary>arv_gc_property_node_new_p_minimum</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_minimum (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-port" role="function">
+<title>arv_gc_property_node_new_p_port&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-port"><primary>arv_gc_property_node_new_p_port</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_port (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-value" role="function">
+<title>arv_gc_property_node_new_p_value&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-value"><primary>arv_gc_property_node_new_p_value</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_value (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-variable" role="function">
+<title>arv_gc_property_node_new_p_variable&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-variable"><primary>arv_gc_property_node_new_p_variable</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_variable (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-polling-time" role="function">
+<title>arv_gc_property_node_new_polling_time&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-polling-time"><primary>arv_gc_property_node_new_polling_time</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_polling_time (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-sign" role="function">
+<title>arv_gc_property_node_new_sign&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-sign"><primary>arv_gc_property_node_new_sign</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_sign (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-slope" role="function">
+<title>arv_gc_property_node_new_slope&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-slope"><primary>arv_gc_property_node_new_slope</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_slope (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-tooltip" role="function">
+<title>arv_gc_property_node_new_tooltip&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-tooltip"><primary>arv_gc_property_node_new_tooltip</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_tooltip (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-unit" role="function">
+<title>arv_gc_property_node_new_unit&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-unit"><primary>arv_gc_property_node_new_unit</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_unit (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-value-default" role="function">
+<title>arv_gc_property_node_new_p_value_default&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-value-default"><primary>arv_gc_property_node_new_p_value_default</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_value_default
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-value-default" role="function">
+<title>arv_gc_property_node_new_value_default&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-value-default"><primary>arv_gc_property_node_new_value_default</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_value_default
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-value" role="function">
+<title>arv_gc_property_node_new_value&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-value"><primary>arv_gc_property_node_new_value</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_value (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-event-id" role="function">
+<title>arv_gc_property_node_new_event_id&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-event-id"><primary>arv_gc_property_node_new_event_id</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_event_id (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-p-selected" role="function">
+<title>arv_gc_property_node_new_p_selected&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-p-selected"><primary>arv_gc_property_node_new_p_selected</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_p_selected (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-name" role="function" condition="since:0.6.0">
+<title>arv_gc_property_node_get_name&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-name" role="0.6.0"><primary>arv_gc_property_node_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_property_node_get_name (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>);</programlisting>
+<refsect3 id="arv-gc-property-node-get-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-property-node-get-name.returns" role="returns">
+<title>Returns</title>
+<para> node Name property value.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-gc-property-node-get-node-type" role="function">
+<title>arv_gc_property_node_get_node_type&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-node-type"><primary>arv_gc_property_node_get_node_type</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcPropertyNodeType"><returnvalue>ArvGcPropertyNodeType</returnvalue></link>
+arv_gc_property_node_get_node_type (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-linked-node" role="function">
+<title>arv_gc_property_node_get_linked_node&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-linked-node"><primary>arv_gc_property_node_get_linked_node</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_get_linked_node (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>);</programlisting>
+<refsect3 id="arv-gc-property-node-get-linked-node.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-property-node-get-linked-node.returns" role="returns">
+<title>Returns</title>
+<para>the <link linkend="ArvGcNode"><type>ArvGcNode</type></link> which <parameter>node</parameter>
+points to, <link linkend="NULL:CAPS"><literal>NULL</literal></link> if the property is not a pointer. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-gc-property-node-get-double" role="function">
+<title>arv_gc_property_node_get_double&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-double"><primary>arv_gc_property_node_get_double</primary></indexterm>
+<programlisting language="C"><link linkend="double"><returnvalue>double</returnvalue></link>
+arv_gc_property_node_get_double (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>,
+                                 <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-set-double" role="function">
+<title>arv_gc_property_node_set_double&#160;()</title>
+<indexterm zone="arv-gc-property-node-set-double"><primary>arv_gc_property_node_set_double</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_property_node_set_double (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>,
+                                 <parameter><link linkend="double"><type>double</type></link> v_double</parameter>,
+                                 <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-int64" role="function">
+<title>arv_gc_property_node_get_int64&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-int64"><primary>arv_gc_property_node_get_int64</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_gc_property_node_get_int64 (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-set-int64" role="function">
+<title>arv_gc_property_node_set_int64&#160;()</title>
+<indexterm zone="arv-gc-property-node-set-int64"><primary>arv_gc_property_node_set_int64</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_property_node_set_int64 (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>,
+                                <parameter><link linkend="gint64"><type>gint64</type></link> v_int64</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-string" role="function">
+<title>arv_gc_property_node_get_string&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-string"><primary>arv_gc_property_node_get_string</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_property_node_get_string (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>,
+                                 <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-set-string" role="function">
+<title>arv_gc_property_node_set_string&#160;()</title>
+<indexterm zone="arv-gc-property-node-set-string"><primary>arv_gc_property_node_set_string</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_property_node_set_string (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *node</parameter>,
+                                 <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>,
+                                 <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-access-mode" role="function">
+<title>arv_gc_property_node_get_access_mode&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-access-mode"><primary>arv_gc_property_node_get_access_mode</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcAccessMode"><returnvalue>ArvGcAccessMode</returnvalue></link>
+arv_gc_property_node_get_access_mode (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                                      <parameter><link linkend="ArvGcAccessMode"><type>ArvGcAccessMode</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-cachable" role="function">
+<title>arv_gc_property_node_get_cachable&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-cachable"><primary>arv_gc_property_node_get_cachable</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcCachable"><returnvalue>ArvGcCachable</returnvalue></link>
+arv_gc_property_node_get_cachable (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                                   <parameter><link linkend="ArvGcCachable"><type>ArvGcCachable</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-endianness" role="function">
+<title>arv_gc_property_node_get_endianness&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-endianness"><primary>arv_gc_property_node_get_endianness</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_property_node_get_endianness (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                                     <parameter><link linkend="guint"><type>guint</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-lsb" role="function">
+<title>arv_gc_property_node_get_lsb&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-lsb"><primary>arv_gc_property_node_get_lsb</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_property_node_get_lsb (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                              <parameter><link linkend="guint"><type>guint</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-msb" role="function">
+<title>arv_gc_property_node_get_msb&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-msb"><primary>arv_gc_property_node_get_msb</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_property_node_get_msb (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                              <parameter><link linkend="guint"><type>guint</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-sign" role="function">
+<title>arv_gc_property_node_get_sign&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-sign"><primary>arv_gc_property_node_get_sign</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcSignedness"><returnvalue>ArvGcSignedness</returnvalue></link>
+arv_gc_property_node_get_sign (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                               <parameter><link linkend="ArvGcSignedness"><type>ArvGcSignedness</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-visibility" role="function">
+<title>arv_gc_property_node_get_visibility&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-visibility"><primary>arv_gc_property_node_get_visibility</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcVisibility"><returnvalue>ArvGcVisibility</returnvalue></link>
+arv_gc_property_node_get_visibility (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                                     <parameter><link linkend="ArvGcVisibility"><type>ArvGcVisibility</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-visibility" role="function">
+<title>arv_gc_property_node_new_visibility&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-visibility"><primary>arv_gc_property_node_new_visibility</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_visibility (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-representation" role="function">
+<title>arv_gc_property_node_get_representation&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-representation"><primary>arv_gc_property_node_get_representation</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcRepresentation"><returnvalue>ArvGcRepresentation</returnvalue></link>
+arv_gc_property_node_get_representation
+                               (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                                <parameter><link linkend="ArvGcRepresentation"><type>ArvGcRepresentation</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-representation" role="function">
+<title>arv_gc_property_node_new_representation&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-representation"><primary>arv_gc_property_node_new_representation</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_representation
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-display-notation" role="function">
+<title>arv_gc_property_node_get_display_notation&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-display-notation"><primary>arv_gc_property_node_get_display_notation</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcDisplayNotation"><returnvalue>ArvGcDisplayNotation</returnvalue></link>
+arv_gc_property_node_get_display_notation
+                               (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                                <parameter><link linkend="ArvGcDisplayNotation"><type>ArvGcDisplayNotation</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-display-notation" role="function">
+<title>arv_gc_property_node_new_display_notation&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-display-notation"><primary>arv_gc_property_node_new_display_notation</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_display_notation
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-display-precision" role="function">
+<title>arv_gc_property_node_get_display_precision&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-display-precision"><primary>arv_gc_property_node_get_display_precision</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_gc_property_node_get_display_precision
+                               (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                                <parameter><link linkend="gint64"><type>gint64</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-display-precision" role="function">
+<title>arv_gc_property_node_new_display_precision&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-display-precision"><primary>arv_gc_property_node_new_display_precision</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_display_precision
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-new-streamable" role="function">
+<title>arv_gc_property_node_new_streamable&#160;()</title>
+<indexterm zone="arv-gc-property-node-new-streamable"><primary>arv_gc_property_node_new_streamable</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_property_node_new_streamable (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-property-node-get-streamable" role="function">
+<title>arv_gc_property_node_get_streamable&#160;()</title>
+<indexterm zone="arv-gc-property-node-get-streamable"><primary>arv_gc_property_node_get_streamable</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcStreamable"><returnvalue>ArvGcStreamable</returnvalue></link>
+arv_gc_property_node_get_streamable (<parameter><link linkend="ArvGcPropertyNode"><type>ArvGcPropertyNode</type></link> *self</parameter>,
+                                     <parameter><link linkend="ArvGcStreamable"><type>ArvGcStreamable</type></link> default_value</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcPropertyNode.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcPropertyNode-struct" role="struct">
+<title>ArvGcPropertyNode</title>
+<indexterm zone="ArvGcPropertyNode-struct"><primary>ArvGcPropertyNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcPropertyNode ArvGcPropertyNode;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcPropertyNode.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ArvGcPropertyNode--node-type" role="property"><title>The <literal>“node-type”</literal> property</title>
+<indexterm zone="ArvGcPropertyNode--node-type"><primary>ArvGcPropertyNode:node-type</primary></indexterm>
+<programlisting>  “node-type”                <link linkend="ArvGcPropertyNodeType"><type>ArvGcPropertyNodeType</type></link></programlisting>
+<para>Actual node type.</para><para>Owner: ArvGcPropertyNode</para>
+<para>Flags: Read / Write / Construct&#160;Only</para>
+<para>Default value: ARV_GC_PROPERTY_NODE_TYPE_UNKNOWN</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

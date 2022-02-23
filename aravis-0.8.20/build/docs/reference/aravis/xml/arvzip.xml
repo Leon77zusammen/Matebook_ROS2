@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="aravis-ArvZip">
+<refmeta>
+<refentrytitle role="top_of_page" id="aravis-ArvZip.top_of_page">ArvZip</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvZip</refname>
+<refpurpose>A simple zip extractor</refpurpose>
+</refnamediv>
+
+<refsect1 id="aravis-ArvZip.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvZip"><returnvalue>ArvZip</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-zip-new">arv_zip_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-zip-free">arv_zip_free</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-zip-get-file">arv_zip_get_file</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GSList"><returnvalue>GSList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-zip-get-file-list">arv_zip_get_file_list</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-zip-file-get-name">arv_zip_file_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="size-t"><returnvalue>size_t</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-zip-file-get-uncompressed-size">arv_zip_file_get_uncompressed_size</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-GUINT16-FROM-LE-PTR:CAPS">ARV_GUINT16_FROM_LE_PTR</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-GUINT32-FROM-LE-PTR:CAPS">ARV_GUINT32_FROM_LE_PTR</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint16"><returnvalue>guint16</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-guint16-from-unaligned-le-ptr">arv_guint16_from_unaligned_le_ptr</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-guint32-from-unaligned-le-ptr">arv_guint32_from_unaligned_le_ptr</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="aravis-ArvZip.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvZip">ArvZip</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="aravis-ArvZip.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="aravis-ArvZip.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-zip-new" role="function">
+<title>arv_zip_new&#160;()</title>
+<indexterm zone="arv-zip-new"><primary>arv_zip_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvZip"><returnvalue>ArvZip</returnvalue></link>&#160;*
+arv_zip_new (<parameter>const <link linkend="void"><type>void</type></link> *buffer</parameter>,
+             <parameter><link linkend="size-t"><type>size_t</type></link> size</parameter>);</programlisting>
+
+<para><emphasis role="annotation">[<acronym>skip</acronym>]</emphasis></para><refsect3 id="arv-zip-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>zipped data</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>size of the zipped data</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-zip-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="ArvZip"><type>ArvZip</type></link> instance</para>
+</refsect3></refsect2>
+<refsect2 id="arv-zip-free" role="function">
+<title>arv_zip_free&#160;()</title>
+<indexterm zone="arv-zip-free"><primary>arv_zip_free</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_zip_free (<parameter><link linkend="ArvZip"><type>ArvZip</type></link> *zip</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-zip-get-file" role="function">
+<title>arv_zip_get_file&#160;()</title>
+<indexterm zone="arv-zip-get-file"><primary>arv_zip_get_file</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+arv_zip_get_file (<parameter><link linkend="ArvZip"><type>ArvZip</type></link> *zip</parameter>,
+                  <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                  <parameter><link linkend="size-t"><type>size_t</type></link> *size</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-zip-get-file-list" role="function">
+<title>arv_zip_get_file_list&#160;()</title>
+<indexterm zone="arv-zip-get-file-list"><primary>arv_zip_get_file_list</primary></indexterm>
+<programlisting language="C">const <link linkend="GSList"><returnvalue>GSList</returnvalue></link>&#160;*
+arv_zip_get_file_list (<parameter><link linkend="ArvZip"><type>ArvZip</type></link> *zip</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-zip-file-get-name" role="function">
+<title>arv_zip_file_get_name&#160;()</title>
+<indexterm zone="arv-zip-file-get-name"><primary>arv_zip_file_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_zip_file_get_name (<parameter><link linkend="ArvZipFile"><type>ArvZipFile</type></link> *zip_file</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-zip-file-get-uncompressed-size" role="function">
+<title>arv_zip_file_get_uncompressed_size&#160;()</title>
+<indexterm zone="arv-zip-file-get-uncompressed-size"><primary>arv_zip_file_get_uncompressed_size</primary></indexterm>
+<programlisting language="C"><link linkend="size-t"><returnvalue>size_t</returnvalue></link>
+arv_zip_file_get_uncompressed_size (<parameter><link linkend="ArvZipFile"><type>ArvZipFile</type></link> *zip_file</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="ARV-GUINT16-FROM-LE-PTR:CAPS" role="macro">
+<title>ARV_GUINT16_FROM_LE_PTR()</title>
+<indexterm zone="ARV-GUINT16-FROM-LE-PTR:CAPS"><primary>ARV_GUINT16_FROM_LE_PTR</primary></indexterm>
+<programlisting language="C">#define ARV_GUINT16_FROM_LE_PTR(ptr,offset) arv_guint16_from_unaligned_le_ptr (ptr, offset)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-GUINT32-FROM-LE-PTR:CAPS" role="macro">
+<title>ARV_GUINT32_FROM_LE_PTR()</title>
+<indexterm zone="ARV-GUINT32-FROM-LE-PTR:CAPS"><primary>ARV_GUINT32_FROM_LE_PTR</primary></indexterm>
+<programlisting language="C">#define ARV_GUINT32_FROM_LE_PTR(ptr,offset) arv_guint32_from_unaligned_le_ptr (ptr, offset)
+</programlisting>
+</refsect2>
+<refsect2 id="arv-guint16-from-unaligned-le-ptr" role="function">
+<title>arv_guint16_from_unaligned_le_ptr&#160;()</title>
+<indexterm zone="arv-guint16-from-unaligned-le-ptr"><primary>arv_guint16_from_unaligned_le_ptr</primary></indexterm>
+<programlisting language="C"><link linkend="guint16"><returnvalue>guint16</returnvalue></link>
+arv_guint16_from_unaligned_le_ptr (<parameter>const <link linkend="char"><type>char</type></link> *ptr</parameter>,
+                                   <parameter><link linkend="gint16"><type>gint16</type></link> offset</parameter>);</programlisting>
+<para>See <parameter>arv_guint32_from_unaligned_le_ptr</parameter>
+.</para>
+<refsect3 id="arv-guint16-from-unaligned-le-ptr.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ptr</para></entry>
+<entry role="parameter_description"><para>pointer to a little endian 16 bit usigned integer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>an offset to add to <parameter>ptr</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-guint16-from-unaligned-le-ptr.returns" role="returns">
+<title>Returns</title>
+<para> a guint16 in machine endianness</para>
+</refsect3></refsect2>
+<refsect2 id="arv-guint32-from-unaligned-le-ptr" role="function">
+<title>arv_guint32_from_unaligned_le_ptr&#160;()</title>
+<indexterm zone="arv-guint32-from-unaligned-le-ptr"><primary>arv_guint32_from_unaligned_le_ptr</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+arv_guint32_from_unaligned_le_ptr (<parameter>const <link linkend="char"><type>char</type></link> *ptr</parameter>,
+                                   <parameter><link linkend="gint32"><type>gint32</type></link> offset</parameter>);</programlisting>
+<para>Here's an excerpt of the ARM documentation:</para>
+<para>"Unaligned data access in C and C++ code</para>
+<para>It can be necessary to access unaligned data in memory, for example,
+when porting legacy code from a CISC architecture where instructions are
+available to directly access unaligned data in memory.</para>
+<para>On ARMv4 and ARMv5 architectures, and on the ARMv6 architecture
+depending on how it is configured, care is required when accessing
+unaligned data in memory, to avoid unexpected results. For example, when
+a conventional pointer is used to read a word in C or C++ source code,
+the ARM compiler generates assembly language code that reads the word
+using an LDR instruction. This works as expected when the address is a
+multiple of four, for example if it lies on a word boundary. However, if
+the address is not a multiple of four, the LDR instruction returns a
+rotated result rather than performing a true unaligned word load.
+Generally, this rotation is not what the programmer expects.</para>
+<para>On ARMv6 and later architectures, unaligned access is fully supported."</para>
+<refsect3 id="arv-guint32-from-unaligned-le-ptr.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ptr</para></entry>
+<entry role="parameter_description"><para>pointer to a little endian 32 bit usigned integer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>an offset to add to <parameter>ptr</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-guint32-from-unaligned-le-ptr.returns" role="returns">
+<title>Returns</title>
+<para> a guint32 in machine endianness</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="aravis-ArvZip.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvZip" role="struct">
+<title>ArvZip</title>
+<indexterm zone="ArvZip"><primary>ArvZip</primary></indexterm>
+<programlisting language="C">typedef struct _ArvZip ArvZip;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

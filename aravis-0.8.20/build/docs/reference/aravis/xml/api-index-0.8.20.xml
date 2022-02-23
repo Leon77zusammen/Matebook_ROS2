@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.8.20">
+<indexdiv><title>A</title>
+<indexentry><primaryie linkends="ARAVIS-API-VERSION:CAPS"><link linkend="ARAVIS-API-VERSION:CAPS">ARAVIS_API_VERSION</link>, macro in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="arv-get-device-manufacturer-info"><link linkend="arv-get-device-manufacturer-info">arv_get_device_manufacturer_info</link>, function in <link linkend="aravis-Arv">Arv</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-major-version"><link linkend="arv-get-major-version">arv_get_major_version</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-micro-version"><link linkend="arv-get-micro-version">arv_get_micro_version</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-minor-version"><link linkend="arv-get-minor-version">arv_get_minor_version</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>I</title>
+<indexentry><primaryie linkends="arv-interface-get-device-manufacturer-info"><link linkend="arv-interface-get-device-manufacturer-info">arv_interface_get_device_manufacturer_info</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

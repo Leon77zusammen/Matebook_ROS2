@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvDomElement">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvDomElement.top_of_page">ArvDomElement</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvDomElement</refname>
+<refpurpose>Base class for DOM element nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvDomElement.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-element-get-tag-name">arv_dom_element_get_tag_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-element-get-attribute">arv_dom_element_get_attribute</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-element-set-attribute">arv_dom_element_set_attribute</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomElement.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvDomElement-struct">ArvDomElement</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomElement.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvDomElement
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvDomElement.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvDomElement.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-dom-element-get-tag-name" role="function">
+<title>arv_dom_element_get_tag_name&#160;()</title>
+<indexterm zone="arv-dom-element-get-tag-name"><primary>arv_dom_element_get_tag_name</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_dom_element_get_tag_name (<parameter><link linkend="ArvDomElement"><type>ArvDomElement</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-element-get-attribute" role="function">
+<title>arv_dom_element_get_attribute&#160;()</title>
+<indexterm zone="arv-dom-element-get-attribute"><primary>arv_dom_element_get_attribute</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_dom_element_get_attribute (<parameter><link linkend="ArvDomElement"><type>ArvDomElement</type></link> *self</parameter>,
+                               <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-element-set-attribute" role="function">
+<title>arv_dom_element_set_attribute&#160;()</title>
+<indexterm zone="arv-dom-element-set-attribute"><primary>arv_dom_element_set_attribute</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_dom_element_set_attribute (<parameter><link linkend="ArvDomElement"><type>ArvDomElement</type></link> *self</parameter>,
+                               <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                               <parameter>const <link linkend="char"><type>char</type></link> *attribute_value</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvDomElement.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvDomElement-struct" role="struct">
+<title>ArvDomElement</title>
+<indexterm zone="ArvDomElement-struct"><primary>ArvDomElement</primary></indexterm>
+<programlisting language="C">typedef struct _ArvDomElement ArvDomElement;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

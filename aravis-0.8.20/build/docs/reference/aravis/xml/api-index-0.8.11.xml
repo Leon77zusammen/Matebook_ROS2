@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.8.11">
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="arv-stream-get-info-double"><link linkend="arv-stream-get-info-double">arv_stream_get_info_double</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-info-double-by-name"><link linkend="arv-stream-get-info-double-by-name">arv_stream_get_info_double_by_name</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-info-name"><link linkend="arv-stream-get-info-name">arv_stream_get_info_name</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-info-type"><link linkend="arv-stream-get-info-type">arv_stream_get_info_type</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-info-uint64"><link linkend="arv-stream-get-info-uint64">arv_stream_get_info_uint64</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-info-uint64-by-name"><link linkend="arv-stream-get-info-uint64-by-name">arv_stream_get_info_uint64_by_name</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-get-n-infos"><link linkend="arv-stream-get-n-infos">arv_stream_get_n_infos</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

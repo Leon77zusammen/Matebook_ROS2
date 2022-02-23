@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvFakeStream">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvFakeStream.top_of_page">ArvFakeStream</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvFakeStream</refname>
+<refpurpose>Fake stream</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvFakeStream.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvFakeStream-struct">ArvFakeStream</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvFakeStream.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvStream">ArvStream</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvFakeStream
+</screen>
+</refsect1>
+<refsect1 id="ArvFakeStream.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ArvFakeStream implements
+ <link linkend="GInitable">GInitable</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvFakeStream.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvFakeStream.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="ArvFakeStream.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvFakeStream-struct" role="struct">
+<title>ArvFakeStream</title>
+<indexterm zone="ArvFakeStream-struct"><primary>ArvFakeStream</primary></indexterm>
+<programlisting language="C">typedef struct _ArvFakeStream ArvFakeStream;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

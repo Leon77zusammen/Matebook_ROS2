@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.8.19">
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-get-black-level"><link linkend="arv-camera-get-black-level">arv_camera_get_black_level</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-get-black-level-auto"><link linkend="arv-camera-get-black-level-auto">arv_camera_get_black_level_auto</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-get-black-level-bounds"><link linkend="arv-camera-get-black-level-bounds">arv_camera_get_black_level_bounds</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-is-black-level-auto-available"><link linkend="arv-camera-is-black-level-auto-available">arv_camera_is_black_level_auto_available</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-is-black-level-available"><link linkend="arv-camera-is-black-level-available">arv_camera_is_black_level_available</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-set-black-level"><link linkend="arv-camera-set-black-level">arv_camera_set_black_level</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-set-black-level-auto"><link linkend="arv-camera-set-black-level-auto">arv_camera_set_black_level_auto</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcRegisterDescriptionNode">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcRegisterDescriptionNode.top_of_page">ArvGcRegisterDescriptionNode</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcRegisterDescriptionNode</refname>
+<refpurpose>Class for RegisterDescription nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcRegisterDescriptionNode.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-new">arv_gc_register_description_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-compare-schema-version">arv_gc_register_description_node_compare_schema_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-check-schema-version">arv_gc_register_description_node_check_schema_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-get-model-name">arv_gc_register_description_node_get_model_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-get-vendor-name">arv_gc_register_description_node_get_vendor_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-get-major-version">arv_gc_register_description_node_get_major_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-get-minor-version">arv_gc_register_description_node_get_minor_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-get-subminor-version">arv_gc_register_description_node_get_subminor_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-get-schema-major-version">arv_gc_register_description_node_get_schema_major_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-get-schema-minor-version">arv_gc_register_description_node_get_schema_minor_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-description-node-get-schema-subminor-version">arv_gc_register_description_node_get_schema_subminor_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-feature-node">arv_gc_register_feature_node</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcRegisterDescriptionNode.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcRegisterDescriptionNode-struct">ArvGcRegisterDescriptionNode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcRegisterDescriptionNode.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcRegisterDescriptionNode
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGcRegisterDescriptionNode.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcRegisterDescriptionNode.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-register-description-node-new" role="function">
+<title>arv_gc_register_description_node_new&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-new"><primary>arv_gc_register_description_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_register_description_node_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-register-description-node-compare-schema-version" role="function" condition="since:0.6.0">
+<title>arv_gc_register_description_node_compare_schema_version&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-compare-schema-version" role="0.6.0"><primary>arv_gc_register_description_node_compare_schema_version</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+arv_gc_register_description_node_compare_schema_version
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> major</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> minor</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> subminor</parameter>);</programlisting>
+<para>Compare the Genicam document version to the given version.</para>
+<refsect3 id="arv-gc-register-description-node-compare-schema-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>major</para></entry>
+<entry role="parameter_description"><para>major version number</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>minor</para></entry>
+<entry role="parameter_description"><para>minor version number</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>subminor</para></entry>
+<entry role="parameter_description"><para>sub minor version number</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-compare-schema-version.returns" role="returns">
+<title>Returns</title>
+<para> -1 if document version is lower than the given version, 0 if equal and 1 if greater.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-check-schema-version" role="function" condition="since:0.6.0">
+<title>arv_gc_register_description_node_check_schema_version&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-check-schema-version" role="0.6.0"><primary>arv_gc_register_description_node_check_schema_version</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gc_register_description_node_check_schema_version
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> required_major</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> required_minor</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> required_subminor</parameter>);</programlisting>
+<para>Checks if the Genicam document version is higher or equal to the given version.</para>
+<refsect3 id="arv-gc-register-description-node-check-schema-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>required_major</para></entry>
+<entry role="parameter_description"><para>required major version number</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>required_minor</para></entry>
+<entry role="parameter_description"><para>required minor version number</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>required_subminor</para></entry>
+<entry role="parameter_description"><para>required sub minor version number</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-check-schema-version.returns" role="returns">
+<title>Returns</title>
+<para> True if document version is higher or equal than the given version.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-get-model-name" role="function" condition="since:0.8.0">
+<title>arv_gc_register_description_node_get_model_name&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-get-model-name" role="0.8.0"><primary>arv_gc_register_description_node_get_model_name</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_register_description_node_get_model_name
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>);</programlisting>
+<para>Gets camera model name for given Genicam document.</para>
+<refsect3 id="arv-gc-register-description-node-get-model-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-get-model-name.returns" role="returns">
+<title>Returns</title>
+<para> Model name string.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-get-vendor-name" role="function" condition="since:0.8.0">
+<title>arv_gc_register_description_node_get_vendor_name&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-get-vendor-name" role="0.8.0"><primary>arv_gc_register_description_node_get_vendor_name</primary></indexterm>
+<programlisting language="C"><link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_register_description_node_get_vendor_name
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>);</programlisting>
+<para>Gets camera vendor name for given Genicam document.</para>
+<refsect3 id="arv-gc-register-description-node-get-vendor-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-get-vendor-name.returns" role="returns">
+<title>Returns</title>
+<para> Vendor name string.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-get-major-version" role="function" condition="since:0.8.0">
+<title>arv_gc_register_description_node_get_major_version&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-get-major-version" role="0.8.0"><primary>arv_gc_register_description_node_get_major_version</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_register_description_node_get_major_version
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>);</programlisting>
+<para>Gets Genicam document major version.</para>
+<refsect3 id="arv-gc-register-description-node-get-major-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-get-major-version.returns" role="returns">
+<title>Returns</title>
+<para> Major version.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-get-minor-version" role="function" condition="since:0.8.0">
+<title>arv_gc_register_description_node_get_minor_version&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-get-minor-version" role="0.8.0"><primary>arv_gc_register_description_node_get_minor_version</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_register_description_node_get_minor_version
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>);</programlisting>
+<para>Gets Genicam document minor version.</para>
+<refsect3 id="arv-gc-register-description-node-get-minor-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-get-minor-version.returns" role="returns">
+<title>Returns</title>
+<para> Minor version.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-get-subminor-version" role="function" condition="since:0.8.0">
+<title>arv_gc_register_description_node_get_subminor_version&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-get-subminor-version" role="0.8.0"><primary>arv_gc_register_description_node_get_subminor_version</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_register_description_node_get_subminor_version
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>);</programlisting>
+<para>Gets Genicam document sub minor version.</para>
+<refsect3 id="arv-gc-register-description-node-get-subminor-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-get-subminor-version.returns" role="returns">
+<title>Returns</title>
+<para> Sub minor version.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-get-schema-major-version" role="function" condition="since:0.8.0">
+<title>arv_gc_register_description_node_get_schema_major_version&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-get-schema-major-version" role="0.8.0"><primary>arv_gc_register_description_node_get_schema_major_version</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_register_description_node_get_schema_major_version
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>);</programlisting>
+<para>Gets Genicam document schema major version.</para>
+<refsect3 id="arv-gc-register-description-node-get-schema-major-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-get-schema-major-version.returns" role="returns">
+<title>Returns</title>
+<para> Schema major version.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-get-schema-minor-version" role="function" condition="since:0.8.0">
+<title>arv_gc_register_description_node_get_schema_minor_version&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-get-schema-minor-version" role="0.8.0"><primary>arv_gc_register_description_node_get_schema_minor_version</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_register_description_node_get_schema_minor_version
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>);</programlisting>
+<para>Gets Genicam document schema minor version.</para>
+<refsect3 id="arv-gc-register-description-node-get-schema-minor-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-get-schema-minor-version.returns" role="returns">
+<title>Returns</title>
+<para> Schema minor version.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-description-node-get-schema-subminor-version" role="function" condition="since:0.8.0">
+<title>arv_gc_register_description_node_get_schema_subminor_version&#160;()</title>
+<indexterm zone="arv-gc-register-description-node-get-schema-subminor-version" role="0.8.0"><primary>arv_gc_register_description_node_get_schema_subminor_version</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gc_register_description_node_get_schema_subminor_version
+                               (<parameter><link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link> *node</parameter>);</programlisting>
+<para>Gets Genicam document schema sub minor version.</para>
+<refsect3 id="arv-gc-register-description-node-get-schema-subminor-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcRegisterDescriptionNode"><type>ArvGcRegisterDescriptionNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-register-description-node-get-schema-subminor-version.returns" role="returns">
+<title>Returns</title>
+<para> Schema sub minor version.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-register-feature-node" role="function">
+<title>arv_gc_register_feature_node&#160;()</title>
+<indexterm zone="arv-gc-register-feature-node"><primary>arv_gc_register_feature_node</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_register_feature_node (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>,
+                              <parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *node</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcRegisterDescriptionNode.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcRegisterDescriptionNode-struct" role="struct">
+<title>ArvGcRegisterDescriptionNode</title>
+<indexterm zone="ArvGcRegisterDescriptionNode-struct"><primary>ArvGcRegisterDescriptionNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcRegisterDescriptionNode ArvGcRegisterDescriptionNode;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

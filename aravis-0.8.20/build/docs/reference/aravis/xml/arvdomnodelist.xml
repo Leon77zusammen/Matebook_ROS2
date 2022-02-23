@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvDomNodeList">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvDomNodeList.top_of_page">ArvDomNodeList</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvDomNodeList</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvDomNodeList.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-node-list-get-item">arv_dom_node_list_get_item</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-node-list-get-length">arv_dom_node_list_get_length</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomNodeList.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvDomNodeList
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNodeChildList">ArvDomNodeChildList</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvDomNodeList.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvDomNodeList.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-dom-node-list-get-item" role="function">
+<title>arv_dom_node_list_get_item&#160;()</title>
+<indexterm zone="arv-dom-node-list-get-item"><primary>arv_dom_node_list_get_item</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_node_list_get_item (<parameter><link linkend="ArvDomNodeList"><type>ArvDomNodeList</type></link> *list</parameter>,
+                            <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>Get one of the item of <parameter>list</parameter>
+.</para>
+<refsect3 id="arv-dom-node-list-get-item.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>list</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNodeList"><type>ArvDomNodeList</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>item index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-node-list-get-item.returns" role="returns">
+<title>Returns</title>
+<para>item corresponding to index, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-node-list-get-length" role="function">
+<title>arv_dom_node_list_get_length&#160;()</title>
+<indexterm zone="arv-dom-node-list-get-length"><primary>arv_dom_node_list_get_length</primary></indexterm>
+<programlisting language="C">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+arv_dom_node_list_get_length (<parameter><link linkend="ArvDomNodeList"><type>ArvDomNodeList</type></link> *list</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

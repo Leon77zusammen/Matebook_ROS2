@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.8.17">
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-is-enumeration-entry-available"><link linkend="arv-camera-is-enumeration-entry-available">arv_camera_is_enumeration_entry_available</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-is-software-trigger-supported"><link linkend="arv-camera-is-software-trigger-supported">arv_camera_is_software_trigger_supported</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-uv-set-usb-mode"><link linkend="arv-camera-uv-set-usb-mode">arv_camera_uv_set_usb_mode</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="arv-device-is-enumeration-entry-available"><link linkend="arv-device-is-enumeration-entry-available">arv_device_is_enumeration_entry_available</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>U</title>
+<indexentry><primaryie linkends="arv-uv-device-new-from-guid"><link linkend="arv-uv-device-new-from-guid">arv_uv_device_new_from_guid</link>, function in <link linkend="ArvUvDevice">ArvUvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-uv-device-set-usb-mode"><link linkend="arv-uv-device-set-usb-mode">arv_uv_device_set_usb_mode</link>, function in <link linkend="ArvUvDevice">ArvUvDevice</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

@@ -1,0 +1,14 @@
+<SIGNAL>
+<NAME>ArvDevice::control-lost</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ArvDevice *arvdevice
+</SIGNAL>
+
+<SIGNAL>
+<NAME>ArvStream::new-buffer</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+ArvStream *arvstream
+</SIGNAL>
+

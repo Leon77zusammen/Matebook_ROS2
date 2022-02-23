@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ArvUvDevice: Aravis Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.79.1">
+<link rel="home" href="index.html" title="Aravis Reference Manual">
+<link rel="up" href="ch07.html" title="USB cameras">
+<link rel="prev" href="ArvUvInterface.html" title="ArvUvInterface">
+<link rel="next" href="ArvUvStream.html" title="ArvUvStream">
+<meta name="generator" content="GTK-Doc V1.32 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="5"><tr valign="middle">
+<td width="100%" align="left" class="shortcuts">
+<a href="#" class="shortcut">Top</a><span id="nav_description">  <span class="dim">|</span> 
+                  <a href="#ArvUvDevice.description" class="shortcut">Description</a></span><span id="nav_hierarchy">  <span class="dim">|</span> 
+                  <a href="#ArvUvDevice.object-hierarchy" class="shortcut">Object Hierarchy</a></span><span id="nav_properties">  <span class="dim">|</span> 
+                  <a href="#ArvUvDevice.properties" class="shortcut">Properties</a></span>
+</td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="16" height="16" border="0" alt="Home"></a></td>
+<td><a accesskey="u" href="ch07.html"><img src="up.png" width="16" height="16" border="0" alt="Up"></a></td>
+<td><a accesskey="p" href="ArvUvInterface.html"><img src="left.png" width="16" height="16" border="0" alt="Prev"></a></td>
+<td><a accesskey="n" href="ArvUvStream.html"><img src="right.png" width="16" height="16" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="refentry">
+<a name="ArvUvDevice"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="ArvUvDevice.top_of_page"></a>ArvUvDevice</span></h2>
+<p>ArvUvDevice — USB3Vision device</p>
+</td>
+<td class="gallery_image" valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsect1">
+<a name="ArvUvDevice.functions"></a><h2>Functions</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="functions_proto_type">
+<col class="functions_proto_name">
+</colgroup>
+<tbody>
+<tr>
+<td class="function_type">
+<a class="link" href="ArvDevice.html" title="ArvDevice"><span class="returnvalue">ArvDevice</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ArvUvDevice.html#arv-uv-device-new" title="arv_uv_device_new ()">arv_uv_device_new</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<a class="link" href="ArvDevice.html" title="ArvDevice"><span class="returnvalue">ArvDevice</span></a> *
+</td>
+<td class="function_name">
+<a class="link" href="ArvUvDevice.html#arv-uv-device-new-from-guid" title="arv_uv_device_new_from_guid ()">arv_uv_device_new_from_guid</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+<tr>
+<td class="function_type">
+<span class="returnvalue">void</span>
+</td>
+<td class="function_name">
+<a class="link" href="ArvUvDevice.html#arv-uv-device-set-usb-mode" title="arv_uv_device_set_usb_mode ()">arv_uv_device_set_usb_mode</a> <span class="c_punctuation">()</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ArvUvDevice.properties"></a><h2>Properties</h2>
+<div class="informaltable"><table class="informaltable" border="0">
+<colgroup>
+<col width="150px" class="properties_type">
+<col width="300px" class="properties_name">
+<col width="200px" class="properties_flags">
+</colgroup>
+<tbody>
+<tr>
+<td class="property_type">
+<span class="type">gchar</span> *</td>
+<td class="property_name"><a class="link" href="ArvUvDevice.html#ArvUvDevice--guid" title="The “guid” property">guid</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">gchar</span> *</td>
+<td class="property_name"><a class="link" href="ArvUvDevice.html#ArvUvDevice--product" title="The “product” property">product</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">gchar</span> *</td>
+<td class="property_name"><a class="link" href="ArvUvDevice.html#ArvUvDevice--serial-number" title="The “serial-number” property">serial-number</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+<tr>
+<td class="property_type">
+<span class="type">gchar</span> *</td>
+<td class="property_name"><a class="link" href="ArvUvDevice.html#ArvUvDevice--vendor" title="The “vendor” property">vendor</a></td>
+<td class="property_flags">Write / Construct Only</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ArvUvDevice.other"></a><h2>Types and Values</h2>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="other_proto_type">
+<col class="other_proto_name">
+</colgroup>
+<tbody><tr>
+<td class="datatype_keyword">enum</td>
+<td class="function_name"><a class="link" href="ArvUvDevice.html#ArvUvUsbMode" title="enum ArvUvUsbMode">ArvUvUsbMode</a></td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="refsect1">
+<a name="ArvUvDevice.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="screen">    GObject
+    <span class="lineart">╰──</span> <a class="link" href="ArvDevice.html" title="ArvDevice">ArvDevice</a>
+        <span class="lineart">╰──</span> ArvUvDevice
+</pre>
+</div>
+<div class="refsect1">
+<a name="ArvUvDevice.description"></a><h2>Description</h2>
+</div>
+<div class="refsect1">
+<a name="ArvUvDevice.functions_details"></a><h2>Functions</h2>
+<div class="refsect2">
+<a name="arv-uv-device-new"></a><h3>arv_uv_device_new ()</h3>
+<pre class="programlisting"><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="returnvalue">ArvDevice</span></a> *
+arv_uv_device_new (<em class="parameter"><code>const <span class="type">char</span> *vendor</code></em>,
+                   <em class="parameter"><code>const <span class="type">char</span> *product</code></em>,
+                   <em class="parameter"><code>const <span class="type">char</span> *serial_number</code></em>,
+                   <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-uv-device-new.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>vendor</p></td>
+<td class="parameter_description"><p>USB3 vendor string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>product</p></td>
+<td class="parameter_description"><p>USB3 product string</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>serial_number</p></td>
+<td class="parameter_description"><p>device serial number</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span> placeholder, <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-uv-device-new.returns"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> using USB3 based protocol</p>
+</div>
+<p class="since">Since: <a class="link" href="ix07.html#api-index-0.8.0">0.8.0</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-uv-device-new-from-guid"></a><h3>arv_uv_device_new_from_guid ()</h3>
+<pre class="programlisting"><a class="link" href="ArvDevice.html" title="ArvDevice"><span class="returnvalue">ArvDevice</span></a> *
+arv_uv_device_new_from_guid (<em class="parameter"><code>const <span class="type">char</span> *guid</code></em>,
+                             <em class="parameter"><code><span class="type">GError</span> **error</code></em>);</pre>
+<div class="refsect3">
+<a name="arv-uv-device-new-from-guid.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>guid</p></td>
+<td class="parameter_description"><p>device GUID</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>error</p></td>
+<td class="parameter_description"><p>a <span class="type">GError</span> placeholder, <code class="literal">NULL</code> to ignore</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="refsect3">
+<a name="arv-uv-device-new-from-guid.returns"></a><h4>Returns</h4>
+<p> a newly created <a class="link" href="ArvDevice.html" title="ArvDevice"><span class="type">ArvDevice</span></a> using USB3 based protocol</p>
+</div>
+<p class="since">Since: <a class="link" href="ix14.html#api-index-0.8.17">0.8.17</a></p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="arv-uv-device-set-usb-mode"></a><h3>arv_uv_device_set_usb_mode ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>
+arv_uv_device_set_usb_mode (<em class="parameter"><code><a class="link" href="ArvUvDevice.html" title="ArvUvDevice"><span class="type">ArvUvDevice</span></a> *uv_device</code></em>,
+                            <em class="parameter"><code><a class="link" href="ArvUvDevice.html#ArvUvUsbMode" title="enum ArvUvUsbMode"><span class="type">ArvUvUsbMode</span></a> usb_mode</code></em>);</pre>
+<p>Sets the option to utilize the USB synchronous or asynchronous device I/O API. The default mode is
+<em class="parameter"><code>ARV_UV_USB_MODE_SYNC</code></em>
+, which means USB bulk transfer will be synchronously executed. This mode is qualified to work,
+but it has the performance issue with some high framerate device. Using <em class="parameter"><code>ARV_UV_USB_MODE_ASYNC</code></em>
+ possibly improves the
+bandwidth.</p>
+<div class="refsect3">
+<a name="arv-uv-device-set-usb-mode.parameters"></a><h4>Parameters</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="150px" class="parameters_name">
+<col class="parameters_description">
+<col width="200px" class="parameters_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="parameter_name"><p>uv_device</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvUvDevice.html" title="ArvUvDevice"><span class="type">ArvUvDevice</span></a></p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+<tr>
+<td class="parameter_name"><p>usb_mode</p></td>
+<td class="parameter_description"><p>a <a class="link" href="ArvUvDevice.html#ArvUvUsbMode" title="enum ArvUvUsbMode"><span class="type">ArvUvUsbMode</span></a> option</p></td>
+<td class="parameter_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<p class="since">Since: <a class="link" href="ix14.html#api-index-0.8.17">0.8.17</a></p>
+</div>
+</div>
+<div class="refsect1">
+<a name="ArvUvDevice.other_details"></a><h2>Types and Values</h2>
+<div class="refsect2">
+<a name="ArvUvUsbMode"></a><h3>enum ArvUvUsbMode</h3>
+<div class="refsect3">
+<a name="ArvUvUsbMode.members"></a><h4>Members</h4>
+<div class="informaltable"><table class="informaltable" width="100%" border="0">
+<colgroup>
+<col width="300px" class="enum_members_name">
+<col class="enum_members_description">
+<col width="200px" class="enum_members_annotations">
+</colgroup>
+<tbody>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-UV-USB-MODE-SYNC:CAPS"></a>ARV_UV_USB_MODE_SYNC</p></td>
+<td class="enum_member_description">
+<p>utilize libusb synchronous device I/O API</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-UV-USB-MODE-ASYNC:CAPS"></a>ARV_UV_USB_MODE_ASYNC</p></td>
+<td class="enum_member_description">
+<p>utilize libusb asynchronous device I/O API</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+<tr>
+<td class="enum_member_name"><p><a name="ARV-UV-USB-MODE-DEFAULT:CAPS"></a>ARV_UV_USB_MODE_DEFAULT</p></td>
+<td class="enum_member_description">
+<p>default usb mode</p>
+</td>
+<td class="enum_member_annotations"> </td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="refsect1">
+<a name="ArvUvDevice.property-details"></a><h2>Property Details</h2>
+<div class="refsect2">
+<a name="ArvUvDevice--guid"></a><h3>The <code class="literal">“guid”</code> property</h3>
+<pre class="programlisting">  “guid”                     <span class="type">gchar</span> *</pre>
+<p>USB3 device GUID.</p>
+<p>Owner: ArvUvDevice</p>
+<p>Flags: Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvUvDevice--product"></a><h3>The <code class="literal">“product”</code> property</h3>
+<pre class="programlisting">  “product”                  <span class="type">gchar</span> *</pre>
+<p>USB3 device product string.</p>
+<p>Owner: ArvUvDevice</p>
+<p>Flags: Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvUvDevice--serial-number"></a><h3>The <code class="literal">“serial-number”</code> property</h3>
+<pre class="programlisting">  “serial-number”            <span class="type">gchar</span> *</pre>
+<p>USB3 device serial number.</p>
+<p>Owner: ArvUvDevice</p>
+<p>Flags: Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="ArvUvDevice--vendor"></a><h3>The <code class="literal">“vendor”</code> property</h3>
+<pre class="programlisting">  “vendor”                   <span class="type">gchar</span> *</pre>
+<p>USB3 device vendor string.</p>
+<p>Owner: ArvUvDevice</p>
+<p>Flags: Write / Construct Only</p>
+<p>Default value: NULL</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>Generated by GTK-Doc V1.32</div>
+</body>
+</html>

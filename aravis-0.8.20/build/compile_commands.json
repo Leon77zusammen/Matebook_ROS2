@@ -1,0 +1,686 @@
+[
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvenumtypes.c.o' -MF 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvenumtypes.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvenumtypes.c.o' -c src/arvenumtypes.c",
+    "file": "src/arvenumtypes.c",
+    "output": "src/25a6634@@aravis-0.8@sha/meson-generated_.._arvenumtypes.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvenumtypesprivate.c.o' -MF 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvenumtypesprivate.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvenumtypesprivate.c.o' -c src/arvenumtypesprivate.c",
+    "file": "src/arvenumtypesprivate.c",
+    "output": "src/25a6634@@aravis-0.8@sha/meson-generated_.._arvenumtypesprivate.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvresources.c.o' -MF 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvresources.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/meson-generated_.._arvresources.c.o' -c src/arvresources.c",
+    "file": "src/arvresources.c",
+    "output": "src/25a6634@@aravis-0.8@sha/meson-generated_.._arvresources.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvenums.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvenums.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvenums.c.o' -c ../src/arvenums.c",
+    "file": "../src/arvenums.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvenums.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdebug.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdebug.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdebug.c.o' -c ../src/arvdebug.c",
+    "file": "../src/arvdebug.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdebug.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvsystem.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvsystem.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvsystem.c.o' -c ../src/arvsystem.c",
+    "file": "../src/arvsystem.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvsystem.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvevaluator.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvevaluator.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvevaluator.c.o' -c ../src/arvevaluator.c",
+    "file": "../src/arvevaluator.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvevaluator.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomnode.c.o' -c ../src/arvdomnode.c",
+    "file": "../src/arvdomnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomnodechildlist.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomnodechildlist.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomnodechildlist.c.o' -c ../src/arvdomnodechildlist.c",
+    "file": "../src/arvdomnodechildlist.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomnodechildlist.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomnodelist.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomnodelist.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomnodelist.c.o' -c ../src/arvdomnodelist.c",
+    "file": "../src/arvdomnodelist.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomnodelist.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomnamednodemap.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomnamednodemap.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomnamednodemap.c.o' -c ../src/arvdomnamednodemap.c",
+    "file": "../src/arvdomnamednodemap.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomnamednodemap.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomdocument.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomdocument.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomdocument.c.o' -c ../src/arvdomdocument.c",
+    "file": "../src/arvdomdocument.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomdocument.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomdocumentfragment.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomdocumentfragment.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomdocumentfragment.c.o' -c ../src/arvdomdocumentfragment.c",
+    "file": "../src/arvdomdocumentfragment.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomdocumentfragment.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomelement.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomelement.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomelement.c.o' -c ../src/arvdomelement.c",
+    "file": "../src/arvdomelement.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomelement.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomcharacterdata.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomcharacterdata.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomcharacterdata.c.o' -c ../src/arvdomcharacterdata.c",
+    "file": "../src/arvdomcharacterdata.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomcharacterdata.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomtext.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomtext.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomtext.c.o' -c ../src/arvdomtext.c",
+    "file": "../src/arvdomtext.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomtext.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomparser.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomparser.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomparser.c.o' -c ../src/arvdomparser.c",
+    "file": "../src/arvdomparser.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomparser.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdomimplementation.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdomimplementation.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdomimplementation.c.o' -c ../src/arvdomimplementation.c",
+    "file": "../src/arvdomimplementation.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdomimplementation.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvcamera.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvcamera.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvcamera.c.o' -c ../src/arvcamera.c",
+    "file": "../src/arvcamera.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvcamera.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgc.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgc.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgc.c.o' -c ../src/arvgc.c",
+    "file": "../src/arvgc.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgc.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcnode.c.o' -c ../src/arvgcnode.c",
+    "file": "../src/arvgcnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcpropertynode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcpropertynode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcpropertynode.c.o' -c ../src/arvgcpropertynode.c",
+    "file": "../src/arvgcpropertynode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcpropertynode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcindexnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcindexnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcindexnode.c.o' -c ../src/arvgcindexnode.c",
+    "file": "../src/arvgcindexnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcindexnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcvalueindexednode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcvalueindexednode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcvalueindexednode.c.o' -c ../src/arvgcvalueindexednode.c",
+    "file": "../src/arvgcvalueindexednode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcvalueindexednode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcinvalidatornode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcinvalidatornode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcinvalidatornode.c.o' -c ../src/arvgcinvalidatornode.c",
+    "file": "../src/arvgcinvalidatornode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcinvalidatornode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcfeaturenode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcfeaturenode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcfeaturenode.c.o' -c ../src/arvgcfeaturenode.c",
+    "file": "../src/arvgcfeaturenode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcfeaturenode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcregisterdescriptionnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcregisterdescriptionnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcregisterdescriptionnode.c.o' -c ../src/arvgcregisterdescriptionnode.c",
+    "file": "../src/arvgcregisterdescriptionnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcregisterdescriptionnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcgroupnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcgroupnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcgroupnode.c.o' -c ../src/arvgcgroupnode.c",
+    "file": "../src/arvgcgroupnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcgroupnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgccategory.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgccategory.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgccategory.c.o' -c ../src/arvgccategory.c",
+    "file": "../src/arvgccategory.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgccategory.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcboolean.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcboolean.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcboolean.c.o' -c ../src/arvgcboolean.c",
+    "file": "../src/arvgcboolean.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcboolean.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcenumeration.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcenumeration.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcenumeration.c.o' -c ../src/arvgcenumeration.c",
+    "file": "../src/arvgcenumeration.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcenumeration.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcenumentry.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcenumentry.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcenumentry.c.o' -c ../src/arvgcenumentry.c",
+    "file": "../src/arvgcenumentry.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcenumentry.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcintegernode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcintegernode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcintegernode.c.o' -c ../src/arvgcintegernode.c",
+    "file": "../src/arvgcintegernode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcintegernode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcfloatnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcfloatnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcfloatnode.c.o' -c ../src/arvgcfloatnode.c",
+    "file": "../src/arvgcfloatnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcfloatnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcregisternode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcregisternode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcregisternode.c.o' -c ../src/arvgcregisternode.c",
+    "file": "../src/arvgcregisternode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcregisternode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcintregnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcintregnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcintregnode.c.o' -c ../src/arvgcintregnode.c",
+    "file": "../src/arvgcintregnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcintregnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcstringnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcstringnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcstringnode.c.o' -c ../src/arvgcstringnode.c",
+    "file": "../src/arvgcstringnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcstringnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcmaskedintregnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcmaskedintregnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcmaskedintregnode.c.o' -c ../src/arvgcmaskedintregnode.c",
+    "file": "../src/arvgcmaskedintregnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcmaskedintregnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcfloatregnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcfloatregnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcfloatregnode.c.o' -c ../src/arvgcfloatregnode.c",
+    "file": "../src/arvgcfloatregnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcfloatregnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcstringregnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcstringregnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcstringregnode.c.o' -c ../src/arvgcstringregnode.c",
+    "file": "../src/arvgcstringregnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcstringregnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcstructregnode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcstructregnode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcstructregnode.c.o' -c ../src/arvgcstructregnode.c",
+    "file": "../src/arvgcstructregnode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcstructregnode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcstructentrynode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcstructentrynode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcstructentrynode.c.o' -c ../src/arvgcstructentrynode.c",
+    "file": "../src/arvgcstructentrynode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcstructentrynode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgccommand.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgccommand.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgccommand.c.o' -c ../src/arvgccommand.c",
+    "file": "../src/arvgccommand.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgccommand.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcswissknife.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcswissknife.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcswissknife.c.o' -c ../src/arvgcswissknife.c",
+    "file": "../src/arvgcswissknife.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcswissknife.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcswissknifenode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcswissknifenode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcswissknifenode.c.o' -c ../src/arvgcswissknifenode.c",
+    "file": "../src/arvgcswissknifenode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcswissknifenode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcintswissknifenode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcintswissknifenode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcintswissknifenode.c.o' -c ../src/arvgcintswissknifenode.c",
+    "file": "../src/arvgcintswissknifenode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcintswissknifenode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcconverter.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcconverter.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcconverter.c.o' -c ../src/arvgcconverter.c",
+    "file": "../src/arvgcconverter.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcconverter.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcconverternode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcconverternode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcconverternode.c.o' -c ../src/arvgcconverternode.c",
+    "file": "../src/arvgcconverternode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcconverternode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcintconverternode.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcintconverternode.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcintconverternode.c.o' -c ../src/arvgcintconverternode.c",
+    "file": "../src/arvgcintconverternode.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcintconverternode.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcport.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcport.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcport.c.o' -c ../src/arvgcport.c",
+    "file": "../src/arvgcport.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcport.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcregister.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcregister.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcregister.c.o' -c ../src/arvgcregister.c",
+    "file": "../src/arvgcregister.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcregister.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcinteger.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcinteger.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcinteger.c.o' -c ../src/arvgcinteger.c",
+    "file": "../src/arvgcinteger.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcinteger.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcstring.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcstring.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcstring.c.o' -c ../src/arvgcstring.c",
+    "file": "../src/arvgcstring.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcstring.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcselector.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcselector.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcselector.c.o' -c ../src/arvgcselector.c",
+    "file": "../src/arvgcselector.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcselector.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgcfloat.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgcfloat.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgcfloat.c.o' -c ../src/arvgcfloat.c",
+    "file": "../src/arvgcfloat.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgcfloat.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvinterface.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvinterface.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvinterface.c.o' -c ../src/arvinterface.c",
+    "file": "../src/arvinterface.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvinterface.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvdevice.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvdevice.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvdevice.c.o' -c ../src/arvdevice.c",
+    "file": "../src/arvdevice.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvdevice.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvstream.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvstream.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvstream.c.o' -c ../src/arvstream.c",
+    "file": "../src/arvstream.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvstream.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvbuffer.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvbuffer.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvbuffer.c.o' -c ../src/arvbuffer.c",
+    "file": "../src/arvbuffer.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvbuffer.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvchunkparser.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvchunkparser.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvchunkparser.c.o' -c ../src/arvchunkparser.c",
+    "file": "../src/arvchunkparser.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvchunkparser.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgvinterface.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgvinterface.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgvinterface.c.o' -c ../src/arvgvinterface.c",
+    "file": "../src/arvgvinterface.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgvinterface.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgvdevice.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgvdevice.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgvdevice.c.o' -c ../src/arvgvdevice.c",
+    "file": "../src/arvgvdevice.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgvdevice.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgvstream.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgvstream.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgvstream.c.o' -c ../src/arvgvstream.c",
+    "file": "../src/arvgvstream.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgvstream.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvfakeinterface.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvfakeinterface.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvfakeinterface.c.o' -c ../src/arvfakeinterface.c",
+    "file": "../src/arvfakeinterface.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvfakeinterface.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvfakedevice.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvfakedevice.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvfakedevice.c.o' -c ../src/arvfakedevice.c",
+    "file": "../src/arvfakedevice.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvfakedevice.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvfakestream.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvfakestream.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvfakestream.c.o' -c ../src/arvfakestream.c",
+    "file": "../src/arvfakestream.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvfakestream.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvfakecamera.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvfakecamera.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvfakecamera.c.o' -c ../src/arvfakecamera.c",
+    "file": "../src/arvfakecamera.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvfakecamera.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgvfakecamera.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgvfakecamera.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgvfakecamera.c.o' -c ../src/arvgvfakecamera.c",
+    "file": "../src/arvgvfakecamera.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgvfakecamera.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvrealtime.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvrealtime.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvrealtime.c.o' -c ../src/arvrealtime.c",
+    "file": "../src/arvrealtime.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvrealtime.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvxmlschema.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvxmlschema.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvxmlschema.c.o' -c ../src/arvxmlschema.c",
+    "file": "../src/arvxmlschema.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvxmlschema.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvuvinterface.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvuvinterface.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvuvinterface.c.o' -c ../src/arvuvinterface.c",
+    "file": "../src/arvuvinterface.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvuvinterface.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvuvdevice.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvuvdevice.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvuvdevice.c.o' -c ../src/arvuvdevice.c",
+    "file": "../src/arvuvdevice.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvuvdevice.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvuvstream.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvuvstream.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvuvstream.c.o' -c ../src/arvuvstream.c",
+    "file": "../src/arvuvstream.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvuvstream.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvmisc.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvmisc.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvmisc.c.o' -c ../src/arvmisc.c",
+    "file": "../src/arvmisc.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvmisc.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvnetwork.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvnetwork.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvnetwork.c.o' -c ../src/arvnetwork.c",
+    "file": "../src/arvnetwork.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvnetwork.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvzip.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvzip.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvzip.c.o' -c ../src/arvzip.c",
+    "file": "../src/arvzip.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvzip.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvstr.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvstr.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvstr.c.o' -c ../src/arvstr.c",
+    "file": "../src/arvstr.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvstr.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgvcp.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgvcp.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgvcp.c.o' -c ../src/arvgvcp.c",
+    "file": "../src/arvgvcp.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgvcp.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvgvsp.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvgvsp.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvgvsp.c.o' -c ../src/arvgvsp.c",
+    "file": "../src/arvgvsp.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvgvsp.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvwakeup.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvwakeup.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvwakeup.c.o' -c ../src/arvwakeup.c",
+    "file": "../src/arvwakeup.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvwakeup.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvuvcp.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvuvcp.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvuvcp.c.o' -c ../src/arvuvcp.c",
+    "file": "../src/arvuvcp.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvuvcp.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@aravis-0.8@sha -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@aravis-0.8@sha/arvuvsp.c.o' -MF 'src/25a6634@@aravis-0.8@sha/arvuvsp.c.o.d' -o 'src/25a6634@@aravis-0.8@sha/arvuvsp.c.o' -c ../src/arvuvsp.c",
+    "file": "../src/arvuvsp.c",
+    "output": "src/25a6634@@aravis-0.8@sha/arvuvsp.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@arv-tool-0.8@exe -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@arv-tool-0.8@exe/arvtool.c.o' -MF 'src/25a6634@@arv-tool-0.8@exe/arvtool.c.o.d' -o 'src/25a6634@@arv-tool-0.8@exe/arvtool.c.o' -c ../src/arvtool.c",
+    "file": "../src/arvtool.c",
+    "output": "src/25a6634@@arv-tool-0.8@exe/arvtool.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@arv-test-0.8@exe -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@arv-test-0.8@exe/meson-generated_.._arvtestresources.c.o' -MF 'src/25a6634@@arv-test-0.8@exe/meson-generated_.._arvtestresources.c.o.d' -o 'src/25a6634@@arv-test-0.8@exe/meson-generated_.._arvtestresources.c.o' -c src/arvtestresources.c",
+    "file": "src/arvtestresources.c",
+    "output": "src/25a6634@@arv-test-0.8@exe/meson-generated_.._arvtestresources.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@arv-test-0.8@exe -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@arv-test-0.8@exe/arvtest.c.o' -MF 'src/25a6634@@arv-test-0.8@exe/arvtest.c.o.d' -o 'src/25a6634@@arv-test-0.8@exe/arvtest.c.o' -c ../src/arvtest.c",
+    "file": "../src/arvtest.c",
+    "output": "src/25a6634@@arv-test-0.8@exe/arvtest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@arv-camera-test-0.8@exe -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@arv-camera-test-0.8@exe/arvcameratest.c.o' -MF 'src/25a6634@@arv-camera-test-0.8@exe/arvcameratest.c.o.d' -o 'src/25a6634@@arv-camera-test-0.8@exe/arvcameratest.c.o' -c ../src/arvcameratest.c",
+    "file": "../src/arvcameratest.c",
+    "output": "src/25a6634@@arv-camera-test-0.8@exe/arvcameratest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Isrc/25a6634@@arv-fake-gv-camera-0.8@exe -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -DARAVIS_COMPILATION -MD -MQ 'src/25a6634@@arv-fake-gv-camera-0.8@exe/arvfakegvcamera.c.o' -MF 'src/25a6634@@arv-fake-gv-camera-0.8@exe/arvfakegvcamera.c.o.d' -o 'src/25a6634@@arv-fake-gv-camera-0.8@exe/arvfakegvcamera.c.o' -c ../src/arvfakegvcamera.c",
+    "file": "../src/arvfakegvcamera.c",
+    "output": "src/25a6634@@arv-fake-gv-camera-0.8@exe/arvfakegvcamera.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@evaluator@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@evaluator@exe/evaluator.c.o' -MF 'tests/59830eb@@evaluator@exe/evaluator.c.o.d' -o 'tests/59830eb@@evaluator@exe/evaluator.c.o' -c ../tests/evaluator.c",
+    "file": "../tests/evaluator.c",
+    "output": "tests/59830eb@@evaluator@exe/evaluator.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@buffer@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@buffer@exe/buffer.c.o' -MF 'tests/59830eb@@buffer@exe/buffer.c.o.d' -o 'tests/59830eb@@buffer@exe/buffer.c.o' -c ../tests/buffer.c",
+    "file": "../tests/buffer.c",
+    "output": "tests/59830eb@@buffer@exe/buffer.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@misc@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@misc@exe/misc.c.o' -MF 'tests/59830eb@@misc@exe/misc.c.o.d' -o 'tests/59830eb@@misc@exe/misc.c.o' -c ../tests/misc.c",
+    "file": "../tests/misc.c",
+    "output": "tests/59830eb@@misc@exe/misc.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@dom@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread '-DGENICAM_FILENAME=\"/home/yulong/Documents/aravis-0.8.20/tests/data/genicam.xml\"' -MD -MQ 'tests/59830eb@@dom@exe/dom.c.o' -MF 'tests/59830eb@@dom@exe/dom.c.o.d' -o 'tests/59830eb@@dom@exe/dom.c.o' -c ../tests/dom.c",
+    "file": "../tests/dom.c",
+    "output": "tests/59830eb@@dom@exe/dom.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@genicam@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread '-DGENICAM_FILENAME=\"/home/yulong/Documents/aravis-0.8.20/tests/data/genicam.xml\"' -MD -MQ 'tests/59830eb@@genicam@exe/genicam.c.o' -MF 'tests/59830eb@@genicam@exe/genicam.c.o.d' -o 'tests/59830eb@@genicam@exe/genicam.c.o' -c ../tests/genicam.c",
+    "file": "../tests/genicam.c",
+    "output": "tests/59830eb@@genicam@exe/genicam.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@fake@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread '-DGENICAM_FILENAME=\"/home/yulong/Documents/aravis-0.8.20/src/arv-fake-camera.xml\"' -MD -MQ 'tests/59830eb@@fake@exe/fake.c.o' -MF 'tests/59830eb@@fake@exe/fake.c.o.d' -o 'tests/59830eb@@fake@exe/fake.c.o' -c ../tests/fake.c",
+    "file": "../tests/fake.c",
+    "output": "tests/59830eb@@fake@exe/fake.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@fakegv@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread '-DGENICAM_FILENAME=\"/home/yulong/Documents/aravis-0.8.20/src/arv-fake-camera.xml\"' -MD -MQ 'tests/59830eb@@fakegv@exe/fakegv.c.o' -MF 'tests/59830eb@@fakegv@exe/fakegv.c.o.d' -o 'tests/59830eb@@fakegv@exe/fakegv.c.o' -c ../tests/fakegv.c",
+    "file": "../tests/fakegv.c",
+    "output": "tests/59830eb@@fakegv@exe/fakegv.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-network-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-network-test@exe/arvnetworktest.c.o' -MF 'tests/59830eb@@arv-network-test@exe/arvnetworktest.c.o.d' -o 'tests/59830eb@@arv-network-test@exe/arvnetworktest.c.o' -c ../tests/arvnetworktest.c",
+    "file": "../tests/arvnetworktest.c",
+    "output": "tests/59830eb@@arv-network-test@exe/arvnetworktest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-device-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-device-test@exe/arvdevicetest.c.o' -MF 'tests/59830eb@@arv-device-test@exe/arvdevicetest.c.o.d' -o 'tests/59830eb@@arv-device-test@exe/arvdevicetest.c.o' -c ../tests/arvdevicetest.c",
+    "file": "../tests/arvdevicetest.c",
+    "output": "tests/59830eb@@arv-device-test@exe/arvdevicetest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-genicam-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-genicam-test@exe/arvgenicamtest.c.o' -MF 'tests/59830eb@@arv-genicam-test@exe/arvgenicamtest.c.o.d' -o 'tests/59830eb@@arv-genicam-test@exe/arvgenicamtest.c.o' -c ../tests/arvgenicamtest.c",
+    "file": "../tests/arvgenicamtest.c",
+    "output": "tests/59830eb@@arv-genicam-test@exe/arvgenicamtest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-evaluator-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-evaluator-test@exe/arvevaluatortest.c.o' -MF 'tests/59830eb@@arv-evaluator-test@exe/arvevaluatortest.c.o.d' -o 'tests/59830eb@@arv-evaluator-test@exe/arvevaluatortest.c.o' -c ../tests/arvevaluatortest.c",
+    "file": "../tests/arvevaluatortest.c",
+    "output": "tests/59830eb@@arv-evaluator-test@exe/arvevaluatortest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-zip-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-zip-test@exe/arvziptest.c.o' -MF 'tests/59830eb@@arv-zip-test@exe/arvziptest.c.o.d' -o 'tests/59830eb@@arv-zip-test@exe/arvziptest.c.o' -c ../tests/arvziptest.c",
+    "file": "../tests/arvziptest.c",
+    "output": "tests/59830eb@@arv-zip-test@exe/arvziptest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-chunk-parser-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-chunk-parser-test@exe/arvchunkparsertest.c.o' -MF 'tests/59830eb@@arv-chunk-parser-test@exe/arvchunkparsertest.c.o.d' -o 'tests/59830eb@@arv-chunk-parser-test@exe/arvchunkparsertest.c.o' -c ../tests/arvchunkparsertest.c",
+    "file": "../tests/arvchunkparsertest.c",
+    "output": "tests/59830eb@@arv-chunk-parser-test@exe/arvchunkparsertest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-heartbeat-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-heartbeat-test@exe/arvheartbeattest.c.o' -MF 'tests/59830eb@@arv-heartbeat-test@exe/arvheartbeattest.c.o.d' -o 'tests/59830eb@@arv-heartbeat-test@exe/arvheartbeattest.c.o' -c ../tests/arvheartbeattest.c",
+    "file": "../tests/arvheartbeattest.c",
+    "output": "tests/59830eb@@arv-heartbeat-test@exe/arvheartbeattest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-acquisition-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-acquisition-test@exe/arvacquisitiontest.c.o' -MF 'tests/59830eb@@arv-acquisition-test@exe/arvacquisitiontest.c.o.d' -o 'tests/59830eb@@arv-acquisition-test@exe/arvacquisitiontest.c.o' -c ../tests/arvacquisitiontest.c",
+    "file": "../tests/arvacquisitiontest.c",
+    "output": "tests/59830eb@@arv-acquisition-test@exe/arvacquisitiontest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-example@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-example@exe/arvexample.c.o' -MF 'tests/59830eb@@arv-example@exe/arvexample.c.o.d' -o 'tests/59830eb@@arv-example@exe/arvexample.c.o' -c ../tests/arvexample.c",
+    "file": "../tests/arvexample.c",
+    "output": "tests/59830eb@@arv-example@exe/arvexample.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-auto-packet-size-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-auto-packet-size-test@exe/arvautopacketsizetest.c.o' -MF 'tests/59830eb@@arv-auto-packet-size-test@exe/arvautopacketsizetest.c.o.d' -o 'tests/59830eb@@arv-auto-packet-size-test@exe/arvautopacketsizetest.c.o' -c ../tests/arvautopacketsizetest.c",
+    "file": "../tests/arvautopacketsizetest.c",
+    "output": "tests/59830eb@@arv-auto-packet-size-test@exe/arvautopacketsizetest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-device-scan-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-device-scan-test@exe/arvdevicescantest.c.o' -MF 'tests/59830eb@@arv-device-scan-test@exe/arvdevicescantest.c.o.d' -o 'tests/59830eb@@arv-device-scan-test@exe/arvdevicescantest.c.o' -c ../tests/arvdevicescantest.c",
+    "file": "../tests/arvdevicescantest.c",
+    "output": "tests/59830eb@@arv-device-scan-test@exe/arvdevicescantest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@arv-roi-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@arv-roi-test@exe/arvroitest.c.o' -MF 'tests/59830eb@@arv-roi-test@exe/arvroitest.c.o.d' -o 'tests/59830eb@@arv-roi-test@exe/arvroitest.c.o' -c ../tests/arvroitest.c",
+    "file": "../tests/arvroitest.c",
+    "output": "tests/59830eb@@arv-roi-test@exe/arvroitest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@time-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@time-test@exe/timetest.c.o' -MF 'tests/59830eb@@time-test@exe/timetest.c.o.d' -o 'tests/59830eb@@time-test@exe/timetest.c.o' -c ../tests/timetest.c",
+    "file": "../tests/timetest.c",
+    "output": "tests/59830eb@@time-test@exe/timetest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@load-http-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@load-http-test@exe/loadhttptest.c.o' -MF 'tests/59830eb@@load-http-test@exe/loadhttptest.c.o.d' -o 'tests/59830eb@@load-http-test@exe/loadhttptest.c.o' -c ../tests/loadhttptest.c",
+    "file": "../tests/loadhttptest.c",
+    "output": "tests/59830eb@@load-http-test@exe/loadhttptest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "c++ -Itests/59830eb@@cpp-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wnon-virtual-dtor -g -pthread -MD -MQ 'tests/59830eb@@cpp-test@exe/cpp.cc.o' -MF 'tests/59830eb@@cpp-test@exe/cpp.cc.o.d' -o 'tests/59830eb@@cpp-test@exe/cpp.cc.o' -c ../tests/cpp.cc",
+    "file": "../tests/cpp.cc",
+    "output": "tests/59830eb@@cpp-test@exe/cpp.cc.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Itests/59830eb@@realtime-test@exe -Itests -I../tests -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread -MD -MQ 'tests/59830eb@@realtime-test@exe/realtimetest.c.o' -MF 'tests/59830eb@@realtime-test@exe/realtimetest.c.o.d' -o 'tests/59830eb@@realtime-test@exe/realtimetest.c.o' -c ../tests/realtimetest.c",
+    "file": "../tests/realtimetest.c",
+    "output": "tests/59830eb@@realtime-test@exe/realtimetest.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Iviewer/d35ca50@@arv-viewer-0.8@exe -Iviewer -I../viewer -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gstreamer-1.0 -I/usr/include/orc-0.4 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread '-DARAVIS_LOCALE_DIR=\"/usr/local/share/locale\"' '-DARAVIS_GETTEXT=\"aravis-0.8\"' -MD -MQ 'viewer/d35ca50@@arv-viewer-0.8@exe/meson-generated_.._arvviewerresources.c.o' -MF 'viewer/d35ca50@@arv-viewer-0.8@exe/meson-generated_.._arvviewerresources.c.o.d' -o 'viewer/d35ca50@@arv-viewer-0.8@exe/meson-generated_.._arvviewerresources.c.o' -c viewer/arvviewerresources.c",
+    "file": "viewer/arvviewerresources.c",
+    "output": "viewer/d35ca50@@arv-viewer-0.8@exe/meson-generated_.._arvviewerresources.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Iviewer/d35ca50@@arv-viewer-0.8@exe -Iviewer -I../viewer -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gstreamer-1.0 -I/usr/include/orc-0.4 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread '-DARAVIS_LOCALE_DIR=\"/usr/local/share/locale\"' '-DARAVIS_GETTEXT=\"aravis-0.8\"' -MD -MQ 'viewer/d35ca50@@arv-viewer-0.8@exe/main.c.o' -MF 'viewer/d35ca50@@arv-viewer-0.8@exe/main.c.o.d' -o 'viewer/d35ca50@@arv-viewer-0.8@exe/main.c.o' -c ../viewer/main.c",
+    "file": "../viewer/main.c",
+    "output": "viewer/d35ca50@@arv-viewer-0.8@exe/main.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Iviewer/d35ca50@@arv-viewer-0.8@exe -Iviewer -I../viewer -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -I/usr/include/at-spi2-atk/2.0 -I/usr/include/at-spi-2.0 -I/usr/include/dbus-1.0 -I/usr/lib/x86_64-linux-gnu/dbus-1.0/include -I/usr/include/gtk-3.0 -I/usr/include/gio-unix-2.0 -I/usr/include/pango-1.0 -I/usr/include/fribidi -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/uuid -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gstreamer-1.0 -I/usr/include/orc-0.4 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -pthread '-DARAVIS_LOCALE_DIR=\"/usr/local/share/locale\"' '-DARAVIS_GETTEXT=\"aravis-0.8\"' -MD -MQ 'viewer/d35ca50@@arv-viewer-0.8@exe/arvviewer.c.o' -MF 'viewer/d35ca50@@arv-viewer-0.8@exe/arvviewer.c.o.d' -o 'viewer/d35ca50@@arv-viewer-0.8@exe/arvviewer.c.o' -c ../viewer/arvviewer.c",
+    "file": "../viewer/arvviewer.c",
+    "output": "viewer/d35ca50@@arv-viewer-0.8@exe/arvviewer.c.o"
+  },
+  {
+    "directory": "/home/yulong/Documents/aravis-0.8.20/build",
+    "command": "cc -Igst/b408f4a@@gstaravis.0.8@sha -Igst -I../gst -Isrc -I../src -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/libxml2 -I/usr/include/libusb-1.0 -I/usr/include/gstreamer-1.0 -fdiagnostics-color=always -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -g -Wduplicated-branches -Wimplicit-fallthrough -Wmisleading-indentation -Wstrict-prototypes -Wunused -Wunused-variable -Wdeclaration-after-statement -Wformat=2 -Wimplicit-function-declaration -Winit-self -Wmissing-include-dirs -Wmissing-prototypes -Wpointer-arith -Wformat-nonliteral -Wmaybe-uninitialized -fvisibility=hidden -fPIC -pthread -DPACKAGE_LOCALE_DIR=/usr/local '-DG_LOG_DOMAIN=\"Aravis\"' -MD -MQ 'gst/b408f4a@@gstaravis.0.8@sha/gstaravis.c.o' -MF 'gst/b408f4a@@gstaravis.0.8@sha/gstaravis.c.o.d' -o 'gst/b408f4a@@gstaravis.0.8@sha/gstaravis.c.o' -c ../gst/gstaravis.c",
+    "file": "../gst/gstaravis.c",
+    "output": "gst/b408f4a@@gstaravis.0.8@sha/gstaravis.c.o"
+  }
+]

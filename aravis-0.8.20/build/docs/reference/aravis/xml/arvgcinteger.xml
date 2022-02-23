@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcInteger">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcInteger.top_of_page">ArvGcInteger</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcInteger</refname>
+<refpurpose>Integer interface</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcInteger.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-integer-get-value">arv_gc_integer_get_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-integer-set-value">arv_gc_integer_set_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-integer-get-min">arv_gc_integer_get_min</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-integer-get-max">arv_gc_integer_get_max</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-integer-get-inc">arv_gc_integer_get_inc</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcRepresentation"><returnvalue>ArvGcRepresentation</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-integer-get-representation">arv_gc_integer_get_representation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-integer-get-unit">arv_gc_integer_get_unit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-integer-impose-min">arv_gc_integer_impose_min</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-integer-impose-max">arv_gc_integer_impose_max</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcInteger.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcInteger-struct">ArvGcInteger</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcInteger.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcInteger
+</screen>
+</refsect1>
+<refsect1 id="ArvGcInteger.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+ArvGcInteger requires
+ <link linkend="GObject">GObject</link>.</para>
+
+</refsect1>
+<refsect1 id="ArvGcInteger.implementations" role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+ArvGcInteger is implemented by
+ <link linkend="ArvGcEnumeration">ArvGcEnumeration</link>,  <link linkend="ArvGcIntConverterNode">ArvGcIntConverterNode</link>,  <link linkend="ArvGcIntRegNode">ArvGcIntRegNode</link>,  <link linkend="ArvGcIntSwissKnifeNode">ArvGcIntSwissKnifeNode</link>,  <link linkend="ArvGcIntegerNode">ArvGcIntegerNode</link>,  <link linkend="ArvGcMaskedIntRegNode">ArvGcMaskedIntRegNode</link> and  <link linkend="ArvGcStructEntryNode">ArvGcStructEntryNode</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvGcInteger.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcInteger.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-integer-get-value" role="function">
+<title>arv_gc_integer_get_value&#160;()</title>
+<indexterm zone="arv-gc-integer-get-value"><primary>arv_gc_integer_get_value</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_gc_integer_get_value (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>,
+                          <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-integer-set-value" role="function">
+<title>arv_gc_integer_set_value&#160;()</title>
+<indexterm zone="arv-gc-integer-set-value"><primary>arv_gc_integer_set_value</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_integer_set_value (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>,
+                          <parameter><link linkend="gint64"><type>gint64</type></link> value</parameter>,
+                          <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-integer-get-min" role="function">
+<title>arv_gc_integer_get_min&#160;()</title>
+<indexterm zone="arv-gc-integer-get-min"><primary>arv_gc_integer_get_min</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_gc_integer_get_min (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>,
+                        <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-integer-get-max" role="function">
+<title>arv_gc_integer_get_max&#160;()</title>
+<indexterm zone="arv-gc-integer-get-max"><primary>arv_gc_integer_get_max</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_gc_integer_get_max (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>,
+                        <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-integer-get-inc" role="function">
+<title>arv_gc_integer_get_inc&#160;()</title>
+<indexterm zone="arv-gc-integer-get-inc"><primary>arv_gc_integer_get_inc</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_gc_integer_get_inc (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>,
+                        <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-integer-get-representation" role="function">
+<title>arv_gc_integer_get_representation&#160;()</title>
+<indexterm zone="arv-gc-integer-get-representation"><primary>arv_gc_integer_get_representation</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcRepresentation"><returnvalue>ArvGcRepresentation</returnvalue></link>
+arv_gc_integer_get_representation (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>);</programlisting>
+<para>Get number representation format.</para>
+<refsect3 id="arv-gc-integer-get-representation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gc_integer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcInteger"><type>ArvGcInteger</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-integer-get-representation.returns" role="returns">
+<title>Returns</title>
+<para> Number representation format as <link linkend="ArvGcRepresentation"><type>ArvGcRepresentation</type></link>.</para>
+</refsect3></refsect2>
+<refsect2 id="arv-gc-integer-get-unit" role="function">
+<title>arv_gc_integer_get_unit&#160;()</title>
+<indexterm zone="arv-gc-integer-get-unit"><primary>arv_gc_integer_get_unit</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_integer_get_unit (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-integer-impose-min" role="function">
+<title>arv_gc_integer_impose_min&#160;()</title>
+<indexterm zone="arv-gc-integer-impose-min"><primary>arv_gc_integer_impose_min</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_integer_impose_min (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>,
+                           <parameter><link linkend="gint64"><type>gint64</type></link> minimum</parameter>,
+                           <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-integer-impose-max" role="function">
+<title>arv_gc_integer_impose_max&#160;()</title>
+<indexterm zone="arv-gc-integer-impose-max"><primary>arv_gc_integer_impose_max</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_integer_impose_max (<parameter><link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> *gc_integer</parameter>,
+                           <parameter><link linkend="gint64"><type>gint64</type></link> maximum</parameter>,
+                           <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcInteger.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcInteger-struct" role="struct">
+<title>ArvGcInteger</title>
+<indexterm zone="ArvGcInteger-struct"><primary>ArvGcInteger</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcInteger ArvGcInteger;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.6.2">
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="arv-stream-start-thread"><link linkend="arv-stream-start-thread">arv_stream_start_thread</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-stream-stop-thread"><link linkend="arv-stream-stop-thread">arv_stream_stop_thread</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

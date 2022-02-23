@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcConverter">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcConverter.top_of_page">ArvGcConverter</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcConverter</refname>
+<refpurpose>Class for Converter and IntConverter nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcConverter.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcConverter-struct">ArvGcConverter</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcConverter.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcConverter
+                        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcConverterNode">ArvGcConverterNode</link>
+                        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcIntConverterNode">ArvGcIntConverterNode</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGcConverter.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcConverter.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="ArvGcConverter.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcConverter-struct" role="struct">
+<title>ArvGcConverter</title>
+<indexterm zone="ArvGcConverter-struct"><primary>ArvGcConverter</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcConverter ArvGcConverter;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

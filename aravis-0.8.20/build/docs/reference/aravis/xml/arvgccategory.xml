@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcCategory">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcCategory.top_of_page">ArvGcCategory</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcCategory</refname>
+<refpurpose>Class for Category nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcCategory.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-category-new">arv_gc_category_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GSList"><returnvalue>GSList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-category-get-features">arv_gc_category_get_features</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcCategory.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcCategory-struct">ArvGcCategory</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcCategory.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcCategory
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGcCategory.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcCategory.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-category-new" role="function">
+<title>arv_gc_category_new&#160;()</title>
+<indexterm zone="arv-gc-category-new"><primary>arv_gc_category_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_category_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-category-get-features" role="function">
+<title>arv_gc_category_get_features&#160;()</title>
+<indexterm zone="arv-gc-category-get-features"><primary>arv_gc_category_get_features</primary></indexterm>
+<programlisting language="C">const <link linkend="GSList"><returnvalue>GSList</returnvalue></link>&#160;*
+arv_gc_category_get_features (<parameter><link linkend="ArvGcCategory"><type>ArvGcCategory</type></link> *category</parameter>);</programlisting>
+<para>Get a list of strings with the name of the features listed in the given category node.</para>
+<refsect3 id="arv-gc-category-get-features.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>category</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcCategory"><type>ArvGcCategory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-category-get-features.returns" role="returns">
+<title>Returns</title>
+<para>a list of strings. </para>
+<para><emphasis role="annotation">[<acronym>element-type</acronym> utf8][<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcCategory.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcCategory-struct" role="struct">
+<title>ArvGcCategory</title>
+<indexterm zone="ArvGcCategory-struct"><primary>ArvGcCategory</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcCategory ArvGcCategory;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

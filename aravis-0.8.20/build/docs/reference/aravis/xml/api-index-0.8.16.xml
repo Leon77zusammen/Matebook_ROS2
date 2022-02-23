@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.8.16">
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-get-float-increment"><link linkend="arv-camera-get-float-increment">arv_camera_get_float_increment</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="arv-device-get-float-feature-increment"><link linkend="arv-device-get-float-feature-increment">arv_device_get_float_feature_increment</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

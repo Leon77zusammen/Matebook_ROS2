@@ -1,0 +1,269 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvEvaluator">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvEvaluator.top_of_page">ArvEvaluator</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvEvaluator</refname>
+<refpurpose>A math expression evaluator with Genicam syntax</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvEvaluator.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvEvaluator"><returnvalue>ArvEvaluator</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-evaluator-new">arv_evaluator_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-evaluator-set-expression">arv_evaluator_set_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-evaluator-get-expression">arv_evaluator_get_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-evaluator-get-constant">arv_evaluator_get_constant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-evaluator-get-sub-expression">arv_evaluator_get_sub_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-evaluator-set-constant">arv_evaluator_set_constant</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-evaluator-set-sub-expression">arv_evaluator_set_sub_expression</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="double"><returnvalue>double</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-evaluator-evaluate-as-double">arv_evaluator_evaluate_as_double</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-evaluator-evaluate-as-int64">arv_evaluator_evaluate_as_int64</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-evaluator-set-double-variable">arv_evaluator_set_double_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-evaluator-set-int64-variable">arv_evaluator_set_int64_variable</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvEvaluator.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvEvaluator-struct">ArvEvaluator</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvEvaluator.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvEvaluator
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvEvaluator.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvEvaluator.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-evaluator-new" role="function">
+<title>arv_evaluator_new&#160;()</title>
+<indexterm zone="arv-evaluator-new"><primary>arv_evaluator_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvEvaluator"><returnvalue>ArvEvaluator</returnvalue></link>&#160;*
+arv_evaluator_new (<parameter>const <link linkend="char"><type>char</type></link> *expression</parameter>);</programlisting>
+<para>Creates a new <link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> object. The syntax is described in the genicam standard specification.</para>
+<refsect3 id="arv-evaluator-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>expression</para></entry>
+<entry role="parameter_description"><para>an evaluator expression. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-evaluator-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> object.</para>
+</refsect3></refsect2>
+<refsect2 id="arv-evaluator-set-expression" role="function">
+<title>arv_evaluator_set_expression&#160;()</title>
+<indexterm zone="arv-evaluator-set-expression"><primary>arv_evaluator_set_expression</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_evaluator_set_expression (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                              <parameter>const <link linkend="char"><type>char</type></link> *expression</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-evaluator-get-expression" role="function">
+<title>arv_evaluator_get_expression&#160;()</title>
+<indexterm zone="arv-evaluator-get-expression"><primary>arv_evaluator_get_expression</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_evaluator_get_expression (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-evaluator-get-constant" role="function" condition="since:0.6.0">
+<title>arv_evaluator_get_constant&#160;()</title>
+<indexterm zone="arv-evaluator-get-constant" role="0.6.0"><primary>arv_evaluator_get_constant</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_evaluator_get_constant (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<refsect3 id="arv-evaluator-get-constant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>evaluator</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvEvaluator"><type>ArvEvaluator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>constant name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-evaluator-get-constant.returns" role="returns">
+<title>Returns</title>
+<para> The formula of the constant corresponding to <parameter>name</parameter>
+, <link linkend="NULL:CAPS"><literal>NULL</literal></link> if not defined.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-evaluator-get-sub-expression" role="function" condition="since:0.6.0">
+<title>arv_evaluator_get_sub_expression&#160;()</title>
+<indexterm zone="arv-evaluator-get-sub-expression" role="0.6.0"><primary>arv_evaluator_get_sub_expression</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_evaluator_get_sub_expression (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                                  <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<refsect3 id="arv-evaluator-get-sub-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>evaluator</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvEvaluator"><type>ArvEvaluator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>sub-expression name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-evaluator-get-sub-expression.returns" role="returns">
+<title>Returns</title>
+<para> The formula of the sub-expression corresponding to <parameter>name</parameter>
+, <link linkend="NULL:CAPS"><literal>NULL</literal></link> if not defined.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-evaluator-set-constant" role="function" condition="since:0.6.0">
+<title>arv_evaluator_set_constant&#160;()</title>
+<indexterm zone="arv-evaluator-set-constant" role="0.6.0"><primary>arv_evaluator_set_constant</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_evaluator_set_constant (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *constant</parameter>);</programlisting>
+<para>Assign a string to a constant. If <parameter>constant</parameter>
+ == <link linkend="NULL:CAPS"><literal>NULL</literal></link>, the constant previously assigned to <parameter>name</parameter>
+ will be removed.</para>
+<refsect3 id="arv-evaluator-set-constant.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>evaluator</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvEvaluator"><type>ArvEvaluator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>constant name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>constant</para></entry>
+<entry role="parameter_description"><para>constant as a string. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-evaluator-set-sub-expression" role="function" condition="since:0.6.0">
+<title>arv_evaluator_set_sub_expression&#160;()</title>
+<indexterm zone="arv-evaluator-set-sub-expression" role="0.6.0"><primary>arv_evaluator_set_sub_expression</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_evaluator_set_sub_expression (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                                  <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                  <parameter>const <link linkend="char"><type>char</type></link> *expression</parameter>);</programlisting>
+<para>Assign a formula to a sub-expression. If <parameter>expression</parameter>
+ == <link linkend="NULL:CAPS"><literal>NULL</literal></link>, the sub-expression previously assigned to <parameter>name</parameter>
+ will be removed.
+A sub-expression may not reference another sub-expression.</para>
+<refsect3 id="arv-evaluator-set-sub-expression.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>evaluator</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvEvaluator"><type>ArvEvaluator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>sub-expression name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>expression</para></entry>
+<entry role="parameter_description"><para>sub-pexression formula. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-evaluator-evaluate-as-double" role="function">
+<title>arv_evaluator_evaluate_as_double&#160;()</title>
+<indexterm zone="arv-evaluator-evaluate-as-double"><primary>arv_evaluator_evaluate_as_double</primary></indexterm>
+<programlisting language="C"><link linkend="double"><returnvalue>double</returnvalue></link>
+arv_evaluator_evaluate_as_double (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-evaluator-evaluate-as-int64" role="function">
+<title>arv_evaluator_evaluate_as_int64&#160;()</title>
+<indexterm zone="arv-evaluator-evaluate-as-int64"><primary>arv_evaluator_evaluate_as_int64</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_evaluator_evaluate_as_int64 (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                                 <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-evaluator-set-double-variable" role="function">
+<title>arv_evaluator_set_double_variable&#160;()</title>
+<indexterm zone="arv-evaluator-set-double-variable"><primary>arv_evaluator_set_double_variable</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_evaluator_set_double_variable (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                                   <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                   <parameter><link linkend="double"><type>double</type></link> v_double</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-evaluator-set-int64-variable" role="function">
+<title>arv_evaluator_set_int64_variable&#160;()</title>
+<indexterm zone="arv-evaluator-set-int64-variable"><primary>arv_evaluator_set_int64_variable</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_evaluator_set_int64_variable (<parameter><link linkend="ArvEvaluator"><type>ArvEvaluator</type></link> *evaluator</parameter>,
+                                  <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                                  <parameter><link linkend="gint64"><type>gint64</type></link> v_int64</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvEvaluator.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvEvaluator-struct" role="struct">
+<title>ArvEvaluator</title>
+<indexterm zone="ArvEvaluator-struct"><primary>ArvEvaluator</primary></indexterm>
+<programlisting language="C">typedef struct _ArvEvaluator ArvEvaluator;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

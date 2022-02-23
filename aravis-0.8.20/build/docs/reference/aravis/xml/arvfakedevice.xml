@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvFakeDevice">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvFakeDevice.top_of_page">ArvFakeDevice</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvFakeDevice</refname>
+<refpurpose>Fake device</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvFakeDevice.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-fake-device-new">arv_fake_device_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvFakeCamera"><returnvalue>ArvFakeCamera</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-fake-device-get-fake-camera">arv_fake_device_get_fake_camera</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvFakeDevice.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="ArvFakeDevice--serial-number">serial-number</link></entry><entry role="property_flags">Write / Construct&#160;Only</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvFakeDevice.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvFakeDevice-struct">ArvFakeDevice</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvFakeDevice.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDevice">ArvDevice</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvFakeDevice
+</screen>
+</refsect1>
+<refsect1 id="ArvFakeDevice.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ArvFakeDevice implements
+ <link linkend="GInitable">GInitable</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvFakeDevice.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvFakeDevice.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-fake-device-new" role="function" condition="since:0.8.0">
+<title>arv_fake_device_new&#160;()</title>
+<indexterm zone="arv-fake-device-new" role="0.8.0"><primary>arv_fake_device_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+arv_fake_device_new (<parameter>const <link linkend="char"><type>char</type></link> *serial_number</parameter>,
+                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-fake-device-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>serial_number</para></entry>
+<entry role="parameter_description"><para>fake device serial number</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-fake-device-new.returns" role="returns">
+<title>Returns</title>
+<para> a newly created <link linkend="ArvDevice"><type>ArvDevice</type></link> simulating a real device</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-fake-device-get-fake-camera" role="function" condition="since:0.8.0">
+<title>arv_fake_device_get_fake_camera&#160;()</title>
+<indexterm zone="arv-fake-device-get-fake-camera" role="0.8.0"><primary>arv_fake_device_get_fake_camera</primary></indexterm>
+<programlisting language="C"><link linkend="ArvFakeCamera"><returnvalue>ArvFakeCamera</returnvalue></link>&#160;*
+arv_fake_device_get_fake_camera (<parameter><link linkend="ArvFakeDevice"><type>ArvFakeDevice</type></link> *device</parameter>);</programlisting>
+<refsect3 id="arv-fake-device-get-fake-camera.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a fake device</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-fake-device-get-fake-camera.returns" role="returns">
+<title>Returns</title>
+<para>the <link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> used by this device instance. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="ArvFakeDevice.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvFakeDevice-struct" role="struct">
+<title>ArvFakeDevice</title>
+<indexterm zone="ArvFakeDevice-struct"><primary>ArvFakeDevice</primary></indexterm>
+<programlisting language="C">typedef struct _ArvFakeDevice ArvFakeDevice;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvFakeDevice.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ArvFakeDevice--serial-number" role="property"><title>The <literal>“serial-number”</literal> property</title>
+<indexterm zone="ArvFakeDevice--serial-number"><primary>ArvFakeDevice:serial-number</primary></indexterm>
+<programlisting>  “serial-number”            <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>Fake device serial number.</para><para>Owner: ArvFakeDevice</para>
+<para>Flags: Write / Construct&#160;Only</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,6 @@
+GInitable GObject
+ArvGcFloat GObject
+ArvGcInteger GObject
+ArvGcString GObject
+ArvGcSelector GObject
+ArvGcRegister GObject

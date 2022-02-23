@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.8.6">
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-new-with-device"><link linkend="arv-camera-new-with-device">arv_camera_new_with_device</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="arv-device-set-range-check-policy"><link linkend="arv-device-set-range-check-policy">arv_device_set_range_check_policy</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>R</title>
+<indexentry><primaryie linkends="ArvRangeCheckPolicy"><link linkend="ArvRangeCheckPolicy">ArvRangeCheckPolicy</link>, enum in <link linkend="ArvGc">ArvGc</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

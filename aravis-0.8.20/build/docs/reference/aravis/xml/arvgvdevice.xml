@@ -1,0 +1,412 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGvDevice">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGvDevice.top_of_page">ArvGvDevice</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGvDevice</refname>
+<refpurpose>GigEVision device</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGvDevice.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gv-device-new">arv_gv_device_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-get-timestamp-tick-frequency">arv_gv_device_get_timestamp_tick_frequency</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GSocketAddress"><returnvalue>GSocketAddress</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gv-device-get-device-address">arv_gv_device_get_device_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GSocketAddress"><returnvalue>GSocketAddress</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gv-device-get-interface-address">arv_gv_device_get_interface_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-get-packet-size">arv_gv_device_get_packet_size</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-set-packet-size">arv_gv_device_set_packet_size</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-set-packet-size-adjustment">arv_gv_device_set_packet_size_adjustment</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGvStreamOption"><returnvalue>ArvGvStreamOption</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-get-stream-options">arv_gv_device_get_stream_options</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-set-stream-options">arv_gv_device_set_stream_options</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-auto-packet-size">arv_gv_device_auto_packet_size</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-take-control">arv_gv_device_take_control</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-leave-control">arv_gv_device_leave_control</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-device-is-controller">arv_gv_device_is_controller</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGvDevice.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GInetAddress"><type>GInetAddress</type></link>&#160;*</entry><entry role="property_name"><link linkend="ArvGvDevice--device-address">device-address</link></entry><entry role="property_flags">Write / Construct&#160;Only</entry></row>
+<row><entry role="property_type"><link linkend="GInetAddress"><type>GInetAddress</type></link>&#160;*</entry><entry role="property_name"><link linkend="ArvGvDevice--interface-address">interface-address</link></entry><entry role="property_flags">Write / Construct&#160;Only</entry></row>
+<row><entry role="property_type"><link linkend="ArvGvPacketSizeAdjustment"><type>ArvGvPacketSizeAdjustment</type></link></entry><entry role="property_name"><link linkend="ArvGvDevice--packet-size-adjustment">packet-size-adjustment</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGvDevice.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGvDevice-struct">ArvGvDevice</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGvDevice.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDevice">ArvDevice</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGvDevice
+</screen>
+</refsect1>
+<refsect1 id="ArvGvDevice.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ArvGvDevice implements
+ <link linkend="GInitable">GInitable</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvGvDevice.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGvDevice.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gv-device-new" role="function" condition="since:0.8.0">
+<title>arv_gv_device_new&#160;()</title>
+<indexterm zone="arv-gv-device-new" role="0.8.0"><primary>arv_gv_device_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+arv_gv_device_new (<parameter><link linkend="GInetAddress"><type>GInetAddress</type></link> *interface_address</parameter>,
+                   <parameter><link linkend="GInetAddress"><type>GInetAddress</type></link> *device_address</parameter>,
+                   <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-gv-device-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface_address</para></entry>
+<entry role="parameter_description"><para>address of the interface connected to the device</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>device_address</para></entry>
+<entry role="parameter_description"><para>device address</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gv-device-new.returns" role="returns">
+<title>Returns</title>
+<para> a newly created <link linkend="ArvDevice"><type>ArvDevice</type></link> using GigE protocol</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gv-device-get-timestamp-tick-frequency" role="function">
+<title>arv_gv_device_get_timestamp_tick_frequency&#160;()</title>
+<indexterm zone="arv-gv-device-get-timestamp-tick-frequency"><primary>arv_gv_device_get_timestamp_tick_frequency</primary></indexterm>
+<programlisting language="C"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+arv_gv_device_get_timestamp_tick_frequency
+                               (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gv-device-get-device-address" role="function" condition="since:0.2.0">
+<title>arv_gv_device_get_device_address&#160;()</title>
+<indexterm zone="arv-gv-device-get-device-address" role="0.2.0"><primary>arv_gv_device_get_device_address</primary></indexterm>
+<programlisting language="C"><link linkend="GSocketAddress"><returnvalue>GSocketAddress</returnvalue></link>&#160;*
+arv_gv_device_get_device_address (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *device</parameter>);</programlisting>
+<refsect3 id="arv-gv-device-get-device-address.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gv-device-get-device-address.returns" role="returns">
+<title>Returns</title>
+<para>the device IP address. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-gv-device-get-interface-address" role="function" condition="since:0.2.0">
+<title>arv_gv_device_get_interface_address&#160;()</title>
+<indexterm zone="arv-gv-device-get-interface-address" role="0.2.0"><primary>arv_gv_device_get_interface_address</primary></indexterm>
+<programlisting language="C"><link linkend="GSocketAddress"><returnvalue>GSocketAddress</returnvalue></link>&#160;*
+arv_gv_device_get_interface_address (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *device</parameter>);</programlisting>
+<refsect3 id="arv-gv-device-get-interface-address.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gv-device-get-interface-address.returns" role="returns">
+<title>Returns</title>
+<para>the device host interface IP address. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-gv-device-get-packet-size" role="function">
+<title>arv_gv_device_get_packet_size&#160;()</title>
+<indexterm zone="arv-gv-device-get-packet-size"><primary>arv_gv_device_get_packet_size</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gv_device_get_packet_size (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>,
+                               <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gv-device-set-packet-size" role="function">
+<title>arv_gv_device_set_packet_size&#160;()</title>
+<indexterm zone="arv-gv-device-set-packet-size"><primary>arv_gv_device_set_packet_size</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gv_device_set_packet_size (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>,
+                               <parameter><link linkend="gint"><type>gint</type></link> packet_size</parameter>,
+                               <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gv-device-set-packet-size-adjustment" role="function" condition="since:0.8.3">
+<title>arv_gv_device_set_packet_size_adjustment&#160;()</title>
+<indexterm zone="arv-gv-device-set-packet-size-adjustment" role="0.8.3"><primary>arv_gv_device_set_packet_size_adjustment</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gv_device_set_packet_size_adjustment
+                               (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>,
+                                <parameter><link linkend="ArvGvPacketSizeAdjustment"><type>ArvGvPacketSizeAdjustment</type></link> adjustment</parameter>);</programlisting>
+<para>Sets the option for the packet size adjustment happening at stream object creation. See
+<link linkend="arv-gv-device-auto-packet-size"><function>arv_gv_device_auto_packet_size()</function></link> for a description of the packet adjustment feature. The default behaviour is
+<parameter>ARV_GV_PACKET_SIZE_ADJUSTEMENT_ON_FAILURE_ONCE</parameter>
+, which means the packet size is adjusted if the current packet size
+check fails, and only the first time <link linkend="arv-device-create-stream"><function>arv_device_create_stream()</function></link> is successfully called during <parameter>gv_device</parameter>
+ instance
+life.</para>
+<refsect3 id="arv-gv-device-set-packet-size-adjustment.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gv_device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>adjustment</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvPacketSizeAdjustment"><type>ArvGvPacketSizeAdjustment</type></link> option</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.3">0.8.3</link></para></refsect2>
+<refsect2 id="arv-gv-device-get-stream-options" role="function" condition="since:0.6.0">
+<title>arv_gv_device_get_stream_options&#160;()</title>
+<indexterm zone="arv-gv-device-get-stream-options" role="0.6.0"><primary>arv_gv_device_get_stream_options</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGvStreamOption"><returnvalue>ArvGvStreamOption</returnvalue></link>
+arv_gv_device_get_stream_options (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>);</programlisting>
+<refsect3 id="arv-gv-device-get-stream-options.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gv_device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gv-device-get-stream-options.returns" role="returns">
+<title>Returns</title>
+<para> options for stream creation</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-gv-device-set-stream-options" role="function" condition="since:0.6.0">
+<title>arv_gv_device_set_stream_options&#160;()</title>
+<indexterm zone="arv-gv-device-set-stream-options" role="0.6.0"><primary>arv_gv_device_set_stream_options</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gv_device_set_stream_options (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>,
+                                  <parameter><link linkend="ArvGvStreamOption"><type>ArvGvStreamOption</type></link> options</parameter>);</programlisting>
+<para>Sets the option used during stream creation. It must be called before <link linkend="arv-device-create-stream"><function>arv_device_create_stream()</function></link>.</para>
+<refsect3 id="arv-gv-device-set-stream-options.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gv_device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>options</para></entry>
+<entry role="parameter_description"><para>options for stream creation</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-gv-device-auto-packet-size" role="function" condition="since:0.6.0">
+<title>arv_gv_device_auto_packet_size&#160;()</title>
+<indexterm zone="arv-gv-device-auto-packet-size" role="0.6.0"><primary>arv_gv_device_auto_packet_size</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+arv_gv_device_auto_packet_size (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Automatically determine the biggest packet size that can be used data streaming, and set GevSCPSPacketSize value
+accordingly. This function relies on the GevSCPSFireTestPacket feature.</para>
+<refsect3 id="arv-gv-device-auto-packet-size.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gv_device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gv-device-auto-packet-size.returns" role="returns">
+<title>Returns</title>
+<para> The automatic packet size, in bytes, or the current one if GevSCPSFireTestPacket is not supported.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-gv-device-take-control" role="function" condition="since:0.8.3">
+<title>arv_gv_device_take_control&#160;()</title>
+<indexterm zone="arv-gv-device-take-control" role="0.8.3"><primary>arv_gv_device_take_control</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gv_device_take_control (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>,
+                            <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-gv-device-take-control.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gv_device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gv-device-take-control.returns" role="returns">
+<title>Returns</title>
+<para> whether the control was successfully acquired</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.3">0.8.3</link></para></refsect2>
+<refsect2 id="arv-gv-device-leave-control" role="function" condition="since:0.8.3">
+<title>arv_gv_device_leave_control&#160;()</title>
+<indexterm zone="arv-gv-device-leave-control" role="0.8.3"><primary>arv_gv_device_leave_control</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gv_device_leave_control (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>,
+                             <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-gv-device-leave-control.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gv_device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gv-device-leave-control.returns" role="returns">
+<title>Returns</title>
+<para> whether the control was successfully relinquished</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.3">0.8.3</link></para></refsect2>
+<refsect2 id="arv-gv-device-is-controller" role="function" condition="since:0.8.0">
+<title>arv_gv_device_is_controller&#160;()</title>
+<indexterm zone="arv-gv-device-is-controller" role="0.8.0"><primary>arv_gv_device_is_controller</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gv_device_is_controller (<parameter><link linkend="ArvGvDevice"><type>ArvGvDevice</type></link> *gv_device</parameter>);</programlisting>
+<refsect3 id="arv-gv-device-is-controller.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gv_device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvDevice"><type>ArvGvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gv-device-is-controller.returns" role="returns">
+<title>Returns</title>
+<para> value indicating whether the ArvGvDevice has control access to the camera</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="ArvGvDevice.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGvDevice-struct" role="struct">
+<title>ArvGvDevice</title>
+<indexterm zone="ArvGvDevice-struct"><primary>ArvGvDevice</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGvDevice ArvGvDevice;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGvDevice.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ArvGvDevice--device-address" role="property"><title>The <literal>“device-address”</literal> property</title>
+<indexterm zone="ArvGvDevice--device-address"><primary>ArvGvDevice:device-address</primary></indexterm>
+<programlisting>  “device-address”           <link linkend="GInetAddress"><type>GInetAddress</type></link>&#160;*</programlisting>
+<para>The device address.</para><para>Owner: ArvGvDevice</para>
+<para>Flags: Write / Construct&#160;Only</para>
+</refsect2>
+<refsect2 id="ArvGvDevice--interface-address" role="property"><title>The <literal>“interface-address”</literal> property</title>
+<indexterm zone="ArvGvDevice--interface-address"><primary>ArvGvDevice:interface-address</primary></indexterm>
+<programlisting>  “interface-address”        <link linkend="GInetAddress"><type>GInetAddress</type></link>&#160;*</programlisting>
+<para>The address of the interface connected to the device.</para><para>Owner: ArvGvDevice</para>
+<para>Flags: Write / Construct&#160;Only</para>
+</refsect2>
+<refsect2 id="ArvGvDevice--packet-size-adjustment" role="property"><title>The <literal>“packet-size-adjustment”</literal> property</title>
+<indexterm zone="ArvGvDevice--packet-size-adjustment"><primary>ArvGvDevice:packet-size-adjustment</primary></indexterm>
+<programlisting>  “packet-size-adjustment”   <link linkend="ArvGvPacketSizeAdjustment"><type>ArvGvPacketSizeAdjustment</type></link></programlisting>
+<para>Packet size adjustment option.</para><para>Owner: ArvGvDevice</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Default value: ARV_GV_PACKET_SIZE_ADJUSTMENT_ON_FAILURE_ONCE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

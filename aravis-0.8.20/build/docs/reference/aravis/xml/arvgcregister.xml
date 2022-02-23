@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcRegister">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcRegister.top_of_page">ArvGcRegister</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcRegister</refname>
+<refpurpose>Register interface</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcRegister.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-get">arv_gc_register_get</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-get-address">arv_gc_register_get_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-get-length">arv_gc_register_get_length</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-register-set">arv_gc_register_set</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcRegister.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcRegister-struct">ArvGcRegister</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcRegister.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcRegister
+</screen>
+</refsect1>
+<refsect1 id="ArvGcRegister.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+ArvGcRegister requires
+ <link linkend="GObject">GObject</link>.</para>
+
+</refsect1>
+<refsect1 id="ArvGcRegister.implementations" role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+ArvGcRegister is implemented by
+ <link linkend="ArvGcFloatRegNode">ArvGcFloatRegNode</link>,  <link linkend="ArvGcIntRegNode">ArvGcIntRegNode</link>,  <link linkend="ArvGcMaskedIntRegNode">ArvGcMaskedIntRegNode</link>,  <link linkend="ArvGcRegisterNode">ArvGcRegisterNode</link>,  <link linkend="ArvGcStringRegNode">ArvGcStringRegNode</link>,  <link linkend="ArvGcStructEntryNode">ArvGcStructEntryNode</link> and  <link linkend="ArvGcStructRegNode">ArvGcStructRegNode</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvGcRegister.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcRegister.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-register-get" role="function">
+<title>arv_gc_register_get&#160;()</title>
+<indexterm zone="arv-gc-register-get"><primary>arv_gc_register_get</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_register_get (<parameter><link linkend="ArvGcRegister"><type>ArvGcRegister</type></link> *gc_register</parameter>,
+                     <parameter><link linkend="void"><type>void</type></link> *buffer</parameter>,
+                     <parameter><link linkend="guint64"><type>guint64</type></link> length</parameter>,
+                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-register-get-address" role="function">
+<title>arv_gc_register_get_address&#160;()</title>
+<indexterm zone="arv-gc-register-get-address"><primary>arv_gc_register_get_address</primary></indexterm>
+<programlisting language="C"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+arv_gc_register_get_address (<parameter><link linkend="ArvGcRegister"><type>ArvGcRegister</type></link> *gc_register</parameter>,
+                             <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-register-get-length" role="function">
+<title>arv_gc_register_get_length&#160;()</title>
+<indexterm zone="arv-gc-register-get-length"><primary>arv_gc_register_get_length</primary></indexterm>
+<programlisting language="C"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+arv_gc_register_get_length (<parameter><link linkend="ArvGcRegister"><type>ArvGcRegister</type></link> *gc_register</parameter>,
+                            <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-register-set" role="function">
+<title>arv_gc_register_set&#160;()</title>
+<indexterm zone="arv-gc-register-set"><primary>arv_gc_register_set</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_register_set (<parameter><link linkend="ArvGcRegister"><type>ArvGcRegister</type></link> *gc_register</parameter>,
+                     <parameter>const <link linkend="void"><type>void</type></link> *buffer</parameter>,
+                     <parameter><link linkend="guint64"><type>guint64</type></link> length</parameter>,
+                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcRegister.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcRegister-struct" role="struct">
+<title>ArvGcRegister</title>
+<indexterm zone="ArvGcRegister-struct"><primary>ArvGcRegister</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcRegister ArvGcRegister;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

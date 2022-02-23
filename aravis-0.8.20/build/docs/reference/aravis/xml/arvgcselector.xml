@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcSelector">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcSelector.top_of_page">ArvGcSelector</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcSelector</refname>
+<refpurpose>Selector interface</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcSelector.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="GSList"><returnvalue>GSList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-selector-get-selected-features">arv_gc_selector_get_selected_features</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-selector-is-selector">arv_gc_selector_is_selector</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcSelector.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcSelector-struct">ArvGcSelector</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcSelector.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcSelector
+</screen>
+</refsect1>
+<refsect1 id="ArvGcSelector.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+ArvGcSelector requires
+ <link linkend="GObject">GObject</link>.</para>
+
+</refsect1>
+<refsect1 id="ArvGcSelector.implementations" role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+ArvGcSelector is implemented by
+ <link linkend="ArvGcEnumeration">ArvGcEnumeration</link>,  <link linkend="ArvGcIntRegNode">ArvGcIntRegNode</link>,  <link linkend="ArvGcIntegerNode">ArvGcIntegerNode</link> and  <link linkend="ArvGcMaskedIntRegNode">ArvGcMaskedIntRegNode</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvGcSelector.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcSelector.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-selector-get-selected-features" role="function" condition="since:0.8.0">
+<title>arv_gc_selector_get_selected_features&#160;()</title>
+<indexterm zone="arv-gc-selector-get-selected-features" role="0.8.0"><primary>arv_gc_selector_get_selected_features</primary></indexterm>
+<programlisting language="C">const <link linkend="GSList"><returnvalue>GSList</returnvalue></link>&#160;*
+arv_gc_selector_get_selected_features (<parameter><link linkend="ArvGcSelector"><type>ArvGcSelector</type></link> *gc_selector</parameter>);</programlisting>
+<refsect3 id="arv-gc-selector-get-selected-features.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gc_selector</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcSelector"><type>ArvGcSelector</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-selector-get-selected-features.returns" role="returns">
+<title>Returns</title>
+<para>a list of selected <link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>element-type</acronym> ArvGcFeatureNode][<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-selector-is-selector" role="function" condition="since:0.8.0">
+<title>arv_gc_selector_is_selector&#160;()</title>
+<indexterm zone="arv-gc-selector-is-selector" role="0.8.0"><primary>arv_gc_selector_is_selector</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gc_selector_is_selector (<parameter><link linkend="ArvGcSelector"><type>ArvGcSelector</type></link> *gc_selector</parameter>);</programlisting>
+<refsect3 id="arv-gc-selector-is-selector.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gc_selector</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcSelector"><type>ArvGcSelector</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-selector-is-selector.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if this node is a selector, i.e. it has pSelected childs.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcSelector.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcSelector-struct" role="struct">
+<title>ArvGcSelector</title>
+<indexterm zone="ArvGcSelector-struct"><primary>ArvGcSelector</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcSelector ArvGcSelector;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

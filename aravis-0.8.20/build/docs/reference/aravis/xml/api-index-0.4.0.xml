@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.4.0">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="arv-buffer-get-chunk-data"><link linkend="arv-buffer-get-chunk-data">arv_buffer_get_chunk_data</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-data"><link linkend="arv-buffer-get-data">arv_buffer_get_data</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-image-height"><link linkend="arv-buffer-get-image-height">arv_buffer_get_image_height</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-image-pixel-format"><link linkend="arv-buffer-get-image-pixel-format">arv_buffer_get_image_pixel_format</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-image-region"><link linkend="arv-buffer-get-image-region">arv_buffer_get_image_region</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-image-width"><link linkend="arv-buffer-get-image-width">arv_buffer_get_image_width</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-image-x"><link linkend="arv-buffer-get-image-x">arv_buffer_get_image_x</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-image-y"><link linkend="arv-buffer-get-image-y">arv_buffer_get_image_y</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-payload-type"><link linkend="arv-buffer-get-payload-type">arv_buffer_get_payload_type</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-status"><link linkend="arv-buffer-get-status">arv_buffer_get_status</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-timestamp"><link linkend="arv-buffer-get-timestamp">arv_buffer_get_timestamp</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-get-user-data"><link linkend="arv-buffer-get-user-data">arv_buffer_get_user_data</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-set-timestamp"><link linkend="arv-buffer-set-timestamp">arv_buffer_set_timestamp</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-create-chunk-parser"><link linkend="arv-camera-create-chunk-parser">arv_camera_create_chunk_parser</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-is-gv-device"><link linkend="arv-camera-is-gv-device">arv_camera_is_gv_device</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-chunk-parser-new"><link linkend="arv-chunk-parser-new">arv_chunk_parser_new</link>, function in <link linkend="ArvChunkParser">ArvChunkParser</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>D</title>
+<indexentry><primaryie linkends="arv-device-create-chunk-parser"><link linkend="arv-device-create-chunk-parser">arv_device_create_chunk_parser</link>, function in <link linkend="ArvDevice">ArvDevice</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>M</title>
+<indexentry><primaryie linkends="arv-make-thread-high-priority"><link linkend="arv-make-thread-high-priority">arv_make_thread_high_priority</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-make-thread-realtime"><link linkend="arv-make-thread-realtime">arv_make_thread_realtime</link>, function in <link linkend="ArvStream">ArvStream</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>S</title>
+<indexentry><primaryie linkends="arv-str-strip"><link linkend="arv-str-strip">arv_str_strip</link>, function in <link linkend="aravis-ArvStr">ArvStr</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

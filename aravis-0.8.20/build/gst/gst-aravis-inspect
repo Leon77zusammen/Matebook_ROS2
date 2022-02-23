@@ -1,0 +1,3 @@
+#!/bin/sh
+
+gst-inspect-1.0 --gst-plugin-load=/home/yulong/Documents/aravis-0.8.20/build/gst/libgstaravis.0.8.so $*

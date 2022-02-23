@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.8.8">
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-are-chunks-available"><link linkend="arv-camera-are-chunks-available">arv_camera_are_chunks_available</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-get-device-serial-number"><link linkend="arv-camera-get-device-serial-number">arv_camera_get_device_serial_number</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-set-range-check-policy"><link linkend="arv-camera-set-range-check-policy">arv_camera_set_range_check_policy</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-set-register-cache-policy"><link linkend="arv-camera-set-register-cache-policy">arv_camera_set_register_cache_policy</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="ArvGcStreamable"><link linkend="ArvGcStreamable">ArvGcStreamable</link>, enum in <link linkend="ArvGc">ArvGc</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

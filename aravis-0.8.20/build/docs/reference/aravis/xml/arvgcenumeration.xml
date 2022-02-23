@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcEnumeration">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcEnumeration.top_of_page">ArvGcEnumeration</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcEnumeration</refname>
+<refpurpose>Class for Enumeration nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcEnumeration.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-new">arv_gc_enumeration_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-get-string-value">arv_gc_enumeration_get_string_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-set-string-value">arv_gc_enumeration_set_string_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-get-int-value">arv_gc_enumeration_get_int_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-set-int-value">arv_gc_enumeration_set_int_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GSList"><returnvalue>GSList</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-get-entries">arv_gc_enumeration_get_entries</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-dup-available-int-values">arv_gc_enumeration_dup_available_int_values</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;**
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-dup-available-string-values">arv_gc_enumeration_dup_available_string_values</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;**
+</entry><entry role="function_name"><link linkend="arv-gc-enumeration-dup-available-display-names">arv_gc_enumeration_dup_available_display_names</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcEnumeration.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcEnumeration-struct">ArvGcEnumeration</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcEnumeration.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcEnumeration
+</screen>
+</refsect1>
+<refsect1 id="ArvGcEnumeration.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ArvGcEnumeration implements
+ <link linkend="ArvGcInteger">ArvGcInteger</link>,  <link linkend="ArvGcString">ArvGcString</link> and  <link linkend="ArvGcSelector">ArvGcSelector</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvGcEnumeration.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcEnumeration.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-enumeration-new" role="function">
+<title>arv_gc_enumeration_new&#160;()</title>
+<indexterm zone="arv-gc-enumeration-new"><primary>arv_gc_enumeration_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_enumeration_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-enumeration-get-string-value" role="function">
+<title>arv_gc_enumeration_get_string_value&#160;()</title>
+<indexterm zone="arv-gc-enumeration-get-string-value"><primary>arv_gc_enumeration_get_string_value</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_enumeration_get_string_value (<parameter><link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link> *enumeration</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-enumeration-set-string-value" role="function">
+<title>arv_gc_enumeration_set_string_value&#160;()</title>
+<indexterm zone="arv-gc-enumeration-set-string-value"><primary>arv_gc_enumeration_set_string_value</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gc_enumeration_set_string_value (<parameter><link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link> *enumeration</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *value</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-enumeration-get-int-value" role="function">
+<title>arv_gc_enumeration_get_int_value&#160;()</title>
+<indexterm zone="arv-gc-enumeration-get-int-value"><primary>arv_gc_enumeration_get_int_value</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_gc_enumeration_get_int_value (<parameter><link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link> *enumeration</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-enumeration-set-int-value" role="function">
+<title>arv_gc_enumeration_set_int_value&#160;()</title>
+<indexterm zone="arv-gc-enumeration-set-int-value"><primary>arv_gc_enumeration_set_int_value</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gc_enumeration_set_int_value (<parameter><link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link> *enumeration</parameter>,
+                                  <parameter><link linkend="gint64"><type>gint64</type></link> value</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-enumeration-get-entries" role="function">
+<title>arv_gc_enumeration_get_entries&#160;()</title>
+<indexterm zone="arv-gc-enumeration-get-entries"><primary>arv_gc_enumeration_get_entries</primary></indexterm>
+<programlisting language="C">const <link linkend="GSList"><returnvalue>GSList</returnvalue></link>&#160;*
+arv_gc_enumeration_get_entries (<parameter><link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link> *enumeration</parameter>);</programlisting>
+<refsect3 id="arv-gc-enumeration-get-entries.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>enumeration</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-enumeration-get-entries.returns" role="returns">
+<title>Returns</title>
+<para>the list of enumeration entry nodes. </para>
+<para><emphasis role="annotation">[<acronym>element-type</acronym> ArvGcFeatureNode][<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-gc-enumeration-dup-available-int-values" role="function" condition="since:0.8.0">
+<title>arv_gc_enumeration_dup_available_int_values&#160;()</title>
+<indexterm zone="arv-gc-enumeration-dup-available-int-values" role="0.8.0"><primary>arv_gc_enumeration_dup_available_int_values</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>&#160;*
+arv_gc_enumeration_dup_available_int_values
+                               (<parameter><link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link> *enumeration</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *n_values</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-gc-enumeration-dup-available-int-values.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>enumeration</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_values</para></entry>
+<entry role="parameter_description"><para>the number of values. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>the error that occured, or NULL. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-enumeration-dup-available-int-values.returns" role="returns">
+<title>Returns</title>
+<para>a newly allocated array of 64 bit integers, to be freed after use using <link linkend="g-free"><function>g_free()</function></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>array</acronym> length=n_values]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-enumeration-dup-available-string-values" role="function" condition="since:0.8.0">
+<title>arv_gc_enumeration_dup_available_string_values&#160;()</title>
+<indexterm zone="arv-gc-enumeration-dup-available-string-values" role="0.8.0"><primary>arv_gc_enumeration_dup_available_string_values</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;**
+arv_gc_enumeration_dup_available_string_values
+                               (<parameter><link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link> *enumeration</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *n_values</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Create an array of all available values of <parameter>enumeration</parameter>
+, as strings.</para>
+<refsect3 id="arv-gc-enumeration-dup-available-string-values.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>enumeration</para></entry>
+<entry role="parameter_description"><para>an <link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_values</para></entry>
+<entry role="parameter_description"><para>placeholder for the number of values. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>placeholder for error, may be NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-enumeration-dup-available-string-values.returns" role="returns">
+<title>Returns</title>
+<para>an newly created array of const strings, which must freed after use using g_free,
+<link linkend="NULL:CAPS"><literal>NULL</literal></link> on error. </para>
+<para><emphasis role="annotation">[<acronym>array</acronym> length=n_values][<acronym>transfer container</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-enumeration-dup-available-display-names" role="function" condition="since:0.8.0">
+<title>arv_gc_enumeration_dup_available_display_names&#160;()</title>
+<indexterm zone="arv-gc-enumeration-dup-available-display-names" role="0.8.0"><primary>arv_gc_enumeration_dup_available_display_names</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;**
+arv_gc_enumeration_dup_available_display_names
+                               (<parameter><link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link> *enumeration</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *n_values</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Create an array of display names of all available entries.</para>
+<refsect3 id="arv-gc-enumeration-dup-available-display-names.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>enumeration</para></entry>
+<entry role="parameter_description"><para>an <link linkend="ArvGcEnumeration"><type>ArvGcEnumeration</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_values</para></entry>
+<entry role="parameter_description"><para>placeholder for the number of values. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>placeholder for error, may be NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-enumeration-dup-available-display-names.returns" role="returns">
+<title>Returns</title>
+<para>an newly created array of const strings, which must freed after use using g_free,
+<link linkend="NULL:CAPS"><literal>NULL</literal></link> on error. </para>
+<para><emphasis role="annotation">[<acronym>array</acronym> length=n_values][<acronym>transfer container</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcEnumeration.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcEnumeration-struct" role="struct">
+<title>ArvGcEnumeration</title>
+<indexterm zone="ArvGcEnumeration-struct"><primary>ArvGcEnumeration</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcEnumeration ArvGcEnumeration;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

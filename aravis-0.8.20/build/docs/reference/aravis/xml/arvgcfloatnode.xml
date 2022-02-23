@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcFloatNode">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcFloatNode.top_of_page">ArvGcFloatNode</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcFloatNode</refname>
+<refpurpose>Class for Float nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcFloatNode.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-float-node-new">arv_gc_float_node_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcFloatNode.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcFloatNode-struct">ArvGcFloatNode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcFloatNode.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcFloatNode
+</screen>
+</refsect1>
+<refsect1 id="ArvGcFloatNode.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ArvGcFloatNode implements
+ <link linkend="ArvGcFloat">ArvGcFloat</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvGcFloatNode.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGcFloatNode.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-float-node-new" role="function">
+<title>arv_gc_float_node_new&#160;()</title>
+<indexterm zone="arv-gc-float-node-new"><primary>arv_gc_float_node_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_float_node_new (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcFloatNode.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcFloatNode-struct" role="struct">
+<title>ArvGcFloatNode</title>
+<indexterm zone="ArvGcFloatNode-struct"><primary>ArvGcFloatNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcFloatNode ArvGcFloatNode;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

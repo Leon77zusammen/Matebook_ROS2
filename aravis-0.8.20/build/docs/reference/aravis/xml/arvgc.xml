@@ -1,0 +1,601 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGc">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGc.top_of_page">ArvGc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGc</refname>
+<refpurpose>Genicam root document class</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGc.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvGc"><returnvalue>ArvGc</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-new">arv_gc_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-get-node">arv_gc_get_node</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-get-device">arv_gc_get_device</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvBuffer"><returnvalue>ArvBuffer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-get-buffer">arv_gc_get_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-set-buffer">arv_gc_set_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvRangeCheckPolicy"><returnvalue>ArvRangeCheckPolicy</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-get-range-check-policy">arv_gc_get_range_check_policy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-set-range-check-policy">arv_gc_set_range_check_policy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvRegisterCachePolicy"><returnvalue>ArvRegisterCachePolicy</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-get-register-cache-policy">arv_gc_get_register_cache_policy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-set-register-cache-policy">arv_gc_set_register_cache_policy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGc-struct">ArvGc</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvRangeCheckPolicy">ArvRangeCheckPolicy</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvRegisterCachePolicy">ArvRegisterCachePolicy</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcNameSpace">ArvGcNameSpace</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcAccessMode">ArvGcAccessMode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcCachable">ArvGcCachable</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcSignedness">ArvGcSignedness</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcIsLinear">ArvGcIsLinear</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcVisibility">ArvGcVisibility</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcRepresentation">ArvGcRepresentation</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcDisplayNotation">ArvGcDisplayNotation</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGcStreamable">ArvGcStreamable</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomDocument">ArvDomDocument</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGc
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGc.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="ArvGc"><type>ArvGc</type></link> implements the root document for the storage of the Genicam feature
+nodes. It builds the node tree by parsing an xml file in the Genicam
+standard format. See http://www.genicam.org.</para>
+
+</refsect1>
+<refsect1 id="ArvGc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-new" role="function">
+<title>arv_gc_new&#160;()</title>
+<indexterm zone="arv-gc-new"><primary>arv_gc_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGc"><returnvalue>ArvGc</returnvalue></link>&#160;*
+arv_gc_new (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+            <parameter>const <link linkend="void"><type>void</type></link> *xml</parameter>,
+            <parameter><link linkend="size-t"><type>size_t</type></link> size</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-get-node" role="function">
+<title>arv_gc_get_node&#160;()</title>
+<indexterm zone="arv-gc-get-node"><primary>arv_gc_get_node</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_gc_get_node (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>,
+                 <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<para>Retrieves a genicam node by name.</para>
+<refsect3 id="arv-gc-get-node.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>genicam</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGc"><type>ArvGc</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>node name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-get-node.returns" role="returns">
+<title>Returns</title>
+<para>a <link linkend="ArvGcNode"><type>ArvGcNode</type></link>, null if not found. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-gc-get-device" role="function">
+<title>arv_gc_get_device&#160;()</title>
+<indexterm zone="arv-gc-get-device"><primary>arv_gc_get_device</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+arv_gc_get_device (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>);</programlisting>
+<para>Retrieves the device handled by this genicam interface. The device is used for register access.</para>
+<refsect3 id="arv-gc-get-device.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>genicam</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGc"><type>ArvGc</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-get-device.returns" role="returns">
+<title>Returns</title>
+<para>a <link linkend="ArvDevice"><type>ArvDevice</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-gc-get-buffer" role="function">
+<title>arv_gc_get_buffer&#160;()</title>
+<indexterm zone="arv-gc-get-buffer"><primary>arv_gc_get_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="ArvBuffer"><returnvalue>ArvBuffer</returnvalue></link>&#160;*
+arv_gc_get_buffer (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>);</programlisting>
+<para>Retrieves the binded buffer.</para>
+<refsect3 id="arv-gc-get-buffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>genicam</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGc"><type>ArvGc</type></link> object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-get-buffer.returns" role="returns">
+<title>Returns</title>
+<para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-gc-set-buffer" role="function">
+<title>arv_gc_set_buffer&#160;()</title>
+<indexterm zone="arv-gc-set-buffer"><primary>arv_gc_set_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_set_buffer (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>,
+                   <parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-get-range-check-policy" role="function">
+<title>arv_gc_get_range_check_policy&#160;()</title>
+<indexterm zone="arv-gc-get-range-check-policy"><primary>arv_gc_get_range_check_policy</primary></indexterm>
+<programlisting language="C"><link linkend="ArvRangeCheckPolicy"><returnvalue>ArvRangeCheckPolicy</returnvalue></link>
+arv_gc_get_range_check_policy (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-set-range-check-policy" role="function">
+<title>arv_gc_set_range_check_policy&#160;()</title>
+<indexterm zone="arv-gc-set-range-check-policy"><primary>arv_gc_set_range_check_policy</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_set_range_check_policy (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>,
+                               <parameter><link linkend="ArvRangeCheckPolicy"><type>ArvRangeCheckPolicy</type></link> policy</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-get-register-cache-policy" role="function">
+<title>arv_gc_get_register_cache_policy&#160;()</title>
+<indexterm zone="arv-gc-get-register-cache-policy"><primary>arv_gc_get_register_cache_policy</primary></indexterm>
+<programlisting language="C"><link linkend="ArvRegisterCachePolicy"><returnvalue>ArvRegisterCachePolicy</returnvalue></link>
+arv_gc_get_register_cache_policy (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-set-register-cache-policy" role="function">
+<title>arv_gc_set_register_cache_policy&#160;()</title>
+<indexterm zone="arv-gc-set-register-cache-policy"><primary>arv_gc_set_register_cache_policy</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_set_register_cache_policy (<parameter><link linkend="ArvGc"><type>ArvGc</type></link> *genicam</parameter>,
+                                  <parameter><link linkend="ArvRegisterCachePolicy"><type>ArvRegisterCachePolicy</type></link> policy</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGc-struct" role="struct">
+<title>ArvGc</title>
+<indexterm zone="ArvGc-struct"><primary>ArvGc</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGc ArvGc;</programlisting>
+</refsect2>
+<refsect2 id="ArvRangeCheckPolicy" role="enum" condition="since:0.8.6">
+<title>enum ArvRangeCheckPolicy</title>
+<indexterm zone="ArvRangeCheckPolicy" role="0.8.6"><primary>ArvRangeCheckPolicy</primary></indexterm>
+<refsect3 id="ArvRangeCheckPolicy.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-RANGE-CHECK-POLICY-DISABLE:CAPS">ARV_RANGE_CHECK_POLICY_DISABLE</para></entry>
+<entry role="enum_member_description"><para>never check if float or integer node value is in min/max range</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-RANGE-CHECK-POLICY-ENABLE:CAPS">ARV_RANGE_CHECK_POLICY_ENABLE</para></entry>
+<entry role="enum_member_description"><para>always check if if float or integer node is in min/max range</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-RANGE-CHECK-POLICY-DEBUG:CAPS">ARV_RANGE_CHECK_POLICY_DEBUG</para></entry>
+<entry role="enum_member_description"><para>check the value, but only display an error message if the value is not allowed (Since 0.8.8)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-RANGE-CHECK-POLICY-DEFAULT:CAPS">ARV_RANGE_CHECK_POLICY_DEFAULT</para></entry>
+<entry role="enum_member_description"><para>default range check policy</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.6">0.8.6</link></para></refsect2>
+<refsect2 id="ArvRegisterCachePolicy" role="enum" condition="since:0.8.0">
+<title>enum ArvRegisterCachePolicy</title>
+<indexterm zone="ArvRegisterCachePolicy" role="0.8.0"><primary>ArvRegisterCachePolicy</primary></indexterm>
+<refsect3 id="ArvRegisterCachePolicy.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-REGISTER-CACHE-POLICY-DISABLE:CAPS">ARV_REGISTER_CACHE_POLICY_DISABLE</para></entry>
+<entry role="enum_member_description"><para>disable register caching</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-REGISTER-CACHE-POLICY-ENABLE:CAPS">ARV_REGISTER_CACHE_POLICY_ENABLE</para></entry>
+<entry role="enum_member_description"><para>enable register caching</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-REGISTER-CACHE-POLICY-DEBUG:CAPS">ARV_REGISTER_CACHE_POLICY_DEBUG</para></entry>
+<entry role="enum_member_description"><para>enable register caching, but read the acual register value for comparison</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-REGISTER-CACHE-POLICY-DEFAULT:CAPS">ARV_REGISTER_CACHE_POLICY_DEFAULT</para></entry>
+<entry role="enum_member_description"><para>default cache policy</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="ArvGcNameSpace" role="enum">
+<title>enum ArvGcNameSpace</title>
+<indexterm zone="ArvGcNameSpace"><primary>ArvGcNameSpace</primary></indexterm>
+<para>Specifies feature node or register name space type. Standard name space features are listed in
+Genicam materials. Any other vendor-specific features should use custom name space type.</para>
+<refsect3 id="ArvGcNameSpace.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-NAME-SPACE-UNDEFINED:CAPS">ARV_GC_NAME_SPACE_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined name space</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-NAME-SPACE-STANDARD:CAPS">ARV_GC_NAME_SPACE_STANDARD</para></entry>
+<entry role="enum_member_description"><para>Genicam standardized name space</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-NAME-SPACE-CUSTOM:CAPS">ARV_GC_NAME_SPACE_CUSTOM</para></entry>
+<entry role="enum_member_description"><para>non-standardized name space</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGcAccessMode" role="enum">
+<title>enum ArvGcAccessMode</title>
+<indexterm zone="ArvGcAccessMode"><primary>ArvGcAccessMode</primary></indexterm>
+<para>Specifies access mode for feature nodes and registers.</para>
+<refsect3 id="ArvGcAccessMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-ACCESS-MODE-UNDEFINED:CAPS">ARV_GC_ACCESS_MODE_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined access mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-ACCESS-MODE-RO:CAPS">ARV_GC_ACCESS_MODE_RO</para></entry>
+<entry role="enum_member_description"><para>read-only access</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-ACCESS-MODE-WO:CAPS">ARV_GC_ACCESS_MODE_WO</para></entry>
+<entry role="enum_member_description"><para>write-only access</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-ACCESS-MODE-RW:CAPS">ARV_GC_ACCESS_MODE_RW</para></entry>
+<entry role="enum_member_description"><para>read and write access</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGcCachable" role="enum">
+<title>enum ArvGcCachable</title>
+<indexterm zone="ArvGcCachable"><primary>ArvGcCachable</primary></indexterm>
+<para>Specifies caching mode for register values.</para>
+<refsect3 id="ArvGcCachable.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-CACHABLE-UNDEFINED:CAPS">ARV_GC_CACHABLE_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined cache mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-CACHABLE-NO-CACHE:CAPS">ARV_GC_CACHABLE_NO_CACHE</para></entry>
+<entry role="enum_member_description"><para>no value caching</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-CACHABLE-WRITE-THROUGH:CAPS">ARV_GC_CACHABLE_WRITE_THROUGH</para></entry>
+<entry role="enum_member_description"><para>write-through cache mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-CACHABLE-WRITE-AROUND:CAPS">ARV_GC_CACHABLE_WRITE_AROUND</para></entry>
+<entry role="enum_member_description"><para>write-around cache mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGcSignedness" role="enum">
+<title>enum ArvGcSignedness</title>
+<indexterm zone="ArvGcSignedness"><primary>ArvGcSignedness</primary></indexterm>
+<para>Specifies signedness of integer registers. Per standard Genicam internally uses signed 64-bit
+signed integers for representing all integer registers. Therefore unsigned 64-bit integers are
+not available.</para>
+<refsect3 id="ArvGcSignedness.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-SIGNEDNESS-UNDEFINED:CAPS">ARV_GC_SIGNEDNESS_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined sign</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-SIGNEDNESS-SIGNED:CAPS">ARV_GC_SIGNEDNESS_SIGNED</para></entry>
+<entry role="enum_member_description"><para>signed integer</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-SIGNEDNESS-UNSIGNED:CAPS">ARV_GC_SIGNEDNESS_UNSIGNED</para></entry>
+<entry role="enum_member_description"><para>unsigned integer</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGcIsLinear" role="enum">
+<title>enum ArvGcIsLinear</title>
+<indexterm zone="ArvGcIsLinear"><primary>ArvGcIsLinear</primary></indexterm>
+<para>Describes relationship between TO and FROM variables in Converter feature nodes.</para>
+<refsect3 id="ArvGcIsLinear.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-IS-LINEAR-UNDEFINED:CAPS">ARV_GC_IS_LINEAR_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined relationship between variables</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-IS-LINEAR-NO:CAPS">ARV_GC_IS_LINEAR_NO</para></entry>
+<entry role="enum_member_description"><para>non-linear relationship between variables</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-IS-LINEAR-YES:CAPS">ARV_GC_IS_LINEAR_YES</para></entry>
+<entry role="enum_member_description"><para>linear relationship between variables</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGcVisibility" role="enum">
+<title>enum ArvGcVisibility</title>
+<indexterm zone="ArvGcVisibility"><primary>ArvGcVisibility</primary></indexterm>
+<para>Specifies feature node recommended visibility in user interfaces.</para>
+<refsect3 id="ArvGcVisibility.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-VISIBILITY-UNDEFINED:CAPS">ARV_GC_VISIBILITY_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined feature visibility level</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-VISIBILITY-INVISIBLE:CAPS">ARV_GC_VISIBILITY_INVISIBLE</para></entry>
+<entry role="enum_member_description"><para>feature should be not be visible in user interface</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-VISIBILITY-GURU:CAPS">ARV_GC_VISIBILITY_GURU</para></entry>
+<entry role="enum_member_description"><para>very advanced feature to be shown to very experienced users</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-VISIBILITY-EXPERT:CAPS">ARV_GC_VISIBILITY_EXPERT</para></entry>
+<entry role="enum_member_description"><para>advanced feature to be shown to expert users</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-VISIBILITY-BEGINNER:CAPS">ARV_GC_VISIBILITY_BEGINNER</para></entry>
+<entry role="enum_member_description"><para>basic feature to be shown to all users</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGcRepresentation" role="enum" condition="since:0.8.0">
+<title>enum ArvGcRepresentation</title>
+<indexterm zone="ArvGcRepresentation" role="0.8.0"><primary>ArvGcRepresentation</primary></indexterm>
+<para>Number representation formats.</para>
+<refsect3 id="ArvGcRepresentation.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-REPRESENTATION-UNDEFINED:CAPS">ARV_GC_REPRESENTATION_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined representation</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-REPRESENTATION-LINEAR:CAPS">ARV_GC_REPRESENTATION_LINEAR</para></entry>
+<entry role="enum_member_description"><para>number presented on linear scale (e.g. on a linear slider)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-REPRESENTATION-LOGARITHMIC:CAPS">ARV_GC_REPRESENTATION_LOGARITHMIC</para></entry>
+<entry role="enum_member_description"><para>number presented on logarithmic scale (e.g. on a logarithmic slider)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-REPRESENTATION-BOOLEAN:CAPS">ARV_GC_REPRESENTATION_BOOLEAN</para></entry>
+<entry role="enum_member_description"><para>binary choice (e.g. a checkbox)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-REPRESENTATION-PURE-NUMBER:CAPS">ARV_GC_REPRESENTATION_PURE_NUMBER</para></entry>
+<entry role="enum_member_description"><para>number presented in an editable field (e.g. a spinbox)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-REPRESENTATION-HEX-NUMBER:CAPS">ARV_GC_REPRESENTATION_HEX_NUMBER</para></entry>
+<entry role="enum_member_description"><para>number presented in hexadecimal format</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-REPRESENTATION-IPV4-ADDRESS:CAPS">ARV_GC_REPRESENTATION_IPV4_ADDRESS</para></entry>
+<entry role="enum_member_description"><para>IPv4 address</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-REPRESENTATION-MAC-ADDRESS:CAPS">ARV_GC_REPRESENTATION_MAC_ADDRESS</para></entry>
+<entry role="enum_member_description"><para>MAC address</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="ArvGcDisplayNotation" role="enum" condition="since:0.8.0">
+<title>enum ArvGcDisplayNotation</title>
+<indexterm zone="ArvGcDisplayNotation" role="0.8.0"><primary>ArvGcDisplayNotation</primary></indexterm>
+<para>Number display notations for showing numbers in user interfaces.</para>
+<refsect3 id="ArvGcDisplayNotation.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-DISPLAY-NOTATION-UNDEFINED:CAPS">ARV_GC_DISPLAY_NOTATION_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined number notation</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-DISPLAY-NOTATION-AUTOMATIC:CAPS">ARV_GC_DISPLAY_NOTATION_AUTOMATIC</para></entry>
+<entry role="enum_member_description"><para>automatically detect whether to use fixed or scientific number notation</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-DISPLAY-NOTATION-FIXED:CAPS">ARV_GC_DISPLAY_NOTATION_FIXED</para></entry>
+<entry role="enum_member_description"><para>used fixed (i.e. decimal) notation for displaying numbers</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-DISPLAY-NOTATION-SCIENTIFIC:CAPS">ARV_GC_DISPLAY_NOTATION_SCIENTIFIC</para></entry>
+<entry role="enum_member_description"><para>use scientific notation for displaying numbers</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="ArvGcStreamable" role="enum" condition="since:0.8.8">
+<title>enum ArvGcStreamable</title>
+<indexterm zone="ArvGcStreamable" role="0.8.8"><primary>ArvGcStreamable</primary></indexterm>
+<para>Denotes that the corresponding feature is prepared to be stored to and loaded from a file via the node tree.
+The idea is to persist the state of a camera by storing the features marked as Streamable and restore the state by
+writing those features back to the node tree.</para>
+<refsect3 id="ArvGcStreamable.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-STREAMABLE-UNDEFINED:CAPS">ARV_GC_STREAMABLE_UNDEFINED</para></entry>
+<entry role="enum_member_description"><para>undefined streamable</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-STREAMABLE-NO:CAPS">ARV_GC_STREAMABLE_NO</para></entry>
+<entry role="enum_member_description"><para>the feature can't be used for camera state persistence</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GC-STREAMABLE-YES:CAPS">ARV_GC_STREAMABLE_YES</para></entry>
+<entry role="enum_member_description"><para>the feature can be used for camera state persistence</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.8">0.8.8</link></para></refsect2>
+
+</refsect1>
+
+</refentry>

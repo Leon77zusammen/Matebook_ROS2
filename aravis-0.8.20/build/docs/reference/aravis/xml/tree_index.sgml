@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE screen PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<screen>
+    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvBuffer">ArvBuffer</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvCamera">ArvCamera</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvChunkParser">ArvChunkParser</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDevice">ArvDevice</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvFakeDevice">ArvFakeDevice</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGvDevice">ArvGvDevice</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvUvDevice">ArvUvDevice</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomCharacterData">ArvDomCharacterData</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomText">ArvDomText</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomDocumentFragment">ArvDomDocumentFragment</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomDocument">ArvDomDocument</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGc">ArvGc</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcFeatureNode">ArvGcFeatureNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcBoolean">ArvGcBoolean</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcCategory">ArvGcCategory</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcCommand">ArvGcCommand</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcConverter">ArvGcConverter</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcConverterNode">ArvGcConverterNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcIntConverterNode">ArvGcIntConverterNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcEnumEntry">ArvGcEnumEntry</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcEnumeration">ArvGcEnumeration</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcFloatNode">ArvGcFloatNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcRegisterNode">ArvGcRegisterNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcFloatRegNode">ArvGcFloatRegNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcIntRegNode">ArvGcIntRegNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcMaskedIntRegNode">ArvGcMaskedIntRegNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcStringRegNode">ArvGcStringRegNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcStructRegNode">ArvGcStructRegNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcGroupNode">ArvGcGroupNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcSwissKnife">ArvGcSwissKnife</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcIntSwissKnifeNode">ArvGcIntSwissKnifeNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcSwissKnifeNode">ArvGcSwissKnifeNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcIntegerNode">ArvGcIntegerNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcPort">ArvGcPort</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcRegisterDescriptionNode">ArvGcRegisterDescriptionNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcStringNode">ArvGcStringNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcStructEntryNode">ArvGcStructEntryNode</link>
+    <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcPropertyNode">ArvGcPropertyNode</link>
+    <phrase role="lineart">&#9474;</phrase>               <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcIndexNode">ArvGcIndexNode</link>
+    <phrase role="lineart">&#9474;</phrase>               <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcInvalidatorNode">ArvGcInvalidatorNode</link>
+    <phrase role="lineart">&#9474;</phrase>               <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcValueIndexedNode">ArvGcValueIndexedNode</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomNamedNodeMap">ArvDomNamedNodeMap</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvDomNodeList">ArvDomNodeList</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNodeChildList">ArvDomNodeChildList</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvEvaluator">ArvEvaluator</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvFakeCamera">ArvFakeCamera</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvInterface">ArvInterface</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvFakeInterface">ArvFakeInterface</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGvInterface">ArvGvInterface</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvUvInterface">ArvUvInterface</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvStream">ArvStream</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvFakeStream">ArvFakeStream</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGvStream">ArvGvStream</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvUvStream">ArvUvStream</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGvFakeCamera">ArvGvFakeCamera</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvXmlSchema">ArvXmlSchema</link>
+    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcFloat">ArvGcFloat</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcInteger">ArvGcInteger</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcString">ArvGcString</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcSelector">ArvGcSelector</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcRegister">ArvGcRegister</link>
+</screen>

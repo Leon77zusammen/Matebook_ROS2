@@ -1,0 +1,1256 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvBuffer">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvBuffer.top_of_page">ArvBuffer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvBuffer</refname>
+<refpurpose>Buffer for storage of video frames</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvBuffer.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="ArvFrameCallback">*ArvFrameCallback</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvBuffer"><returnvalue>ArvBuffer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-buffer-new">arv_buffer_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvBuffer"><returnvalue>ArvBuffer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-buffer-new-full">arv_buffer_new_full</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvBuffer"><returnvalue>ArvBuffer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-buffer-new-allocate">arv_buffer_new_allocate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-buffer-get-user-data">arv_buffer_get_user_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-buffer-get-data">arv_buffer_get_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-has-chunks">arv_buffer_has_chunks</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-buffer-get-chunk-data">arv_buffer_get_chunk_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-timestamp">arv_buffer_get_timestamp</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-set-timestamp">arv_buffer_set_timestamp</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-system-timestamp">arv_buffer_get_system_timestamp</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-set-system-timestamp">arv_buffer_set_system_timestamp</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-set-frame-id">arv_buffer_set_frame_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-frame-id">arv_buffer_get_frame_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvBufferPayloadType"><returnvalue>ArvBufferPayloadType</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-payload-type">arv_buffer_get_payload_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvBufferStatus"><returnvalue>ArvBufferStatus</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-status">arv_buffer_get_status</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-image-height">arv_buffer_get_image_height</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvPixelFormat"><returnvalue>ArvPixelFormat</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-image-pixel-format">arv_buffer_get_image_pixel_format</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-image-region">arv_buffer_get_image_region</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-image-width">arv_buffer_get_image_width</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-image-x">arv_buffer_get_image_x</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-buffer-get-image-y">arv_buffer_get_image_y</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BIT-PER-PIXEL:CAPS">ARV_PIXEL_FORMAT_BIT_PER_PIXEL</link><phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvBuffer.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvBufferStatus">ArvBufferStatus</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvBuffer-struct">ArvBuffer</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvBufferPayloadType">ArvBufferPayloadType</link></entry></row>
+<row><entry role="typedef_keyword">typedef</entry><entry role="function_name"><link linkend="ArvPixelFormat">ArvPixelFormat</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-BG-10P:CAPS">ARV_PIXEL_FORMAT_BAYER_BG_10P</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-BG-10-PACKED:CAPS">ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-BG-12P:CAPS">ARV_PIXEL_FORMAT_BAYER_BG_12P</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GB-10P:CAPS">ARV_PIXEL_FORMAT_BAYER_GB_10P</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GB-10-PACKED:CAPS">ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GB-12P:CAPS">ARV_PIXEL_FORMAT_BAYER_GB_12P</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GR-10P:CAPS">ARV_PIXEL_FORMAT_BAYER_GR_10P</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GR-10-PACKED:CAPS">ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GR-12P:CAPS">ARV_PIXEL_FORMAT_BAYER_GR_12P</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-RG-10P:CAPS">ARV_PIXEL_FORMAT_BAYER_RG_10P</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-RG-10-PACKED:CAPS">ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-RG-12P:CAPS">ARV_PIXEL_FORMAT_BAYER_RG_12P</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-BG-10:CAPS">ARV_PIXEL_FORMAT_BAYER_BG_10</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-BG-12:CAPS">ARV_PIXEL_FORMAT_BAYER_BG_12</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GR-12-PACKED:CAPS">ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GB-12-PACKED:CAPS">ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-RG-12-PACKED:CAPS">ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-BG-12-PACKED:CAPS">ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-BG-8:CAPS">ARV_PIXEL_FORMAT_BAYER_BG_8</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GB-10:CAPS">ARV_PIXEL_FORMAT_BAYER_GB_10</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GB-12:CAPS">ARV_PIXEL_FORMAT_BAYER_GB_12</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GB-8:CAPS">ARV_PIXEL_FORMAT_BAYER_GB_8</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GR-10:CAPS">ARV_PIXEL_FORMAT_BAYER_GR_10</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GR-12:CAPS">ARV_PIXEL_FORMAT_BAYER_GR_12</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GR-8:CAPS">ARV_PIXEL_FORMAT_BAYER_GR_8</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-RG-10:CAPS">ARV_PIXEL_FORMAT_BAYER_RG_10</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-RG-12:CAPS">ARV_PIXEL_FORMAT_BAYER_RG_12</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-RG-8:CAPS">ARV_PIXEL_FORMAT_BAYER_RG_8</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-BG-16:CAPS">ARV_PIXEL_FORMAT_BAYER_BG_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GB-16:CAPS">ARV_PIXEL_FORMAT_BAYER_GB_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-GR-16:CAPS">ARV_PIXEL_FORMAT_BAYER_GR_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BAYER-RG-16:CAPS">ARV_PIXEL_FORMAT_BAYER_RG_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BGRA-8-PACKED:CAPS">ARV_PIXEL_FORMAT_BGRA_8_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BGR-10-PACKED:CAPS">ARV_PIXEL_FORMAT_BGR_10_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BGR-12-PACKED:CAPS">ARV_PIXEL_FORMAT_BGR_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-BGR-8-PACKED:CAPS">ARV_PIXEL_FORMAT_BGR_8_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-12-PACKED:CAPS">ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-16:CAPS">ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-12-PACKED:CAPS">ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-16:CAPS">ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-12-PACKED:CAPS">ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-16:CAPS">ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-12-PACKED:CAPS">ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-16:CAPS">ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-CUSTOM-YUV-422-YUYV-PACKED:CAPS">ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-MONO-10:CAPS">ARV_PIXEL_FORMAT_MONO_10</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-MONO-10-PACKED:CAPS">ARV_PIXEL_FORMAT_MONO_10_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-MONO-12:CAPS">ARV_PIXEL_FORMAT_MONO_12</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-MONO-12-PACKED:CAPS">ARV_PIXEL_FORMAT_MONO_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-MONO-14:CAPS">ARV_PIXEL_FORMAT_MONO_14</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-MONO-16:CAPS">ARV_PIXEL_FORMAT_MONO_16</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-MONO-8:CAPS">ARV_PIXEL_FORMAT_MONO_8</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-MONO-8-SIGNED:CAPS">ARV_PIXEL_FORMAT_MONO_8_SIGNED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-RGBA-8-PACKED:CAPS">ARV_PIXEL_FORMAT_RGBA_8_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-RGB-10-PACKED:CAPS">ARV_PIXEL_FORMAT_RGB_10_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-RGB-10-PLANAR:CAPS">ARV_PIXEL_FORMAT_RGB_10_PLANAR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-RGB-12-PACKED:CAPS">ARV_PIXEL_FORMAT_RGB_12_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-RGB-12-PLANAR:CAPS">ARV_PIXEL_FORMAT_RGB_12_PLANAR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-RGB-16-PLANAR:CAPS">ARV_PIXEL_FORMAT_RGB_16_PLANAR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-RGB-8-PACKED:CAPS">ARV_PIXEL_FORMAT_RGB_8_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-RGB-8-PLANAR:CAPS">ARV_PIXEL_FORMAT_RGB_8_PLANAR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-YUV-411-PACKED:CAPS">ARV_PIXEL_FORMAT_YUV_411_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-YUV-422-PACKED:CAPS">ARV_PIXEL_FORMAT_YUV_422_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-YUV-422-YUYV-PACKED:CAPS">ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-PIXEL-FORMAT-YUV-444-PACKED:CAPS">ARV_PIXEL_FORMAT_YUV_444_PACKED</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvBuffer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvBuffer
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvBuffer.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="ArvBuffer"><type>ArvBuffer</type></link> provides a class for the instantiation of buffers used for the
+storage of the separate images of the video stream. The actual data space
+may either be allocated by <link linkend="ArvBuffer"><type>ArvBuffer</type></link> during an object instatiation, of
+preallocated. <link linkend="ArvBuffer"><type>ArvBuffer</type></link> also allows the transmission of image metadata,
+such as offsets and size of the transmitted region of interrest, pixel
+format and time stamp.</para>
+
+</refsect1>
+<refsect1 id="ArvBuffer.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="ArvFrameCallback" role="function">
+<title>ArvFrameCallback&#160;()</title>
+<indexterm zone="ArvFrameCallback"><primary>ArvFrameCallback</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*ArvFrameCallback<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-buffer-new" role="function" condition="since:0.2.0">
+<title>arv_buffer_new&#160;()</title>
+<indexterm zone="arv-buffer-new" role="0.2.0"><primary>arv_buffer_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvBuffer"><returnvalue>ArvBuffer</returnvalue></link>&#160;*
+arv_buffer_new (<parameter><link linkend="size-t"><type>size_t</type></link> size</parameter>,
+                <parameter><link linkend="void"><type>void</type></link> *preallocated</parameter>);</programlisting>
+<para>Creates a new buffer for the storage of the video stream images.
+The data space can be either preallocated, and the caller is responsible
+for it's deallocation, or allocated by this function. If it is the case,
+data memory will be freed when the buffer is destroyed.</para>
+<refsect3 id="arv-buffer-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>payload size</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>preallocated</para></entry>
+<entry role="parameter_description"><para>preallocated memory buffer. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="ArvBuffer"><type>ArvBuffer</type></link> object</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-buffer-new-full" role="function" condition="since:0.2.0">
+<title>arv_buffer_new_full&#160;()</title>
+<indexterm zone="arv-buffer-new-full" role="0.2.0"><primary>arv_buffer_new_full</primary></indexterm>
+<programlisting language="C"><link linkend="ArvBuffer"><returnvalue>ArvBuffer</returnvalue></link>&#160;*
+arv_buffer_new_full (<parameter><link linkend="size-t"><type>size_t</type></link> size</parameter>,
+                     <parameter><link linkend="void"><type>void</type></link> *preallocated</parameter>,
+                     <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>,
+                     <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> user_data_destroy_func</parameter>);</programlisting>
+<para>Creates a new buffer for the storage of the video stream images.
+The data space can be either preallocated, and the caller is responsible
+for it's deallocation, or allocated by this function. If it is the case,
+data memory will be freed when the buffer is destroyed.</para>
+<para>If <parameter>user_data_destroy_func</parameter>
+ is non NULL, it will be called in order to destroy
+user_data when the buffer is destroyed.</para>
+<refsect3 id="arv-buffer-new-full.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>payload size</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>preallocated</para></entry>
+<entry role="parameter_description"><para>preallocated memory buffer. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>a pointer to user data associated to this buffer. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data_destroy_func</para></entry>
+<entry role="parameter_description"><para>an optional user data destroy callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-new-full.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="ArvBuffer"><type>ArvBuffer</type></link> object</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-buffer-new-allocate" role="function" condition="since:0.2.3">
+<title>arv_buffer_new_allocate&#160;()</title>
+<indexterm zone="arv-buffer-new-allocate" role="0.2.3"><primary>arv_buffer_new_allocate</primary></indexterm>
+<programlisting language="C"><link linkend="ArvBuffer"><returnvalue>ArvBuffer</returnvalue></link>&#160;*
+arv_buffer_new_allocate (<parameter><link linkend="size-t"><type>size_t</type></link> size</parameter>);</programlisting>
+<para>Creates a new buffer for the storage of the video stream images.
+The data space is allocated by this function, and will
+be freed when the buffer is destroyed.</para>
+<refsect3 id="arv-buffer-new-allocate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>payload size</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-new-allocate.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="ArvBuffer"><type>ArvBuffer</type></link> object</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.3">0.2.3</link></para></refsect2>
+<refsect2 id="arv-buffer-get-user-data" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_user_data&#160;()</title>
+<indexterm zone="arv-buffer-get-user-data" role="0.4.0"><primary>arv_buffer_get_user_data</primary></indexterm>
+<programlisting language="C">const <link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+arv_buffer_get_user_data (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets a pointer to user data set by arv_buffer_new_full.</para>
+<refsect3 id="arv-buffer-get-user-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-user-data.returns" role="returns">
+<title>Returns</title>
+<para> user data, or NULL if not set.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-data" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_data&#160;()</title>
+<indexterm zone="arv-buffer-get-data" role="0.4.0"><primary>arv_buffer_get_data</primary></indexterm>
+<programlisting language="C">const <link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+arv_buffer_get_data (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                     <parameter><link linkend="size-t"><type>size_t</type></link> *size</parameter>);</programlisting>
+<para>Buffer data accessor.</para>
+<refsect3 id="arv-buffer-get-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>location to store data size, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-data.returns" role="returns">
+<title>Returns</title>
+<para>a pointer to the buffer data. </para>
+<para><emphasis role="annotation">[<acronym>array</acronym> length=size][<acronym>element-type</acronym> guint8]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-has-chunks" role="function" condition="since:0.8.0">
+<title>arv_buffer_has_chunks&#160;()</title>
+<indexterm zone="arv-buffer-has-chunks" role="0.8.0"><primary>arv_buffer_has_chunks</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_buffer_has_chunks (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<refsect3 id="arv-buffer-has-chunks.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-has-chunks.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if <parameter>buffer</parameter>
+has a payload type that contains chunk data.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-chunk-data" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_chunk_data&#160;()</title>
+<indexterm zone="arv-buffer-get-chunk-data" role="0.4.0"><primary>arv_buffer_get_chunk_data</primary></indexterm>
+<programlisting language="C">const <link linkend="void"><returnvalue>void</returnvalue></link>&#160;*
+arv_buffer_get_chunk_data (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                           <parameter><link linkend="guint64"><type>guint64</type></link> chunk_id</parameter>,
+                           <parameter><link linkend="size-t"><type>size_t</type></link> *size</parameter>);</programlisting>
+<para>Chunk data accessor.</para>
+<refsect3 id="arv-buffer-get-chunk-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>chunk_id</para></entry>
+<entry role="parameter_description"><para>chunk id</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>location to store chunk data size, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-chunk-data.returns" role="returns">
+<title>Returns</title>
+<para>a pointer to the chunk data. </para>
+<para><emphasis role="annotation">[<acronym>array</acronym> length=size][<acronym>element-type</acronym> guint8]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-timestamp" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_timestamp&#160;()</title>
+<indexterm zone="arv-buffer-get-timestamp" role="0.4.0"><primary>arv_buffer_get_timestamp</primary></indexterm>
+<programlisting language="C"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+arv_buffer_get_timestamp (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the buffer camera timestamp, expressed as nanoseconds. Not all devices
+provide reliable timestamp, which means sometimes its better to rely on the
+buffer completion host local time, or to use
+<link linkend="arv-buffer-get-system-timestamp"><function>arv_buffer_get_system_timestamp()</function></link>.</para>
+<refsect3 id="arv-buffer-get-timestamp.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-timestamp.returns" role="returns">
+<title>Returns</title>
+<para> buffer timestamp, in nanoseconds.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-set-timestamp" role="function" condition="since:0.4.0">
+<title>arv_buffer_set_timestamp&#160;()</title>
+<indexterm zone="arv-buffer-set-timestamp" role="0.4.0"><primary>arv_buffer_set_timestamp</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_buffer_set_timestamp (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                          <parameter><link linkend="guint64"><type>guint64</type></link> timestamp_ns</parameter>);</programlisting>
+<para>Sets the buffer timestamp, which allows to override the timpestamp set by
+the camera, which in some case is incorrect.</para>
+<refsect3 id="arv-buffer-set-timestamp.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>timestamp_ns</para></entry>
+<entry role="parameter_description"><para>a timestamp, expressed as nanoseconds</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-system-timestamp" role="function" condition="since:0.6.0">
+<title>arv_buffer_get_system_timestamp&#160;()</title>
+<indexterm zone="arv-buffer-get-system-timestamp" role="0.6.0"><primary>arv_buffer_get_system_timestamp</primary></indexterm>
+<programlisting language="C"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+arv_buffer_get_system_timestamp (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the system timestamp for when the frame was received. Expressed in
+nanoseconds.</para>
+<refsect3 id="arv-buffer-get-system-timestamp.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-system-timestamp.returns" role="returns">
+<title>Returns</title>
+<para> buffer system timestamp, in nanoseconds.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-buffer-set-system-timestamp" role="function" condition="since:0.6.0">
+<title>arv_buffer_set_system_timestamp&#160;()</title>
+<indexterm zone="arv-buffer-set-system-timestamp" role="0.6.0"><primary>arv_buffer_set_system_timestamp</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_buffer_set_system_timestamp (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                                 <parameter><link linkend="guint64"><type>guint64</type></link> timestamp_ns</parameter>);</programlisting>
+<para>Sets the system timestamp for when the frame was received. Expressed in
+nanoseconds.</para>
+<refsect3 id="arv-buffer-set-system-timestamp.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>timestamp_ns</para></entry>
+<entry role="parameter_description"><para>a timestamp, expressed as nanoseconds</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-buffer-set-frame-id" role="function" condition="since:0.8.3">
+<title>arv_buffer_set_frame_id&#160;()</title>
+<indexterm zone="arv-buffer-set-frame-id" role="0.8.3"><primary>arv_buffer_set_frame_id</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_buffer_set_frame_id (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                         <parameter><link linkend="guint64"><type>guint64</type></link> frame_id</parameter>);</programlisting>
+<para>Sets the buffer frame id.  For GigEVision devices, 0 is an invalid value.</para>
+<refsect3 id="arv-buffer-set-frame-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>frame_id</para></entry>
+<entry role="parameter_description"><para>a <link linkend="guint64"><type>guint64</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.3">0.8.3</link></para></refsect2>
+<refsect2 id="arv-buffer-get-frame-id" role="function" condition="since:0.8.0">
+<title>arv_buffer_get_frame_id&#160;()</title>
+<indexterm zone="arv-buffer-get-frame-id" role="0.8.0"><primary>arv_buffer_get_frame_id</primary></indexterm>
+<programlisting language="C"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+arv_buffer_get_frame_id (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the buffer frame id. For GigEVision devices, 0 is an invalid value.</para>
+<refsect3 id="arv-buffer-get-frame-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-frame-id.returns" role="returns">
+<title>Returns</title>
+<para> frame id, 0 on error.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-payload-type" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_payload_type&#160;()</title>
+<indexterm zone="arv-buffer-get-payload-type" role="0.4.0"><primary>arv_buffer_get_payload_type</primary></indexterm>
+<programlisting language="C"><link linkend="ArvBufferPayloadType"><returnvalue>ArvBufferPayloadType</returnvalue></link>
+arv_buffer_get_payload_type (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the buffer payload type.</para>
+<refsect3 id="arv-buffer-get-payload-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-payload-type.returns" role="returns">
+<title>Returns</title>
+<para> payload type.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-status" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_status&#160;()</title>
+<indexterm zone="arv-buffer-get-status" role="0.4.0"><primary>arv_buffer_get_status</primary></indexterm>
+<programlisting language="C"><link linkend="ArvBufferStatus"><returnvalue>ArvBufferStatus</returnvalue></link>
+arv_buffer_get_status (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the buffer acquisition status.</para>
+<refsect3 id="arv-buffer-get-status.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-status.returns" role="returns">
+<title>Returns</title>
+<para> buffer acquisition status.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-image-height" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_image_height&#160;()</title>
+<indexterm zone="arv-buffer-get-image-height" role="0.4.0"><primary>arv_buffer_get_image_height</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+arv_buffer_get_image_height (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the image width. This function must only be called on buffer containing a <parameter>ARV_BUFFER_PAYLOAD_TYPE_IMAGE</parameter>
+ payload.</para>
+<refsect3 id="arv-buffer-get-image-height.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-image-height.returns" role="returns">
+<title>Returns</title>
+<para> image height, in pixels.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-image-pixel-format" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_image_pixel_format&#160;()</title>
+<indexterm zone="arv-buffer-get-image-pixel-format" role="0.4.0"><primary>arv_buffer_get_image_pixel_format</primary></indexterm>
+<programlisting language="C"><link linkend="ArvPixelFormat"><returnvalue>ArvPixelFormat</returnvalue></link>
+arv_buffer_get_image_pixel_format (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the image pixel format. This function must only be called on buffer containing a <parameter>ARV_BUFFER_PAYLOAD_TYPE_IMAGE</parameter>
+ payload.</para>
+<refsect3 id="arv-buffer-get-image-pixel-format.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-image-pixel-format.returns" role="returns">
+<title>Returns</title>
+<para> image pixel format.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-image-region" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_image_region&#160;()</title>
+<indexterm zone="arv-buffer-get-image-region" role="0.4.0"><primary>arv_buffer_get_image_region</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_buffer_get_image_region (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                             <parameter><link linkend="gint"><type>gint</type></link> *x</parameter>,
+                             <parameter><link linkend="gint"><type>gint</type></link> *y</parameter>,
+                             <parameter><link linkend="gint"><type>gint</type></link> *width</parameter>,
+                             <parameter><link linkend="gint"><type>gint</type></link> *height</parameter>);</programlisting>
+<para>Gets the image region. This function must only be called on buffer containing a <parameter>ARV_BUFFER_PAYLOAD_TYPE_IMAGE</parameter>
+ payload.</para>
+<refsect3 id="arv-buffer-get-image-region.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>x</para></entry>
+<entry role="parameter_description"><para>image x offset placeholder. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>optional</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>y</para></entry>
+<entry role="parameter_description"><para>image y offset placeholder. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>optional</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>image width placholder. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>optional</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>image height placeholder. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>optional</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-image-width" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_image_width&#160;()</title>
+<indexterm zone="arv-buffer-get-image-width" role="0.4.0"><primary>arv_buffer_get_image_width</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+arv_buffer_get_image_width (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the image width. This function must only be called on buffer containing a <parameter>ARV_BUFFER_PAYLOAD_TYPE_IMAGE</parameter>
+ payload.</para>
+<refsect3 id="arv-buffer-get-image-width.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-image-width.returns" role="returns">
+<title>Returns</title>
+<para> image width, in pixels.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-image-x" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_image_x&#160;()</title>
+<indexterm zone="arv-buffer-get-image-x" role="0.4.0"><primary>arv_buffer_get_image_x</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+arv_buffer_get_image_x (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the image x offset. This function must only be called on buffer containing a <parameter>ARV_BUFFER_PAYLOAD_TYPE_IMAGE</parameter>
+ payload.</para>
+<refsect3 id="arv-buffer-get-image-x.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-image-x.returns" role="returns">
+<title>Returns</title>
+<para> image x offset, in pixels.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-buffer-get-image-y" role="function" condition="since:0.4.0">
+<title>arv_buffer_get_image_y&#160;()</title>
+<indexterm zone="arv-buffer-get-image-y" role="0.4.0"><primary>arv_buffer_get_image_y</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+arv_buffer_get_image_y (<parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>Gets the image y offset. This function must only be called on buffer containing a <parameter>ARV_BUFFER_PAYLOAD_TYPE_IMAGE</parameter>
+ payload.</para>
+<refsect3 id="arv-buffer-get-image-y.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvBuffer"><type>ArvBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-buffer-get-image-y.returns" role="returns">
+<title>Returns</title>
+<para> image y offset, in pixels.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BIT-PER-PIXEL:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BIT_PER_PIXEL()</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BIT-PER-PIXEL:CAPS"><primary>ARV_PIXEL_FORMAT_BIT_PER_PIXEL</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BIT_PER_PIXEL(pixel_format) (((pixel_format) &gt;&gt; 16) &amp; 0xff)
+</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvBuffer.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvBufferStatus" role="enum">
+<title>enum ArvBufferStatus</title>
+<indexterm zone="ArvBufferStatus"><primary>ArvBufferStatus</primary></indexterm>
+<refsect3 id="ArvBufferStatus.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-UNKNOWN:CAPS">ARV_BUFFER_STATUS_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>unknown status</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-SUCCESS:CAPS">ARV_BUFFER_STATUS_SUCCESS</para></entry>
+<entry role="enum_member_description"><para>the buffer contains a valid image</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-CLEARED:CAPS">ARV_BUFFER_STATUS_CLEARED</para></entry>
+<entry role="enum_member_description"><para>the buffer is cleared</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-TIMEOUT:CAPS">ARV_BUFFER_STATUS_TIMEOUT</para></entry>
+<entry role="enum_member_description"><para>timeout was reached before all packets are received</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-MISSING-PACKETS:CAPS">ARV_BUFFER_STATUS_MISSING_PACKETS</para></entry>
+<entry role="enum_member_description"><para>stream has missing packets</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-WRONG-PACKET-ID:CAPS">ARV_BUFFER_STATUS_WRONG_PACKET_ID</para></entry>
+<entry role="enum_member_description"><para>stream has packet with wrong id</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-SIZE-MISMATCH:CAPS">ARV_BUFFER_STATUS_SIZE_MISMATCH</para></entry>
+<entry role="enum_member_description"><para>the received image didn't fit in the buffer data space</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-FILLING:CAPS">ARV_BUFFER_STATUS_FILLING</para></entry>
+<entry role="enum_member_description"><para>the image is currently being filled</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-STATUS-ABORTED:CAPS">ARV_BUFFER_STATUS_ABORTED</para></entry>
+<entry role="enum_member_description"><para>the filling was aborted before completion</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvBuffer-struct" role="struct">
+<title>ArvBuffer</title>
+<indexterm zone="ArvBuffer-struct"><primary>ArvBuffer</primary></indexterm>
+<programlisting language="C">typedef struct _ArvBuffer ArvBuffer;</programlisting>
+</refsect2>
+<refsect2 id="ArvBufferPayloadType" role="enum">
+<title>enum ArvBufferPayloadType</title>
+<indexterm zone="ArvBufferPayloadType"><primary>ArvBufferPayloadType</primary></indexterm>
+<refsect3 id="ArvBufferPayloadType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-UNKNOWN:CAPS">ARV_BUFFER_PAYLOAD_TYPE_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>unknown payload type</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-IMAGE:CAPS">ARV_BUFFER_PAYLOAD_TYPE_IMAGE</para></entry>
+<entry role="enum_member_description"><para>image data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-RAWDATA:CAPS">ARV_BUFFER_PAYLOAD_TYPE_RAWDATA</para></entry>
+<entry role="enum_member_description"><para>raw data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-FILE:CAPS">ARV_BUFFER_PAYLOAD_TYPE_FILE</para></entry>
+<entry role="enum_member_description"><para>file</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-CHUNK-DATA:CAPS">ARV_BUFFER_PAYLOAD_TYPE_CHUNK_DATA</para></entry>
+<entry role="enum_member_description"><para>chunk data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-EXTENDED-CHUNK-DATA:CAPS">ARV_BUFFER_PAYLOAD_TYPE_EXTENDED_CHUNK_DATA</para></entry>
+<entry role="enum_member_description"><para>extended chunk data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-JPEG:CAPS">ARV_BUFFER_PAYLOAD_TYPE_JPEG</para></entry>
+<entry role="enum_member_description"><para>JPEG data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-JPEG2000:CAPS">ARV_BUFFER_PAYLOAD_TYPE_JPEG2000</para></entry>
+<entry role="enum_member_description"><para>JPEG2000 data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-H264:CAPS">ARV_BUFFER_PAYLOAD_TYPE_H264</para></entry>
+<entry role="enum_member_description"><para>h264 data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-MULTIZONE-IMAGE:CAPS">ARV_BUFFER_PAYLOAD_TYPE_MULTIZONE_IMAGE</para></entry>
+<entry role="enum_member_description"><para>multizone image</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-BUFFER-PAYLOAD-TYPE-IMAGE-EXTENDED-CHUNK:CAPS">ARV_BUFFER_PAYLOAD_TYPE_IMAGE_EXTENDED_CHUNK</para></entry>
+<entry role="enum_member_description"><para>image and chunk data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvPixelFormat" role="typedef">
+<title>ArvPixelFormat</title>
+<indexterm zone="ArvPixelFormat"><primary>ArvPixelFormat</primary></indexterm>
+<programlisting language="C">typedef guint32 ArvPixelFormat;
+</programlisting>
+<para>A datatype to hold a pixel format.</para>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-BG-10P:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_BG_10P</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-BG-10P:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_BG_10P</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_BG_10P		((ArvPixelFormat) 0x010a0052u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-BG-10-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-BG-10-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_BG_10_PACKED&#160;((ArvPixelFormat) 0x010c0029u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-BG-12P:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_BG_12P</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-BG-12P:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_BG_12P</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_BG_12P		((ArvPixelFormat) 0x010c0053u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GB-10P:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GB_10P</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GB-10P:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GB_10P</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GB_10P		((ArvPixelFormat) 0x010a0054u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GB-10-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GB-10-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GB_10_PACKED&#160;((ArvPixelFormat) 0x010c0028u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GB-12P:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GB_12P</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GB-12P:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GB_12P</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GB_12P		((ArvPixelFormat) 0x010c0055u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GR-10P:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GR_10P</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GR-10P:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GR_10P</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GR_10P		((ArvPixelFormat) 0x010a0056u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GR-10-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GR-10-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GR_10_PACKED&#160;((ArvPixelFormat) 0x010c0026u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GR-12P:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GR_12P</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GR-12P:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GR_12P</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GR_12P		((ArvPixelFormat) 0x010c0057u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-RG-10P:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_RG_10P</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-RG-10P:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_RG_10P</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_RG_10P		((ArvPixelFormat) 0x010a0058u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-RG-10-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-RG-10-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_RG_10_PACKED&#160;((ArvPixelFormat) 0x010c0027u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-RG-12P:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_RG_12P</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-RG-12P:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_RG_12P</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_RG_12P		((ArvPixelFormat) 0x010c0059u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-BG-10:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_BG_10</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-BG-10:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_BG_10</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_BG_10		((ArvPixelFormat) 0x0110000fu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-BG-12:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_BG_12</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-BG-12:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_BG_12</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_BG_12		((ArvPixelFormat) 0x01100013u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GR-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GR-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GR_12_PACKED&#160;((ArvPixelFormat) 0x010c002au)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GB-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GB-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GB_12_PACKED&#160;((ArvPixelFormat) 0x010c002cu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-RG-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-RG-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_RG_12_PACKED&#160;((ArvPixelFormat) 0x010c002bu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-BG-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-BG-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_BG_12_PACKED&#160;((ArvPixelFormat) 0x010c002du)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-BG-8:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_BG_8</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-BG-8:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_BG_8</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_BG_8		((ArvPixelFormat) 0x0108000bu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GB-10:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GB_10</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GB-10:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GB_10</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GB_10		((ArvPixelFormat) 0x0110000eu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GB-12:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GB_12</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GB-12:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GB_12</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GB_12		((ArvPixelFormat) 0x01100012u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GB-8:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GB_8</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GB-8:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GB_8</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GB_8		((ArvPixelFormat) 0x0108000au)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GR-10:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GR_10</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GR-10:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GR_10</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GR_10		((ArvPixelFormat) 0x0110000cu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GR-12:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GR_12</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GR-12:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GR_12</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GR_12		((ArvPixelFormat) 0x01100010u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GR-8:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GR_8</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GR-8:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GR_8</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GR_8		((ArvPixelFormat) 0x01080008u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-RG-10:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_RG_10</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-RG-10:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_RG_10</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_RG_10		((ArvPixelFormat) 0x0110000du)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-RG-12:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_RG_12</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-RG-12:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_RG_12</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_RG_12		((ArvPixelFormat) 0x01100011u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-RG-8:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_RG_8</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-RG-8:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_RG_8</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_RG_8		((ArvPixelFormat) 0x01080009u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-BG-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_BG_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-BG-16:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_BG_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_BG_16		((ArvPixelFormat) 0x01100031u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GB-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GB_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GB-16:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GB_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GB_16		((ArvPixelFormat) 0x01100030u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-GR-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_GR_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-GR-16:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_GR_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_GR_16		((ArvPixelFormat) 0x0110002eu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BAYER-RG-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BAYER_RG_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BAYER-RG-16:CAPS"><primary>ARV_PIXEL_FORMAT_BAYER_RG_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BAYER_RG_16		((ArvPixelFormat) 0x0110002fu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BGRA-8-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BGRA_8_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BGRA-8-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BGRA_8_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BGRA_8_PACKED		((ArvPixelFormat) 0x02200017u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BGR-10-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BGR_10_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BGR-10-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BGR_10_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BGR_10_PACKED		((ArvPixelFormat) 0x02300019u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BGR-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BGR_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BGR-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BGR_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BGR_12_PACKED		((ArvPixelFormat) 0x0230001bu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-BGR-8-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_BGR_8_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-BGR-8-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_BGR_8_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_BGR_8_PACKED		((ArvPixelFormat) 0x02180015u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_12_PACKED  	((ArvPixelFormat) 0x810c0004u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-BAYER-BG-16:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_BG_16		((ArvPixelFormat) 0x81100009u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_12_PACKED  	((ArvPixelFormat) 0x810c0003u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GB-16:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GB_16		((ArvPixelFormat) 0x81100008u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_12_PACKED  	((ArvPixelFormat) 0x810c0001u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-BAYER-GR-16:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_GR_16		((ArvPixelFormat) 0x81100006u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_12_PACKED  	((ArvPixelFormat) 0x810c0002u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-BAYER-RG-16:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_BAYER_RG_16		((ArvPixelFormat) 0x81100007u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-CUSTOM-YUV-422-YUYV-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-CUSTOM-YUV-422-YUYV-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_CUSTOM_YUV_422_YUYV_PACKED 	((ArvPixelFormat) 0x82100005u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-MONO-10:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_MONO_10</title>
+<indexterm zone="ARV-PIXEL-FORMAT-MONO-10:CAPS"><primary>ARV_PIXEL_FORMAT_MONO_10</primary></indexterm>
+<programlisting language="C">#define&#160;ARV_PIXEL_FORMAT_MONO_10		((ArvPixelFormat) 0x01100003u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-MONO-10-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_MONO_10_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-MONO-10-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_MONO_10_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_MONO_10_PACKED		((ArvPixelFormat) 0x010c0004u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-MONO-12:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_MONO_12</title>
+<indexterm zone="ARV-PIXEL-FORMAT-MONO-12:CAPS"><primary>ARV_PIXEL_FORMAT_MONO_12</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_MONO_12		((ArvPixelFormat) 0x01100005u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-MONO-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_MONO_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-MONO-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_MONO_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_MONO_12_PACKED		((ArvPixelFormat) 0x010c0006u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-MONO-14:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_MONO_14</title>
+<indexterm zone="ARV-PIXEL-FORMAT-MONO-14:CAPS"><primary>ARV_PIXEL_FORMAT_MONO_14</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_MONO_14		((ArvPixelFormat) 0x01100025u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-MONO-16:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_MONO_16</title>
+<indexterm zone="ARV-PIXEL-FORMAT-MONO-16:CAPS"><primary>ARV_PIXEL_FORMAT_MONO_16</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_MONO_16		((ArvPixelFormat) 0x01100007u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-MONO-8:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_MONO_8</title>
+<indexterm zone="ARV-PIXEL-FORMAT-MONO-8:CAPS"><primary>ARV_PIXEL_FORMAT_MONO_8</primary></indexterm>
+<programlisting language="C">#define&#160;ARV_PIXEL_FORMAT_MONO_8			((ArvPixelFormat) 0x01080001u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-MONO-8-SIGNED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_MONO_8_SIGNED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-MONO-8-SIGNED:CAPS"><primary>ARV_PIXEL_FORMAT_MONO_8_SIGNED</primary></indexterm>
+<programlisting language="C">#define&#160;ARV_PIXEL_FORMAT_MONO_8_SIGNED		((ArvPixelFormat) 0x01080002u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-RGBA-8-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_RGBA_8_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-RGBA-8-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_RGBA_8_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_RGBA_8_PACKED		((ArvPixelFormat) 0x02200016u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-RGB-10-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_RGB_10_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-RGB-10-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_RGB_10_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_RGB_10_PACKED		((ArvPixelFormat) 0x02300018u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-RGB-10-PLANAR:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_RGB_10_PLANAR</title>
+<indexterm zone="ARV-PIXEL-FORMAT-RGB-10-PLANAR:CAPS"><primary>ARV_PIXEL_FORMAT_RGB_10_PLANAR</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_RGB_10_PLANAR		((ArvPixelFormat) 0x02300022u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-RGB-12-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_RGB_12_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-RGB-12-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_RGB_12_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_RGB_12_PACKED		((ArvPixelFormat) 0x0230001au)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-RGB-12-PLANAR:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_RGB_12_PLANAR</title>
+<indexterm zone="ARV-PIXEL-FORMAT-RGB-12-PLANAR:CAPS"><primary>ARV_PIXEL_FORMAT_RGB_12_PLANAR</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_RGB_12_PLANAR		((ArvPixelFormat) 0x02300023u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-RGB-16-PLANAR:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_RGB_16_PLANAR</title>
+<indexterm zone="ARV-PIXEL-FORMAT-RGB-16-PLANAR:CAPS"><primary>ARV_PIXEL_FORMAT_RGB_16_PLANAR</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_RGB_16_PLANAR		((ArvPixelFormat) 0x02300024u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-RGB-8-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_RGB_8_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-RGB-8-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_RGB_8_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_RGB_8_PACKED		((ArvPixelFormat) 0x02180014u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-RGB-8-PLANAR:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_RGB_8_PLANAR</title>
+<indexterm zone="ARV-PIXEL-FORMAT-RGB-8-PLANAR:CAPS"><primary>ARV_PIXEL_FORMAT_RGB_8_PLANAR</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_RGB_8_PLANAR		((ArvPixelFormat) 0x02180021u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-YUV-411-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_YUV_411_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-YUV-411-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_YUV_411_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_YUV_411_PACKED		((ArvPixelFormat) 0x020c001eu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-YUV-422-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_YUV_422_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-YUV-422-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_YUV_422_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_YUV_422_PACKED		((ArvPixelFormat) 0x0210001fu)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-YUV-422-YUYV-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-YUV-422-YUYV-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_YUV_422_YUYV_PACKED 	((ArvPixelFormat) 0x02100032u)
+</programlisting>
+</refsect2>
+<refsect2 id="ARV-PIXEL-FORMAT-YUV-444-PACKED:CAPS" role="macro">
+<title>ARV_PIXEL_FORMAT_YUV_444_PACKED</title>
+<indexterm zone="ARV-PIXEL-FORMAT-YUV-444-PACKED:CAPS"><primary>ARV_PIXEL_FORMAT_YUV_444_PACKED</primary></indexterm>
+<programlisting language="C">#define ARV_PIXEL_FORMAT_YUV_444_PACKED		((ArvPixelFormat) 0x02180020u)
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

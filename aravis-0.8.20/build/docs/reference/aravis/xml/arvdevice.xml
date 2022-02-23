@@ -1,0 +1,1216 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvDevice">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvDevice.top_of_page">ArvDevice</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvDevice</refname>
+<refpurpose>Abstract base class for device handling</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvDevice.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvStream"><returnvalue>ArvStream</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-device-create-stream">arv_device_create_stream</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvChunkParser"><returnvalue>ArvChunkParser</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-device-create-chunk-parser">arv_device_create_chunk_parser</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-read-memory">arv_device_read_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-write-memory">arv_device_write_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-read-register">arv_device_read_register</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-write-register">arv_device_write_register</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-device-get-genicam-xml">arv_device_get_genicam_xml</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGc"><returnvalue>ArvGc</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-device-get-genicam">arv_device_get_genicam</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-device-get-feature">arv_device_get_feature</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-is-feature-available">arv_device_is_feature_available</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-execute-command">arv_device_execute_command</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-get-boolean-feature-value">arv_device_get_boolean_feature_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-set-boolean-feature-value">arv_device_set_boolean_feature_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-set-string-feature-value">arv_device_set_string_feature_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-device-get-string-feature-value">arv_device_get_string_feature_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-set-integer-feature-value">arv_device_set_integer_feature_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-get-integer-feature-value">arv_device_get_integer_feature_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-get-integer-feature-bounds">arv_device_get_integer_feature_bounds</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-get-integer-feature-increment">arv_device_get_integer_feature_increment</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-set-float-feature-value">arv_device_set_float_feature_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="double"><returnvalue>double</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-get-float-feature-value">arv_device_get_float_feature_value</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-get-float-feature-bounds">arv_device_get_float_feature_bounds</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="double"><returnvalue>double</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-get-float-feature-increment">arv_device_get_float_feature_increment</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-is-enumeration-entry-available">arv_device_is_enumeration_entry_available</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-device-dup-available-enumeration-feature-values">arv_device_dup_available_enumeration_feature_values</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;**
+</entry><entry role="function_name"><link linkend="arv-device-dup-available-enumeration-feature-values-as-strings">arv_device_dup_available_enumeration_feature_values_as_strings</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;**
+</entry><entry role="function_name"><link linkend="arv-device-dup-available-enumeration-feature-values-as-display-names">arv_device_dup_available_enumeration_feature_values_as_display_names</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-set-features-from-string">arv_device_set_features_from_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-set-range-check-policy">arv_device_set_range_check_policy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-device-set-register-cache-policy">arv_device_set_register_cache_policy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDevice.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signal_proto_type" colwidth="150px"/>
+<colspec colname="signal_proto_name" colwidth="300px"/>
+<colspec colname="signal_proto_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="ArvDevice-control-lost">control-lost</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDevice.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ARV-DEVICE-ERROR:CAPS">ARV_DEVICE_ERROR</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvDeviceError">ArvDeviceError</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvDevice-struct">ArvDevice</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDevice.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvDevice
+        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvFakeDevice">ArvFakeDevice</link>
+        <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGvDevice">ArvGvDevice</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvUvDevice">ArvUvDevice</link>
+</screen>
+</refsect1>
+<refsect1 id="ArvDevice.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ArvDevice implements
+ <link linkend="GInitable">GInitable</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvDevice.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="ArvDevice"><type>ArvDevice</type></link> is an abstract base class for the control of cameras. It provides
+an easy access to the camera settings, and to its genicam interface for  more
+advanced uses.</para>
+
+</refsect1>
+<refsect1 id="ArvDevice.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-device-create-stream" role="function" condition="since:0.2.0">
+<title>arv_device_create_stream&#160;()</title>
+<indexterm zone="arv-device-create-stream" role="0.2.0"><primary>arv_device_create_stream</primary></indexterm>
+<programlisting language="C"><link linkend="ArvStream"><returnvalue>ArvStream</returnvalue></link>&#160;*
+arv_device_create_stream (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                          <parameter><link linkend="ArvStreamCallback"><type>ArvStreamCallback</type></link> callback</parameter>,
+                          <parameter><link linkend="void"><type>void</type></link> *user_data</parameter>,
+                          <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Creates a new <link linkend="ArvStream"><type>ArvStream</type></link> for video stream handling. See
+<parameter>ArvStreamCallback</parameter>
+ for details regarding the callback function.</para>
+<refsect3 id="arv-device-create-stream.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para>a frame processing callback. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope call</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data for <parameter>callback</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>][<acronym>closure</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-create-stream.returns" role="returns">
+<title>Returns</title>
+<para>a new <link linkend="ArvStream"><type>ArvStream</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-device-create-chunk-parser" role="function" condition="since:0.4.0">
+<title>arv_device_create_chunk_parser&#160;()</title>
+<indexterm zone="arv-device-create-chunk-parser" role="0.4.0"><primary>arv_device_create_chunk_parser</primary></indexterm>
+<programlisting language="C"><link linkend="ArvChunkParser"><returnvalue>ArvChunkParser</returnvalue></link>&#160;*
+arv_device_create_chunk_parser (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>);</programlisting>
+<para>Create a <link linkend="ArvChunkParser"><type>ArvChunkParser</type></link> object, to be used for chunk data extraction from <link linkend="ArvBuffer"><type>ArvBuffer</type></link>.</para>
+<refsect3 id="arv-device-create-chunk-parser.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-create-chunk-parser.returns" role="returns">
+<title>Returns</title>
+<para>a new <link linkend="ArvChunkParser"><type>ArvChunkParser</type></link> object, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.4.0">0.4.0</link></para></refsect2>
+<refsect2 id="arv-device-read-memory" role="function" condition="since:0.2.0">
+<title>arv_device_read_memory&#160;()</title>
+<indexterm zone="arv-device-read-memory" role="0.2.0"><primary>arv_device_read_memory</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_device_read_memory (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                        <parameter><link linkend="guint64"><type>guint64</type></link> address</parameter>,
+                        <parameter><link linkend="guint32"><type>guint32</type></link> size</parameter>,
+                        <parameter><link linkend="void"><type>void</type></link> *buffer</parameter>,
+                        <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Reads <parameter>size</parameter>
+ bytes from the device memory.</para>
+<refsect3 id="arv-device-read-memory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>address</para></entry>
+<entry role="parameter_description"><para>memory address</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>number of bytes to read</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a buffer for the storage of the read data</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-read-memory.returns" role="returns">
+<title>Returns</title>
+<para>TRUE on success. </para>
+<para><emphasis role="annotation">[<acronym>skip</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-device-write-memory" role="function" condition="since:0.2.0">
+<title>arv_device_write_memory&#160;()</title>
+<indexterm zone="arv-device-write-memory" role="0.2.0"><primary>arv_device_write_memory</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_device_write_memory (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                         <parameter><link linkend="guint64"><type>guint64</type></link> address</parameter>,
+                         <parameter><link linkend="guint32"><type>guint32</type></link> size</parameter>,
+                         <parameter><link linkend="void"><type>void</type></link> *buffer</parameter>,
+                         <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Writes <parameter>size</parameter>
+ bytes to the device memory.</para>
+<refsect3 id="arv-device-write-memory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>address</para></entry>
+<entry role="parameter_description"><para>memory address</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>size of the returned buffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>the buffer read from memory. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-write-memory.returns" role="returns">
+<title>Returns</title>
+<para>TRUE on success. </para>
+<para><emphasis role="annotation">[<acronym>skip</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-device-read-register" role="function" condition="since:0.2.0">
+<title>arv_device_read_register&#160;()</title>
+<indexterm zone="arv-device-read-register" role="0.2.0"><primary>arv_device_read_register</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_device_read_register (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                          <parameter><link linkend="guint64"><type>guint64</type></link> address</parameter>,
+                          <parameter><link linkend="guint32"><type>guint32</type></link> *value</parameter>,
+                          <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Reads the value of a device register.</para>
+<refsect3 id="arv-device-read-register.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>address</para></entry>
+<entry role="parameter_description"><para>register address</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>a placeholder for the read value. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-read-register.returns" role="returns">
+<title>Returns</title>
+<para>TRUE on success. </para>
+<para><emphasis role="annotation">[<acronym>skip</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-device-write-register" role="function" condition="since:0.2.0">
+<title>arv_device_write_register&#160;()</title>
+<indexterm zone="arv-device-write-register" role="0.2.0"><primary>arv_device_write_register</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_device_write_register (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                           <parameter><link linkend="guint64"><type>guint64</type></link> address</parameter>,
+                           <parameter><link linkend="guint32"><type>guint32</type></link> value</parameter>,
+                           <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Writes <parameter>value</parameter>
+ to a device register.</para>
+<refsect3 id="arv-device-write-register.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>address</para></entry>
+<entry role="parameter_description"><para>the register address</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>value to write</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-write-register.returns" role="returns">
+<title>Returns</title>
+<para>TRUE on success. </para>
+<para><emphasis role="annotation">[<acronym>skip</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-device-get-genicam-xml" role="function" condition="since:0.2.0">
+<title>arv_device_get_genicam_xml&#160;()</title>
+<indexterm zone="arv-device-get-genicam-xml" role="0.2.0"><primary>arv_device_get_genicam_xml</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_device_get_genicam_xml (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                            <parameter><link linkend="size-t"><type>size_t</type></link> *size</parameter>);</programlisting>
+<para>Gets the Genicam XML data stored in the device memory.</para>
+<refsect3 id="arv-device-get-genicam-xml.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>placeholder for the returned data size (bytes). </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-genicam-xml.returns" role="returns">
+<title>Returns</title>
+<para>a pointer to the Genicam XML data, owned by the device. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-device-get-genicam" role="function" condition="since:0.2.0">
+<title>arv_device_get_genicam&#160;()</title>
+<indexterm zone="arv-device-get-genicam" role="0.2.0"><primary>arv_device_get_genicam</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGc"><returnvalue>ArvGc</returnvalue></link>&#160;*
+arv_device_get_genicam (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>);</programlisting>
+<para>Retrieves the genicam interface of the given device.</para>
+<refsect3 id="arv-device-get-genicam.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-genicam.returns" role="returns">
+<title>Returns</title>
+<para>the genicam interface. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-device-get-feature" role="function" condition="since:0.2.0">
+<title>arv_device_get_feature&#160;()</title>
+<indexterm zone="arv-device-get-feature" role="0.2.0"><primary>arv_device_get_feature</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNode"><returnvalue>ArvGcNode</returnvalue></link>&#160;*
+arv_device_get_feature (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                        <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>);</programlisting>
+<refsect3 id="arv-device-get-feature.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-feature.returns" role="returns">
+<title>Returns</title>
+<para>the genicam node corresponding to the feature name, NULL if not found. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-device-is-feature-available" role="function" condition="since:0.8.0">
+<title>arv_device_is_feature_available&#160;()</title>
+<indexterm zone="arv-device-is-feature-available" role="0.8.0"><primary>arv_device_is_feature_available</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_device_is_feature_available (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                 <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                 <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Return: <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if feature is available, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> if not or on error.</para>
+<refsect3 id="arv-device-is-feature-available.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-execute-command" role="function" condition="since:0.8.0">
+<title>arv_device_execute_command&#160;()</title>
+<indexterm zone="arv-device-execute-command" role="0.8.0"><primary>arv_device_execute_command</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_execute_command (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                            <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                            <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Execute a genicam command.</para>
+<refsect3 id="arv-device-execute-command.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-get-boolean-feature-value" role="function" condition="since:0.8.0">
+<title>arv_device_get_boolean_feature_value&#160;()</title>
+<indexterm zone="arv-device-get-boolean-feature-value" role="0.8.0"><primary>arv_device_get_boolean_feature_value</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_device_get_boolean_feature_value (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                      <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                      <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-device-get-boolean-feature-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-boolean-feature-value.returns" role="returns">
+<title>Returns</title>
+<para> the feature value, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> on error.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-set-boolean-feature-value" role="function" condition="since:0.8.0">
+<title>arv_device_set_boolean_feature_value&#160;()</title>
+<indexterm zone="arv-device-set-boolean-feature-value" role="0.8.0"><primary>arv_device_set_boolean_feature_value</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_set_boolean_feature_value (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                      <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                      <parameter><link linkend="gboolean"><type>gboolean</type></link> value</parameter>,
+                                      <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Set the value of a boolean feature.</para>
+<refsect3 id="arv-device-set-boolean-feature-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>feature value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-set-string-feature-value" role="function" condition="since:0.8.0">
+<title>arv_device_set_string_feature_value&#160;()</title>
+<indexterm zone="arv-device-set-string-feature-value" role="0.8.0"><primary>arv_device_set_string_feature_value</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_set_string_feature_value (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *value</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Set the string feature value.</para>
+<refsect3 id="arv-device-set-string-feature-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>new feature value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-get-string-feature-value" role="function" condition="since:0.8.0">
+<title>arv_device_get_string_feature_value&#160;()</title>
+<indexterm zone="arv-device-get-string-feature-value" role="0.8.0"><primary>arv_device_get_string_feature_value</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_device_get_string_feature_value (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-device-get-string-feature-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-string-feature-value.returns" role="returns">
+<title>Returns</title>
+<para> the string feature value, <link linkend="NULL:CAPS"><literal>NULL</literal></link> on error.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-set-integer-feature-value" role="function" condition="since:0.8.0">
+<title>arv_device_set_integer_feature_value&#160;()</title>
+<indexterm zone="arv-device-set-integer-feature-value" role="0.8.0"><primary>arv_device_set_integer_feature_value</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_set_integer_feature_value (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                      <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                      <parameter><link linkend="gint64"><type>gint64</type></link> value</parameter>,
+                                      <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Set the integer feature value.</para>
+<refsect3 id="arv-device-set-integer-feature-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>new feature value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-get-integer-feature-value" role="function" condition="since:0.8.0">
+<title>arv_device_get_integer_feature_value&#160;()</title>
+<indexterm zone="arv-device-get-integer-feature-value" role="0.8.0"><primary>arv_device_get_integer_feature_value</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_device_get_integer_feature_value (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                      <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                      <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-device-get-integer-feature-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-integer-feature-value.returns" role="returns">
+<title>Returns</title>
+<para> the integer feature value, 0 on error.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-get-integer-feature-bounds" role="function" condition="since:0.8.0">
+<title>arv_device_get_integer_feature_bounds&#160;()</title>
+<indexterm zone="arv-device-get-integer-feature-bounds" role="0.8.0"><primary>arv_device_get_integer_feature_bounds</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_get_integer_feature_bounds (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                       <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                       <parameter><link linkend="gint64"><type>gint64</type></link> *min</parameter>,
+                                       <parameter><link linkend="gint64"><type>gint64</type></link> *max</parameter>,
+                                       <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Retrieves feature bounds.</para>
+<refsect3 id="arv-device-get-integer-feature-bounds.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>min</para></entry>
+<entry role="parameter_description"><para>minimum feature value. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>max</para></entry>
+<entry role="parameter_description"><para>maximum feature value. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-get-integer-feature-increment" role="function" condition="since:0.8.0">
+<title>arv_device_get_integer_feature_increment&#160;()</title>
+<indexterm zone="arv-device-get-integer-feature-increment" role="0.8.0"><primary>arv_device_get_integer_feature_increment</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+arv_device_get_integer_feature_increment
+                               (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Not all integer features have evenly distributed allowed values, which means the returned increment may not reflect the allowed value
+set.</para>
+<refsect3 id="arv-device-get-integer-feature-increment.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-integer-feature-increment.returns" role="returns">
+<title>Returns</title>
+<para> feature value increment, or 1 on error.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-set-float-feature-value" role="function" condition="since:0.8.0">
+<title>arv_device_set_float_feature_value&#160;()</title>
+<indexterm zone="arv-device-set-float-feature-value" role="0.8.0"><primary>arv_device_set_float_feature_value</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_set_float_feature_value (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                    <parameter><link linkend="double"><type>double</type></link> value</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Set the float feature value.</para>
+<refsect3 id="arv-device-set-float-feature-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>new feature value</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-get-float-feature-value" role="function" condition="since:0.8.0">
+<title>arv_device_get_float_feature_value&#160;()</title>
+<indexterm zone="arv-device-get-float-feature-value" role="0.8.0"><primary>arv_device_get_float_feature_value</primary></indexterm>
+<programlisting language="C"><link linkend="double"><returnvalue>double</returnvalue></link>
+arv_device_get_float_feature_value (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                    <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-device-get-float-feature-value.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-float-feature-value.returns" role="returns">
+<title>Returns</title>
+<para> the float feature value, 0.0 on error.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-get-float-feature-bounds" role="function" condition="since:0.8.0">
+<title>arv_device_get_float_feature_bounds&#160;()</title>
+<indexterm zone="arv-device-get-float-feature-bounds" role="0.8.0"><primary>arv_device_get_float_feature_bounds</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_get_float_feature_bounds (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                     <parameter><link linkend="double"><type>double</type></link> *min</parameter>,
+                                     <parameter><link linkend="double"><type>double</type></link> *max</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Retrieves feature bounds.</para>
+<refsect3 id="arv-device-get-float-feature-bounds.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>min</para></entry>
+<entry role="parameter_description"><para>minimum feature value. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>max</para></entry>
+<entry role="parameter_description"><para>maximum feature value. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-get-float-feature-increment" role="function" condition="since:0.8.16">
+<title>arv_device_get_float_feature_increment&#160;()</title>
+<indexterm zone="arv-device-get-float-feature-increment" role="0.8.16"><primary>arv_device_get_float_feature_increment</primary></indexterm>
+<programlisting language="C"><link linkend="double"><returnvalue>double</returnvalue></link>
+arv_device_get_float_feature_increment
+                               (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Not all float features have evenly distributed allowed values, which means the returned increment may not reflect the allowed value
+set.</para>
+<refsect3 id="arv-device-get-float-feature-increment.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-get-float-feature-increment.returns" role="returns">
+<title>Returns</title>
+<para> feature value increment, or <link linkend="G-MINDOUBLE:CAPS"><type>G_MINDOUBLE</type></link> on error.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.16">0.8.16</link></para></refsect2>
+<refsect2 id="arv-device-is-enumeration-entry-available" role="function" condition="since:0.8.17">
+<title>arv_device_is_enumeration_entry_available&#160;()</title>
+<indexterm zone="arv-device-is-enumeration-entry-available" role="0.8.17"><primary>arv_device_is_enumeration_entry_available</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_device_is_enumeration_entry_available
+                               (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *entry</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="arv-device-is-enumeration-entry-available.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>an <link linkend="ArvDevice"><type>ArvDevice</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>enumeration feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>entry</para></entry>
+<entry role="parameter_description"><para>entry name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-is-enumeration-entry-available.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the feature and the feature entry are available</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.17">0.8.17</link></para></refsect2>
+<refsect2 id="arv-device-dup-available-enumeration-feature-values" role="function" condition="since:0.8.0">
+<title>arv_device_dup_available_enumeration_feature_values&#160;()</title>
+<indexterm zone="arv-device-dup-available-enumeration-feature-values" role="0.8.0"><primary>arv_device_dup_available_enumeration_feature_values</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>&#160;*
+arv_device_dup_available_enumeration_feature_values
+                               (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *n_values</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Get all the available values of <parameter>feature</parameter>
+, as integers.</para>
+<refsect3 id="arv-device-dup-available-enumeration-feature-values.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>an <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_values</para></entry>
+<entry role="parameter_description"><para>placeholder for the number of returned values</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-dup-available-enumeration-feature-values.returns" role="returns">
+<title>Returns</title>
+<para>a newly created array of 64 bit integers, which must freed after use using g_free,
+or NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>array</acronym> length=n_values][<acronym>transfer container</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-dup-available-enumeration-feature-values-as-strings" role="function" condition="since:0.8.0">
+<title>arv_device_dup_available_enumeration_feature_values_as_strings&#160;()</title>
+<indexterm zone="arv-device-dup-available-enumeration-feature-values-as-strings" role="0.8.0"><primary>arv_device_dup_available_enumeration_feature_values_as_strings</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;**
+arv_device_dup_available_enumeration_feature_values_as_strings
+                               (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *n_values</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Get all the available values of <parameter>feature</parameter>
+, as strings.</para>
+<refsect3 id="arv-device-dup-available-enumeration-feature-values-as-strings.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>an <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_values</para></entry>
+<entry role="parameter_description"><para>placeholder for the number of returned values</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-dup-available-enumeration-feature-values-as-strings.returns" role="returns">
+<title>Returns</title>
+<para>a newly created array of const strings, which must freed after use using g_free,
+or NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>array</acronym> length=n_values][<acronym>transfer container</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-dup-available-enumeration-feature-values-as-display-names" role="function" condition="since:0.8.0">
+<title>arv_device_dup_available_enumeration_feature_values_as_display_names&#160;()</title>
+<indexterm zone="arv-device-dup-available-enumeration-feature-values-as-display-names" role="0.8.0"><primary>arv_device_dup_available_enumeration_feature_values_as_display_names</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;**
+arv_device_dup_available_enumeration_feature_values_as_display_names
+                               (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *feature</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *n_values</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Get display names of all the available entries of <parameter>feature</parameter>
+.</para>
+<refsect3 id="arv-device-dup-available-enumeration-feature-values-as-display-names.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>an <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>feature name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_values</para></entry>
+<entry role="parameter_description"><para>placeholder for the number of returned values</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-device-dup-available-enumeration-feature-values-as-display-names.returns" role="returns">
+<title>Returns</title>
+<para>a newly created array of const strings, to be freed after use using g_free, or
+<link linkend="NULL:CAPS"><literal>NULL</literal></link> on error. </para>
+<para><emphasis role="annotation">[<acronym>array</acronym> length=n_values][<acronym>transfer container</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-set-features-from-string" role="function" condition="since:0.8.0">
+<title>arv_device_set_features_from_string&#160;()</title>
+<indexterm zone="arv-device-set-features-from-string" role="0.8.0"><primary>arv_device_set_features_from_string</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_device_set_features_from_string (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                     <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>,
+                                     <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Set features from a string containing a list of space separated feature assignments or command names. For example:</para>
+<informalexample><programlisting role="example" language="C"><![CDATA[
+arv_device_set_features_from_string (device, "Width=256 Height=256 PixelFormat='Mono8' TriggerStart", &error);
+]]></programlisting></informalexample>
+<para></para>
+<refsect3 id="arv-device-set-features-from-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>a space separated list of features assignments</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-device-set-range-check-policy" role="function" condition="since:0.8.6">
+<title>arv_device_set_range_check_policy&#160;()</title>
+<indexterm zone="arv-device-set-range-check-policy" role="0.8.6"><primary>arv_device_set_range_check_policy</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_set_range_check_policy (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                   <parameter><link linkend="ArvRangeCheckPolicy"><type>ArvRangeCheckPolicy</type></link> policy</parameter>);</programlisting>
+<para>Sets the range check policy. When enabled, before being set, the value of all nodes with an <link linkend="ArvGcFloat"><type>ArvGcFloat</type></link> or
+<link linkend="ArvGcInteger"><type>ArvGcInteger</type></link> interface will be checked against their Min and Max properties.</para>
+<warning><para>Be aware that some camera may have wrong definition of Min and Max, as this check is defined as not
+mandatory in the Genicam specification. If this is the case, it will not possible to set the value of the features
+with faulty Min or Max definition. Range check is disabled by default.</para></warning>
+<refsect3 id="arv-device-set-range-check-policy.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>policy</para></entry>
+<entry role="parameter_description"><para>range check policy</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.6">0.8.6</link></para></refsect2>
+<refsect2 id="arv-device-set-register-cache-policy" role="function" condition="since:0.8.0">
+<title>arv_device_set_register_cache_policy&#160;()</title>
+<indexterm zone="arv-device-set-register-cache-policy" role="0.8.0"><primary>arv_device_set_register_cache_policy</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_device_set_register_cache_policy (<parameter><link linkend="ArvDevice"><type>ArvDevice</type></link> *device</parameter>,
+                                      <parameter><link linkend="ArvRegisterCachePolicy"><type>ArvRegisterCachePolicy</type></link> policy</parameter>);</programlisting>
+<para>Sets the register cache policy.</para>
+<warning><para>Be aware that some camera may have wrong Cachable properties defined in their Genicam metadata, which may
+lead to incorrect readouts. Using the debug cache policy, and activating genicam debug output (export ARV_DEBUG=genicam), can help you to
+check the cache validity. In this mode, every time the cache content is not in sync with the actual register value, a debug message is
+printed on the console.</para></warning>
+<refsect3 id="arv-device-set-register-cache-policy.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>policy</para></entry>
+<entry role="parameter_description"><para>cache policy</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="ArvDevice.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ARV-DEVICE-ERROR:CAPS" role="macro">
+<title>ARV_DEVICE_ERROR</title>
+<indexterm zone="ARV-DEVICE-ERROR:CAPS"><primary>ARV_DEVICE_ERROR</primary></indexterm>
+<programlisting language="C">#define ARV_DEVICE_ERROR arv_device_error_quark()
+</programlisting>
+</refsect2>
+<refsect2 id="ArvDeviceError" role="enum">
+<title>enum ArvDeviceError</title>
+<indexterm zone="ArvDeviceError"><primary>ArvDeviceError</primary></indexterm>
+<refsect3 id="ArvDeviceError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-WRONG-FEATURE:CAPS">ARV_DEVICE_ERROR_WRONG_FEATURE</para></entry>
+<entry role="enum_member_description"><para>Wrong feature type</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-FEATURE-NOT-FOUND:CAPS">ARV_DEVICE_ERROR_FEATURE_NOT_FOUND</para></entry>
+<entry role="enum_member_description"><para>Feature node not found</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-NOT-CONNECTED:CAPS">ARV_DEVICE_ERROR_NOT_CONNECTED</para></entry>
+<entry role="enum_member_description"><para>Device is not connected</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-PROTOCOL-ERROR:CAPS">ARV_DEVICE_ERROR_PROTOCOL_ERROR</para></entry>
+<entry role="enum_member_description"><para>Protocol error</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-TRANSFER-ERROR:CAPS">ARV_DEVICE_ERROR_TRANSFER_ERROR</para></entry>
+<entry role="enum_member_description"><para>Transfer error</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-TIMEOUT:CAPS">ARV_DEVICE_ERROR_TIMEOUT</para></entry>
+<entry role="enum_member_description"><para>Timeout detected</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-NOT-FOUND:CAPS">ARV_DEVICE_ERROR_NOT_FOUND</para></entry>
+<entry role="enum_member_description"><para>Device not found</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-INVALID-PARAMETER:CAPS">ARV_DEVICE_ERROR_INVALID_PARAMETER</para></entry>
+<entry role="enum_member_description"><para>Invalid construction parameter</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-GENICAM-NOT-FOUND:CAPS">ARV_DEVICE_ERROR_GENICAM_NOT_FOUND</para></entry>
+<entry role="enum_member_description"><para>Missing Genicam data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-NO-STREAM-CHANNEL:CAPS">ARV_DEVICE_ERROR_NO_STREAM_CHANNEL</para></entry>
+<entry role="enum_member_description"><para>No stream channel found</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-NOT-CONTROLLER:CAPS">ARV_DEVICE_ERROR_NOT_CONTROLLER</para></entry>
+<entry role="enum_member_description"><para>Controller privilege required</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-DEVICE-ERROR-UNKNOWN:CAPS">ARV_DEVICE_ERROR_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>Unknown error</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvDevice-struct" role="struct">
+<title>ArvDevice</title>
+<indexterm zone="ArvDevice-struct"><primary>ArvDevice</primary></indexterm>
+<programlisting language="C">typedef struct _ArvDevice ArvDevice;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvDevice.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="ArvDevice-control-lost" role="signal"><title>The <literal>“control-lost”</literal> signal</title>
+<indexterm zone="ArvDevice-control-lost" role="0.2.0"><primary>ArvDevice::control-lost</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="ArvDevice"><type>ArvDevice</type></link> *device,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Signal that the control of the device is lost.</para>
+<para>This signal may be emited from a thread different than the main one,
+so please take care to shared data access from the callback.</para>
+<refsect3 id="ArvDevice-control-lost.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>device</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDevice"><type>ArvDevice</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+<para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+</refsect1>
+
+</refentry>

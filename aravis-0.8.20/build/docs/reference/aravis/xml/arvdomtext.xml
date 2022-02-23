@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvDomText">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvDomText.top_of_page">ArvDomText</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvDomText</refname>
+<refpurpose>Base class for DOM text nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvDomText.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-text-new">arv_dom_text_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomText.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomCharacterData">ArvDomCharacterData</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvDomText
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvDomText.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvDomText.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-dom-text-new" role="function">
+<title>arv_dom_text_new&#160;()</title>
+<indexterm zone="arv-dom-text-new"><primary>arv_dom_text_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_text_new (<parameter>const <link linkend="char"><type>char</type></link> *data</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

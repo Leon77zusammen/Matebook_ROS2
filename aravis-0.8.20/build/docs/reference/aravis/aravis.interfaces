@@ -1,0 +1,24 @@
+ArvCamera GInitable
+ArvDevice GInitable
+ArvFakeDevice GInitable
+ArvGvDevice GInitable
+ArvUvDevice GInitable
+ArvGcConverterNode ArvGcFloat
+ArvGcIntConverterNode ArvGcInteger
+ArvGcEnumeration ArvGcInteger ArvGcString ArvGcSelector
+ArvGcFloatNode ArvGcFloat
+ArvGcRegisterNode ArvGcRegister
+ArvGcFloatRegNode ArvGcRegister ArvGcFloat
+ArvGcIntRegNode ArvGcRegister ArvGcInteger ArvGcSelector
+ArvGcMaskedIntRegNode ArvGcRegister ArvGcInteger ArvGcSelector
+ArvGcStringRegNode ArvGcRegister ArvGcString
+ArvGcStructRegNode ArvGcRegister
+ArvGcIntSwissKnifeNode ArvGcInteger
+ArvGcSwissKnifeNode ArvGcFloat
+ArvGcIntegerNode ArvGcInteger ArvGcSelector
+ArvGcStringNode ArvGcString
+ArvGcStructEntryNode ArvGcRegister ArvGcInteger
+ArvStream GInitable
+ArvFakeStream GInitable
+ArvGvStream GInitable
+ArvUvStream GInitable

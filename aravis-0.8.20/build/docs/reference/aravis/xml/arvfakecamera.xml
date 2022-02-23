@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvFakeCamera">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvFakeCamera.top_of_page">ArvFakeCamera</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvFakeCamera</refname>
+<refpurpose>Fake camera internals</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvFakeCamera.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvFakeCamera"><returnvalue>ArvFakeCamera</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-fake-camera-new">arv_fake_camera_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvFakeCamera"><returnvalue>ArvFakeCamera</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-fake-camera-new-full">arv_fake_camera_new_full</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-read-memory">arv_fake_camera_read_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-write-memory">arv_fake_camera_write_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-read-register">arv_fake_camera_read_register</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-write-register">arv_fake_camera_write_register</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-wait-for-next-frame">arv_fake_camera_wait_for_next_frame</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-get-sleep-time-for-next-frame">arv_fake_camera_get_sleep_time_for_next_frame</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-fill-buffer">arv_fake_camera_fill_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-set-inet-address">arv_fake_camera_set_inet_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-get-acquisition-status">arv_fake_camera_get_acquisition_status</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-get-control-channel-privilege">arv_fake_camera_get_control_channel_privilege</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-get-heartbeat-timeout">arv_fake_camera_get_heartbeat_timeout</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="size-t"><returnvalue>size_t</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-get-payload">arv_fake_camera_get_payload</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GSocketAddress"><returnvalue>GSocketAddress</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-fake-camera-get-stream-address">arv_fake_camera_get_stream_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-set-control-channel-privilege">arv_fake_camera_set_control_channel_privilege</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-set-fill-pattern">arv_fake_camera_set_fill_pattern</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-fake-camera-set-trigger-frequency">arv_fake_camera_set_trigger_frequency</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-fake-camera-get-genicam-xml">arv_fake_camera_get_genicam_xml</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-set-fake-camera-genicam-filename">arv_set_fake_camera_genicam_filename</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvFakeCamera.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvFakeCamera-struct">ArvFakeCamera</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvFakeCamera.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvFakeCamera
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvFakeCamera.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> is a class that simulate a real camera, which provides
+methods for the implementation of <link linkend="ArvFakeDevice"><type>ArvFakeDevice</type></link> and <link linkend="ArvFakeStream"><type>ArvFakeStream</type></link>.</para>
+<para>arv-fake-gv-camera is a GV camera simulator based on this class.</para>
+
+</refsect1>
+<refsect1 id="ArvFakeCamera.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-fake-camera-new" role="function">
+<title>arv_fake_camera_new&#160;()</title>
+<indexterm zone="arv-fake-camera-new"><primary>arv_fake_camera_new</primary></indexterm>
+<programlisting language="C"><link linkend="ArvFakeCamera"><returnvalue>ArvFakeCamera</returnvalue></link>&#160;*
+arv_fake_camera_new (<parameter>const <link linkend="char"><type>char</type></link> *serial_number</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-new-full" role="function">
+<title>arv_fake_camera_new_full&#160;()</title>
+<indexterm zone="arv-fake-camera-new-full"><primary>arv_fake_camera_new_full</primary></indexterm>
+<programlisting language="C"><link linkend="ArvFakeCamera"><returnvalue>ArvFakeCamera</returnvalue></link>&#160;*
+arv_fake_camera_new_full (<parameter>const <link linkend="char"><type>char</type></link> *serial_number</parameter>,
+                          <parameter>const <link linkend="char"><type>char</type></link> *genicam_filename</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-read-memory" role="function">
+<title>arv_fake_camera_read_memory&#160;()</title>
+<indexterm zone="arv-fake-camera-read-memory"><primary>arv_fake_camera_read_memory</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_fake_camera_read_memory (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                             <parameter><link linkend="guint32"><type>guint32</type></link> address</parameter>,
+                             <parameter><link linkend="guint32"><type>guint32</type></link> size</parameter>,
+                             <parameter><link linkend="void"><type>void</type></link> *buffer</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-write-memory" role="function">
+<title>arv_fake_camera_write_memory&#160;()</title>
+<indexterm zone="arv-fake-camera-write-memory"><primary>arv_fake_camera_write_memory</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_fake_camera_write_memory (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                              <parameter><link linkend="guint32"><type>guint32</type></link> address</parameter>,
+                              <parameter><link linkend="guint32"><type>guint32</type></link> size</parameter>,
+                              <parameter>const <link linkend="void"><type>void</type></link> *buffer</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-read-register" role="function">
+<title>arv_fake_camera_read_register&#160;()</title>
+<indexterm zone="arv-fake-camera-read-register"><primary>arv_fake_camera_read_register</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_fake_camera_read_register (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                               <parameter><link linkend="guint32"><type>guint32</type></link> address</parameter>,
+                               <parameter><link linkend="guint32"><type>guint32</type></link> *value</parameter>);</programlisting>
+<refsect3 id="arv-fake-camera-read-register.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>camera</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>address</para></entry>
+<entry role="parameter_description"><para>the register address</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>the register value. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-fake-camera-read-register.returns" role="returns">
+<title>Returns</title>
+<para> true if the read succeeded, false otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="arv-fake-camera-write-register" role="function">
+<title>arv_fake_camera_write_register&#160;()</title>
+<indexterm zone="arv-fake-camera-write-register"><primary>arv_fake_camera_write_register</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_fake_camera_write_register (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                                <parameter><link linkend="guint32"><type>guint32</type></link> address</parameter>,
+                                <parameter><link linkend="guint32"><type>guint32</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-wait-for-next-frame" role="function">
+<title>arv_fake_camera_wait_for_next_frame&#160;()</title>
+<indexterm zone="arv-fake-camera-wait-for-next-frame"><primary>arv_fake_camera_wait_for_next_frame</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_fake_camera_wait_for_next_frame (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-get-sleep-time-for-next-frame" role="function">
+<title>arv_fake_camera_get_sleep_time_for_next_frame&#160;()</title>
+<indexterm zone="arv-fake-camera-get-sleep-time-for-next-frame"><primary>arv_fake_camera_get_sleep_time_for_next_frame</primary></indexterm>
+<programlisting language="C"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+arv_fake_camera_get_sleep_time_for_next_frame
+                               (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                                <parameter><link linkend="guint64"><type>guint64</type></link> *next_timestamp_us</parameter>);</programlisting>
+<refsect3 id="arv-fake-camera-get-sleep-time-for-next-frame.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>camera</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>next_timestamp_us</para></entry>
+<entry role="parameter_description"><para>the timestamp for the next frame in microseconds. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>optional</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-fake-camera-get-sleep-time-for-next-frame.returns" role="returns">
+<title>Returns</title>
+<para> the sleep time for the next frame</para>
+</refsect3></refsect2>
+<refsect2 id="arv-fake-camera-fill-buffer" role="function">
+<title>arv_fake_camera_fill_buffer&#160;()</title>
+<indexterm zone="arv-fake-camera-fill-buffer"><primary>arv_fake_camera_fill_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_fake_camera_fill_buffer (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                             <parameter><link linkend="ArvBuffer"><type>ArvBuffer</type></link> *buffer</parameter>,
+                             <parameter><link linkend="guint32"><type>guint32</type></link> *packet_size</parameter>);</programlisting>
+<para>Fill a buffer with data from the fake camera.</para>
+<refsect3 id="arv-fake-camera-fill-buffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>camera</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>the <link linkend="ArvBuffer"><type>ArvBuffer</type></link> to fill</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>packet_size</para></entry>
+<entry role="parameter_description"><para>the packet size. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>optional</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="arv-fake-camera-set-inet-address" role="function">
+<title>arv_fake_camera_set_inet_address&#160;()</title>
+<indexterm zone="arv-fake-camera-set-inet-address"><primary>arv_fake_camera_set_inet_address</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_fake_camera_set_inet_address (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                                  <parameter><link linkend="GInetAddress"><type>GInetAddress</type></link> *address</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-get-acquisition-status" role="function">
+<title>arv_fake_camera_get_acquisition_status&#160;()</title>
+<indexterm zone="arv-fake-camera-get-acquisition-status"><primary>arv_fake_camera_get_acquisition_status</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+arv_fake_camera_get_acquisition_status
+                               (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-get-control-channel-privilege" role="function">
+<title>arv_fake_camera_get_control_channel_privilege&#160;()</title>
+<indexterm zone="arv-fake-camera-get-control-channel-privilege"><primary>arv_fake_camera_get_control_channel_privilege</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+arv_fake_camera_get_control_channel_privilege
+                               (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-get-heartbeat-timeout" role="function">
+<title>arv_fake_camera_get_heartbeat_timeout&#160;()</title>
+<indexterm zone="arv-fake-camera-get-heartbeat-timeout"><primary>arv_fake_camera_get_heartbeat_timeout</primary></indexterm>
+<programlisting language="C"><link linkend="guint32"><returnvalue>guint32</returnvalue></link>
+arv_fake_camera_get_heartbeat_timeout (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-get-payload" role="function">
+<title>arv_fake_camera_get_payload&#160;()</title>
+<indexterm zone="arv-fake-camera-get-payload"><primary>arv_fake_camera_get_payload</primary></indexterm>
+<programlisting language="C"><link linkend="size-t"><returnvalue>size_t</returnvalue></link>
+arv_fake_camera_get_payload (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-get-stream-address" role="function">
+<title>arv_fake_camera_get_stream_address&#160;()</title>
+<indexterm zone="arv-fake-camera-get-stream-address"><primary>arv_fake_camera_get_stream_address</primary></indexterm>
+<programlisting language="C"><link linkend="GSocketAddress"><returnvalue>GSocketAddress</returnvalue></link>&#160;*
+arv_fake_camera_get_stream_address (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>);</programlisting>
+<refsect3 id="arv-fake-camera-get-stream-address.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>camera</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-fake-camera-get-stream-address.returns" role="returns">
+<title>Returns</title>
+<para>the data stream <link linkend="GSocketAddress"><type>GSocketAddress</type></link> for this camera. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-fake-camera-set-control-channel-privilege" role="function">
+<title>arv_fake_camera_set_control_channel_privilege&#160;()</title>
+<indexterm zone="arv-fake-camera-set-control-channel-privilege"><primary>arv_fake_camera_set_control_channel_privilege</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_fake_camera_set_control_channel_privilege
+                               (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                                <parameter><link linkend="guint32"><type>guint32</type></link> privilege</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-set-fill-pattern" role="function">
+<title>arv_fake_camera_set_fill_pattern&#160;()</title>
+<indexterm zone="arv-fake-camera-set-fill-pattern"><primary>arv_fake_camera_set_fill_pattern</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_fake_camera_set_fill_pattern (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                                  <parameter><link linkend="ArvFakeCameraFillPattern"><type>ArvFakeCameraFillPattern</type></link> fill_pattern_callback</parameter>,
+                                  <parameter><link linkend="void"><type>void</type></link> *fill_pattern_data</parameter>);</programlisting>
+<para>Sets the fill pattern callback for custom test images.</para>
+<refsect3 id="arv-fake-camera-set-fill-pattern.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>camera</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>fill_pattern_callback</para></entry>
+<entry role="parameter_description"><para>callback for image filling. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope call</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>fill_pattern_data</para></entry>
+<entry role="parameter_description"><para>image filling user data. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="arv-fake-camera-set-trigger-frequency" role="function">
+<title>arv_fake_camera_set_trigger_frequency&#160;()</title>
+<indexterm zone="arv-fake-camera-set-trigger-frequency"><primary>arv_fake_camera_set_trigger_frequency</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_fake_camera_set_trigger_frequency (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                                       <parameter><link linkend="double"><type>double</type></link> frequency</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-fake-camera-get-genicam-xml" role="function">
+<title>arv_fake_camera_get_genicam_xml&#160;()</title>
+<indexterm zone="arv-fake-camera-get-genicam-xml"><primary>arv_fake_camera_get_genicam_xml</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_fake_camera_get_genicam_xml (<parameter><link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link> *camera</parameter>,
+                                 <parameter><link linkend="size-t"><type>size_t</type></link> *size</parameter>);</programlisting>
+<refsect3 id="arv-fake-camera-get-genicam-xml.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>camera</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvFakeCamera"><type>ArvFakeCamera</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of the returned XML string. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>optional</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-fake-camera-get-genicam-xml.returns" role="returns">
+<title>Returns</title>
+<para>the genicam XML description of the camera. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-set-fake-camera-genicam-filename" role="function">
+<title>arv_set_fake_camera_genicam_filename&#160;()</title>
+<indexterm zone="arv-set-fake-camera-genicam-filename"><primary>arv_set_fake_camera_genicam_filename</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_set_fake_camera_genicam_filename (<parameter>const <link linkend="char"><type>char</type></link> *filename</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvFakeCamera.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvFakeCamera-struct" role="struct">
+<title>ArvFakeCamera</title>
+<indexterm zone="ArvFakeCamera-struct"><primary>ArvFakeCamera</primary></indexterm>
+<programlisting language="C">typedef struct _ArvFakeCamera ArvFakeCamera;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

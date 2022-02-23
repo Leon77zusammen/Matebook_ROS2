@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<indexdiv id="api-index-0.6.0">
+<indexdiv><title>A</title>
+<indexentry><primaryie linkends="ARAVIS-CHECK-VERSION:CAPS"><link linkend="ARAVIS-CHECK-VERSION:CAPS">ARAVIS_CHECK_VERSION</link>, macro in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ARAVIS-HAS-PACKET-SOCKET:CAPS"><link linkend="ARAVIS-HAS-PACKET-SOCKET:CAPS">ARAVIS_HAS_PACKET_SOCKET</link>, macro in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ARAVIS-HAS-USB:CAPS"><link linkend="ARAVIS-HAS-USB:CAPS">ARAVIS_HAS_USB</link>, macro in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ARAVIS-MAJOR-VERSION:CAPS"><link linkend="ARAVIS-MAJOR-VERSION:CAPS">ARAVIS_MAJOR_VERSION</link>, macro in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ARAVIS-MICRO-VERSION:CAPS"><link linkend="ARAVIS-MICRO-VERSION:CAPS">ARAVIS_MICRO_VERSION</link>, macro in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="ARAVIS-MINOR-VERSION:CAPS"><link linkend="ARAVIS-MINOR-VERSION:CAPS">ARAVIS_MINOR_VERSION</link>, macro in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="arv-buffer-get-system-timestamp"><link linkend="arv-buffer-get-system-timestamp">arv_buffer_get_system_timestamp</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-buffer-set-system-timestamp"><link linkend="arv-buffer-set-system-timestamp">arv_buffer_set_system_timestamp</link>, function in <link linkend="ArvBuffer">ArvBuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="arv-camera-gv-set-stream-options"><link linkend="arv-camera-gv-set-stream-options">arv_camera_gv_set_stream_options</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-camera-is-uv-device"><link linkend="arv-camera-is-uv-device">arv_camera_is_uv_device</link>, function in <link linkend="ArvCamera">ArvCamera</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>E</title>
+<indexentry><primaryie linkends="arv-evaluator-get-constant"><link linkend="arv-evaluator-get-constant">arv_evaluator_get_constant</link>, function in <link linkend="ArvEvaluator">ArvEvaluator</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-evaluator-get-sub-expression"><link linkend="arv-evaluator-get-sub-expression">arv_evaluator_get_sub_expression</link>, function in <link linkend="ArvEvaluator">ArvEvaluator</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-evaluator-set-constant"><link linkend="arv-evaluator-set-constant">arv_evaluator_set_constant</link>, function in <link linkend="ArvEvaluator">ArvEvaluator</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-evaluator-set-sub-expression"><link linkend="arv-evaluator-set-sub-expression">arv_evaluator_set_sub_expression</link>, function in <link linkend="ArvEvaluator">ArvEvaluator</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="arv-gc-property-node-get-name"><link linkend="arv-gc-property-node-get-name">arv_gc_property_node_get_name</link>, function in <link linkend="ArvGcPropertyNode">ArvGcPropertyNode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gc-register-description-node-check-schema-version"><link linkend="arv-gc-register-description-node-check-schema-version">arv_gc_register_description_node_check_schema_version</link>, function in <link linkend="ArvGcRegisterDescriptionNode">ArvGcRegisterDescriptionNode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gc-register-description-node-compare-schema-version"><link linkend="arv-gc-register-description-node-compare-schema-version">arv_gc_register_description_node_compare_schema_version</link>, function in <link linkend="ArvGcRegisterDescriptionNode">ArvGcRegisterDescriptionNode</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-device-address"><link linkend="arv-get-device-address">arv_get_device_address</link>, function in <link linkend="aravis-Arv">Arv</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-device-model"><link linkend="arv-get-device-model">arv_get_device_model</link>, function in <link linkend="aravis-Arv">Arv</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-device-protocol"><link linkend="arv-get-device-protocol">arv_get_device_protocol</link>, function in <link linkend="aravis-Arv">Arv</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-device-serial-nbr"><link linkend="arv-get-device-serial-nbr">arv_get_device_serial_nbr</link>, function in <link linkend="aravis-Arv">Arv</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-get-device-vendor"><link linkend="arv-get-device-vendor">arv_get_device_vendor</link>, function in <link linkend="aravis-Arv">Arv</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gv-device-auto-packet-size"><link linkend="arv-gv-device-auto-packet-size">arv_gv_device_auto_packet_size</link>, function in <link linkend="ArvGvDevice">ArvGvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gv-device-get-stream-options"><link linkend="arv-gv-device-get-stream-options">arv_gv_device_get_stream_options</link>, function in <link linkend="ArvGvDevice">ArvGvDevice</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-gv-device-set-stream-options"><link linkend="arv-gv-device-set-stream-options">arv_gv_device_set_stream_options</link>, function in <link linkend="ArvGvDevice">ArvGvDevice</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>I</title>
+<indexentry><primaryie linkends="arv-interface-get-device-model"><link linkend="arv-interface-get-device-model">arv_interface_get_device_model</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-interface-get-device-protocol"><link linkend="arv-interface-get-device-protocol">arv_interface_get_device_protocol</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-interface-get-device-serial-nbr"><link linkend="arv-interface-get-device-serial-nbr">arv_interface_get_device_serial_nbr</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+<indexentry><primaryie linkends="arv-interface-get-device-vendor"><link linkend="arv-interface-get-device-vendor">arv_interface_get_device_vendor</link>, function in <link linkend="ArvInterface">ArvInterface</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

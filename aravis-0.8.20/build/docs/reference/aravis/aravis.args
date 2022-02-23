@@ -1,0 +1,280 @@
+<ARG>
+<NAME>ArvCamera::device</NAME>
+<TYPE>ArvDevice*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwX</FLAGS>
+<NICK>Device</NICK>
+<BLURB>The device associated with this camera.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvCamera::name</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Camera name</NICK>
+<BLURB>The camera name.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvChunkParser::genicam</NAME>
+<TYPE>ArvGc*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwX</FLAGS>
+<NICK>genicam</NICK>
+<BLURB>Genicam instance.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvFakeDevice::serial-number</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Serial number</NICK>
+<BLURB>Fake device serial number.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGcPropertyNode::node-type</NAME>
+<TYPE>ArvGcPropertyNodeType</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwX</FLAGS>
+<NICK>Node type</NICK>
+<BLURB>Actual node type.</BLURB>
+<DEFAULT>ARV_GC_PROPERTY_NODE_TYPE_UNKNOWN</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvDevice::device-address</NAME>
+<TYPE>GInetAddress*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Device address</NICK>
+<BLURB>The device address.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvDevice::interface-address</NAME>
+<TYPE>GInetAddress*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Interface address</NICK>
+<BLURB>The address of the interface connected to the device.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvDevice::packet-size-adjustment</NAME>
+<TYPE>ArvGvPacketSizeAdjustment</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Packet size adjustment</NICK>
+<BLURB>Packet size adjustment option.</BLURB>
+<DEFAULT>ARV_GV_PACKET_SIZE_ADJUSTMENT_ON_FAILURE_ONCE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvFakeCamera::genicam-filename</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Genicam filename</NICK>
+<BLURB>Genicam filename.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvFakeCamera::gvsp-lost-ratio</NAME>
+<TYPE>gdouble</TYPE>
+<RANGE>[0,1]</RANGE>
+<FLAGS>wx</FLAGS>
+<NICK>GVSP lost packet ratio</NICK>
+<BLURB>GVSP lost packet ratio.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvFakeCamera::interface-name</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Interface name</NICK>
+<BLURB>Interface name.</BLURB>
+<DEFAULT>"127.0.0.1"</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvFakeCamera::serial-number</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Serial number</NICK>
+<BLURB>Serial number.</BLURB>
+<DEFAULT>"GV01"</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvStream::frame-retention</NAME>
+<TYPE>guint</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Frame retention</NICK>
+<BLURB>Packet retention, in µs.</BLURB>
+<DEFAULT>100000</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvStream::initial-packet-timeout</NAME>
+<TYPE>guint</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Initial packet timeout</NICK>
+<BLURB>Initial packet timeout, in µs.</BLURB>
+<DEFAULT>1000</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvStream::packet-request-ratio</NAME>
+<TYPE>gdouble</TYPE>
+<RANGE>[0,2]</RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Packet request ratio</NICK>
+<BLURB>Packet resend request limit as a percentage of frame packet number.</BLURB>
+<DEFAULT>0.25</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvStream::packet-resend</NAME>
+<TYPE>ArvGvStreamPacketResend</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Packet resend</NICK>
+<BLURB>Packet resend behaviour.</BLURB>
+<DEFAULT>ARV_GV_STREAM_PACKET_RESEND_ALWAYS</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvStream::packet-timeout</NAME>
+<TYPE>guint</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Packet timeout</NICK>
+<BLURB>Packet timeout, in µs.</BLURB>
+<DEFAULT>20000</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvStream::socket-buffer</NAME>
+<TYPE>ArvGvStreamSocketBuffer</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Socket buffer</NICK>
+<BLURB>Socket buffer behaviour.</BLURB>
+<DEFAULT>ARV_GV_STREAM_SOCKET_BUFFER_FIXED</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvGvStream::socket-buffer-size</NAME>
+<TYPE>gint</TYPE>
+<RANGE>>= -1</RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Socket buffer size</NICK>
+<BLURB>Socket buffer size, in bytes.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvStream::callback</NAME>
+<TYPE>gpointer</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwX</FLAGS>
+<NICK>Stream callback</NICK>
+<BLURB>Optional user callback.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvStream::callback-data</NAME>
+<TYPE>gpointer</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwX</FLAGS>
+<NICK>Stream callback data</NICK>
+<BLURB>Optional user callback data.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvStream::device</NAME>
+<TYPE>ArvDevice*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwX</FLAGS>
+<NICK>Paret device</NICK>
+<BLURB>A ArvDevice parent object.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvStream::emit-signals</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Emit signals</NICK>
+<BLURB>Emit signals.</BLURB>
+<DEFAULT>FALSE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvUvDevice::guid</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>GUID</NICK>
+<BLURB>USB3 device GUID.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvUvDevice::product</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Product</NICK>
+<BLURB>USB3 device product string.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvUvDevice::serial-number</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Serial number</NICK>
+<BLURB>USB3 device serial number.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvUvDevice::vendor</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Vendor</NICK>
+<BLURB>USB3 device vendor string.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>ArvUvStream::usb-mode</NAME>
+<TYPE>ArvUvUsbMode</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>USB mode</NICK>
+<BLURB>USB device I/O mode.</BLURB>
+<DEFAULT>ARV_UV_USB_MODE_SYNC</DEFAULT>
+</ARG>
+

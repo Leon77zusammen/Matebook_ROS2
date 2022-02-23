@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvInterface">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvInterface.top_of_page">ArvInterface</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvInterface</refname>
+<refpurpose>Abstract base class for camera discovery</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvInterface.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-get-device-address">arv_interface_get_device_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-get-device-id">arv_interface_get_device_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-get-device-model">arv_interface_get_device_model</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-get-device-physical-id">arv_interface_get_device_physical_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-get-device-serial-nbr">arv_interface_get_device_serial_nbr</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-get-device-vendor">arv_interface_get_device_vendor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-get-device-manufacturer-info">arv_interface_get_device_manufacturer_info</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-get-device-protocol">arv_interface_get_device_protocol</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-interface-get-n-devices">arv_interface_get_n_devices</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-interface-open-device">arv_interface_open_device</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-interface-update-device-list">arv_interface_update_device_list</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="ArvInterface.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="ArvInterface"><type>ArvInterface</type></link> is an abstract base class for camera discovery. It maintains a
+list of the available devices and helps to instantiate the corresponding
+<link linkend="ArvDevice"><type>ArvDevice</type></link> objects. If the user already knows the device id of the device, he should
+not worry about this class and just use <link linkend="arv-camera-new"><function>arv_camera_new()</function></link> or
+<link linkend="arv-open-device"><function>arv_open_device()</function></link>.</para>
+
+</refsect1>
+<refsect1 id="ArvInterface.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-interface-get-device-address" role="function" condition="since:0.2.0">
+<title>arv_interface_get_device_address&#160;()</title>
+<indexterm zone="arv-interface-get-device-address" role="0.2.0"><primary>arv_interface_get_device_address</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_interface_get_device_address (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                                  <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>queries the device address (IP address in the case of an ethernet camera). Useful
+for constructing manual connections to devices using <parameter>arv_gv_device_new</parameter>
+</para>
+<para>Prior to this call the <link linkend="arv-interface-update-device-list"><function>arv_interface_update_device_list()</function></link>
+function must be called.</para>
+<refsect3 id="arv-interface-get-device-address.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>device index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-device-address.returns" role="returns">
+<title>Returns</title>
+<para>the device address. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-interface-get-device-id" role="function" condition="since:0.2.0">
+<title>arv_interface_get_device_id&#160;()</title>
+<indexterm zone="arv-interface-get-device-id" role="0.2.0"><primary>arv_interface_get_device_id</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_interface_get_device_id (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                             <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>Queries the unique device id corresponding to index.  Prior to this
+call the <link linkend="arv-interface-update-device-list"><function>arv_interface_update_device_list()</function></link> function must be called.</para>
+<refsect3 id="arv-interface-get-device-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>device index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-device-id.returns" role="returns">
+<title>Returns</title>
+<para> a unique device id</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-interface-get-device-model" role="function" condition="since:0.6.0">
+<title>arv_interface_get_device_model&#160;()</title>
+<indexterm zone="arv-interface-get-device-model" role="0.6.0"><primary>arv_interface_get_device_model</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_interface_get_device_model (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>Queries the device model.</para>
+<para>Prior to this call the <link linkend="arv-interface-update-device-list"><function>arv_interface_update_device_list()</function></link>
+function must be called.</para>
+<refsect3 id="arv-interface-get-device-model.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>device index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-device-model.returns" role="returns">
+<title>Returns</title>
+<para>the device model, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-interface-get-device-physical-id" role="function" condition="since:0.2.0">
+<title>arv_interface_get_device_physical_id&#160;()</title>
+<indexterm zone="arv-interface-get-device-physical-id" role="0.2.0"><primary>arv_interface_get_device_physical_id</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_interface_get_device_physical_id (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                                      <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>Queries the physical device id corresponding to index such
+as the MAC address for Ethernet based devices, bus id for PCI,
+USB or Firewire based devices.</para>
+<para>Prior to this call the <link linkend="arv-interface-update-device-list"><function>arv_interface_update_device_list()</function></link>
+function must be called.</para>
+<refsect3 id="arv-interface-get-device-physical-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>device index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-device-physical-id.returns" role="returns">
+<title>Returns</title>
+<para> a physical device id</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-interface-get-device-serial-nbr" role="function" condition="since:0.6.0">
+<title>arv_interface_get_device_serial_nbr&#160;()</title>
+<indexterm zone="arv-interface-get-device-serial-nbr" role="0.6.0"><primary>arv_interface_get_device_serial_nbr</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_interface_get_device_serial_nbr (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                                     <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>Queries the device serial.</para>
+<para>Prior to this call the <link linkend="arv-interface-update-device-list"><function>arv_interface_update_device_list()</function></link>
+function must be called.</para>
+<refsect3 id="arv-interface-get-device-serial-nbr.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>device index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-device-serial-nbr.returns" role="returns">
+<title>Returns</title>
+<para>the device serial, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-interface-get-device-vendor" role="function" condition="since:0.6.0">
+<title>arv_interface_get_device_vendor&#160;()</title>
+<indexterm zone="arv-interface-get-device-vendor" role="0.6.0"><primary>arv_interface_get_device_vendor</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_interface_get_device_vendor (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                                 <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>Queries the device vendor.</para>
+<para>Prior to this call the <link linkend="arv-interface-update-device-list"><function>arv_interface_update_device_list()</function></link>
+function must be called.</para>
+<refsect3 id="arv-interface-get-device-vendor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>device index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-device-vendor.returns" role="returns">
+<title>Returns</title>
+<para>the device vendor, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-interface-get-device-manufacturer-info" role="function" condition="since:0.8.20">
+<title>arv_interface_get_device_manufacturer_info&#160;()</title>
+<indexterm zone="arv-interface-get-device-manufacturer-info" role="0.8.20"><primary>arv_interface_get_device_manufacturer_info</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_interface_get_device_manufacturer_info
+                               (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                                <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>Queries the device manufacturer info.</para>
+<para>Prior to this call the <link linkend="arv-interface-update-device-list"><function>arv_interface_update_device_list()</function></link>
+function must be called.</para>
+<refsect3 id="arv-interface-get-device-manufacturer-info.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>device index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-device-manufacturer-info.returns" role="returns">
+<title>Returns</title>
+<para>the device manufacturer info, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.20">0.8.20</link></para></refsect2>
+<refsect2 id="arv-interface-get-device-protocol" role="function" condition="since:0.6.0">
+<title>arv_interface_get_device_protocol&#160;()</title>
+<indexterm zone="arv-interface-get-device-protocol" role="0.6.0"><primary>arv_interface_get_device_protocol</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_interface_get_device_protocol (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                                   <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<para>Queries the device protocol. Possible values are 'USB3Vision', 'GigEVision'
+and 'Fake'.</para>
+<para>Prior to this call the <link linkend="arv-interface-update-device-list"><function>arv_interface_update_device_list()</function></link>
+function must be called.</para>
+<refsect3 id="arv-interface-get-device-protocol.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>device index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-device-protocol.returns" role="returns">
+<title>Returns</title>
+<para>the device protocol as a string, NULL on error. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.6.0">0.6.0</link></para></refsect2>
+<refsect2 id="arv-interface-get-n-devices" role="function" condition="since:0.2.0">
+<title>arv_interface_get_n_devices&#160;()</title>
+<indexterm zone="arv-interface-get-n-devices" role="0.2.0"><primary>arv_interface_get_n_devices</primary></indexterm>
+<programlisting language="C">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+arv_interface_get_n_devices (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>);</programlisting>
+<para>Queries the number of available devices on this interface. Prior to this
+call the <parameter>arv_interface_update_device_list</parameter>
+ function must be called. The list content will not
+change until the next call of the update function.</para>
+<refsect3 id="arv-interface-get-n-devices.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-get-n-devices.returns" role="returns">
+<title>Returns</title>
+<para> the number of available devices</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-interface-open-device" role="function" condition="since:0.2.0">
+<title>arv_interface_open_device&#160;()</title>
+<indexterm zone="arv-interface-open-device" role="0.2.0"><primary>arv_interface_open_device</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDevice"><returnvalue>ArvDevice</returnvalue></link>&#160;*
+arv_interface_open_device (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>,
+                           <parameter>const <link linkend="char"><type>char</type></link> *device_id</parameter>,
+                           <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Creates a new <link linkend="ArvDevice"><type>ArvDevice</type></link> object corresponding to the given device id string.
+The first available device is returned if <parameter>device_id</parameter>
+ is <link linkend="NULL:CAPS"><literal>NULL</literal></link>.</para>
+<refsect3 id="arv-interface-open-device.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>device_id</para></entry>
+<entry role="parameter_description"><para>device unique id. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> placeholder, <link linkend="NULL:CAPS"><literal>NULL</literal></link> to ignore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-interface-open-device.returns" role="returns">
+<title>Returns</title>
+<para>a new <link linkend="ArvDevice"><type>ArvDevice</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+<refsect2 id="arv-interface-update-device-list" role="function" condition="since:0.2.0">
+<title>arv_interface_update_device_list&#160;()</title>
+<indexterm zone="arv-interface-update-device-list" role="0.2.0"><primary>arv_interface_update_device_list</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_interface_update_device_list (<parameter><link linkend="ArvInterface"><type>ArvInterface</type></link> *interface</parameter>);</programlisting>
+<para>Updates the internal list of available devices. This may change the
+connection between a list index and a device ID.</para>
+<refsect3 id="arv-interface-update-device-list.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>interface</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvInterface"><type>ArvInterface</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-0.2.0">0.2.0</link></para></refsect2>
+
+</refsect1>
+
+</refentry>

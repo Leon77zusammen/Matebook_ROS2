@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGcFeatureNode">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGcFeatureNode.top_of_page">ArvGcFeatureNode</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGcFeatureNode</refname>
+<refpurpose>Base class for Genicam feature nodes</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGcFeatureNode.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-value-as-string">arv_gc_feature_node_get_value_as_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-set-value-from-string">arv_gc_feature_node_set_value_from_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-name">arv_gc_feature_node_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcNameSpace"><returnvalue>ArvGcNameSpace</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-name-space">arv_gc_feature_node_get_name_space</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-display-name">arv_gc_feature_node_get_display_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-tooltip">arv_gc_feature_node_get_tooltip</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-description">arv_gc_feature_node_get_description</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-is-available">arv_gc_feature_node_is_available</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-is-implemented">arv_gc_feature_node_is_implemented</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-is-locked">arv_gc_feature_node_is_locked</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcVisibility"><returnvalue>ArvGcVisibility</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-visibility">arv_gc_feature_node_get_visibility</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcAccessMode"><returnvalue>ArvGcAccessMode</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-imposed-access-mode">arv_gc_feature_node_get_imposed_access_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvGcAccessMode"><returnvalue>ArvGcAccessMode</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gc-feature-node-get-actual-access-mode">arv_gc_feature_node_get_actual_access_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcFeatureNode.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGcFeatureNode-struct">ArvGcFeatureNode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGcFeatureNode.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomNode">ArvDomNode</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvDomElement">ArvDomElement</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcNode">ArvGcNode</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGcFeatureNode
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcBoolean">ArvGcBoolean</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcCategory">ArvGcCategory</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcCommand">ArvGcCommand</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcConverter">ArvGcConverter</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcEnumEntry">ArvGcEnumEntry</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcEnumeration">ArvGcEnumeration</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcFloatNode">ArvGcFloatNode</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcRegisterNode">ArvGcRegisterNode</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcGroupNode">ArvGcGroupNode</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcSwissKnife">ArvGcSwissKnife</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcIntegerNode">ArvGcIntegerNode</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcPort">ArvGcPort</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcRegisterDescriptionNode">ArvGcRegisterDescriptionNode</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="ArvGcStringNode">ArvGcStringNode</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvGcStructEntryNode">ArvGcStructEntryNode</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGcFeatureNode.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> provides a base class for the implementation of the different
+types of Genicam feature node (Group, Integer, Float, Enumeration...).</para>
+
+</refsect1>
+<refsect1 id="ArvGcFeatureNode.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gc-feature-node-get-value-as-string" role="function">
+<title>arv_gc_feature_node_get_value_as_string&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-value-as-string"><primary>arv_gc_feature_node_get_value_as_string</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_feature_node_get_value_as_string
+                               (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Retrieve the node value a string.</para>
+<warning><para>Please note the string content is still owned by the <parameter>node</parameter> object, which means the returned pointer may not be still valid after a new call to this function.</para></warning>
+<refsect3 id="arv-gc-feature-node-get-value-as-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gc_feature_node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>return location for a GError, or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-feature-node-get-value-as-string.returns" role="returns">
+<title>Returns</title>
+<para>a string representation of the node value, <link linkend="NULL:CAPS"><literal>NULL</literal></link> if not applicable. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-gc-feature-node-set-value-from-string" role="function">
+<title>arv_gc_feature_node_set_value_from_string&#160;()</title>
+<indexterm zone="arv-gc-feature-node-set-value-from-string"><primary>arv_gc_feature_node_set_value_from_string</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gc_feature_node_set_value_from_string
+                               (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *string</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Set the node value using a string representation of the value. May not be applicable to every node type, but safe.</para>
+<refsect3 id="arv-gc-feature-node-set-value-from-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gc_feature_node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>string</para></entry>
+<entry role="parameter_description"><para>new node value, as string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>return location for a GError, or NULL</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="arv-gc-feature-node-get-name" role="function">
+<title>arv_gc_feature_node_get_name&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-name"><primary>arv_gc_feature_node_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_feature_node_get_name (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-feature-node-get-name-space" role="function" condition="since:0.8.0">
+<title>arv_gc_feature_node_get_name_space&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-name-space" role="0.8.0"><primary>arv_gc_feature_node_get_name_space</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcNameSpace"><returnvalue>ArvGcNameSpace</returnvalue></link>
+arv_gc_feature_node_get_name_space (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>);</programlisting>
+<para>Get feature name space.</para>
+<refsect3 id="arv-gc-feature-node-get-name-space.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gc_feature_node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-feature-node-get-name-space.returns" role="returns">
+<title>Returns</title>
+<para> Name space value as <link linkend="ArvGcNameSpace"><type>ArvGcNameSpace</type></link>.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-feature-node-get-display-name" role="function">
+<title>arv_gc_feature_node_get_display_name&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-display-name"><primary>arv_gc_feature_node_get_display_name</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_feature_node_get_display_name (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-feature-node-get-tooltip" role="function">
+<title>arv_gc_feature_node_get_tooltip&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-tooltip"><primary>arv_gc_feature_node_get_tooltip</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_feature_node_get_tooltip (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-feature-node-get-description" role="function">
+<title>arv_gc_feature_node_get_description&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-description"><primary>arv_gc_feature_node_get_description</primary></indexterm>
+<programlisting language="C">const <link linkend="char"><returnvalue>char</returnvalue></link>&#160;*
+arv_gc_feature_node_get_description (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-feature-node-is-available" role="function">
+<title>arv_gc_feature_node_is_available&#160;()</title>
+<indexterm zone="arv-gc-feature-node-is-available"><primary>arv_gc_feature_node_is_available</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gc_feature_node_is_available (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>,
+                                  <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-feature-node-is-implemented" role="function">
+<title>arv_gc_feature_node_is_implemented&#160;()</title>
+<indexterm zone="arv-gc-feature-node-is-implemented"><primary>arv_gc_feature_node_is_implemented</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gc_feature_node_is_implemented (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-feature-node-is-locked" role="function">
+<title>arv_gc_feature_node_is_locked&#160;()</title>
+<indexterm zone="arv-gc-feature-node-is-locked"><primary>arv_gc_feature_node_is_locked</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+arv_gc_feature_node_is_locked (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>,
+                               <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-feature-node-get-visibility" role="function">
+<title>arv_gc_feature_node_get_visibility&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-visibility"><primary>arv_gc_feature_node_get_visibility</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcVisibility"><returnvalue>ArvGcVisibility</returnvalue></link>
+arv_gc_feature_node_get_visibility (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gc-feature-node-get-imposed-access-mode" role="function" condition="since:0.8.0">
+<title>arv_gc_feature_node_get_imposed_access_mode&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-imposed-access-mode" role="0.8.0"><primary>arv_gc_feature_node_get_imposed_access_mode</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcAccessMode"><returnvalue>ArvGcAccessMode</returnvalue></link>
+arv_gc_feature_node_get_imposed_access_mode
+                               (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>);</programlisting>
+<para>Gets feature node imposed access mode property.</para>
+<warning><para>Note that this function will not give the actual access mode. Please use
+<link linkend="arv-gc-feature-node-get-actual-access-mode"><type>arv_gc_feature_node_get_actual_access_mode</type></link> to get an access mode combined from imposed access
+mode and underlying register access mode properties.</para></warning>
+<refsect3 id="arv-gc-feature-node-get-imposed-access-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gc_feature_node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-feature-node-get-imposed-access-mode.returns" role="returns">
+<title>Returns</title>
+<para> Access mode as <link linkend="ArvGcAccessMode"><type>ArvGcAccessMode</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+<refsect2 id="arv-gc-feature-node-get-actual-access-mode" role="function" condition="since:0.8.0">
+<title>arv_gc_feature_node_get_actual_access_mode&#160;()</title>
+<indexterm zone="arv-gc-feature-node-get-actual-access-mode" role="0.8.0"><primary>arv_gc_feature_node_get_actual_access_mode</primary></indexterm>
+<programlisting language="C"><link linkend="ArvGcAccessMode"><returnvalue>ArvGcAccessMode</returnvalue></link>
+arv_gc_feature_node_get_actual_access_mode
+                               (<parameter><link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link> *gc_feature_node</parameter>);</programlisting>
+<para>Gets feature node allowed access mode. This is a combination of Genicam ImposedAccessMode and
+AccessMode properties of underlying features and registers.</para>
+<refsect3 id="arv-gc-feature-node-get-actual-access-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gc_feature_node</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGcFeatureNode"><type>ArvGcFeatureNode</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-gc-feature-node-get-actual-access-mode.returns" role="returns">
+<title>Returns</title>
+<para> Access mode as <link linkend="ArvGcAccessMode"><type>ArvGcAccessMode</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-0.8.0">0.8.0</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="ArvGcFeatureNode.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGcFeatureNode-struct" role="struct">
+<title>ArvGcFeatureNode</title>
+<indexterm zone="ArvGcFeatureNode-struct"><primary>ArvGcFeatureNode</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGcFeatureNode ArvGcFeatureNode;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

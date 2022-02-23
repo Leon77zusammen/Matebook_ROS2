@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGvInterface">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGvInterface.top_of_page">ArvGvInterface</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGvInterface</refname>
+<refpurpose>GigEVision interface</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGvInterface.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvInterface"><returnvalue>ArvInterface</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-gv-interface-get-instance">arv_gv_interface_get_instance</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGvInterface.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGvInterface-struct">ArvGvInterface</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGvInterface.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvInterface">ArvInterface</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGvInterface
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvGvInterface.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGvInterface.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gv-interface-get-instance" role="function">
+<title>arv_gv_interface_get_instance&#160;()</title>
+<indexterm zone="arv-gv-interface-get-instance"><primary>arv_gv_interface_get_instance</primary></indexterm>
+<programlisting language="C"><link linkend="ArvInterface"><returnvalue>ArvInterface</returnvalue></link>&#160;*
+arv_gv_interface_get_instance (<parameter><type>void</type></parameter>);</programlisting>
+<para>Gets the unique instance of the GV interface.</para>
+<refsect3 id="arv-gv-interface-get-instance.returns" role="returns">
+<title>Returns</title>
+<para>a <link linkend="ArvInterface"><type>ArvInterface</type></link> singleton. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ArvGvInterface.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGvInterface-struct" role="struct">
+<title>ArvGvInterface</title>
+<indexterm zone="ArvGvInterface-struct"><primary>ArvGvInterface</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGvInterface ArvGvInterface;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

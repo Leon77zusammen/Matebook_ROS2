@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvGvStream">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvGvStream.top_of_page">ArvGvStream</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvGvStream</refname>
+<refpurpose>GigEVision stream</refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvGvStream.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="guint16"><returnvalue>guint16</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-stream-get-port">arv_gv_stream_get_port</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-gv-stream-get-statistics">arv_gv_stream_get_statistics</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGvStream.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="ArvGvStream--frame-retention">frame-retention</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="ArvGvStream--initial-packet-timeout">initial-packet-timeout</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="ArvGvStream--packet-request-ratio">packet-request-ratio</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="ArvGvStreamPacketResend"><type>ArvGvStreamPacketResend</type></link></entry><entry role="property_name"><link linkend="ArvGvStream--packet-resend">packet-resend</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="ArvGvStream--packet-timeout">packet-timeout</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="ArvGvStreamSocketBuffer"><type>ArvGvStreamSocketBuffer</type></link></entry><entry role="property_name"><link linkend="ArvGvStream--socket-buffer">socket-buffer</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="ArvGvStream--socket-buffer-size">socket-buffer-size</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGvStream.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="other_proto_type" colwidth="150px"/>
+<colspec colname="other_proto_name"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGvStreamOption">ArvGvStreamOption</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGvStreamSocketBuffer">ArvGvStreamSocketBuffer</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="ArvGvStreamPacketResend">ArvGvStreamPacketResend</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="ArvGvStream-struct">ArvGvStream</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvGvStream.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="ArvStream">ArvStream</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvGvStream
+</screen>
+</refsect1>
+<refsect1 id="ArvGvStream.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+ArvGvStream implements
+ <link linkend="GInitable">GInitable</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="ArvGvStream.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvGvStream.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-gv-stream-get-port" role="function">
+<title>arv_gv_stream_get_port&#160;()</title>
+<indexterm zone="arv-gv-stream-get-port"><primary>arv_gv_stream_get_port</primary></indexterm>
+<programlisting language="C"><link linkend="guint16"><returnvalue>guint16</returnvalue></link>
+arv_gv_stream_get_port (<parameter><link linkend="ArvGvStream"><type>ArvGvStream</type></link> *gv_stream</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-gv-stream-get-statistics" role="function">
+<title>arv_gv_stream_get_statistics&#160;()</title>
+<indexterm zone="arv-gv-stream-get-statistics"><primary>arv_gv_stream_get_statistics</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+arv_gv_stream_get_statistics (<parameter><link linkend="ArvGvStream"><type>ArvGvStream</type></link> *gv_stream</parameter>,
+                              <parameter><link linkend="guint64"><type>guint64</type></link> *n_resent_packets</parameter>,
+                              <parameter><link linkend="guint64"><type>guint64</type></link> *n_missing_packets</parameter>);</programlisting>
+<refsect3 id="arv-gv-stream-get-statistics.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gv_stream</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvGvStream"><type>ArvGvStream</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_resent_packets</para></entry>
+<entry role="parameter_description"><para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>n_missing_packets</para></entry>
+<entry role="parameter_description"><para>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="ArvGvStream.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="ArvGvStreamOption" role="enum">
+<title>enum ArvGvStreamOption</title>
+<indexterm zone="ArvGvStreamOption"><primary>ArvGvStreamOption</primary></indexterm>
+<refsect3 id="ArvGvStreamOption.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GV-STREAM-OPTION-NONE:CAPS">ARV_GV_STREAM_OPTION_NONE</para></entry>
+<entry role="enum_member_description"><para>no option specified</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GV-STREAM-OPTION-PACKET-SOCKET-DISABLED:CAPS">ARV_GV_STREAM_OPTION_PACKET_SOCKET_DISABLED</para></entry>
+<entry role="enum_member_description"><para>use of packet socket is disabled</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGvStreamSocketBuffer" role="enum">
+<title>enum ArvGvStreamSocketBuffer</title>
+<indexterm zone="ArvGvStreamSocketBuffer"><primary>ArvGvStreamSocketBuffer</primary></indexterm>
+<refsect3 id="ArvGvStreamSocketBuffer.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GV-STREAM-SOCKET-BUFFER-FIXED:CAPS">ARV_GV_STREAM_SOCKET_BUFFER_FIXED</para></entry>
+<entry role="enum_member_description"><para>socket buffer is set to a given fixed value</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GV-STREAM-SOCKET-BUFFER-AUTO:CAPS">ARV_GV_STREAM_SOCKET_BUFFER_AUTO</para></entry>
+<entry role="enum_member_description"><para>socket buffer size is set to the payload size</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGvStreamPacketResend" role="enum">
+<title>enum ArvGvStreamPacketResend</title>
+<indexterm zone="ArvGvStreamPacketResend"><primary>ArvGvStreamPacketResend</primary></indexterm>
+<refsect3 id="ArvGvStreamPacketResend.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GV-STREAM-PACKET-RESEND-NEVER:CAPS">ARV_GV_STREAM_PACKET_RESEND_NEVER</para></entry>
+<entry role="enum_member_description"><para>never request a packet resend</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="ARV-GV-STREAM-PACKET-RESEND-ALWAYS:CAPS">ARV_GV_STREAM_PACKET_RESEND_ALWAYS</para></entry>
+<entry role="enum_member_description"><para>request a packet resend if a packet was missing</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="ArvGvStream-struct" role="struct">
+<title>ArvGvStream</title>
+<indexterm zone="ArvGvStream-struct"><primary>ArvGvStream</primary></indexterm>
+<programlisting language="C">typedef struct _ArvGvStream ArvGvStream;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="ArvGvStream.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="ArvGvStream--frame-retention" role="property"><title>The <literal>“frame-retention”</literal> property</title>
+<indexterm zone="ArvGvStream--frame-retention"><primary>ArvGvStream:frame-retention</primary></indexterm>
+<programlisting>  “frame-retention”          <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Amount of time Aravis is wating for frame completion after the last packet is received. A greater value will
+also increase the maximum frame latency in case of missing packets.</para>
+<para>Owner: ArvGvStream</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Default value: 100000</para>
+</refsect2>
+<refsect2 id="ArvGvStream--initial-packet-timeout" role="property"><title>The <literal>“initial-packet-timeout”</literal> property</title>
+<indexterm zone="ArvGvStream--initial-packet-timeout" role="0.8.15"><primary>ArvGvStream:initial-packet-timeout</primary></indexterm>
+<programlisting>  “initial-packet-timeout”   <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Delay before asking for a packet resend after the packet was detected missing for the first time. The reason
+for this delay is, depending on the network topology, stream packets are not always received in increasing id
+order. As the missing packet detection happens at each received packet, by verifying if each previous packet
+has been received, we could emit useless packet resend requests if they are not ordered.</para>
+<para>Owner: ArvGvStream</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Default value: 1000</para>
+<para role="since">Since: <link linkend="api-index-0.8.15">0.8.15</link></para></refsect2>
+<refsect2 id="ArvGvStream--packet-request-ratio" role="property"><title>The <literal>“packet-request-ratio”</literal> property</title>
+<indexterm zone="ArvGvStream--packet-request-ratio"><primary>ArvGvStream:packet-request-ratio</primary></indexterm>
+<programlisting>  “packet-request-ratio”     <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Maximum number of packet resend requests for a given frame, as a percentage of the number of packets per
+frame.</para>
+<para>Owner: ArvGvStream</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,2]</para>
+<para>Default value: 0.25</para>
+</refsect2>
+<refsect2 id="ArvGvStream--packet-resend" role="property"><title>The <literal>“packet-resend”</literal> property</title>
+<indexterm zone="ArvGvStream--packet-resend"><primary>ArvGvStream:packet-resend</primary></indexterm>
+<programlisting>  “packet-resend”            <link linkend="ArvGvStreamPacketResend"><type>ArvGvStreamPacketResend</type></link></programlisting>
+<para>Packet resend policy. This only applies if the device supports packet resend.</para>
+<para>Owner: ArvGvStream</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Default value: ARV_GV_STREAM_PACKET_RESEND_ALWAYS</para>
+</refsect2>
+<refsect2 id="ArvGvStream--packet-timeout" role="property"><title>The <literal>“packet-timeout”</literal> property</title>
+<indexterm zone="ArvGvStream--packet-timeout"><primary>ArvGvStream:packet-timeout</primary></indexterm>
+<programlisting>  “packet-timeout”           <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Timeout while waiting for a packet after a resend request, before asking again.</para>
+<para>Owner: ArvGvStream</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Default value: 20000</para>
+</refsect2>
+<refsect2 id="ArvGvStream--socket-buffer" role="property"><title>The <literal>“socket-buffer”</literal> property</title>
+<indexterm zone="ArvGvStream--socket-buffer"><primary>ArvGvStream:socket-buffer</primary></indexterm>
+<programlisting>  “socket-buffer”            <link linkend="ArvGvStreamSocketBuffer"><type>ArvGvStreamSocketBuffer</type></link></programlisting>
+<para>Incoming socket buffer policy.</para>
+<para>Owner: ArvGvStream</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Default value: ARV_GV_STREAM_SOCKET_BUFFER_FIXED</para>
+</refsect2>
+<refsect2 id="ArvGvStream--socket-buffer-size" role="property"><title>The <literal>“socket-buffer-size”</literal> property</title>
+<indexterm zone="ArvGvStream--socket-buffer-size"><primary>ArvGvStream:socket-buffer-size</primary></indexterm>
+<programlisting>  “socket-buffer-size”       <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Size in bytes of the incoming socket buffer. A greater value helps to lower the number of missings packets,
+as the expense of an increased memory usage.</para>
+<para>Owner: ArvGvStream</para>
+<para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= -1</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

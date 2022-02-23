@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.3//EN"
+               "http://www.oasis-open.org/docbook/xml/4.3/docbookx.dtd"
+[
+  <!ENTITY % local.common.attrib "xmlns:xi  CDATA  #FIXED 'http://www.w3.org/2003/XInclude'">
+  <!ENTITY % gtkdocentities SYSTEM "../xml/gtkdocentities.ent">
+  %gtkdocentities;
+]>
+<refentry id="ArvDomNamedNodeMap">
+<refmeta>
+<refentrytitle role="top_of_page" id="ArvDomNamedNodeMap.top_of_page">ArvDomNamedNodeMap</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>ARAVIS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ArvDomNamedNodeMap</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="ArvDomNamedNodeMap.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_proto_type" colwidth="150px"/>
+<colspec colname="functions_proto_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-named-node-map-get-item">arv_dom_named_node_map_get_item</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="arv-dom-named-node-map-get-length">arv_dom_named_node_map_get_length</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-named-node-map-get-named-item">arv_dom_named_node_map_get_named_item</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-named-node-map-set-named-item">arv_dom_named_node_map_set_named_item</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="arv-dom-named-node-map-remove-named-item">arv_dom_named_node_map_remove_named_item</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="ArvDomNamedNodeMap.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> ArvDomNamedNodeMap
+</screen>
+</refsect1>
+
+
+<refsect1 id="ArvDomNamedNodeMap.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="ArvDomNamedNodeMap.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="arv-dom-named-node-map-get-item" role="function">
+<title>arv_dom_named_node_map_get_item&#160;()</title>
+<indexterm zone="arv-dom-named-node-map-get-item"><primary>arv_dom_named_node_map_get_item</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_named_node_map_get_item (<parameter><link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link> *map</parameter>,
+                                 <parameter>unsigned <link linkend="int"><type>int</type></link> index</parameter>);</programlisting>
+<refsect3 id="arv-dom-named-node-map-get-item.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>map</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>index</para></entry>
+<entry role="parameter_description"><para>an index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-named-node-map-get-item.returns" role="returns">
+<title>Returns</title>
+<para>the <parameter>ArvDomNode</parameter>
+corresponding to <parameter>index</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-named-node-map-get-length" role="function">
+<title>arv_dom_named_node_map_get_length&#160;()</title>
+<indexterm zone="arv-dom-named-node-map-get-length"><primary>arv_dom_named_node_map_get_length</primary></indexterm>
+<programlisting language="C">unsigned <link linkend="int"><returnvalue>int</returnvalue></link>
+arv_dom_named_node_map_get_length (<parameter><link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link> *map</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="arv-dom-named-node-map-get-named-item" role="function">
+<title>arv_dom_named_node_map_get_named_item&#160;()</title>
+<indexterm zone="arv-dom-named-node-map-get-named-item"><primary>arv_dom_named_node_map_get_named_item</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_named_node_map_get_named_item (<parameter><link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link> *map</parameter>,
+                                       <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<refsect3 id="arv-dom-named-node-map-get-named-item.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>map</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>name of the element to look for.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-named-node-map-get-named-item.returns" role="returns">
+<title>Returns</title>
+<para>a <link linkend="ArvDomElement"><type>ArvDomElement</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-named-node-map-set-named-item" role="function">
+<title>arv_dom_named_node_map_set_named_item&#160;()</title>
+<indexterm zone="arv-dom-named-node-map-set-named-item"><primary>arv_dom_named_node_map_set_named_item</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_named_node_map_set_named_item (<parameter><link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link> *map</parameter>,
+                                       <parameter><link linkend="ArvDomNode"><type>ArvDomNode</type></link> *item</parameter>);</programlisting>
+<refsect3 id="arv-dom-named-node-map-set-named-item.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>map</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>item</para></entry>
+<entry role="parameter_description"><para>a node to insert</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-named-node-map-set-named-item.returns" role="returns">
+<title>Returns</title>
+<para>same as <parameter>node</parameter>
+on success. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="arv-dom-named-node-map-remove-named-item" role="function">
+<title>arv_dom_named_node_map_remove_named_item&#160;()</title>
+<indexterm zone="arv-dom-named-node-map-remove-named-item"><primary>arv_dom_named_node_map_remove_named_item</primary></indexterm>
+<programlisting language="C"><link linkend="ArvDomNode"><returnvalue>ArvDomNode</returnvalue></link>&#160;*
+arv_dom_named_node_map_remove_named_item
+                               (<parameter><link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link> *map</parameter>,
+                                <parameter>const <link linkend="char"><type>char</type></link> *name</parameter>);</programlisting>
+<refsect3 id="arv-dom-named-node-map-remove-named-item.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>map</para></entry>
+<entry role="parameter_description"><para>a <link linkend="ArvDomNamedNodeMap"><type>ArvDomNamedNodeMap</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>name of the node to remove</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="arv-dom-named-node-map-remove-named-item.returns" role="returns">
+<title>Returns</title>
+<para>the removed node. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>
